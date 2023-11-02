@@ -140,13 +140,10 @@
         });
 
         function saveForm() {
-            console.log("sfrin");
-            let image = $('#image').val();
-            console.log(image);
+            // let image = $('#image').val();
             let formd = document.getElementById('user_form');
             let formData = new FormData(formd);
-            formData.append('image', image);
-            console.log(typeof (formData));
+            // formData.append('image', image);
             // return false;
             $.ajax({
                 url: baseUrl + 'welcome/saveData',
