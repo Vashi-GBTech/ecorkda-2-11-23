@@ -42,57 +42,54 @@ class Welcome extends CI_Controller
 
 		if ($this->form_validation->run() == FALSE) {
 			echo json_encode("false");
-			exit;
+			die();
 
 		} else {
+			$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
+			$key_result = $this->user_model->checkDuplicate($key_name);
+			if ($key_result) {
+				echo json_encode("Name Already Exists");
+				die();
+			} else {
+				if (isset($_FILES["image"])) {
+					$file = $_FILES["image"];
+					// $file_name = $file["name"];
+					$file_tmp = $file["tmp_name"];
 
+					// Specify the folder where you want to store the uploaded files
+					$upload_directory = "uploads/";
 
-			// $key_name = str_replace(' ', '_', $this->input->post('name'));
-			// print_r($key_name);
-			
-			if (isset($_FILES["image"])) {
-				$file = $_FILES["image"];
-				// $file_name = $file["name"];
-				$file_tmp = $file["tmp_name"];
-				
-				// Specify the folder where you want to store the uploaded files
-				$upload_directory = "uploads/";
-				
-				// Create the folder if it doesn't exist
-				if (!file_exists($upload_directory)) {
-					mkdir($upload_directory, 0777, true);
-				}
-				
-				$file_name = $upload_directory.$file['name'];
-				if (move_uploaded_file($file_tmp, $file_name)) {
-					// $imageArr = explode("\\", $this->input->post('image'));
-					// $image = end($imageArr);
-					
-					$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
-					echo $key_name." ";
-					
-					$data = [
-						'vName' => $this->input->post('name'),
-						'vPost' => $this->input->post('post'),
-						'vEducation' => $this->input->post('education'),
-						'vDesc' => $this->input->post('desc'),
-						'vImage' => $file_name,
-						'key_name' => $key_name,
-					];
-					$result = $this->user_model->saveUserData($data);
-					if($result){
-						echo json_encode('success');
-					}else{
-						echo json_encode('failed');
+					// Create the folder if it doesn't exist
+					if (!file_exists($upload_directory)) {
+						mkdir($upload_directory, 0777, true);
 					}
-					die();
+					$file_name = $upload_directory . $file['name'];
+					if (move_uploaded_file($file_tmp, $file_name)) {
+						// $imageArr = explode("\\", $this->input->post('image'));
+						// $image = end($imageArr);
+
+						$data = [
+							'vName' => $this->input->post('name'),
+							'vPost' => $this->input->post('post'),
+							'vEducation' => $this->input->post('education'),
+							'vDesc' => '',
+							'vImage' => $file_name,
+							'key_name' => $key_name,
+						];
+						$result = $this->user_model->saveUserData($data);
+						if ($result) {
+							echo json_encode('success');
+						} else {
+							echo json_encode('failed');
+						}
+						die();
+					} else {
+						echo json_encode('failed');
+						die();
+					}
 				}
-				else{
-					echo json_encode('failed');
-					die();
-				}
+
 			}
-			
 		}
 
 	}
@@ -112,7 +109,7 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('Business_Analyst copy');
 	}
-	public function Business_Restructuring() 
+	public function Business_Restructuring()
 	{
 		$this->load->view('Business_Restructuring');
 	}

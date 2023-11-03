@@ -134,7 +134,7 @@
                 name: 'required',
                 post: 'required',
                 education: 'required',
-                desc: 'required',
+                // desc: 'required',
                 image: 'required',
             }
         });
@@ -167,10 +167,13 @@
                         })
                         $('#user_form')[0].reset();
                     } else {
+                        // if(data == 'Keyword Already Exists'){
+
+                        // }
                         Swal.fire({
                             position: 'center',
                             icon: 'error',
-                            title: 'Something went wrong!',
+                            title: data,
                             showConfirmButton: false,
                             timer: 3000,
                             customClass: {
