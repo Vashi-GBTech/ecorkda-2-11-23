@@ -521,6 +521,21 @@
         }
 
         function onLoadPage(){
+            $.ajax({
+                url:"<?php echo base_url(); ?>Welcome/getAllMemberDetails",
+                method:"GET",
+                dataType : 'json',
+                success:function(memberData){
+                    console.log("Data is ",data)
+
+                },
+                error:function (xhr, ajaxOptions, thrownError){
+                    alert('error');
+                }
+
+            })
+
+
         if (searchValue.length == 0) {
             commomMapfunction(Members)
         } else {

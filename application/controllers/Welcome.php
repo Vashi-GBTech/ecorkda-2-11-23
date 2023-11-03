@@ -31,6 +31,18 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('welcome_message');
 	}
+	// public function getImage()
+	// {
+	// 	$result = $this->user_model->getImgPath()['vImage'];
+	// 	echo json_encode($result);
+	// 	die();
+	// }
+	public function getAllMemberDetails()
+	{
+		$result = $this->user_model->getAllMembers();
+		echo json_encode($result);
+		die();
+	}
 
 	public function saveData()
 	{

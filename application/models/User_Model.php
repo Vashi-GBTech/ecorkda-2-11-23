@@ -12,7 +12,6 @@ class User_Model extends CI_Model
             echo "Error:" . $e;
             return false;
         }
-
     }
     public function checkDuplicate($key_name)
     {
@@ -30,8 +29,41 @@ class User_Model extends CI_Model
             echo "Error:" . $e;
             return false;
         }
-
     }
+    public function getAllMembers()
+    {
+        try {
+            $this->db->select('key_name, vImage, vName, email, vEducation, vPost, location');
+            // $this->db->select('*');
+            $this->db->from('user_details');
+            $result = $this->db->get()->result_array();
+            // print_r($result);
+            return $result;
+        } catch (Exception $e) {
+            echo "Error:" . $e;
+            return false;
+        }
+    }
+    // public function getImgPath()
+    // {
+    //     try {
+    //         $id = 3;
+    //         $this->db->select('vImage');
+    //         $this->db->from('user_details');
+    //         $this->db->where('iUserId', $id);
+    //         $result = $this->db->get()->row_array();
+    //         // if ($query->num_rows() > 0) {
+    //         //     return true;
+    //         // } else {
+    //         //     return false;
+    //         // }
+    //         return $result;
+    //     } catch (Exception $e) {
+    //         echo "Error:" . $e;
+    //         return false;
+    //     }
+
+    // }
 }
 
 ?>
