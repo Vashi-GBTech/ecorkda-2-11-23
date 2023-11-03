@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 </head>
 
+<style>
+    .add-partner{
+        background-image:url('<?= base_url() ?>assets/ecovis-images/b-1.jpg') !important;
+        background-position:center center;
+        background-size: cover; /* Adjust the size of the background image */
+        background-repeat: no-repeat; 
+    }
+</style>
 <body>
     <div id='getAccess'>
         <div class="container-fluid d-flex">
