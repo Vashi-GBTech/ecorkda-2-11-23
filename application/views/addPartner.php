@@ -108,6 +108,11 @@
         </div>
 
     </div>
+    <!-- <br>
+    <hr><hr>
+    <button class="btn btn-primary" id="get_img"> Get Img</button>
+    <div id="display_img" display="none">
+    </div> -->
     <script>  var baseUrl = "<?= base_url() ?>";</script>
     <script>
         function checkCredentials() {
@@ -175,9 +180,6 @@
                         })
                         $('#user_form')[0].reset();
                     } else {
-                        // if(data == 'Keyword Already Exists'){
-
-                        // }
                         Swal.fire({
                             position: 'center',
                             icon: 'error',
@@ -195,6 +197,23 @@
                 }
             });
         }
+        // $('#get_img').on('click', function(){
+        //     $.ajax({
+        //         type : "GET",
+        //         // async : true,
+        //         // crossDomain : true,
+        //         url : baseUrl+"welcome/getImage",
+        //         dataType : "json",
+        //         success : function(result){
+        //             var html = `<img src="${baseUrl}${result}" alt="image">`;
+        //             $('#display_img').css('display', 'block');
+        //             $('#display_img').html(html);
+        //         },
+        //         error: function(e){
+        //             alert("Error");
+        //         }
+        //     })
+        // })
 
     </script>
 
