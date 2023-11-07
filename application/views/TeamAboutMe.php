@@ -45,19 +45,19 @@
        
         <div class=' w-100 d-flex justify-content-center py-2' >
         <div>
-           <p class='mb-0' style='color:#cd1432!important;font-size:20px;font-family:cursive'>Specialist Areas</p>
-           <ul id="specialist-list" style="padding-left: 20px; margin-bottom: 0px;list-style: initial !important;">
+           <p class='mb-0' style='color:#cd1432!important;font-size:20px;font-family:cursive;text-align:center'>Specialist & Qualification Areas</p>
+           <ul id="specialist-list" style="padding-left: 20px; margin-bottom: 0px;list-style: initial !important;text-align:center;">
              <li>list</li>
            </ul>
-   </div>
+       </div>
          </div>
          <div class='w-100 justify-content-center d-flex py-2' >
-         <div>
+         <!-- <div>
            <p class='mb-0' style='color:#cd1432!important;font-size:20px;font-family:cursive'>Qualifications</p>
            <ul style="padding-left: 20px; margin-bottom: 0px;list-style: initial !important;" id="qualification-list">
             <li>ACCA</li>
            </ul>
-           </div>
+           </div> -->
          </div>
         </div>
         <div class="col-md-7 px-4" >
@@ -67,9 +67,9 @@
             <p id="about-me"></p>
 
              <div class='d-flex w-100 justify-content-left py-2' > 
-            <div>
+            <!-- <div>
            <button href="#"  type="button" class="btn btn-outline-danger"  varient='outlined' style="padding: 5px 49px !important;color: #cd1432 !important;border-color:#cd1432 !important">Connect on LinkedIn</button>
-            </div> 
+            </div>  -->
           </div> 
         </div>
         <div class="col-md-1">
@@ -80,107 +80,7 @@
 </div>
 </body>
 <script>
-const aboutMembersDatas=[
-  { key:'Pankaj_Bhargava',
-    img: './ourTeam_B&W/01_Pankaj_Bhargava.jpg', 
-    Name: "Pankaj Bhargava",
-    emailId: 'Pankaj_Bhargava@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Strategy & Performance Consulting',
-  },
-  { key:'Sanjeev_Bindal',
-    img: './ourTeam_B&W/06_Sanjeev_Bindal.jpg', 
-    Name: "Sanjeev Bindal",
-    emailId: 'Pankaj_Bhargava@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Litigation & Legal Services',
-  },
-  { key:'Dheeraj_Rathi',
-    img: './ourTeam_B&W/02_Dheeraj_rathi.jpg', 
-    Name: "Dheeraj Rathi",
-    emailId: 'Dheeraj_Rathi@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Cross border & Merchant Banking Advice',
-  },
-  { key:'Shruti_Ambegaonkar',
-    img: './ourTeam/shruti-ambegaonkar.jpg', 
-    Name: "Shruti Ambegaonkar",
-    emailId: 'Shruti_Ambegaonkar@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Strategy and Performance Consulting',
-  },
-  { key:'Deepa_Rathi',
-    img: './ourTeam/deepa-rathi.jpg', 
-    Name: "Deepa Rathi",
-    emailId: 'Deepa_Rathi@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post :'On shore and Off shore Advisory'
-  },
-  { key:'Pankaj_Monga',
-    img: './ourTeam_B&W/23_pankaj_monga.jpeg', 
-    Name: "Pankaj Monga",
-    emailId: 'Pankaj_Monga@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Legal, Risk and IPR Practice'
-  },
-  { key:'Manish_Adukia',
-    img: './ourTeam_B&W/05_Manish_Adukia.jpg', 
-    Name: "Manish Adukia",
-    emailId: 'Manish_Adukia@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Business support & Financial Reporting',
-  },
-  { key:'Litigation',
-    img: '', 
-    Name: "Litigation",
-    emailId: 'Litigation@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Litigation,GRC Transaction Advisory',
-  },
-  { key:'Parag_Shah',
-    img: './ourTeam_B&W/09_Parag_Shah.jpg', 
-    Name: "Parag shah",
-    emailId: 'Parag_shah@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Financial & Capital Services'
-  },
-  { key:'Bharat_Mishra',
-    img: './ourTeam_B&W/03_Bharat_Mishra.jpg', 
-    Name: "Bharat Mishtra",
-    emailId: 'Bharat_Mishtra@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Digital Transformation',
-  },
-  { key:'D._Bala',
-    img: './ourTeam_B&W/10_Bala.png', 
-    Name: "D. Bala",
-    emailId: 'D_Bala@ecovis.co.uk' ,
-    specialist:['Corporate Tax','International Tax','VAT'],
-    qualification:['ACCA','PH.D'],
-    linkedIn:'#',
-    post:'Cross Border & Merchant Banking Advice'
-  },
-];
+
 let Members =[
    { key:'Rameshwarlal_Badrilalji_Kabra',
     img: '', 
@@ -557,7 +457,18 @@ let Members =[
     location:'Shastri Nagar, New Delhi',
     about:[]
   },
-]
+];
+
+
+let mainData=[];
+
+function onLoadPage(){
+
+   
+
+
+   
+}
 let loremIpsum=[
   "Hello, I’m Kate. As an Audit and Advisory Partner, I love working in the creative industries; enabling storytellers, content creators and editors to focus on their business, whilst trusting me and the team to look after the audit and accounting compliance and supporting their journey.",
 
@@ -568,39 +479,55 @@ let loremIpsum=[
   " As an Audit Partner I take my responsibilities to help improve the standards of our profession seriously, and to ensure that we deliver what we say, when we say we will, with the utmost focus on quality, always."
 ]
 $( document ).ready(function() {
-   let  url=window.location.href;
+  $.ajax({
+        url:"<?php echo base_url(); ?>Welcome/getAllMemberDetails",
+        method:"GET",
+        dataType : 'json',
+        success:function(memberData){
+            // var data=memberData;
+            mainData=memberData;
+            console.log("Data is ",memberData); 
+            let  url=window.location.href;
    let MemberName=url.split('?name=').pop();
 
 
-  let data=Members.filter(data => data.key === MemberName)
-    console.log(data[0]);
-    let profiledata=data[0];
-    $("#name").html(profiledata.Name);
-    $("#email").html(profiledata.emailId);
-    $('#post').html(profiledata.post);
-var image = document.getElementById("member-img");
-var imageParent = document.getElementById("image-parent");
-image.src = profiledata.img; 
-imageParent.appendChild(image);
-let mappedSpecialist;
-let specialist=profiledata.specialist.length == 0 ? ['-'] :profiledata.specialist;
-let mapSpecialist=specialist.map((data,index)=>{
-  return  `<li class="mb-0 remove-width" style='width: 240px;'>${data}</li>`
-})
+      let data=mainData.filter(data => data.key_name === MemberName)
+        console.log(data[0],'jnkjvbdfk');
+        let profiledata=data[0];
+        $("#name").html(profiledata.vName);
+        $("#email").html(profiledata.email);
+        $('#post').html(profiledata.vPost);
+    var image = document.getElementById("member-img");
+    var imageParent = document.getElementById("image-parent");
+    image.src = baseUrl+profiledata.vImage; 
+    imageParent.appendChild(image);
+    let mappedSpecialist;
+    let specialist=profiledata.vEducation.length == 0 ? ['-'] :profiledata.vEducation;
+    let mapSpecialist= `<li class="mb-0 remove-width fw-bold" style='width: 240px;list-style: none;font-weight: 500;'>${profiledata.vEducation}</li>`
+    
+    $('#specialist-list').html(mapSpecialist);
+    let aboutMe = profiledata.key_name.length == 0 ? loremIpsum : loremIpsum;
+    let mapAboutMe=aboutMe.map((data,index)=>{
+      return `<p>${data}</p>`
+    });
+    $('#about-me').html(mapAboutMe);
+        },
+        error:function (xhr, ajaxOptions, thrownError){
+            alert('error');
+        }
 
-$('#specialist-list').html(mapSpecialist);
+    })
+ 
 
-let qualification=profiledata.qualification.length == 0 ? ['-'] :profiledata.qualification;
-let mapQualification=qualification.map((data,index)=>{
-  return  `<li class="mb-0 remove-width" style='width: 240px;'>${data}</li>`
-})
 
-$('#qualification-list').html(mapQualification);
-let aboutMe = profiledata.about.length == 0 ? loremIpsum : profiledata.about;
-let mapAboutMe=aboutMe.map((data,index)=>{
-  return `<p>${data}</p>`
-});
-$('#about-me').html(mapAboutMe);
+
+// let qualification=profiledata.vEducation.length == 0 ? ['-'] :profiledata.vEducation;
+// let mapQualification=qualification.map((data,index)=>{
+//   return  `<li class="mb-0 remove-width" style='width: 240px;'>${data}</li>`
+// })
+
+// $('#qualification-list').html(mapQualification);
+
 }
 )
 </script>
