@@ -23,7 +23,7 @@ class Welcome extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('user_model');
+		$this->load->model('User_Model');
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array("form_validation"));
 	}
@@ -33,13 +33,13 @@ class Welcome extends CI_Controller
 	}
 	// public function getImage()
 	// {
-	// 	$result = $this->user_model->getImgPath()['vImage'];
+	// 	$result = $this->User_Model->getImgPath()['vImage'];
 	// 	echo json_encode($result);
 	// 	die();
 	// }
 	public function getAllMemberDetails()
 	{
-		$result = $this->user_model->getAllMembers();
+		$result = $this->User_Model->getAllMembers();
 		echo json_encode($result);
 		die();
 	}
@@ -58,7 +58,7 @@ class Welcome extends CI_Controller
 
 		} else {
 			$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
-			$key_result = $this->user_model->checkDuplicate($key_name);
+			$key_result = $this->User_Model->checkDuplicate($key_name);
 			if ($key_result) {
 				echo json_encode("Name Already Exists");
 				die();
@@ -88,7 +88,7 @@ class Welcome extends CI_Controller
 							'vImage' => $file_name,
 							'key_name' => $key_name,
 						];
-						$result = $this->user_model->saveUserData($data);
+						$result = $this->User_Model->saveUserData($data);
 						if ($result) {
 							echo json_encode('success');
 						} else {
