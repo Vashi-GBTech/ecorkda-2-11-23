@@ -509,15 +509,11 @@
             $("#services_menu").slideToggle();
             $("#aboutUs_menu").slideUp();
             // $("#menu").slideUp();
-
         });
         $("#menu_icon").click(function() {
             $("#menu").slideToggle();
             // $("#aboutUs_menu").slideUp();
             // $("#services_menu").slideUp();
-
-
-
         });
 
 
