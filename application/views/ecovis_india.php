@@ -271,7 +271,7 @@
                 <div class="col-md-2"></div>     
                 <div class="col-md-8 ourTeamDropDowndiv">
                 <div class='' style='display: flex;justify-content: end;' id='clear-filter-div' >
-                    <button class='btn btn-outline-danger' id='reset-button' type="button" style='font-size:10px' disabled=true>Clear All Filters <i class='far fa-times-circle'></i></button>
+                    <button class='btn btn-outline-danger' id='reset-button' title='No Filters Applied' type="button" style='font-size:10px' disabled=true>Clear All Filters <i class='far fa-times-circle'></i></button>
                 </div>
               <div class="d-flex justify-content-evenly  align-items-center" style="flex-wrap: inherit;">
               <div  class="dropdown col-md-4 py-2"> 
