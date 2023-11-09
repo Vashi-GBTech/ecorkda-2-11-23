@@ -5,7 +5,7 @@
     <title>Login Form</title>
     <!-- Include Bootstrap CSS, jQuery, and SweetAlert2 CSS and JS files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
@@ -14,6 +14,10 @@
         integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </head>
 
 <style>
@@ -22,6 +26,9 @@
         background-position:center center;
         background-size: cover; /* Adjust the size of the background image */
         background-repeat: no-repeat; 
+    }
+    #employeeTable_length select{
+        color: black !important;
     }
 </style>
 <body>
@@ -108,6 +115,30 @@
         </div>
 
     </div>
+    <div id="employeeTableDiv" style='display:none;background:lightgray' class=''>
+    <div class='d-flex justify-content-center py-5'  >
+    <div class='card col-md-10 p-3'>
+    <table id="employeeTable" border="1">
+        <thead>
+            <tr>
+                <th>SR No.</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Email</th>
+                <th>Education</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here using AJAX -->
+        </tbody>
+    </table>
+    </div>
+   
+   </div>
+    </div>
+ 
+ 
     <!-- <br>
     <hr><hr>
     <button class="btn btn-primary" id="get_img"> Get Img</button>
@@ -126,6 +157,7 @@
                     icon: 'success'
                 }).then((result) => {
                     document.getElementById('add-partner-main-div').style.display = 'block';
+                    document.getElementById('employeeTableDiv').style.display = 'block';
                     document.getElementById('getAccess').style.display = 'none';
                 });
             } else {
@@ -226,4 +258,48 @@
             background-color: #FE735C !important;
         }
     </style>
+
+
+<script>
+  $(document).ready(function() {
+    // Fetch data using AJAX and populate the table
+    $.ajax({
+        url: "<?php echo base_url(); ?>Welcome/getAllMemberDetails",
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data, 'hbdcibsdvihlbsdjvhb');
+            // Loop through the data and populate the table
+            for (var i = 0; i < data.length; i++) {
+                let srno = i + 1;
+                var row = '<tr>';
+                row += '<td>' + srno + '</td>';
+                row += '<td>' + data[i].vName + '</td>';
+                row += '<td>' + data[i].vPost + '</td>';
+                row += '<td>' + data[i].email + '</td>';
+                row += '<td>' + data[i].vEducation + '</td>';
+                row += '<td class="d-flex h-100" style="border-bottom:none"><button class="btn btn-outline-warning mx-1" onclick="editEmployee(' + data[i].id + ')"><i class="fas fa-edit"></i></button> <button class="btn btn-danger mx-1" onclick="deleteEmployee(' + data[i].id + ')"><i class="fas fa-trash-alt"></i></button></td>';
+                row += '</tr>';
+                $('#employeeTable tbody').append(row);
+            }
+            // Initialize DataTable after data is populated
+            $('#employeeTable').DataTable();
+        },
+        error: function() {
+            console.log('Error fetching data.');
+        }
+    });
+});
+
+function editEmployee(employeeId) {
+    // Implement the edit action here
+    console.log('Edit Employee ID: ' + employeeId);
+}
+
+function deleteEmployee(employeeId) {
+    // Implement the delete action here
+    console.log('Delete Employee ID: ' + employeeId);
+}
+
+    </script>
 </body>
