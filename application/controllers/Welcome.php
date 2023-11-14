@@ -43,6 +43,154 @@ class Welcome extends CI_Controller
 		echo json_encode($result);
 		die();
 	}
+	public function editMemberDetails()
+	{
+		// print_r($this->input->post());
+		// exit();
+		$id = 0;
+		if ($this->input->post()) {
+			$id = $this->input->post('id');
+		}
+		$result = $this->User_Model->getMemberDetails($id);
+		echo json_encode($result);
+		die();
+	}
+
+	public function saveData1()
+	{
+		$this->form_validation->set_rules('name', 'Username', 'required');
+		$this->form_validation->set_rules('post', 'Designation', 'required');
+		$this->form_validation->set_rules('education', 'Password Confirmation', 'required');
+		$this->form_validation->set_rules('desc', 'Description', 'required');
+		// $this->form_validation->set_rules('image', 'Image', 'required');
+
+		if ($this->form_validation->run() == FALSE) {
+			$response['status'] = 200;
+			$response['msg'] = "false";
+			echo json_encode($response);
+			// echo json_encode("false");
+			die();
+
+		} else {
+			// $key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
+			// $key_result = $this->User_Model->checkDuplicate($key_name);
+			// if ($key_result) {
+			// 	echo json_encode("Name Already Exists");
+			// 	die();
+			// } else {
+			// echo "<pre>";
+			// print_r($_FILES);
+			// echo "slijf";
+			// die();
+			// $imgName = $_FILES['image']["name"];
+			$imgName = $_FILES["image"]['name'];
+			if (isset($_FILES["image"]) && isset($imgName) && !empty($imgName)) {
+				// print_r($this->input->post('emp_id'));
+				// $empId = $this->input->post('emp_id');
+				// exit();
+				$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
+				$key_result = $this->User_Model->checkDuplicate($key_name);
+				if ($key_result) {
+					$response['status'] = 200;
+					$response['msg'] = "Name Already Exists";
+					echo json_encode($response);
+					// echo json_encode("Name Already Exists");
+					die();
+				}
+				$file = $_FILES["image"];
+				// $file_name = $file["name"];
+				$file_tmp = $file["tmp_name"];
+
+				// Specify the folder where you want to store the uploaded files
+				$upload_directory = "uploads/";
+
+				// Create the folder if it doesn't exist
+				if (!file_exists($upload_directory)) {
+					mkdir($upload_directory, 0777, true);
+				}
+				$file_name = $upload_directory . $file['name'];
+				move_uploaded_file($file_tmp, $file_name);
+				// if (move_uploaded_file($file_tmp, $file_name)) {
+				// $imageArr = explode("\\", $this->input->post('image'));
+				// $image = end($imageArr);
+
+				$data = [
+					'vName' => $this->input->post('name'),
+					'vPost' => $this->input->post('post'),
+					'vEducation' => $this->input->post('education'),
+					'vDesc' => $this->input->post('desc'),
+					'vImage' => $file_name,
+					'key_name' => $key_name,
+				];
+				// print_r($this->input->post('emp_id'));
+				// $empId = $this->input->post('emp_id');
+				// exit();
+				$result = $this->User_Model->saveUserData($data);
+				// if (isset($empId) && !empty($empId)) {
+				// 	$result = $this->User_Model->updateUserData($data, $empId);
+				// } else {
+				// 	$result = $this->User_Model->saveUserData($data);
+				// }
+				if ($result) {
+					$response['status'] = 200;
+					$response['msg'] = "Your data has been saved";
+					echo json_encode($response);
+					// echo json_encode('success');
+				} else {
+					$response['status'] = 201;
+					$response['msg'] = "failed";
+					echo json_encode($response);
+					// echo json_encode('failed');
+				}
+				die();
+				// } else {
+				// 	echo json_encode('failed');
+				// 	die();
+				// }
+			} else {
+				// print_r($this->input->post('emp_id'));
+				$empId = $this->input->post('emp_id');
+				// exit();
+				$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
+				$key_result = $this->User_Model->checkDuplicate($key_name, $empId);
+				if ($key_result) {
+					$response['status'] = 201;
+					$response['msg'] = "Name Already Exists";
+					echo json_encode($response);
+					// echo json_encode("Name Already Exists");
+					die();
+				}
+
+				$data = [
+					'vName' => $this->input->post('name'),
+					'vPost' => $this->input->post('post'),
+					'vEducation' => $this->input->post('education'),
+					'vDesc' => $this->input->post('desc'),
+					// 'vImage' => $file_name,
+					'key_name' => $key_name,
+				];
+				// echo "<pre>";
+				// print_r($data);
+				// die();
+				if (isset($empId) && !empty($empId)) {
+					$result = $this->User_Model->updateUserData($data, $empId);
+					$response['status'] = 200;
+					$response['msg'] = "User data updated successfully!...";
+
+					echo json_encode($response);
+				} else {
+					$response['status'] = 201;
+					$response['msg'] = "Something went wrong";
+					echo json_encode($response);
+				}
+				die();
+				// $result = $this->User_Model->updateUserData($data, $empId);
+			}
+
+			// }
+		}
+
+	}
 
 	public function saveData()
 	{
@@ -53,57 +201,99 @@ class Welcome extends CI_Controller
 		// $this->form_validation->set_rules('image', 'Image', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			echo json_encode("false");
+			$response['status'] = 200;
+			$response['msg'] = "false";
+			echo json_encode($response);
 			die();
 
 		} else {
+			$empId = $this->input->post('emp_id');
 			$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
-			$key_result = $this->User_Model->checkDuplicate($key_name);
-			if ($key_result) {
-				echo json_encode("Name Already Exists");
-				die();
+			if (isset($empId) && !empty($empId)) {
+				$key_result = $this->User_Model->checkDuplicate($key_name, $empId);
 			} else {
-				if (isset($_FILES["image"])) {
-					$file = $_FILES["image"];
-					// $file_name = $file["name"];
-					$file_tmp = $file["tmp_name"];
-
-					// Specify the folder where you want to store the uploaded files
-					$upload_directory = "uploads/";
-
-					// Create the folder if it doesn't exist
-					if (!file_exists($upload_directory)) {
-						mkdir($upload_directory, 0777, true);
-					}
-					$file_name = $upload_directory . $file['name'];
-					if (move_uploaded_file($file_tmp, $file_name)) {
-						// $imageArr = explode("\\", $this->input->post('image'));
-						// $image = end($imageArr);
-
-						$data = [
-							'vName' => $this->input->post('name'),
-							'vPost' => $this->input->post('post'),
-							'vEducation' => $this->input->post('education'),
-							'vDesc' => '',
-							'vImage' => $file_name,
-							'key_name' => $key_name,
-						];
-						$result = $this->User_Model->saveUserData($data);
-						if ($result) {
-							echo json_encode('success');
-						} else {
-							echo json_encode('failed');
-						}
-						die();
-					} else {
-						echo json_encode('failed');
-						die();
-					}
-				}
-
+				$key_result = $this->User_Model->checkDuplicate($key_name);
 			}
+			if ($key_result) {
+				$response['status'] = 201;
+				$response['msg'] = "Name Already Exists";
+				echo json_encode($response);
+				die();
+			}
+			$data = array();
+			if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+				$file = $_FILES["image"];
+				$file_tmp = $file["tmp_name"];
+
+				$upload_directory = "uploads/";
+				if (!file_exists($upload_directory)) {
+					mkdir($upload_directory, 0777, true);
+				}
+				$file_name = $upload_directory . $file['name'];
+				move_uploaded_file($file_tmp, $file_name);
+				$data = [
+					'vName' => $this->input->post('name'),
+					'vPost' => $this->input->post('post'),
+					'vEducation' => $this->input->post('education'),
+					'vDesc' => $this->input->post('desc'),
+					'vImage' => $file_name,
+					'key_name' => $key_name,
+				];
+			} else {
+				$data = [
+					'vName' => $this->input->post('name'),
+					'vPost' => $this->input->post('post'),
+					'vEducation' => $this->input->post('education'),
+					'vDesc' => $this->input->post('desc'),
+					// 'vImage' => $file_name,
+					'key_name' => $key_name,
+				];
+			}
+
+			if (isset($empId) && !empty($empId)) {
+				$result = $this->User_Model->updateUserData($data, $empId);
+				$msg = "Your data has been Updated";
+			} else {
+				$result = $this->User_Model->saveUserData($data);
+				$msg = "Your data has been saved";
+				// $response['msg'] = "Your data has been saved";
+			}
+			if ($result) {
+				$response['status'] = 200;
+				$response['msg'] = $msg;
+				echo json_encode($response);
+			} else {
+				$response['status'] = 201;
+				$response['msg'] = "failed";
+				echo json_encode($response);
+			}
+			die();
+
 		}
 
+	}
+	public function deleteMember()
+	{
+		// $data = file_get_contents('php://input');
+		$empId = $this->input->post('emp_id');
+
+		if (isset($empId) && !empty($empId)) {
+			$result = $this->User_Model->deleteUserData($empId);
+			if ($result) {
+				$response['status'] = 200;
+				$response['msg'] = "Deleted Successfully!";
+				echo json_encode($response);
+			}else{
+				$response['status'] = 201;
+				$response['msg'] = "Something went wrong";
+				echo json_encode($response);
+			}
+		} else {
+			$response['status'] = 403;
+			$response['msg'] = "Invalid Request!";
+			echo json_encode($response);
+		}
+		die();
 	}
 	public function index()
 	{

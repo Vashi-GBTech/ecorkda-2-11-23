@@ -17,20 +17,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </head>
 
 <style>
-    .add-partner{
-        background-image:url('<?= base_url() ?>assets/ecovis-images/b-1.jpg') !important;
-        background-position:center center;
-        background-size: cover; /* Adjust the size of the background image */
-        background-repeat: no-repeat; 
+    .add-partner {
+        background-image: url('<?= base_url() ?>assets/ecovis-images/b-1.jpg') !important;
+        background-position: center center;
+        background-size: cover;
+        /* Adjust the size of the background image */
+        background-repeat: no-repeat;
     }
-    #employeeTable_length select{
+
+    #employeeTable_length select {
         color: black !important;
     }
 </style>
+
 <body>
     <div id='getAccess'>
         <div class="container-fluid d-flex">
@@ -77,7 +81,7 @@
 
                     <form id="user_form" enctype="multipart/form-data" class='px-5 py-5'>
                         <h5>Enter The Details</h5>
-
+                        <input type="hidden" name="emp_id" id="emp_id" value="">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" name="name">
@@ -96,8 +100,8 @@
                         <div class="form-group">
                             <label for="desc">Profile Description:</label>
                             <!-- <input type="text" class="form-control" id="desc" name="desc" required placeholder='write something...'> -->
-                            <textarea class="form-control" id="desc" name="desc" required
-                                placeholder='write something...' id="exampleTextarea" rows="3"></textarea>
+                            <textarea class="form-control" name="desc" required placeholder='write something...'
+                                id="exampleTextarea" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -116,29 +120,29 @@
 
     </div>
     <div id="employeeTableDiv" style='display:none;background:lightgray' class=''>
-    <div class='d-flex justify-content-center py-5'  >
-    <div class='card col-md-10 p-3'>
-    <table id="employeeTable" border="1">
-        <thead>
-            <tr>
-                <th>SR No.</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Email</th>
-                <th>Education</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be populated here using AJAX -->
-        </tbody>
-    </table>
+        <div class='d-flex justify-content-center py-5'>
+            <div class='card col-md-10 p-3'>
+                <table id="employeeTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>SR No.</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Email</th>
+                            <th>Education</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated here using AJAX -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
     </div>
-   
-   </div>
-    </div>
- 
- 
+
+
     <!-- <br>
     <hr><hr>
     <button class="btn btn-primary" id="get_img"> Get Img</button>
@@ -185,11 +189,8 @@
         });
 
         function saveForm() {
-            // let image = $('#image').val();
             let formd = document.getElementById('user_form');
             let formData = new FormData(formd);
-            // formData.append('image', image);
-            // return false;
             $.ajax({
                 url: baseUrl + 'welcome/saveData',
                 method: "POST",
@@ -198,12 +199,11 @@
                 processData: false,
                 success: function (data) {
                     data = JSON.parse(data);
-                    console.log(data);
-                    if (data == 'success') {
+                    if (data.status === 200) {
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
-                            title: 'Your data has been saved',
+                            title: data.msg,
                             showConfirmButton: false,
                             timer: 5000,
                             customClass: {
@@ -211,11 +211,22 @@
                             }
                         })
                         $('#user_form')[0].reset();
-                    } else {
+                        $('#image').rules('add', {
+                            required: true   // overwrite an existing rule
+                        });
+                        $('#emp_id').val('');
+
+                        var table = $('#employeeTable').DataTable();
+                        table.destroy();
+                        $('#employeeTable tbody').empty();
+                        // $('#employeeTable').empty();
+                        getDataTable();
+
+                    } else if (data.status === 201) {
                         Swal.fire({
                             position: 'center',
                             icon: 'error',
-                            title: data,
+                            title: data.msg,
                             showConfirmButton: false,
                             timer: 3000,
                             customClass: {
@@ -260,46 +271,149 @@
     </style>
 
 
-<script>
-  $(document).ready(function() {
-    // Fetch data using AJAX and populate the table
-    $.ajax({
-        url: "<?php echo base_url(); ?>Welcome/getAllMemberDetails",
-        method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            console.log(data, 'hbdcibsdvihlbsdjvhb');
-            // Loop through the data and populate the table
-            for (var i = 0; i < data.length; i++) {
-                let srno = i + 1;
-                var row = '<tr>';
-                row += '<td>' + srno + '</td>';
-                row += '<td>' + data[i].vName + '</td>';
-                row += '<td>' + data[i].vPost + '</td>';
-                row += '<td>' + data[i].email + '</td>';
-                row += '<td>' + data[i].vEducation + '</td>';
-                row += '<td class="d-flex h-100" style="border-bottom:none"><button class="btn btn-outline-warning mx-1" onclick="editEmployee(' + data[i].id + ')"><i class="fas fa-edit"></i></button> <button class="btn btn-danger mx-1" onclick="deleteEmployee(' + data[i].id + ')"><i class="fas fa-trash-alt"></i></button></td>';
-                row += '</tr>';
-                $('#employeeTable tbody').append(row);
-            }
-            // Initialize DataTable after data is populated
-            $('#employeeTable').DataTable();
-        },
-        error: function() {
-            console.log('Error fetching data.');
+    <script>
+        $(document).ready(function () {
+            // Fetch data using AJAX and populate the table
+            // $.ajax({
+            //     url: "<?php echo base_url(); ?>Welcome/getAllMemberDetails",
+            //     method: 'GET',
+            //     dataType: 'json',
+            //     success: function (data) {
+            //         console.log(data, 'hbdcibsdvihlbsdjvhb');
+            //         // Loop through the data and populate the table
+            //         for (var i = 0; i < data.length; i++) {
+            //             let srno = i + 1;
+            //             var row = '<tr>';
+            //             row += '<td>' + srno + '</td>';
+            //             row += '<td>' + data[i].vName + '</td>';
+            //             row += '<td>' + data[i].vPost + '</td>';
+            //             row += '<td>' + data[i].email + '</td>';
+            //             row += '<td>' + data[i].vEducation + '</td>';
+            //             row += '<td class="d-flex h-100" style="border-bottom:none"><button class="btn btn-outline-warning mx-1" onclick="editEmployee(' + data[i].id + ')"><i class="fas fa-edit"></i></button> <button class="btn btn-danger mx-1" onclick="deleteEmployee(' + data[i].id + ')"><i class="fas fa-trash-alt"></i></button></td>';
+            //             row += '</tr>';
+            //             $('#employeeTable tbody').append(row);
+            //         }
+            //         // Initialize DataTable after data is populated
+            //         $('#employeeTable').DataTable();
+            //     },
+            //     error: function () {
+            //         console.log('Error fetching data.');
+            //     }
+            // });
+            getDataTable();
+        });
+
+        function getDataTable() {
+            $.ajax({
+                url: "<?php echo base_url(); ?>Welcome/getAllMemberDetails",
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data, 'hbdcibsdvihlbsdjvhb');
+                    // Loop through the data and populate the table
+                    for (var i = 0; i < data.length; i++) {
+                        let srno = i + 1;
+                        var row = '<tr>';
+                        row += '<td>' + srno + '</td>';
+                        row += '<td>' + data[i].vName + '</td>';
+                        row += '<td>' + data[i].vPost + '</td>';
+                        row += '<td>' + data[i].email + '</td>';
+                        row += '<td>' + data[i].vEducation + '</td>';
+                        row += '<td class="d-flex h-100" style="border-bottom:none"><button class="btn btn-outline-warning mx-1" onclick="editEmployee(' + data[i].id + ')"><i class="fas fa-edit"></i></button> <button class="btn btn-danger mx-1" onclick="deleteEmployee(' + data[i].id + ')"><i class="fas fa-trash-alt"></i></button></td>';
+                        row += '</tr>';
+                        $('#employeeTable tbody').append(row);
+                    }
+                    // Initialize DataTable after data is populated
+                    $('#employeeTable').DataTable();
+                },
+                error: function () {
+                    console.log('Error fetching data.');
+                }
+            });
         }
-    });
-});
 
-function editEmployee(employeeId) {
-    // Implement the edit action here
-    console.log('Edit Employee ID: ' + employeeId);
-}
+        function editEmployee(employeeId) {
+            sendId = {
+                id: employeeId
+            };
+            $('#image').rules('add', {
+                required: false   // overwrite an existing rule
+            });
 
-function deleteEmployee(employeeId) {
-    // Implement the delete action here
-    console.log('Delete Employee ID: ' + employeeId);
-}
+            $.ajax({
+                url: "<?php echo base_url(); ?>Welcome/editMemberDetails",
+                method: 'POST',
+                dataType: 'json',
+                data: sendId,
+                success: function (data) {
+                    console.log(data, 'hbdcibsdvihlbsdjvhb');
+                    $('#emp_id').val(data.id);
+                    $('#name').val(data.vName);
+                    $('#post').val(data.vPost);
+                    $('#email').val(data.email);
+                    $('#education').val(data.vEducation);
+                    $('#exampleTextarea').val(data.vDesc);
+                    // $('#exampleTextarea').val(data.vDesc);
+                    // console.log(baseUrl + data.vImage);
+                    // $('#image').attr("src", baseUrl+data.vImage);
+                    var image = document.getElementById("image");
+                    image.src = baseUrl + data.vImage;
+                },
+                error: function () {
+                    console.log('Error fetching data.');
+                }
+            });
+        }
+
+        function deleteEmployee(employeeId) {
+            if (confirm("Are you sure you want to delete this user?")) {
+                $.ajax({
+                    url: baseUrl + "Welcome/deleteMember",
+                    // type: 'DELETE',
+                    type: 'POST',
+                    // dataType: 'JSON',
+                    // contentType: "application/x-www-form-urlencoded",
+                    data: {
+                        emp_id: employeeId
+                    },
+                    success: function (data) {
+                        data = JSON.parse(data);
+                        console.log(data);
+                        if (data.status === 200) {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: data.msg,
+                                showConfirmButton: false,
+                                timer: 5000,
+                                customClass: {
+                                    container: 'my-swal'
+                                }
+                            })
+                            // var table = $('#employeeTable').DataTable();
+                            // table.destroy();
+                            if ($.fn.DataTable.isDataTable('#employeeTable')) {
+                                $('#employeeTable').DataTable().destroy();
+                            }
+                            $('#employeeTable tbody').empty();
+                            getDataTable();
+                        } else if (data.status === 201) {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'error',
+                                title: data.msg,
+                                showConfirmButton: false,
+                                timer: 3000,
+                                customClass: {
+                                    container: 'my-swal'
+                                }
+                            })
+                        }
+                    }
+                });
+            }
+            return false;
+        }
 
     </script>
 </body>
