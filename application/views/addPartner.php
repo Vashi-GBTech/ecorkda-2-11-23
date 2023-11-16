@@ -366,54 +366,61 @@
         }
 
         function deleteEmployee(employeeId) {
-            if (confirm("Are you sure you want to delete this user?")) {
-                $.ajax({
-                    url: baseUrl + "Welcome/deleteMember",
-                    // type: 'DELETE',
-                    type: 'POST',
-                    // dataType: 'JSON',
-                    // contentType: "application/x-www-form-urlencoded",
-                    data: {
-                        emp_id: employeeId
-                    },
-                    success: function (data) {
-                        data = JSON.parse(data);
-                        console.log(data);
-                        if (data.status === 200) {
-                            Swal.fire({
-                                position: 'center',
-                                icon: 'success',
-                                title: data.msg,
-                                showConfirmButton: false,
-                                timer: 5000,
-                                customClass: {
-                                    container: 'my-swal'
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You are about to delete this user.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: baseUrl + 'Welcome/deleteMember',
+                        type: 'POST',
+                        data: {
+                            emp_id: employeeId
+                        },
+                        success: function (data) {
+                            data = JSON.parse(data);
+                            console.log(data);
+                            if (data.status === 200) {
+                                Swal.fire({
+                                    position: 'center',
+                                    icon: 'success',
+                                    title: data.msg,
+                                    showConfirmButton: false,
+                                    timer: 5000,
+                                    customClass: {
+                                        container: 'my-swal'
+                                    }
+                                })
+                                if ($.fn.DataTable.isDataTable('#employeeTable')) {
+                                    $('#employeeTable').DataTable().destroy();
                                 }
-                            })
-                            // var table = $('#employeeTable').DataTable();
-                            // table.destroy();
-                            if ($.fn.DataTable.isDataTable('#employeeTable')) {
-                                $('#employeeTable').DataTable().destroy();
+                                $('#employeeTable tbody').empty();
+                                getDataTable();
+                            } else if (data.status === 201) {
+                                Swal.fire({
+                                    position: 'center',
+                                    icon: 'error',
+                                    title: data.msg,
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    customClass: {
+                                        container: 'my-swal'
+                                    }
+                                });
                             }
-                            $('#employeeTable tbody').empty();
-                            getDataTable();
-                        } else if (data.status === 201) {
-                            Swal.fire({
-                                position: 'center',
-                                icon: 'error',
-                                title: data.msg,
-                                showConfirmButton: false,
-                                timer: 3000,
-                                customClass: {
-                                    container: 'my-swal'
-                                }
-                            })
                         }
-                    }
-                });
-            }
-            return false;
-        }
+                    });
+                }
+            });
+    return false;
+}
+
 
     </script>
 </body>
