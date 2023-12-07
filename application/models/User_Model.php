@@ -13,13 +13,43 @@ class User_Model extends CI_Model
             return false;
         }
     }
-    public function checkDuplicate($key_name)
+    public function updateUserData($data, $id)
     {
         try {
-            $this->db->select('key_name');
-            $this->db->from('user_details');
-            $this->db->where('key_name', $key_name);
-            $query = $this->db->get();
+            $result=$this->db->update("user_details",$data,"id=".$id."");
+            // $result = $this->db->insert("user_details", $data);
+            return $result;
+        } catch (Exception $e) {
+            echo "Error:" . $e;
+            return false;
+        }
+    }
+    public function deleteUserData( $id)
+    {
+        try {
+            $result=$this->db->delete("user_details",array("id" => $id));
+            // $result = $this->db->insert("user_details", $data);
+            return $result;
+        } catch (Exception $e) {
+            echo "Error:" . $e;
+            return false;
+        }
+    }
+    public function checkDuplicate($key_name, $id = null)
+    {
+        try {
+            if(isset($id) && !empty($id)){
+                $this->db->select('key_name');
+                $this->db->from('user_details');
+                $this->db->where('key_name', $key_name);
+                $this->db->where('id !=', $id);
+                $query = $this->db->get();      
+            }else{
+                $this->db->select('key_name');
+                $this->db->from('user_details');
+                $this->db->where('key_name', $key_name);
+                $query = $this->db->get();
+            }
             if ($query->num_rows() > 0) {
                 return true;
             } else {
@@ -33,11 +63,26 @@ class User_Model extends CI_Model
     public function getAllMembers()
     {
         try {
-            $this->db->select('key_name, vImage, vName, email, vEducation, vPost, location');
+            $this->db->select('id, key_name, vImage, vName, email, vEducation, vPost, location');
             // $this->db->select('*');
             $this->db->from('user_details');
             $result = $this->db->get()->result_array();
             // print_r($result);
+            return $result;
+        } catch (Exception $e) {
+            echo "Error:" . $e;
+            return false;
+        }
+    }
+    public function getMemberDetails($id)
+    {
+        try {
+            $this->db->select('id, key_name, vImage, vName,vDesc, email, vEducation, vPost, location');
+            $this->db->from('user_details');
+            $this->db->where('id', $id);
+            $result = $this->db->get()->row_array();
+            // $result = $this->db->get()->result_array();
+           
             return $result;
         } catch (Exception $e) {
             echo "Error:" . $e;
