@@ -1,8 +1,7 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
-{
+class Welcome extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,7 +18,6 @@ class Welcome extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -27,16 +25,11 @@ class Welcome extends CI_Controller
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array("form_validation"));
 	}
+
 	public function welcome()
 	{
 		$this->load->view('welcome_message');
 	}
-	// public function getImage()
-	// {
-	// 	$result = $this->User_Model->getImgPath()['vImage'];
-	// 	echo json_encode($result);
-	// 	die();
-	// }
 	public function getAllMemberDetails()
 	{
 		$result = $this->User_Model->getAllMembers();
@@ -46,6 +39,7 @@ class Welcome extends CI_Controller
 
 	public function saveData()
 	{
+		//echo "<pre>"; print_r($this->input->post()); exit;
 		$this->form_validation->set_rules('name', 'Username', 'required');
 		$this->form_validation->set_rules('post', 'Designation', 'required');
 		$this->form_validation->set_rules('education', 'Password Confirmation', 'required');
@@ -53,65 +47,124 @@ class Welcome extends CI_Controller
 		// $this->form_validation->set_rules('image', 'Image', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			echo json_encode("false");
+			
+			$response['status'] = 200;
+			$response['msg'] = "false";
+			echo json_encode($response);
 			die();
 
 		} else {
+			
+			$empId = $this->input->post('emp_id');
 			$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
-			$key_result = $this->User_Model->checkDuplicate($key_name);
-			if ($key_result) {
-				echo json_encode("Name Already Exists");
-				die();
+			if (isset($empId) && !empty($empId)) {
+				$key_result = $this->User_Model->checkDuplicate($key_name, $empId);
 			} else {
-				if (isset($_FILES["image"])) {
-					$file = $_FILES["image"];
-					// $file_name = $file["name"];
-					$file_tmp = $file["tmp_name"];
-
-					// Specify the folder where you want to store the uploaded files
-					$upload_directory = "uploads/";
-
-					// Create the folder if it doesn't exist
-					if (!file_exists($upload_directory)) {
-						mkdir($upload_directory, 0777, true);
-					}
-					$file_name = $upload_directory . $file['name'];
-					if (move_uploaded_file($file_tmp, $file_name)) {
-						// $imageArr = explode("\\", $this->input->post('image'));
-						// $image = end($imageArr);
-
-						$data = [
-							'vName' => $this->input->post('name'),
-							'vPost' => $this->input->post('post'),
-							'vEducation' => $this->input->post('education'),
-							'vDesc' => '',
-							'vImage' => $file_name,
-							'key_name' => $key_name,
-						];
-						$result = $this->User_Model->saveUserData($data);
-						if ($result) {
-							echo json_encode('success');
-						} else {
-							echo json_encode('failed');
-						}
-						die();
-					} else {
-						echo json_encode('failed');
-						die();
-					}
-				}
-
+				$key_result = $this->User_Model->checkDuplicate($key_name);
 			}
+			if ($key_result) {
+				$response['status'] = 201;
+				$response['msg'] = "Name Already Exists";
+				echo json_encode($response);
+				die();
+			}
+			$data = array();
+			if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+				$file = $_FILES["image"];
+				$file_tmp = $file["tmp_name"];
+
+				$upload_directory = "uploads/";
+				if (!file_exists($upload_directory)) {
+					mkdir($upload_directory, 0777, true);
+				}
+				$file_name = $upload_directory . $file['name'];
+				move_uploaded_file($file_tmp, $file_name);
+				$data = [
+					'name' => $this->input->post('name'),
+					'designation' => $this->input->post('post'),
+					'education' => $this->input->post('education'),
+					'description' => $this->input->post('desc'),
+					'image' => $file_name,
+					'key_name' => $key_name,
+				];
+			} else {
+				$data = [
+					'name' => $this->input->post('name'),
+					'designation' => $this->input->post('post'),
+					'education' => $this->input->post('education'),
+					'description' => $this->input->post('desc'),
+					// 'vImage' => $file_name,
+					'key_name' => $key_name,
+				];
+			}
+			//print_r($empId); exit;
+			if (isset($empId) && !empty($empId)) {
+				$result = $this->User_Model->updateUserData($data, $empId);
+				$msg = "Your data has been Updated";
+			} else {
+				$result = $this->User_Model->savePartnerData($data);
+				$msg = "Your data has been saved";
+				// $response['msg'] = "Your data has been saved";
+			}
+			if ($result) {
+				$response['status'] = 200;
+				$response['msg'] = $msg;
+				echo json_encode($response);
+			} else {
+				$response['status'] = 201;
+				$response['msg'] = "failed";
+				echo json_encode($response);
+			}
+			die();
+
 		}
 
 	}
+
+	public function editMemberDetails()
+	{
+		// print_r($this->input->post());
+		// exit();
+		$id = 0;
+		if ($this->input->post()) {
+			$id = $this->input->post('id');
+		}
+		$result = $this->User_Model->getMemberDetails($id);
+		echo json_encode($result);
+		die();
+	}
+
+
+	public function deleteMember()
+	{
+		// $data = file_get_contents('php://input');
+		$empId = $this->input->post('emp_id');
+
+		if (isset($empId) && !empty($empId)) {
+			$result = $this->User_Model->deleteUserData($empId);
+			if ($result) {
+				$response['status'] = 200;
+				$response['msg'] = "Deleted Successfully!";
+				echo json_encode($response);
+			}else{
+				$response['status'] = 201;
+				$response['msg'] = "Something went wrong";
+				echo json_encode($response);
+			}
+		} else {
+			$response['status'] = 403;
+			$response['msg'] = "Invalid Request!";
+			echo json_encode($response);
+		}
+		die();
+	}
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->view('index.php');
 	}
-	public function addPartner()
+	public function rkca_addPartner()
 	{
-		$this->load->view('addPartner');
+		$this->load->view('rkca_addPartner');
 	}
 	public function Business_Analyst()
 	{
@@ -125,9 +178,9 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('Business_Restructuring');
 	}
-	public function businessSupportAndFinancialReporting()
+	public function BusinessSupportandFinancialReporting()
 	{
-		$this->load->view('businessSupportAndFinancialReporting');
+		$this->load->view('BusinessSupportandFinancialReporting');
 	}
 	public function careers()
 	{
@@ -235,13 +288,13 @@ class Welcome extends CI_Controller
 	}
 	public function contact_us_copy()
 	{
-		$this->load->view('contact_us copy');
+		$this->load->view('contact_us_copy');
 	}
 	public function contact_us()
 	{
 		$this->load->view('contact_us');
 	}
-	public function Cross_border_and_merchant_banking_services()
+	public function Crossborderandmerchantbankingservices()
 	{
 		$this->load->view('Crossborderandmerchantbankingservices');
 	}
@@ -405,5 +458,43 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('TeamAboutMe');
 	}
+	public function accounting_task_force()
+	{
+		$this->load->view('accounting_task_force');
+	}
+	public function work_list()
+	{
+		$this->load->view('work_list');
+	}
+	public function audit_task_force()
+	{
+		$this->load->view('audit_task_force');
+	}
+	public function legal_task_force()
+	{
+		$this->load->view('legal_task_force');
+	}
+	public function ma_task_force()
+	{
+		$this->load->view('ma_task_force');
+	}
+	public function tax_task_force()
+	{
+		$this->load->view('tax_task_force');
+	}
+	public function technology_task_force()
+	{
+		$this->load->view('technology_task_force');
+	}
+	public function women_leadership_group()
+	{
+		$this->load->view('women_leadership_group');
+	}
+	public function rkda_internship()
+	{
+		$this->load->view('rkda_internship');
+	}
+
 
 }
+?>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Ecovis</title>
-    <link rel="icon" href="<?= base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
-
+    <title>ECOVISRKDA - Ecovis</title>
+    <link rel="icon" href="<?= base_url()?>assets/images/ecovis_logoes/Ecovis_RKDA_logo_ball.png" type="image/icon type">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <style>
         .client_stories_details {
@@ -51,7 +51,7 @@
                 <!-- <img class="d-block w-100" src="<?=base_url()?>assets/ecovis-images/homepage_banner.jpg" style="height: 450px;" alt="First slide"> -->
                 <div class="carousel-caption ">
                     <div class="animate__animated animate__fadeInDown">
-                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem;" class="">RKCA INDIA</h1>
+                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem;" class="">RKDA INDIA</h1>
                         <h5 class="font-weight-normal">Aspires to be  largest Contributor of professional services for Startup ECOSYSTEM Member Firms</h5>
                         <a href="<?= base_url()?>welcome/ecovis_india"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">OUR OFFICES</button></a>
                     </div>
@@ -62,7 +62,7 @@
                 <!-- <img class="d-block w-100" src="<?=base_url()?>assets/ecovis-images/careers_banner.png" style="height: 450px;" alt="Second slide"> -->
                 <div class="carousel-caption ">
                     <div class="animate__animated animate__fadeInDown">
-                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent;">RKCA INDIA</h1>
+                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent;">RKDA INDIA</h1>
                         <h3 class="font-weight-normal">The people who intensify our Business</h3>
                         <a href="<?= base_url()?>welcome/team"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">OUR TEAM</button></a>
                     </div>
@@ -73,7 +73,7 @@
                 <!-- <img class="d-block w-100" src="<?=base_url()?>assets/ecovis-images/homepage_banner.jpg" style="height: 450px;" alt="First slide"> -->
                 <div class="carousel-caption ">
                     <div class="animate__animated animate__fadeInDown">
-                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKCA INDIA</h1>
+                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKDA INDIA</h1>
                         <h3 class="font-weight-normal">Build your future with us </h3>
                         <a href="<?= base_url()?>welcome/careers"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">CAREER PATHS</button></a>
                     </div>
@@ -84,7 +84,7 @@
                 <!-- <img class="d-block w-100" src="<?=base_url()?>assets/ecovis-images/homepage_banner.jpg" style="height: 450px;" alt="First slide"> -->
                 <div class="carousel-caption">
                     <div class="animate__animated animate__fadeInDown">
-                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKCA INDIA</h1>
+                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKDA INDIA</h1>
                         <!-- <h3 class="font-weight-normal">Network with us</h3> -->
                         <a href="<?= base_url()?>welcome/careers"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">LET'S CONNECT</button></a>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="carousel-caption ">
                     <div class="animate__animated animate__fadeInDown">
                         <img src="<?= base_url()?>assets/images/ecovis_logoes/Mentor_bi.png" class="w-25 mb-3 mt-4" style="min-width: 120px;" alt="">
-                        <!-- <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKCA  INDIA</h1> -->
+                        <!-- <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem; color:transparent">RKDA  INDIA</h1> -->
                         <h3 class="font-weight-normal">An initiative for Business Transformation</h3>
 
                         <!-- <p class="normalText">An initiative for Business Transformation</p> -->
@@ -133,8 +133,8 @@
                         <button class="dropdown-item services" id="" onclick="showDD('FormationCompanies', 'Formation')" type="button">Formation</button>
                         <button class="dropdown-item services" id="" onclick="showDD('RegistrationCompanies','Registration')" type="button">Registration</button>
                         <button class="dropdown-item services" id="" onclick="showDD('Closure_of_ConcernCompanies','Closure of Concern')" type="button">Closure of Concern</button>
-                        <a href="./Business_Restructuring.php" style="text-decoration: none;" ><button class="dropdown-item services" type="button">Business Restructuring</button></a>
-                        <a href="./Succession_Planning.php" style="text-decoration: none;"><button class="dropdown-item services" type="button">Succession Planning</button></a>
+                        <a href="<?= base_url()?>Business_Restructuring.php" style="text-decoration: none;" ><button class="dropdown-item services" type="button">Business Restructuring</button></a>
+                        <a href="<?= base_url()?>Succession_Planning.php" style="text-decoration: none;"><button class="dropdown-item services" type="button">Succession Planning</button></a>
                     </div>
                 </div>
             </div>
@@ -144,35 +144,35 @@
                         Select category
                     </button>
                     <div class="dropdown-menu w-100 baseofselectedService" id="FormationCompanies">
-                        <a href="./Private_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Private Limited Company</button></a>
-                        <a href="./Limited_Liability_Partnerships.php"  style="text-decoration: none;"><button class="dropdown-item" type="button">Limited Liability Partnerships</button></a>
-                        <a href="./One_Person_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">One Person Company (OPC)</button></a>
-                        <a href="./Proprietorship.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Proprietorship</button></a>
-                        <a href="./Partnership.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Partnership</button></a>
-                        <a href="./Nidhi_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Nidhi Company</button></a>
-                        <a href="./NGO_regestration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">NGO Registration</button></a>
-                        <a href="./Society_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Society Registration</button></a>
+                        <a href="<?= base_url()?>Private_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Private Limited Company</button></a>
+                        <a href="<?= base_url()?>Limited_Liability_Partnerships.php"  style="text-decoration: none;"><button class="dropdown-item" type="button">Limited Liability Partnerships</button></a>
+                        <a href="<?= base_url()?>One_Person_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">One Person Company (OPC)</button></a>
+                        <a href="<?= base_url()?>Proprietorship.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Proprietorship</button></a>
+                        <a href="<?= base_url()?>Partnership.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Partnership</button></a>
+                        <a href="<?= base_url()?>Nidhi_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Nidhi Company</button></a>
+                        <a href="<?= base_url()?>NGO_regestration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">NGO Registration</button></a>
+                        <a href="<?= base_url()?>Society_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Society Registration</button></a>
 
                     </div>
                     <div class="dropdown-menu w-100 baseofselectedService" id="RegistrationCompanies">
                       
 
-                        <a href="./Professional_Tax_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">PTR</button></a>
-                        <a href="./GST.php" style="text-decoration: none;"><button class="dropdown-item" type="button">GST Registration</button></a>
-                        <a href="./epf_registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">EPF Registration</button></a>
-                        <a href="./ESI.php" style="text-decoration: none;"><button class="dropdown-item" type="button">ESI Registration</button></a>
-                        <a href="./PAN.php" style="text-decoration: none;"><button class="dropdown-item" type="button">PAN Application</button></a>
-                        <a href="./Digital_Signature_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Digital Signature Registration</button></a>
-                        <a href="./TAN.php" style="text-decoration: none;"><button class="dropdown-item" type="button">TAN</button></a>
+                        <a href="<?= base_url()?>Professional_Tax_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">PTR</button></a>
+                        <a href="<?= base_url()?>GST.php" style="text-decoration: none;"><button class="dropdown-item" type="button">GST Registration</button></a>
+                        <a href="<?= base_url()?>epf_registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">EPF Registration</button></a>
+                        <a href="<?= base_url()?>ESI.php" style="text-decoration: none;"><button class="dropdown-item" type="button">ESI Registration</button></a>
+                        <a href="<?= base_url()?>PAN.php" style="text-decoration: none;"><button class="dropdown-item" type="button">PAN Application</button></a>
+                        <a href="<?= base_url()?>Digital_Signature_Registration.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Digital Signature Registration</button></a>
+                        <a href="<?= base_url()?>TAN.php" style="text-decoration: none;"><button class="dropdown-item" type="button">TAN</button></a>
                         
                     </div>
                     <div class="dropdown-menu w-100 baseofselectedService" id="Closure_of_ConcernCompanies">
-                        <a href="./Close_Your_Public_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Close Your Public Limited Company</button></a>
-                        <a href="./Closing_a_One_Person_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a One Person Company</button></a>
-                        <a href="./Closing_a_Partnership.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Partnership</button></a>
-                        <a href="./Closing_a_Proprietorship.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Proprietorship</button></a>
-                        <a href="./Closing_a_Nidhi_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Nidhi Company</button></a>
-                        <a href="./Closing_a_Private_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Private Limited Company</button></a>
+                        <a href="<?= base_url()?>Close_Your_Public_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Close Your Public Limited Company</button></a>
+                        <a href="<?= base_url()?>Closing_a_One_Person_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a One Person Company</button></a>
+                        <a href="<?= base_url()?>Closing_a_Partnership.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Partnership</button></a>
+                        <a href="<?= base_url()?>Closing_a_Proprietorship.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Proprietorship</button></a>
+                        <a href="<?= base_url()?>Closing_a_Nidhi_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Nidhi Company</button></a>
+                        <a href="<?= base_url()?>Closing_a_Private_Limited_Company.php" style="text-decoration: none;"><button class="dropdown-item" type="button">Closing a Private Limited Company</button></a>
                         
                     </div>
                 </div>
@@ -182,140 +182,110 @@
 
 
     <!-- offering services  -->
-    <div class="my-5">
+    <!-- <div class="my-5">
         <h2 class="text-center ">Services offered by our experts at Ecovis</h2>
+
+    </div> -->
+    <div id="glance-div">
+    <div class="my-5 ">
+        <h2 class="text-center ">Practice Area At Glance</h2>
 
     </div>
     <div class="row mx-0 justify-content-center">
-        <div class="col-lg-10 col-sm-11">
-            <div class="row mx-0 mb-4">
+        <div class="col-lg-12 col-sm-11">
+            <div class="row mx-0 justify-content-around">
 
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Strategy_Performance_Consulting_services" class="text-dark" style="text-decoration: none;">
+                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn ">
+                    <a href="<?= base_url()?>LitigationLegalServices" class="text-dark" style="text-decoration: none;">
                         <div class="text-center">
-                            <div class="mx-auto service_icons  ">
-                                <div class=" w-75 mx-auto services_logo Strategy_Performance_Consulting_logo "></div>
-                                <!-- <img src="<?=base_url()?>assets/ecovis_icons/Assurance.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading">Strategy & Performance Consulting </h4>
-                            <p class="offeringservicesdetails">Giving you the certainty to drive open and straightforward development.</p>
-                        </div>
-                    </a>
+                            <div class="mx-auto service_icons"  style="width:70px">
+                                <!-- <div class=" w-75 mx-auto services_logo Legalb_logo"></div> -->
 
-                </div>
-                <!-- <div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="text-center">
-        <div class="mx-auto service_icons">
-            <img src="<?=base_url()?>assets/ecovis_icons/Assurance.png" class="w-75" alt="">
-        </div>
-        <h4 class="offeringservicesHeading">Strategy & Performance Consulting </h4>
-        <p class="offeringservicesdetails">Giving you the certainty to drive open and straightforward development</p>
-    </div>
-</div> -->
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Onshore_Offshore_Advisory" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto Onshoreb_logo services_logo"></div>
-                                <!-- <img src="<?=base_url()?>assets/ecovis_icons/TAXATION-removebg.png" class="w-75" alt=""> -->
+                                <img src="<?= base_url()?>assets/new_icon_images/Legalb.png" class="index-service-logo"  style="width:inherit" alt="">
                             </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Onshore & Offshore advisory</h4>
-                            <p class="offeringservicesdetails">Ecovis has experience offering both onshore and offshore advisory services.</p>
+                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Legal and GRC Services
+                            </h4>
+                            <p class="offeringservicesdetails">We create a platform to offer you legal services and
+                                consultancy.</p>
                         </div>
                     </a>
 
 
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Government_risk_compliance" class="text-dark" style="text-decoration: none;">
+
+                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn ">
+                    <a href="<?= base_url()?>BusinessSupportandFinancialReporting" class="text-dark" style="text-decoration: none;">
                         <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto Risk_Compliance_logo services_logo"></div>
-                                <!-- <img src="<?=base_url()?>assets/new_icon_images/Governanceb_black.png" class="w-75" alt=""> -->
+                            <div class="mx-auto service_icons"  style="width:70px">
+                                <!-- <div class=" w-75 mx-auto businessSupport_logo services_logo"></div> -->
+                                <img src="<?= base_url()?>assets/new_icon_images/BusinessSupportb.png" class="index-service-logo"  style="width:inherit" alt="">
                             </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Governance risk & compliance</h4>
-                            <p class="offeringservicesdetails">We prepare organizations for any unexpected challenges.</p>
-                        </div>
-                    </a>
-
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/BusinessSupportandFinancialReporting" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto businessSupport_logo services_logo"></div>
-                                <!-- <img src="<?=base_url()?>assets/new_icon_images/BusinessSupportb.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Business support & financial Reporting</h4>
-                            <p class="offeringservicesdetails">Offering accounting business support to grow your business.</p>
-                        </div>
-                    </a>
-
-                </div>
-                <!-- 
-</div>
-<div class="row mx-0"> -->
-
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/LitigationLegalServices" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto services_logo Legalb_logo"></div>
-
-                                <!-- <img src="<?=base_url()?>assets/new_icon_images/Legalb.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Legal & Litigation Services</h4>
-                            <p class="offeringservicesdetails">We create a platform to offer you legal services and consultancy.</p>
-                        </div>
-                    </a>
-
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Financial_and_Capital_Services" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto services_logo financial_capital_Services"></div>
-
-                                <!-- <img src="<?=base_url()?>assets/ecovis_icons/Growth-Services.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Financial & Capital Services </h4>
-                            <p class="offeringservicesdetails">We want to build a long-term value in the financial services business by transforming it from the ground up.</p>
-                        </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Digital_transformation" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto Digital_Transformationb_logo services_logo"></div>
-
-                                <!-- <img src="<?=base_url()?>assets/new_icon_images/Digital_Transformationb.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Digital Transformation</h4>
-                            <p class="offeringservicesdetails">Transform and foster your business digitally using our digital transformation services.</p>
-                        </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn">
-                    <a href="<?= base_url()?>welcome/Crossborderandmerchantbankingservices" class="text-dark" style="text-decoration: none;">
-                        <div class="text-center">
-                            <div class="mx-auto service_icons">
-                                <div class=" w-75 mx-auto Capacityb_logo services_logo"></div>
-
-                                <!-- <img src="<?=base_url()?>assets/new_icon_images/Capacityb.png" class="w-75" alt=""> -->
-                            </div>
-                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Cross border & merchant banking advice</h4>
-                            <p class="offeringservicesdetails">Capacity and Capability building is becoming one of the fundamental responsibilities, and it is evolving into a high-quality service.</p>
+                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Business Support and
+                                Financial Reporting</h4>
+                            <p class="offeringservicesdetails">Offering accounting business support to grow your
+                                business.</p>
                         </div>
                     </a>
 
                 </div>
             </div>
+
+            <div class="row mx-0 justify-content-around">
+
+                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn ">
+                    <a href="<?= base_url()?>Strategy_Performance_Consulting_services" class="text-dark"
+                        style="text-decoration: none;">
+                        <div class="text-center">
+                            <div class="mx-auto service_icons  ">
+                                <!-- <div class=" w-75 mx-auto services_logo Strategy_Performance_Consulting_logo "></div> -->
+                                <img src="<?= base_url()?>assets/ecovis_icons/Assurance.png" class="index-service-logo"  style="width:inherit" alt="">
+                            </div>
+                            <h4 class="offeringservicesHeading primaryHeading">Strategy & Performance Consulting </h4>
+                            <p class="offeringservicesdetails">Giving you the certainty to drive open and
+                                straightforward development.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="row mx-0  justify-content-around">
+                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn ">
+                    <a href="<?= base_url()?>Digital_transformation" class="text-dark" style="text-decoration: none;">
+                        <div class="text-center">
+                            <div class="mx-auto service_icons"  style="width:70px">
+                                <!-- <div class=" w-75 mx-auto Digital_Transformationb_logo services_logo"></div> -->
+
+                                <img src="<?= base_url()?>assets/new_icon_images/Digital_Transformationb.png" class="index-service-logo"  style="width:inherit"
+                                    alt="">
+                            </div>
+                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Digital Transformation
+                            </h4>
+                            <p class="offeringservicesdetails">Transform and foster your business digitally using our
+                                digital transformation services.</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn ">
+                    <a href="<?= base_url()?>Financial_and_Capital_Services" class="text-dark" style="text-decoration: none;">
+                        <div class="text-center">
+                            <div class="mx-auto service_icons"  style="width:70px">
+                                <!-- <div class=" w-75 mx-auto services_logo financial_capital_Services"></div> -->
+
+                                <img src="<?= base_url()?>assets/ecovis_icons/Growth-Services.png" class="index-service-logo"  style="width:inherit" alt="">
+                            </div>
+                            <h4 class="offeringservicesHeading primaryHeading text-capitalize">Financial & Capital
+                                Services </h4>
+                            <p class="offeringservicesdetails">We want to build a long-term value in the financial
+                                services business by transforming it from the ground up.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
         </div>
+    </div>
     </div>
 
 
@@ -327,7 +297,7 @@
             <div class="col-md-10">
                 <div class="row justify-content-around">
                     <div class="col-md-4 col-lg-3 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/Assurance.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -336,7 +306,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/TAXATION-removebg.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -347,7 +317,7 @@
 
                     </div>
                     <div class="col-md-3 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/RISK COMPLIANCE.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -359,7 +329,7 @@
 
                     </div>
                     <div class="col-md-3 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/Business-Support.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -378,7 +348,7 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/LEgal-Support.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -389,7 +359,7 @@
 
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/Growth-Services.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
@@ -400,7 +370,7 @@
 
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons">
+                        <div class="align-items-center border d-flex justify-content-around mx-auto service_icons"  style="width:70px">
                             <img src="<?=base_url()?>assets/ecovis icons/Digital-Transformation.png" class="w-75" alt="">
                         </div>
                         <a href="#" style="text-decoration:none" class="text-dark">
