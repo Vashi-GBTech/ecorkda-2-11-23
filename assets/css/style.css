@@ -19,7 +19,7 @@
 .normalText {
     font-size: var(--secondry_font_size);
     font-weight: var(--box_normal_text);
-    font-family:cursive;
+    font-family:Meta Offc W01 Normal, Arial, Helvetica, sans-serif;
     color: #cd1432;
 }
 

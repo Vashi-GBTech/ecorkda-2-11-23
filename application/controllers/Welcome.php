@@ -494,6 +494,75 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('rkda_internship');
 	}
+	public function qty_dev_board()
+	{
+		$this->load->view('qty_dev_board');
+	}
+	public function essentials()
+	{
+		$this->load->view('essentials');
+	}
+	public function qty_standards()
+	{
+		$this->load->view('qty_standards');
+	}
+	public function qty_monitoring()
+	{
+		$this->load->view('qty_monitoring');
+	}
+	public function siir()
+	{
+		$this->load->view('siir');
+	}
+	public function service_portfolio()
+	{
+		$this->load->view('service_portfolio');
+	}
+	public function audit()
+	{
+		$this->load->view('audit');
+	}
+	public function tax_accounting()
+	{
+		$this->load->view('tax_accounting');
+	}
+	public function transfer_pricing()
+	{
+		$this->load->view('transfer_pricing');
+	}
+	public function IT_instructions()
+	{
+		$this->load->view('IT_instructions');
+	}
+	public function independent_std()
+	{
+		$this->load->view('independent_std');
+	}
+	public function member_firms()
+	{
+		$this->load->view('member_firms');
+	}
+	public function faq_new_partner()
+	{
+		$this->load->view('faq_new_partner');
+	}
+
+	public function expansion_plan()
+	{
+		$this->load->view('expansion_plan');
+	}
+	public function info_new_partners()
+	{
+		$this->load->view('info_new_partners');
+	}
+	public function integration_checklist()
+	{
+		$this->load->view('integration_checklist');
+	}
+	public function first_steps_checklist()
+	{
+		$this->load->view('first_steps_checklist');
+	}
 
 
 }
