@@ -136,5 +136,21 @@ $route['tax_task_force'] = 'welcome/tax_task_force';
 $route['technology_task_force'] = 'welcome/technology_task_force';
 $route['women_leadership_group'] = 'welcome/women_leadership_group';
 $route['rkda_internship'] = 'welcome/rkda_internship';
-
+$route['qty_dev_board'] = 'welcome/qty_dev_board';
+$route['essentials'] = 'welcome/essentials';
+$route['qty_standards'] = 'welcome/qty_standards';
+$route['qty_monitoring'] = 'welcome/qty_monitoring';
+$route['siir'] = 'welcome/siir';
+$route['service_portfolio'] = 'welcome/service_portfolio';
+$route['audit'] = 'welcome/audit';
+$route['tax_accounting'] = 'welcome/tax_accounting';
+$route['transfer_pricing'] = 'welcome/transfer_pricing';
+$route['IT_instructions'] = 'welcome/IT_instructions';
+$route['independent_std'] = 'welcome/independent_std';
+$route['member_firms'] = 'welcome/member_firms';
+$route['faq_new_partner'] = 'welcome/faq_new_partner';
+$route['expansion_plan'] = 'welcome/expansion_plan';
+$route['info_new_partners'] = 'welcome/info_new_partners';
+$route['integration_checklist'] = 'welcome/integration_checklist';
+$route['first_steps_checklist'] = 'welcome/first_steps_checklist';
 

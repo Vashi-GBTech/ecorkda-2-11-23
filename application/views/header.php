@@ -126,20 +126,10 @@
         float: right;
         margin-right: 5px;
         /* transition: transform 0.3s ease; */
-        */
-        /* display: inline-block;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid #000;
-    margin-left: 5px;
-    transition: transform 0.3s ease; */
+      
     }
 
-    /* .opened .expand {
-    transform: rotate(180deg);
-} */
+ 
     .parent:hover .expand {
         transform: rotate(-180deg);
         transition: transform 0.3s ease;
@@ -164,16 +154,16 @@
         width: 5px;
     }
 
-    /* For scrollbar track */
+
     ::-webkit-scrollbar-track {
         background: #f1f1f1;
-        /* You can change the color */
+      
     }
 
-    /* For scrollbar handle or thumb */
+
     ::-webkit-scrollbar-thumb {
         background: crimson;
-        /* You can change the color */
+    
     }
 </style>
 
@@ -209,7 +199,7 @@
                         <a href="#">
                             <li id="" class="">Home</li>
                         </a>
-                        <a href="#" id="about_us_link">
+                        <a href="#" id="about_us_link" title="Please Click">
                             <li id="about_us" class="about_us">About Us <i class="fas fa-chevron-down"
                                     style='font-size:12px'></i></li>
                         </a>
@@ -241,16 +231,16 @@
                         <li class="parent" id="why-us"><a href="#" class='parent-li'>Why Us<span class="expand"><i
                                         class="fas fa-chevron-down"></i></span></a>
                             <ul class="child">
-                                <li><a href="#">Quality Development Board</a></li>
-                                <li><a href="#">Essentials</a></li>
-                                <li><a href="#">Quality Standards</a></li>
-                                <li><a href="#">Quality Monitoring</a></li>
-                                <li><a href="#">Self-Inspection & Interoffice Review</a></li>
-                                <li><a href="#">Service Portfolio</a></li>
-                                <li><a href="#">Technical Standards</a></li>
+                                <li ><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
+                                <li><a href="<?= base_url() ?>essentials">Essentials</a></li>
+                                <li><a href="<?= base_url() ?>qty_standards">Quality Standards</a></li>
+                                <li><a href="<?= base_url() ?>qty_monitoring">Quality Monitoring</a></li>
+                                <li><a href="<?= base_url() ?>siir">Self-Inspection & Interoffice Review</a></li>
+                                <li><a href="<?= base_url() ?>service_portfolio">Service Portfolio</a></li>
+                                <!-- <li><a href="technical_standards">Technical Standards</a></li> -->
                             </ul>
                         </li>
-                        <a href="#" id="services_link">
+                        <a href="#" id="services_link"  title="Please Click">
                             <li id="services">Our Services <i class="fas fa-chevron-down" style='font-size:12px'></i>
                             </li>
                         </a>
@@ -275,11 +265,11 @@
                         <li class="parent" id="membership"><a href="#" class='parent-li'>Membership<span
                                     class="expand"><i class="fas fa-chevron-down"></i></span></a>
                             <ul class="child membership">
-                                <li><a href="#">FAQ (New Partner)</a></li>
-                                <li><a href="#">Expansion Plan</a></li>
-                                <li><a href="#">Information about New Partners</a></li>
-                                <li><a href="#">Integration Checklist</a></li>
-                                <li><a href="#">First Steps Checklist</a></li>
+                                <li><a href="<?= base_url() ?>faq_new_partner">FAQ (New Partner)</a></li>
+                                <li><a href="<?= base_url() ?>expansion_plan">Expansion Plan</a></li>
+                                <li><a href="<?= base_url() ?>info_new_partners">Information about New Partners</a></li>
+                                <li><a href="<?= base_url() ?>integration_checklist">Integration Checklist</a></li>
+                                <li><a href="<?= base_url() ?>first_steps_checklist">First Steps Checklist</a></li>
 
                             </ul>
                         </li>
