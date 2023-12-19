@@ -37,7 +37,7 @@
         }
 
         .primaryHeading {
-            height: 85px !important;
+            /* height: 85px !important; */
             display: block;
             display: -webkit-box;
             -webkit-line-clamp: 3;

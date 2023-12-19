@@ -563,6 +563,18 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('first_steps_checklist');
 	}
+	public function firm_details()
+	{
+		$this->load->view('firm_details');
+	}
+	public function partner_meetings()
+	{
+		$this->load->view('partner_meetings');
+	}
+	public function firms()
+	{
+		$this->load->view('firms');
+	}
 
 
 }

@@ -153,7 +153,11 @@ button:focus, button:active, button:hover{
     height: 100px;
     border-radius: 50%;
 }
-
+.menu li{
+    font-family: "MetaCompPro-Bold W01 Regular",Arial,Helvetica,sans-serif !important;
+    word-wrap: break-word;
+    font-weight: 600;
+}
 .header_connectBTN {
     background-color: transparent;
     border: 2px solid whitesmoke;
@@ -839,7 +843,7 @@ input:focus,select:focus{
     outline: none;
 }
 .ourTeamDropDowndiv ::placeholder{
-    color: white;
+    color: darkgray;
     font-size: 13px;
 }
 select{
@@ -860,7 +864,53 @@ select{
 .change-img-filter:hover{
     filter:unset;
 }
+.teamMets h2{
+    word-wrap: break-word;
+    color: #222;
+    /* padding-bottom: 1rem; */
+    font-family: "MetaCompPro-Bold W01 Regular",Arial,Helvetica,sans-serif !important;
+    font-weight: 600;
+}
+.teamMets .city_link{
 
+    color: #000;
+    /* text-decoration: black 1px solid !important ; */
+}
+.city-icons{
+    width: 150px;
+    height: 80px;
+
+}
+.city-name-div-new,.city-img-div-new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city-name-div-new{
+    padding: 10px 0px;
+}
+.teams-underline{
+    
+    height: 5px;
+    background-color: #cd1432;
+    border-radius: 2px;
+}
+.teams-underline-div{
+   
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: right; */
+        top: -5px;
+        position: relative;
+}
+.pole-name-div{
+    margin-bottom: 1.5rem;
+}
+
+.textAlignEnd{
+    text-align: end;
+}
 /* team about me pages */
 
 
@@ -956,3 +1006,36 @@ filter: brightness(1);
 .internship-pt-ul li a{
     color: #cd1432;
 }
+
+
+/* geographical locations */
+
+.country-icons{
+    width: 40px;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+/* partner meetings */
+.ipm-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.margin-right{
+    margin-right: 10px;
+}
+.ipm-div , .ipm-div:hover{
+  text-decoration: none !important;
+  color:#000
+}
+
+.ipm-img {
+    width: 100px;
+    border: 1px solid #bebdbd;
+    height:80px
+}
+.bg-gray-ipm{
+    background-color: lightgray;
+}
+

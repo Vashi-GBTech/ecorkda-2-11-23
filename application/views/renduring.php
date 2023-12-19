@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Rendurring</title>
+    <title>RKDA - Rendurring</title>
     <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
 
 </head>
@@ -25,7 +25,7 @@
         </div>
         <div class="">
             <p class="primaryHeading text-justify w-75 mx-auto px-3 position-relative" style="top: -40px;">KEO Films, which had recently won a contract to make an Australian adaptation of a UK TV series, was put in
-                touch with Ecovis Sydney in November 2012 because they needed to establish their imprint quickly, before
+                touch with RKDA Sydney in November 2012 because they needed to establish their imprint quickly, before
                 Christmas!
 
             </p>
@@ -107,7 +107,7 @@
                             <p class="ml-3 pl-4" style=" font-size: var(--secondry_font_size);">
                                 David Conley, Director,
 
-                                ECOVIS Clarc Jacobs, Sydney, Australia
+                                RKDA Clarc Jacobs, Sydney, Australia
 
                                 david.conley@ecovis.com.au
 

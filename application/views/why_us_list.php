@@ -19,10 +19,10 @@
 
 <body>
     <div class="container-fluid p-3 mb-5" style="background-color:rgb(238,238,238)">
-        <h6 class='mb-0'>Working together</h6>
+        <h6 class='mb-0'>Quality Management</h6>
         <ul class='work-list-ul'>
             <li id="qty_dev_board"><a href="<?= base_url() ?>qty_dev_board" class="wl-link-color">Quality Development Board</a></li>
-            <li id="essentials"><a href="<?= base_url() ?>essentials" class="wl-link-color">Essentials</a></li>
+            <li id="essentials"><a href="<?= base_url() ?>essentials" class="wl-link-color">Membership Process</a></li>
             <li id="qty_standards"><a href="<?= base_url() ?>qty_standards" class="wl-link-color">Quality Standards</a>
            <ul class='pl-3'>
            <li id="independent_std"><a href="<?= base_url() ?>independent_std" class="wl-link-color">Independence Standard</a></li>

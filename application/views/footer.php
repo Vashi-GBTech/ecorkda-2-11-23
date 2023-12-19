@@ -13,7 +13,7 @@
         <div class="align-items-center pt-4 mx-0 row">
             <div class="col-md-2">
                 <ul>
-                   <a href="<?=base_url()?>welcome/index "> <li> <img src="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_reverse.png" style="width: 75%; max-width:130px" alt=""></li></a>
+                   <a href="<?=base_url()?>welcome/index "> <li> <img src="<?=base_url()?>assets/images/ecovis_logoes/rkda.png" style="width: 75%; max-width:130px" alt=""></li></a>
                 </ul>
                
             </div>
@@ -32,8 +32,8 @@
             <div class="col-md-2">
                 <div class="AboutUs">
                     <ul class="font-italic">
-                        <a href="<?=base_url()?>welcome/ecovis_india"><li>Ecovis India</li></a>
-                        <a href="<?=base_url()?>welcome/ecovis_International "><li>Ecovis International </li></a>
+                        <a href="<?=base_url()?>welcome/ecovis_india"><li>Rkda India</li></a>
+                        <a href="<?=base_url()?>welcome/ecovis_International "><li>Rkda International </li></a>
                     </ul>
                 </div>
             </div>
@@ -41,20 +41,20 @@
                 <div class="Services">
                     <ul  class="font-italic">
                         <a href="<?=base_url()?>welcome/Strategy_Performance_Consulting_services"><li>Strategy & Perfomance Consulting</li></a>
-                        <a href="<?=base_url()?>welcome/Onshore_Offshore_Advisory "><li>Onshore & Offshore Advisory</li></a>
-                        <a href="<?=base_url()?>welcome/Government_risk_compliance "> <li>Governance Risk & Compliance</li></a>
+                        <!-- <a href="<?=base_url()?>welcome/Onshore_Offshore_Advisory "><li>Onshore & Offshore Advisory</li></a> -->
+                        <!-- <a href="<?=base_url()?>welcome/Government_risk_compliance "> <li>Governance Risk & Compliance</li></a> -->
                         <a href="<?=base_url()?>welcome/BusinessSupportandFinancialReporting "> <li>Business Support & Financial Reporting</li></a>
-                        <a href="<?=base_url()?>welcome/LitigationLegalServices "><li>Litigation & Legal Services</li></a>
+                        <a href="<?=base_url()?>welcome/LitigationLegalServices "><li>Legal & GRC Services</li></a>
                         <a href="<?=base_url()?>welcome/Financial_and_Capital_Services "><li>Financial & Capital Services</li></a>
                         <a href="<?=base_url()?>welcome/Digital_transformation "><li>Digital Transformation</li></a>
-                        <a href="<?=base_url()?>welcome/Crossborderandmerchantbankingservices "><li>Cross Border & Merchant Banking Advice</li></a>
+                        <!-- <a href="<?=base_url()?>welcome/Crossborderandmerchantbankingservices "><li>Cross Border & Merchant Banking Advice</li></a> -->
                     </ul>
                 </div>
             </div>
             <div class="col-md-1 ">
                 <div class="Collaboration">
                     <ul  class="font-italic pl-0">
-                        <a href="<?=base_url()?>welcome/collabration "><li>Collaboration</li></a>
+                        <a href="<?=base_url()?>collaborate"><li>Collaboration</li></a>
                         <a href="<?=base_url()?>welcome/client_stories "><li>Client Stories</li></a>
                     </ul>
                 </div>
@@ -100,17 +100,17 @@
                         <a href="<?=base_url()?>welcome./Strategy_Performance_Consulting_services ">
                             <li>Strategy & Perfomance Consulting</li>
                         </a>
-                        <a href="<?=base_url()?>welcome/Onshore_Offshore_Advisory ">
+                        <!-- <a href="<?=base_url()?>welcome/Onshore_Offshore_Advisory ">
                             <li>Onshore & Offshore Advisory</li>
-                        </a>
-                        <a href="<?=base_url()?>welcome/Government_risk_compliance ">
+                        </a> -->
+                        <!-- <a href="<?=base_url()?>welcome/Government_risk_compliance ">
                             <li>Governance Risk & Compliance</li>
-                        </a>
+                        </a> -->
                         <a href="<?=base_url()?>welcome/BusinessSupportandFinancialReporting ">
                             <li>Business Support & Financial Reporting</li>
                         </a>
                         <a href="<?=base_url()?>welcome/LitigationLegalServices ">
-                            <li>Litigation & Legal Services</li>
+                            <li>Legal & GRC Services</li>
                         </a>
                         <a href="<?=base_url()?>welcome/Financial_and_Capital_Services ">
                             <li>Financial & Capital Services</li>
@@ -118,9 +118,9 @@
                         <a href="<?=base_url()?>welcome/Digital_transformation ">
                             <li>Digital Transformation</li>
                         </a>
-                        <a href="<?=base_url()?>welcome/Crossborderandmerchantbankingservices ">
+                        <!-- <a href="<?=base_url()?>welcome/Crossborderandmerchantbankingservices ">
                             <li>Cross Border & Merchant Banking Advice</li>
-                        </a>
+                        </a> -->
                     </ul>
                 </div>
             </div>
@@ -132,12 +132,12 @@
                     <div class="AboutUs w-50">
                         <ul class="font-italic">
                             <a href="<?=base_url()?>welcome/ecovis_india ">
-                                <li>Ecovis India</li>
+                                <li>Rkda India</li>
                             </a>
                             <a href="<?=base_url()?>welcome/ecovis_International ">
-                                <li>Ecovis International </li>
+                                <li>Rkda International </li>
                             </a>
-                            <a href="<?=base_url()?>welcome/collabration ">
+                            <a href="<?=base_url()?>collaborate">
                                 <li>Collaboration</li>
                             </a>
                         </ul>
@@ -195,8 +195,8 @@
         <div class="AboutUs">
             <ul>
                 <li class="font-weight-bold">About Us</li>
-                <li>Ecovis India</li>
-                <li>Ecovis International </li>
+                <li>Rkda India</li>
+                <li>Rkda International </li>
             </ul>
         </div>
         <div class="Services">
@@ -245,10 +245,10 @@
                                 <h4>About Us</h4>
                             </li><br>
                             <a href="#">
-                                <li>Ecovis India</li>
+                                <li>Rkda India</li>
                             </a>
                             <a href="#">
-                                <li>Ecovis International</li>
+                                <li>Rkda International</li>
                             </a>
                         </ul>
                     </div>
