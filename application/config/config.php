@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
  $config['base_url'] = 'http://ecorkda.ecovisrkca.com';
-//$config['base_url'] = 'http://localhost/ecorkda';
+// $config['base_url'] = 'http://localhost/ecorkda';
 
 /*
 |--------------------------------------------------------------------------

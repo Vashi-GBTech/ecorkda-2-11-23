@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOVISRKDA - Ecovis</title>
-    <link rel="icon" href="<?= base_url()?>assets/images/ecovis_logoes/Ecovis_RKDA_logo_ball.png" type="image/icon type">
+    <link rel="icon" href="<?= base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <style>
@@ -51,9 +51,10 @@
                 <!-- <img class="d-block w-100" src="<?=base_url()?>assets/ecovis-images/homepage_banner.jpg" style="height: 450px;" alt="First slide"> -->
                 <div class="carousel-caption ">
                     <div class="animate__animated animate__fadeInDown">
-                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 2.5rem;" class="">RKDA INDIA</h1>
-                        <h5 class="font-weight-normal">Aspires to be  largest Contributor of professional services for Startup ECOSYSTEM Member Firms</h5>
-                        <a href="<?= base_url()?>welcome/ecovis_india"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">OUR OFFICES</button></a>
+                        <h1 style="font-family: 'Libre Baskerville', serif; font-size: 3.5rem;" class="">RKDA INDIA</h1>
+                       <div class="d-flex justify-content-center"><h6 class="font-weight-normal w-50">Aspires to be  largest Contributor of professional services for Startup ECOSYSTEM Member Firms</h6>
+                       </div> 
+                        <a href="<?= base_url()?>welcome/ecovis_india"> <button class="btn text-light mt-5" style="border: 2px solid whitesmoke; background-color: transparent;">Our Firms</button></a>
                     </div>
                 </div>
             </div>

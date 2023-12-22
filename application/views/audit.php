@@ -30,12 +30,12 @@
             <tbody>
               <tr>
                 <td width="50px">1.</td>
-                <td><strong>Ecovis General Audit Standards</strong>
+                <td><strong>RKDA General Audit Standards</strong>
                   <p></p>
                   <ul  class="internship-pt-ul p-0">
                     <li>1.1 <a
                         href="https://www.ecovis.com/intranet/global/wp-content/uploads/2021/04/Independence_Procedures.pdf"
-                        target="_blank" rel="noopener noreferrer">Ecovis Independence Procedure</a></li>
+                        target="_blank" rel="noopener noreferrer">RKDA Independence Procedure</a></li>
                     <li>1.2 <a
                         href="https://www.ecovis.com/intranet/global/wp-content/uploads/2021/04/Independence_threats_and_safeguarding.pdf"
                         target="_blank" rel="noopener noreferrer">Independence Threats and Safeguarding</a></li>
@@ -44,12 +44,12 @@
               </tr>
               <tr>
                 <td>2.</td>
-                <td><strong>ECOVIS Audit Approach</strong>
+                <td><strong>RKDA Audit Approach</strong>
                   <p></p>
                   <ul class="internship-pt-ul  p-0">
                     <li>2.1 <a
                         href="https://www.ecovis.com/intranet/global/wp-content/uploads/2020/06/ECOVIS-Audit-guideline-v.20122017.xlsx"
-                        target="_blank" rel="noopener noreferrer">ECOVIS Audit guideline</a></li>
+                        target="_blank" rel="noopener noreferrer">RKDA Audit guideline</a></li>
                   </ul>
                 </td>
               </tr>

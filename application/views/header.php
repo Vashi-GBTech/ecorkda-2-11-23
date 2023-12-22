@@ -126,10 +126,10 @@
         float: right;
         margin-right: 5px;
         /* transition: transform 0.3s ease; */
-      
+
     }
 
- 
+
     .parent:hover .expand {
         transform: rotate(-180deg);
         transition: transform 0.3s ease;
@@ -157,13 +157,17 @@
 
     ::-webkit-scrollbar-track {
         background: #f1f1f1;
-      
+
     }
 
 
     ::-webkit-scrollbar-thumb {
         background: crimson;
-    
+
+    }
+
+    .parent-li.underlineNav {
+        text-decoration: underline;
     }
 </style>
 
@@ -181,10 +185,9 @@
             </div>
             <div class="align-items-center col-md-12 d-flex justify-content-between main-header">
                 <div class="logo py-2 text-center">
-                    <a href="<?= base_url() ?>welcome/index"><img
-                            src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="" id="img1"></a>
-                    <a href="<?= base_url() ?>welcome/index"><img
-                            src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt=""
+                    <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="img"
+                            id="img1"></a>
+                    <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="logo"
                             class="cssanimation fadeInBottom" style="display:none; align-items:end;" id="img2"></a>
                 </div>
                 <div style="display:none;" class="w-50" id="searchbar_section">
@@ -196,8 +199,8 @@
                 </div>
                 <div id="menu" class="menu" style="width: 60%; z-index:50;">
                     <ul class="d-flex mb-0 justify-content-around list-unstyled align-items-center">
-                        <a href="#">
-                            <li id="" class="">Home</li>
+                        <a href="<?= base_url() ?>">
+                            <li id="home" class="">Home</li>
                         </a>
                         <a href="#" id="about_us_link" title="Please Click">
                             <li id="about_us" class="about_us">About Us <i class="fas fa-chevron-down"
@@ -206,19 +209,20 @@
                         <!-- <a href="<?= base_url() ?>welcome/client_stories">
                             <li>Governance</li>
                         </a> -->
-                        <li class="parent" id="work-together"><a href="#" class='parent-li'>Working together<span
+                        <li class="parent" id="work-together"><a href="#" class='parent-li'>Task Force<span
                                     class="expand"><i class="fas fa-chevron-down"></i></span></a>
-                            <ul class="child ">
-                                <li><a href="<?= base_url() ?>accounting_task_force">Accounting Task Force</a></li>
-                                <li><a href="<?= base_url() ?>audit_task_force">Audit Task Force</a></li>
-                                <li><a href="<?= base_url() ?>legal_task_force">Legal Task Force</a></li>
-                                <li><a href="<?= base_url() ?>ma_task_force">M&A Task Force</a></li>
-                                <li><a href="<?= base_url() ?>tax_task_force">Tax Task Force</a></li>
-                                <li><a href="<?= base_url() ?>technology_task_force">Technology Task Force</a></li>
+                            <ul class="child work-together">
+                                <li><a href="<?= base_url() ?>accounting_task_force" class="">Accounting Force</a>
+                                </li>
+                                <li><a href="<?= base_url() ?>audit_task_force">Audit Force</a></li>
+                                <li><a href="<?= base_url() ?>legal_task_force">Legal Force</a></li>
+                                <li><a href="<?= base_url() ?>ma_task_force">Merchants & Aquisition Force</a></li>
+                                <li><a href="<?= base_url() ?>tax_task_force">Governance Risk Compliance </a></li>
+                                <li><a href="<?= base_url() ?>technology_task_force">Technology Force</a></li>
                                 <li><a href="<?= base_url() ?>women_leadership_group">Women Leadership Group</a></li>
                                 <li><a href="<?= base_url() ?>rkda_internship">RKDA International Internships</a></li>
-                                <!-- <li><a href="#">International Partner Meetings</a></li>
-                            <li><a href="#">International Service Offerings</a></li> -->
+                                <li><a href="<?= base_url() ?>partner_meetings">Partner Meetings</a></li>
+                                <!-- <li><a href="#">International Service Offerings</a></li> -->
                                 <!-- <li><a href="#">Multinational project news</a></li> -->
                                 <li><a href="#">VAT/ Experts</a></li>
                                 <li><a href="#">Vision 2030</a></li>
@@ -230,9 +234,9 @@
                         </a> -->
                         <li class="parent" id="why-us"><a href="#" class='parent-li'>Why Us<span class="expand"><i
                                         class="fas fa-chevron-down"></i></span></a>
-                            <ul class="child">
-                                <li ><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
-                                <li><a href="<?= base_url() ?>essentials">Essentials</a></li>
+                            <ul class="child why-us">
+                                <li><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
+                                <li><a href="<?= base_url() ?>essentials">Membership Process</a></li>
                                 <li><a href="<?= base_url() ?>qty_standards">Quality Standards</a></li>
                                 <li><a href="<?= base_url() ?>qty_monitoring">Quality Monitoring</a></li>
                                 <li><a href="<?= base_url() ?>siir">Self-Inspection & Interoffice Review</a></li>
@@ -240,7 +244,7 @@
                                 <!-- <li><a href="technical_standards">Technical Standards</a></li> -->
                             </ul>
                         </li>
-                        <a href="#" id="services_link"  title="Please Click">
+                        <a href="#" id="services_link" title="Please Click">
                             <li id="services">Our Services <i class="fas fa-chevron-down" style='font-size:12px'></i>
                             </li>
                         </a>
@@ -306,45 +310,7 @@
                         class="btn header_connectBTN mb-4 font-weight-bold text-light">CONTACT US</button></a>
             </div>
             <div class="col-md-8 px-0 ourPresents">
-                <div class='d-flex'>
-                    <div class="ourPresents pt-4 col-md-6">
-                        <h3 class="font-weight-normal d-inline ml-4 mt-3" style="margin-top:70px">Our Presence </h3>
-                        <ul class="list-unstyled">
-                            <li class="justify-content-between mb-3 mt-4">
-                                <div class="align-items-center row">
-                                    <a href="<?= base_url() ?>welcome/ecovis_india"
-                                        class="d-flex justify-content-between text-dark w-100"
-                                        style=" text-decoration: none;">
-                                        <div class="col-3 pr-0 text-center w-75">
-                                            <i class="fa-solid fa-location-pin text-danger"
-                                                style="font-size: 2.5rem; "></i>
-                                        </div>
-                                        <div class="col-9 pl-0">
-                                            <span>Our Team</span>
-                                            <p></p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="justify-content-between mb-1">
-                                <div class="align-items-center row">
-                                    <a href="<?= base_url() ?>welcome/geographical_locations"
-                                        class="d-flex justify-content-between text-dark w-100"
-                                        style=" text-decoration: none;">
-
-                                        <div class="col-3 pr-0 text-center w-75">
-                                            <i class="fa-solid fa-earth-asia" style="font-size: 2.5rem; "></i>
-                                        </div>
-                                        <div class="col-9 pl-0">
-                                            <span>Our Locations</span>
-                                            <p></p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
+                <div class='d-flex' style='flex-wrap:wrap;'>
 
                     <div class="ourValues pt-4 col-md-6">
                         <h3 class=" d-inline ml-4 mt-3">Our Values</h3>
@@ -358,7 +324,7 @@
                                     <div class="col-9 pl-0">
                                         <h4 class="mb-0 font-weight-normal" style="color:#4b4d4f !important"><span
                                                 style="color: #CD1432;">R</span>esponsibility</h4>
-                                        <p class="mb-0" style="color: #4b4d4f !important;">Towards profession</p>
+                                        <p class="mb-0" style="color: #4b4d4f !important;">for profession</p>
                                     </div>
                                 </div>
                             </li>
@@ -384,7 +350,7 @@
                                     <div class="col-9 pl-0">
                                         <h4 class="mb-0 font-weight-normal" style="color:#4b4d4f !important"><span
                                                 style="color: #CD1432;">D</span>iligent</h4>
-                                        <p class="mb-0" style="color: #4b4d4f !important;">For Clients</p>
+                                        <p class="mb-0" style="color: #4b4d4f !important;">towards Clients</p>
                                     </div>
                                 </div>
                             </li>
@@ -403,19 +369,101 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class=" pt-4">
-                    <div class='d-flex justify-content-center'>
-                        <h3 class="font-weight-normal d-inline ml-1 mt-3"
-                            style='margin-left: 22px !important;line-height: 41px;border-bottom: 2.5px solid;width:fit-content'>
-                            Our Mission </h3>
+                    <div class="col-md-6 pt-4">
+                        <div class='d-flex '>
+                            <h3 class="font-weight-normal d-inline ml-1 "
+                                style='margin-left: 22px !important;line-height: 41px;border-bottom: 2.5px solid;width:fit-content'>
+                                Our Mission </h3>
+                        </div>
+                        <p style='' class='om-style pt-1'>We would be the number one ICAI Approved Professional Network
+                            of
+                            India enabled by our Technology Platform Providers FORUM(Website Link) to leverage AI/ML in
+                            field of Accounting, Having reach to all the parts of Indian districts, Serve maximum number
+                            of
+                            MSME clients through member firms and be foremost contributor to Startup ECOSYSTEM Of India.
+                        </p>
+
                     </div>
-                    <p style='' class='om-style pt-1'>We would be the number one ICAI Approved Professional Network of
-                        India enabled by our Technology Platform Providers FORUM(Website Link) to leverage AI/ML in
-                        field of Accounting, Having reach to all the parts of Indian districts, Serve maximum number of
-                        MSME clients through member firms and be foremost contributor to Startup ECOSYSTEM Of India.</p>
+                    <div class="ourPresents pt-4 col-md-6">
+                        <h3 class="font-weight-normal d-inline ml-4 mt-3" style="margin-top:70px">Our Presence </h3>
+                        <ul class="list-unstyled">
+                            <li class="justify-content-between mb-3 mt-4">
+                                <div class="align-items-center row">
+                                    <a href="<?= base_url() ?>ecovis_india"
+                                        class="d-flex justify-content-between text-dark w-100"
+                                        style=" text-decoration: none;">
+                                        <div class="col-3 pr-0 text-center w-75">
+                                            <i class="fa-solid fa-location-pin text-danger"
+                                                style="font-size: 2.5rem; "></i>
+                                        </div>
+                                        <div class="col-9 pl-0">
+                                            <span>Member firms</span>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="justify-content-between mb-1">
+                                <div class="align-items-center row">
+                                    <a href="<?= base_url() ?>welcome/geographical_locations"
+                                        class="d-flex justify-content-between text-dark w-100"
+                                        style=" text-decoration: none;">
+
+                                        <div class="col-3 pr-0 text-center w-75">
+                                            <i class="fa-solid fa-earth-asia" style="font-size: 2.5rem; "></i>
+                                        </div>
+                                        <div class="col-9 pl-0">
+                                            <span>Our Presence</span>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="ourPresents pt-4 col-md-6">
+                        <h3 class="font-weight-normal d-inline ml-4 mt-3" style="margin-top:70px">Our Purpose</h3>
+                        <!-- <ul class="list-unstyled">
+                            <li class="justify-content-between mb-3 mt-4">
+                                <div class="align-items-center row">
+                                    <a href="<?= base_url() ?>welcome/ecovis_india"
+                                        class="d-flex justify-content-between text-dark w-100"
+                                        style=" text-decoration: none;">
+                                        <div class="col-3 pr-0 text-center w-75">
+                                            <i class="fa-solid fa-location-pin text-danger"
+                                                style="font-size: 2.5rem; "></i>
+                                        </div>
+                                        <div class="col-9 pl-0">
+                                            <span>Member firms</span>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="justify-content-between mb-1">
+                                <div class="align-items-center row">
+                                    <a href="<?= base_url() ?>welcome/geographical_locations"
+                                        class="d-flex justify-content-between text-dark w-100"
+                                        style=" text-decoration: none;">
+
+                                        <div class="col-3 pr-0 text-center w-75">
+                                            <i class="fa-solid fa-earth-asia" style="font-size: 2.5rem; "></i>
+                                        </div>
+                                        <div class="col-9 pl-0">
+                                            <span>Our Presence</span>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul> -->
+
+                    </div>
+
 
                 </div>
+
             </div>
 
 
@@ -426,21 +474,22 @@
 
         <!-- services  -->
 
-        <div class="mx-0 row  position-absolute " style="display: none; z-index: 1;" id="services_menu">
+        <div class="mx-0 row  position-absolute " style="display: none; z-index: 10;" id="services_menu">
             <div class="col-md-4 text-center" style="background: linear-gradient(0deg, #CD1432, #dc4f54);">
                 <div class="mt-5 mx-auto px-2 py-2 rounded-circle" style="width: 210px;">
-                    <img src="<?= base_url() ?>images/ecovis_logoes/Mentor_bi.png" alt="" class="rounded-circle w-100">
+                    <!-- <img src="<?= base_url() ?>images/ecovis_logoes/Mentor_bi.png" alt="" class="rounded-circle w-100"> -->
                 </div>
                 <h4 class="text-light  mt-3">Let’s Connect</h4>
-                <P class="mx-auto text-justify text-light w-75">RKCA is an organization excelled by its Competency
-                    Centers with more than 5 decades of presence in India, having a global footprint with associates in
-                    more than 90+ countries. Our Purpose is to mentor Entities of today to be MNC’s for tomorrow.
-                </P>
+                <p class="mx-auto text-justify text-light w-75">The CA network synergizes AI technology with human
+                    intelligence to conquer business hurdles and amplify capacities. Through this fusion, it navigates
+                    complexities, resolves challenges, and unlocks new potentials, creating an empowered ecosystem
+                    fostering growth, innovation, and adaptability in today's dynamic business landscape.
+                </p>
                 <button class="btn header_connectBTN font-weight-bold text-light">CONTACT US</button>
             </div>
 
-            <div class="col-md-8 ourValues d-flex">
-                <div class="w-100 my-4">
+            <div class="col-md-8 ourValues px-0">
+                <!-- <div class="w-100 my-4">
                     <h3 class="font-weight-normal d-inline ml-4"> Centre of Excellence -COE </h3>
                     <div class="row mt-3">
                         <div class="col-md-6 col-sm-12">
@@ -550,126 +599,125 @@
                         </div>
                     </div>
 
+                </div> -->
+                <div class="row mx-0  justify-content-center">
+                    <div class="col-lg-12 col-sm-11">
+                        <div class="mt-3 mb-3">
+                            <h2 class="text-center ">Practice Area At Glance</h2>
+
+                        </div>
+                        <div class="row mx-0 justify-content-around">
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn px-0 ">
+                                <a href="<?= base_url() ?>LitigationLegalServices" class="text-dark"
+                                    style="text-decoration: none;">
+                                    <div class="text-center">
+                                        <div class="mx-auto service_icons" style="width:70px">
+                                           
+
+                                            <img src="<?= base_url() ?>assets/new_icon_images/Legalb.png"
+                                                class="index-service-logo" style="width:inherit" alt="">
+                                        </div>
+                                        <h4 class="offeringservicesHeading primaryHeading text-capitalize">Legal and GRC
+                                            Services
+                                        </h4>
+                                        <p class="offeringservicesdetails">We create a platform to offer you legal
+                                            services and
+                                            consultancy.</p>
+                                    </div>
+                                </a>
+
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn  px-0">
+                                <a href="<?= base_url() ?>BusinessSupportandFinancialReporting" class="text-dark"
+                                    style="text-decoration: none;">
+                                    <div class="text-center">
+                                        <div class="mx-auto service_icons" style="width:70px">
+                                            <img src="<?= base_url() ?>assets/new_icon_images/BusinessSupportb.png"
+                                                class="index-service-logo" style="width:inherit" alt="">
+                                        </div>
+                                        <h4 class="offeringservicesHeading primaryHeading text-capitalize">Business
+                                            Support and
+                                            Financial Reporting</h4>
+                                        <p class="offeringservicesdetails">Offering accounting business support to grow
+                                            your
+                                            business.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="row mx-0 justify-content-around">
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn px-0 ">
+                                <a href="<?= base_url() ?>Strategy_Performance_Consulting_services" class="text-dark"
+                                    style="text-decoration: none;">
+                                    <div class="text-center">
+                                        <div class="mx-auto service_icons  ">
+                                            <!-- <div class=" w-75 mx-auto services_logo Strategy_Performance_Consulting_logo "></div> -->
+                                            <img src="<?= base_url() ?>assets/ecovis_icons/Assurance.png"
+                                                class="index-service-logo" style="width:inherit" alt="">
+                                        </div>
+                                        <h4 class="offeringservicesHeading primaryHeading">Strategy & Performance
+                                            Consulting </h4>
+                                        <p class="offeringservicesdetails">Giving you the certainty to drive open and
+                                            straightforward development.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="row mx-0  justify-content-around">
+                            <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn  px-0">
+                                <a href="<?= base_url() ?>Digital_transformation" class="text-dark"
+                                    style="text-decoration: none;">
+                                    <div class="text-center">
+                                        <div class="mx-auto service_icons" style="width:70px">
+                                            <!-- <div class=" w-75 mx-auto Digital_Transformationb_logo services_logo"></div> -->
+
+                                            <img src="<?= base_url() ?>assets/new_icon_images/Digital_Transformationb.png"
+                                                class="index-service-logo" style="width:inherit" alt="">
+                                        </div>
+                                        <h4 class="offeringservicesHeading primaryHeading text-capitalize">Digital
+                                            Transformation
+                                        </h4>
+                                        <p class="offeringservicesdetails">Transform and foster your business digitally
+                                            using our
+                                            digital transformation services.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 serviceColomn  px-0">
+                                <a href="<?= base_url() ?>Financial_and_Capital_Services" class="text-dark"
+                                    style="text-decoration: none;">
+                                    <div class="text-center">
+                                        <div class="mx-auto service_icons" style="width:70px">
+                                            <!-- <div class=" w-75 mx-auto services_logo financial_capital_Services"></div> -->
+
+                                            <img src="<?= base_url() ?>assets/ecovis_icons/Growth-Services.png"
+                                                class="index-service-logo" style="width:inherit" alt="">
+                                        </div>
+                                        <h4 class="offeringservicesHeading primaryHeading text-capitalize">Financial &
+                                            Capital
+                                            Services </h4>
+                                        <p class="offeringservicesdetails">We want to build a long-term value in the
+                                            financial
+                                            services business by transforming it from the ground up.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <!--<div class="d-flex mt-2">
-                            <div class="w-50">
-                                <ul class="list-unstyled">
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center menu_services_logo Strategy_Performance_Consulting_logo  w-75">
-                                            
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Assurance</h5>
-                                                <p class="small">Giving you the certainty to drive straightforward
-                                                    development
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75  menu_services_logo Strategy_Performance_Consulting_logo">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/TAXATION-removebg.png" class="" style="width: 67%;"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Taxation</h5>
-                                                <p class="small">Assisting companies with accounting and tax commitments</p>
-                                            </div>
-                                        </div>
-                                    </li>
 
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/RISK COMPLIANCE.png" class="" style="width: 67%;"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Risk & Compliance</h5>
-                                                <p class="small">We prepare organizations for any unexpected challenges</p>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/Business-Support.png" class="" style="width: 67%;"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Accounting Business support</h5>
-                                                <p class="small">Offering accounting business support to grow your business.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="w-50">
-                                <ul class="list-unstyled">
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/LEgal-Support.png" class="" style="width: 67%;"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Legal Services</h5>
-                                                <p class="small">We create a platform to offer you legal services and
-                                                    consultancy</p>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/Growth-Services.png" class="" style="width: 67%;"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Growth Services</h5>
-                                                <p class="small">We develop your business growth quality</p>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-1 d-flex justify-content-between align-items-center">
-                                        <div class="align-items-center row">
-                                            <div class="col-3 pr-0 text-center w-75">
-                                                <img src="<?= base_url() ?>assets/ecovis_icons/Digital-Transformation.png" class=""
-                                                    style="width: 67%;" alt="">
-                                            </div>
-                                            <div class="col-9 pl-0">
-                                                <h5 class="mb-1">Digital transformation</h5>
-                                                <p class="small">Transform and foster your business with our services</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
-
-        <!-- <div class="mt-2">
-                    <h3 class="font-weight-normal d-inline mt-3">Industries</h3>
-                    <ul class="list-unstyled mt-3">
-                        <li>
-                            <h5>Creative</h5>
-                        </li>
-                        <li>
-                            <h5>Technology</h5>
-                        </li>
-                        <li>
-                            <h5>Finance</h5>
-                        </li>
-                    </ul>
-
-                </div> -->
 
 
     </header>
@@ -777,7 +825,58 @@
         });
 
     </script>
+    <script>
+        const baseURL = "<?php echo base_url(); ?>";
 
+        $(document).ready(function () {
+            let activeNav = localStorage.getItem('activeNav');
+
+            console.log(window.location.href);
+            if (window.location.href === baseURL) {
+
+                localStorage.setItem('activeNav', '');
+                $('#home').css({
+                    // 'font-weight': 'bold',
+                    'text-decoration': 'underline'
+                })
+            } else {
+                console.log('inside elsee');
+                if (activeNav) {
+                    $('.parent-li').removeClass('underlineNav');
+                    $(activeNav).find('.parent-li').addClass('underlineNav');
+                }
+
+                function handleMenuClick(selector) {
+                    console.log('inside handlemeuu', selector);
+                    $('.parent-li').removeClass('underlineNav');
+                    let activeLinkSelector = '#' + $(selector).closest('.parent').attr('id');
+                    $(activeLinkSelector + ' .parent-li').addClass('underlineNav');
+                    console.log(activeLinkSelector, 'activeLinkSelector');
+                    localStorage.setItem('activeNav', activeLinkSelector);
+
+                    // Apply style immediately
+                    $('.parent-li').css('text-decoration', 'none'); // Reset all underlines
+                    $(activeLinkSelector + ' .parent-li').css('text-decoration', 'underline');
+                    let activeNav = localStorage.getItem('activeNav');
+
+                }
+                $('.child.membership a').on('click', function () {
+                    handleMenuClick('#membership');
+                });
+
+                $('.child.work-together a').on('click', function () {
+                    handleMenuClick('#work-together');
+                });
+
+                $('.child.why-us a').on('click', function () {
+                    handleMenuClick('#why-us');
+                });
+
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>

@@ -37,7 +37,7 @@
               <li><a href="#">Authorisation to represent</a></li>
               <li><a href="#">Contract on inter-company exchange of message by email</a></li>
               <li><a href="#">Fee agreement</a></li>
-              <li><a href="#">Standard Assignment Terms ECOVIS Audit AG (Status as of 01.02.2002)</a></li>
+              <li><a href="#">Standard Assignment Terms RKDA Audit AG (Status as of 01.02.2002)</a></li>
               <li><a href="#">Tax Accountancy Assignment (package)</a></li>
               <li><a href="#">Tax Accountancy Assignment</a></li>
               <li><a href="#">Tax Accountancy Contract (package)</a></li>
@@ -122,8 +122,8 @@
           </table>
         </div>
         <div class="my-3">
-          <p>If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:"
-              style="color:crimson">ecovis.india@ecovis.com</a> </p>
+          <p>If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com"
+              style="color:crimson">audit@rkda.com</a> </p>
         </div>
       </div>
 

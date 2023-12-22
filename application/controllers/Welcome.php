@@ -102,7 +102,7 @@ class Welcome extends CI_Controller {
 				$result = $this->User_Model->updateUserData($data, $empId);
 				$msg = "Your data has been Updated";
 			} else {
-				$result = $this->User_Model->savePartnerData($data);
+				$result = $this->User_Model->saveUserData($data);
 				$msg = "Your data has been saved";
 				// $response['msg'] = "Your data has been saved";
 			}
@@ -158,6 +158,36 @@ class Welcome extends CI_Controller {
 		}
 		die();
 	}
+
+    public function savePreAppForm(){
+		   $Data= array(
+			"fname"=> $this->input->post("fname"),
+			"lname"=> $this->input->post("lname"),
+			"mem_email"=> $this->input->post("mem_email"),
+			"mem_mobile"=> $this->input->post("mem_mobile"),
+			"icai_mem_number"=> $this->input->post("icaiMembershipNumber"),
+			"b_name"=> $this->input->post("b_name"),
+			"specialization"=> $this->input->post("specialization"),
+			"firm_reg_num"=> $this->input->post("firmRegistrationNumber"),
+			"website"=> $this->input->post("website"),
+			"address"=> $this->input->post("address"),
+			"yoi"=> $this->input->post("yoi"),
+			"firm_typ"=> $this->input->post("firm_typ"),
+			"yoe"=> $this->input->post("yearsOfExperience"),
+			"num_of_partners"=> $this->input->post("totalPartners"),
+			"firm_name"=> $this->input->post("firm_name"),
+			"mem_number"=> $this->input->post("mem_number"),
+		   );
+	
+          exit();
+		 $result = $this->User_Model->savePreAppFormData($Data);
+		 $response['status'] = 200;
+		 $response['msg'] = "success";
+		 echo json_encode($response);
+		 
+		 die();
+	}
+
 	public function index()
 	{
 		$this->load->view('index.php');
@@ -562,6 +592,31 @@ class Welcome extends CI_Controller {
 	public function first_steps_checklist()
 	{
 		$this->load->view('first_steps_checklist');
+	}
+	public function firm_details()
+	{
+		$this->load->view('firm_details');
+	}
+	public function partner_meetings()
+	{
+		$this->load->view('partner_meetings');
+	}
+	public function firms()
+	{
+		$this->load->view('firms');
+	}
+	public function preliminaryAppForm()
+
+	{
+		$this->load->view('preliminaryAppForm');
+	}
+	public function congrats()
+	{
+		$this->load->view('congrats');
+	}
+	public function sendMail()
+	{
+		$this->load->view('sendMail');
 	}
 
 

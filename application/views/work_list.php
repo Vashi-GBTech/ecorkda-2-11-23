@@ -21,16 +21,16 @@
     <div class="container-fluid p-3 mb-5" style="background-color:rgb(238,238,238)">
         <h6 class='mb-0'>Working together</h6>
         <ul class='work-list-ul'>
-            <li id="accounting_task_force" ><a href="<?= base_url() ?>accounting_task_force" class="wl-link-color">Accounting Task Force</a></li>
-            <li id="audit_task_force"><a href="<?= base_url() ?>audit_task_force" class="wl-link-color">Audit Task Force</a></li>
-            <li id="legal_task_force"><a href="<?= base_url() ?>legal_task_force" class="wl-link-color">Legal Task Force</a></li>
-            <li id="ma_task_force"><a href="<?= base_url() ?>ma_task_force" class="wl-link-color">M&A Task Force</a></li>
-            <li id="tax_task_force"><a href="<?= base_url() ?>tax_task_force" class="wl-link-color" class="wl-link-color">Tax Task Force</a></li>
-            <li id="technology_task_force"><a href="<?= base_url() ?>technology_task_force" class="wl-link-color">Technology Task Force</a></li>
+            <li id="accounting_task_force" ><a href="<?= base_url() ?>accounting_task_force" class="wl-link-color">Accounting Force</a></li>
+            <li id="audit_task_force"><a href="<?= base_url() ?>audit_task_force" class="wl-link-color">Audit Force</a></li>
+            <li id="legal_task_force"><a href="<?= base_url() ?>legal_task_force" class="wl-link-color">Legal Force</a></li>
+            <li id="ma_task_force"><a href="<?= base_url() ?>ma_task_force" class="wl-link-color">M&A  Force</a></li>
+            <li id="tax_task_force"><a href="<?= base_url() ?>tax_task_force" class="wl-link-color" class="wl-link-color">Governance Risk Compliance Force</a></li>
+            <li id="technology_task_force"><a href="<?= base_url() ?>technology_task_force" class="wl-link-color">Technology Force</a></li>
             <li id="women_leadership_group" ><a href="<?= base_url() ?>women_leadership_group" class="wl-link-color">Women Leadership Group</a></li>
             <li id="rkda_internship" ><a href="<?= base_url() ?>rkda_internship" class="wl-link-color">RKDA International Internships</a></li>
-            <li><a href="#" class="wl-link-color">International Partner Meetings</a></li>
-            <li><a href="#" class="wl-link-color">International Service Offerings</a></li>
+            <li><a href="<?= base_url() ?>partner_meetings" class="wl-link-color">Partner Meetings</a></li>
+            <li><a href="#" class="wl-link-color">International Connects</a></li>
             <li><a href="#" class="wl-link-color">Multinational project news</a></li>
             <li><a href="#" class="wl-link-color">VAT/ Experts</a></li>
             <li><a href="#" class="wl-link-color">Vision 2030</a></li>

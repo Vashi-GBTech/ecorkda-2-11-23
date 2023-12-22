@@ -19,7 +19,7 @@
 
 <body>
     <div class="container-fluid p-3 mb-5" style="background-color:rgb(238,238,238)">
-        <h6 class='mb-0'>Working together</h6>
+        <h6 class='mb-0'>RKDA Membership</h6>
         <ul class='work-list-ul'>
             <li id="faq_new_partner"><a href="<?= base_url() ?>faq_new_partner" class="wl-link-color">FAQ (New
                     Partner)</a></li>

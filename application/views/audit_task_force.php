@@ -24,7 +24,7 @@
              
             </div>
             <div class="my-3">
-            <p>If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:" style="color:crimson"  >ecovis.india@ecovis.com</a> </p>
+            <p>If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com" style="color:crimson"  >audit@rkda.com</a> </p>
             </div>
             </div>
             
