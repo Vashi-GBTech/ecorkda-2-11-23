@@ -121,6 +121,59 @@ class User_Model extends CI_Model
             return false;
         }
     }
+
+    function sendEmail($to, $subject, $message) {
+        $from_email = 'mentor@ecovisrkca.com'; //change this to yours
+        $this->load->library('email');
+        //configure email settings
+        $config['protocol'] = 'smtp';
+        $config['smtp_host'] = 'webmail.gbtech.in'; //smtp host name
+        $config['smtp_port'] = '465'; //smtp port number 587 on server
+        $config['smtp_user'] = $from_email;
+        $config['smtp_pass'] = 'Mentor@123$'; //$from_email password
+        $config['smtp_crypto'] = 'ssl';
+        $config['mailtype'] = 'html';
+        $config['charset'] = 'iso-8859-1';
+        $config['wordwrap'] = TRUE;
+        $config['newline'] = "\r\n"; //use double quotes
+        $this->email->initialize($config);
+    
+        //send mail
+        $this->email->from($from_email, 'RMT Team');
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
+        if ($this->email->send()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function CreateOtp() {
+        $opt = rand(1000, 10000);
+        $this->db->select('otp');
+        $this->db->from('otp_header_all');
+        $this->db->where('otp', $opt);
+        $this->db->get();
+        if ($this->db->affected_rows() > 0) {
+            return $this->CreateOtp();
+        } else {
+            return $opt;
+        }
+    }
+
+    public function SaveOpt($data, $user_id) {
+        $this->db->where("created_by", $user_id)->delete('otp_header_all');
+        $this->db->insert('otp_header_all', $data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
+
 
 ?>

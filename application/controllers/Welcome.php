@@ -188,6 +188,38 @@ class Welcome extends CI_Controller {
 		 die();
 	}
 
+	public function getOtp(){
+		$user_id = $this->input->post('email');
+		$mobileNo = $this->input->post('phone_number');
+		$caNum = $this->input->post('caNum');
+		if (!empty($user_id)) {
+			$otp = $this->User_Model->CreateOtp();
+			$opt_data = array('otp' => $otp, 'created_on' => date("Y-m-d H:i:s"), 'created_by' => $user_id, 'expire_time' => date("Y-m-d H:i:s", strtotime('+15 minute')));
+			if ($this->User_Model->SaveOpt($opt_data, $user_id)) {
+				$sub = 'Otp Verification';
+				$msg = $otp . ' is your one time password sent by Ecovisrkda System . It is valid for 15 minutes.Do not share your Otp with anyone';
+				$mail=$this->User_Model->sendEmail($user_id, $sub, $msg);
+				// echo "<pre>123 "; print_r($mail); echo " mail "; print_r($user_id);  print_r($sub); print_r($msg); exit();
+				if ($mail == true) {
+					$response['status']= 200;
+					$response['otp']= $otp;
+					$response['body']= "Mail Sended Sucessfully";
+				}else {
+					$response['status'] = 201;
+					$response['body'] = 'Mail Not Send';
+				}
+			} else {
+				$response['status'] = 201;
+				$response['body'] = 'OTP Generation Problem';
+			}
+		}else {
+			$response['status'] = 201;
+			$response['body'] = 'OTP Generation Problem';
+		}
+		echo json_encode($response);
+	}
+
+
 	public function index()
 	{
 		$this->load->view('index.php');

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preliminary Application Form</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
 
 </head>
 <style>
@@ -1073,8 +1076,10 @@
                     $('#email').toggleClass('is-invalid', !emailRegex.test(email));
                     $('#mobile').toggleClass('is-invalid', !mobileRegex.test(mobile));
                     // alert('Please fill in all fields correctly and agree to the T & C');
+                    console.log(" inside if ");
                     return false;
                 } else {
+                    console.log(" inside else if ", baseUrl);
                     $('#email, #mobile').removeClass('is-invalid');
                     var active = $('.wizard .nav-tabs li.active');
                     var nextTab = active.next('li');
@@ -1083,6 +1088,32 @@
                         nextTab.removeClass('disabled');
                         nextTab.find('a[data-toggle="tab"]').click();
                     }
+                    
+                    // Mail otp to user Code start
+                    let formdata = new FormData();
+                    formdata.set('email', email);
+                    formdata.set('phone_number', mobile);
+                    formdata.set('caNum', caNum);
+                    $.ajax({
+                        url     : baseUrl+"Welcome/getOtp",
+                        method  : "POST",
+                        data    : formdata,
+                        dataType: 'json',
+                        cache   : false,
+                        contentType: false,
+                        processData: false,
+                        success: function (success) {
+                            if (success.status === 200) {
+                               console.log(" success ", success);
+                            } else {
+                                console.log(" failed ", success);
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+                    // Mail otp to user Code end
 
                 }
             });
