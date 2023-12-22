@@ -159,5 +159,6 @@ $route['firms'] = 'welcome/firms';
 $route['preliminaryAppForm'] = 'welcome/preliminaryAppForm';
 $route['congrats'] = 'welcome/congrats';
 $route['sendMail'] = 'welcome/sendMail';
+$route['login'] = 'welcome/login';
 
 

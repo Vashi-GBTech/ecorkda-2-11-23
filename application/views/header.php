@@ -182,6 +182,10 @@
                             class="fa-solid fa-newspaper"></i></span> NewsLetter</a>
                 <a href="#" style="text-decoration: none; font-size:medium; font-weight: 500;" class="text-light ml-3">
                     <span><i class="fa-solid fa-envelope"></i></span> mentor@rkca.in</a>
+                <a href="<?= base_url() ?>login" class="btn btn-dark rounded-pill btn-sm text-light ml-3 login">
+                  Login <i class="fas fa-sign-in-alt"></i></a>
+                <a href="<?= base_url() ?>login" class="btn btn-dark rounded-pill btn-sm text-light ml-3 logout" style='display:none'>
+                  Logout <i class="fas fa-sign-in-alt"></i></a>
             </div>
             <div class="align-items-center col-md-12 d-flex justify-content-between main-header">
                 <div class="logo py-2 text-center">
@@ -822,6 +826,20 @@
                 $(this).parent().toggleClass("opened");
                 $(this).next('.child').slideToggle();
             });
+
+
+           const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if(isLoggedIn){
+                $('.login').hide();
+                $('.logout').show();
+
+            }
+            else{
+                $('.login').show();
+                $('.logout').hide();
+            }
+
+        
         });
 
     </script>

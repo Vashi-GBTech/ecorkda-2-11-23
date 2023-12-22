@@ -717,7 +717,7 @@
 
                                     <div class="container col-md-8 p-2">
 
-                                        <div class=" ">
+                                        <form class="" id='verifyOtp'>
                                             <div class="d-flex justify-content-center pb-3">
                                                 <div class="col-md-7 justify-content-center">
                                                     <div class="form-group">
@@ -736,13 +736,13 @@
                                                     <!-- <li><button type="button"
                                                         class="default-btn next-step skip-btn  mt-0">Skip</button>
                                                 </li> -->
-                                                    <li><button type="button"
+                                                    <li><button type="sumbit"
                                                             class="default-btn next-step  mt-0">Continue</button>
                                                     </li>
                                                 </ul>
                                             </div>
 
-                                        </div>
+                                        </form>
 
 
                                     </div>
@@ -1083,6 +1083,7 @@
                         nextTab.removeClass('disabled');
                         nextTab.find('a[data-toggle="tab"]').click();
                     }
+
                 }
             });
         });
@@ -1107,7 +1108,15 @@
 
         });
 
-
+        $('#verifyOtp').submit(function (event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const fdata = {};
+            for (let [key, value] of formData.entries()) {
+                fdata[key] = value;
+            } 
+            // console.log("clickeddd" ,fdata);
+        })
 
     </script>
 </body>
