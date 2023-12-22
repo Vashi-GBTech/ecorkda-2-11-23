@@ -109,6 +109,18 @@ class User_Model extends CI_Model
     //     }
 
     // }
+
+
+    public function savePreAppFormData($data)
+    {
+        try {
+            $result = $this->db->insert("pre_app_form", $data);
+            return $result;
+        } catch (Exception $e) {
+            error_log("Database error: " . $e->getMessage());
+            return false;
+        }
+    }
 }
 
 ?>

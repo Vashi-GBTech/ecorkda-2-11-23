@@ -156,4 +156,8 @@ $route['first_steps_checklist'] = 'welcome/first_steps_checklist';
 $route['firm_details'] = 'welcome/firm_details';
 $route['partner_meetings'] = 'welcome/partner_meetings';
 $route['firms'] = 'welcome/firms';
+$route['preliminaryAppForm'] = 'welcome/preliminaryAppForm';
+$route['congrats'] = 'welcome/congrats';
+$route['sendMail'] = 'welcome/sendMail';
+
 
