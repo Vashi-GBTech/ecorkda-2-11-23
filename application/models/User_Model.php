@@ -173,6 +173,16 @@ class User_Model extends CI_Model
         }
     }
 
+    public function updatePartnerData($data, $id) {
+        $this->db->where("id", $id);
+        $this->db->update('otp_header_all', $data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 
