@@ -616,7 +616,9 @@
 
 <body>
     <?php include_once "header.php" ?>
-
+    <input type="hidden" id="otpVal" name="otpVal" value="" >
+    <input type="hidden" id="id" name="id" value="" >
+    <input type="hidden" id="emailId" name="emailId" value="" >
     <div class='container my-2'>
         <h1 class='acc-for-heading mb-3'>RKDA Network</h1>
         <h4>Membership Application Form</h4>
@@ -1104,6 +1106,10 @@
                         processData: false,
                         success: function (success) {
                             if (success.status === 200) {
+                                console.log(success);
+                                $('#otpVal').val(success.otp);
+                                $('#id').val(success.id);
+                                $('#emailId').val(email);
                                console.log(" success ", success);
                             } else {
                                 console.log(" failed ", success);
@@ -1133,7 +1139,31 @@
         });
 
 
-        $('#yesbtn').on('click', function () {
+        $('#yesbtn').on('click', function (e) {
+            console.log(e);
+            let formdata = new FormData();
+            formdata.set('isPartner', 1);
+            formdata.set('id', $('#id').val());
+            
+            $.ajax({
+                url     : baseUrl+"Welcome/updatePartner",
+                method  : "POST",
+                data    : formdata,
+                dataType: 'json',
+                cache   : false,
+                contentType: false,
+                processData: false,
+                success: function (success) {
+                    if (success.status === 200) {
+                       console.log(" success ", success);
+                    } else {
+                        console.log(" failed ", success);
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
             $('#interestedQuest').hide();
             $('#congratsdiv').show();
 

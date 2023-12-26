@@ -192,9 +192,17 @@ class Welcome extends CI_Controller {
 		$user_id = $this->input->post('email');
 		$mobileNo = $this->input->post('phone_number');
 		$caNum = $this->input->post('caNum');
+		// echo "<pre>"; print_r($this->input->post()); exit();
 		if (!empty($user_id)) {
 			$otp = $this->User_Model->CreateOtp();
-			$opt_data = array('otp' => $otp, 'created_on' => date("Y-m-d H:i:s"), 'created_by' => $user_id, 'expire_time' => date("Y-m-d H:i:s", strtotime('+15 minute')));
+			$opt_data = array(
+				'otp' => $otp, 
+				'created_on' => date("Y-m-d H:i:s"), 
+				'created_by' => $user_id, 
+				'expire_time' => date("Y-m-d H:i:s", strtotime('+15 minute')), 
+				'mobile_no'=>$mobileNo, 
+				'ca_number'=>$caNum
+			);
 			if ($this->User_Model->SaveOpt($opt_data, $user_id)) {
 				$sub = 'Otp Verification';
 				$msg = $otp . ' is your one time password sent by Ecovisrkda System . It is valid for 15 minutes.Do not share your Otp with anyone';
@@ -203,6 +211,7 @@ class Welcome extends CI_Controller {
 				if ($mail == true) {
 					$response['status']= 200;
 					$response['otp']= $otp;
+					$response['id']= $this->db->insert_id();
 					$response['body']= "Mail Sended Sucessfully";
 				}else {
 					$response['status'] = 201;
@@ -215,6 +224,28 @@ class Welcome extends CI_Controller {
 		}else {
 			$response['status'] = 201;
 			$response['body'] = 'OTP Generation Problem';
+		}
+		echo json_encode($response);
+	}
+
+	public function updatePartner(){
+		$id = $this->input->post('id');
+		$isPartner = $this->input->post('isPartner');
+		if (!empty($id)) {
+			$otp = $this->User_Model->CreateOtp();
+			$opt_data = array(
+				'is_partner' => $isPartner, 
+			);
+			if ($this->User_Model->updatePartnerData($opt_data, $id)) {
+					$response['status']= 200;
+					$response['body']= "Partner Added successfully";
+			}else {
+				$response['status'] = 201;
+				$response['body'] = 'Something went wrong';
+			}
+		}else {
+			$response['status'] = 201;
+			$response['body'] = 'Something went wrong';
 		}
 		echo json_encode($response);
 	}
