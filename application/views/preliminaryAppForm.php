@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
+
 
 </head>
 <style>
@@ -616,9 +616,9 @@
 
 <body>
     <?php include_once "header.php" ?>
-    <input type="hidden" id="otpVal" name="otpVal" value="" >
-    <input type="hidden" id="id" name="id" value="" >
-    <input type="hidden" id="emailId" name="emailId" value="" >
+    <input type="hidden" id="otpVal" name="otpVal" value="">
+    <input type="hidden" id="id" name="id" value="">
+    <input type="hidden" id="emailId" name="emailId" value="">
     <div class='container my-2'>
         <h1 class='acc-for-heading mb-3'>RKDA Network</h1>
         <h4>Membership Application Form</h4>
@@ -1034,6 +1034,7 @@
     <script>
         // ------------step-wizard-------------
         $(document).ready(function () {
+
             $('.nav-tabs > li a[title]').tooltip();
 
             //Wizard
@@ -1045,6 +1046,7 @@
                     return false;
                 }
             });
+
 
             // $(".next-step").click(function (e) {
 
@@ -1090,18 +1092,18 @@
                         nextTab.removeClass('disabled');
                         nextTab.find('a[data-toggle="tab"]').click();
                     }
-                    
+
                     // Mail otp to user Code start
                     let formdata = new FormData();
                     formdata.set('email', email);
                     formdata.set('phone_number', mobile);
                     formdata.set('caNum', caNum);
                     $.ajax({
-                        url     : baseUrl+"Welcome/getOtp",
-                        method  : "POST",
-                        data    : formdata,
+                        url: baseUrl + "Welcome/getOtp",
+                        method: "POST",
+                        data: formdata,
                         dataType: 'json',
-                        cache   : false,
+                        cache: false,
                         contentType: false,
                         processData: false,
                         success: function (success) {
@@ -1110,7 +1112,7 @@
                                 $('#otpVal').val(success.otp);
                                 $('#id').val(success.id);
                                 $('#emailId').val(email);
-                               console.log(" success ", success);
+                                console.log(" success ", success);
                             } else {
                                 console.log(" failed ", success);
                             }
@@ -1123,6 +1125,64 @@
 
                 }
             });
+
+            function getUserData($id = null, $emailId = null) {
+                let formdata = new FormData();
+                if ($id == null || $id == '') {
+                    formdata.set('id', $('#id').val());
+                } else {
+                    formdata.set('id', $id);
+                }
+                if ($emailId == null  || $emailId == '') {
+                    formdata.set('emailId', $('#emailId').val());
+                } else {
+                    formdata.set('emailId', $emailId)
+                }
+
+                $.ajax({
+                    url: baseUrl + "Welcome/getUserData",
+                    method: "POST",
+                    data: formdata,
+                    dataType: 'json',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (success) {
+                        if (success.status === 200) {
+                            console.log(" success ", success);
+                            return success;
+                        } else {
+                            console.log(" failed ", success);
+                            return success;
+                        }
+                    },
+                    error: function (error) {
+                        console.log(error);
+                        return false;
+                    }
+                });
+
+                // let url = baseUrl + "Welcome/getUserData";
+                // let data = formdata;
+                // fetch(url, {
+                //     method : "POST",
+                //     headers: {
+                //         "Content-Type" : "application/json"
+                //     },
+                //     body : JSON.stringify(formdata)
+                //     // body : formdata
+                // }).then(res => {
+                //     // console.log(res.json(), " res 123 ");
+                //     return res.json();
+                // }).then(data => {
+                //     console.log(data, " res data  ");
+                // }).catch(error => {
+                //     console.log(error, " errro ");
+                // });
+            }
+
+            // console.log(getUserData(null, 'abhishek.kadam@gbtech.in'), " user data ");
+
         });
 
         function nextTab(elem) {
@@ -1144,18 +1204,18 @@
             let formdata = new FormData();
             formdata.set('isPartner', 1);
             formdata.set('id', $('#id').val());
-            
+
             $.ajax({
-                url     : baseUrl+"Welcome/updatePartner",
-                method  : "POST",
-                data    : formdata,
+                url: baseUrl + "Welcome/updatePartner",
+                method: "POST",
+                data: formdata,
                 dataType: 'json',
-                cache   : false,
+                cache: false,
                 contentType: false,
                 processData: false,
                 success: function (success) {
                     if (success.status === 200) {
-                       console.log(" success ", success);
+                        console.log(" success ", success);
                     } else {
                         console.log(" failed ", success);
                     }
