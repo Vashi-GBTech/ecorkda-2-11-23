@@ -762,9 +762,9 @@
                                                 partner ?</h5>
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 d-flex justify-content-around">
-                                                    <button type="button"
+                                                    <button type="button" onclick="ignoreFunction()"
                                                         class="btn btn-outline-danger btn-lg rounded-pill">
-                                                        <i class="fas fa-times"></i> Ignore
+                                                        <i class="fas fa-times"   ></i> Ignore
                                                     </button>
 
                                                     <button type="button" id="yesbtn"
@@ -784,6 +784,14 @@
                                                 </div>
                                                 <h1>Congratulations!</h1>
                                                 <p>We are all set. Well done!</p>
+                                            </div>
+                                        </div>
+                                        <div class='' id='ignorediv' style='display:none'>
+                                            <div
+                                                style="text-align:center;margin-top:30px;position:relative;width:100%;height:100%;top:0px;left:0px;">
+                                               
+                                                <h1>"We've Got You Covered!</h1>
+                                                <p>Your request has been noted and will be overlooked for now.</p>
                                             </div>
                                         </div>
 
@@ -1105,6 +1113,7 @@
                         success: function (success) {
                             if (success.status === 200) {
                                console.log(" success ", success);
+                               localStorage.setItem('otp',success.otp);
                             } else {
                                 console.log(" failed ", success);
                             }
@@ -1146,8 +1155,26 @@
             for (let [key, value] of formData.entries()) {
                 fdata[key] = value;
             } 
-            // console.log("clickeddd" ,fdata);
+            console.log(fdata);
+          const otp=  localStorage.getItem('otp');
+            if (otp == fdata.firmRegistrationNumber) {
+                // alert("sign up successfully...!");
+                $('#email, #mobile').removeClass('is-invalid');
+                    var active = $('.wizard .nav-tabs li.active');
+                    var nextTab = active.next('li');
+
+                    if (nextTab.length > 0) {
+                        nextTab.removeClass('disabled');
+                        nextTab.find('a[data-toggle="tab"]').click();
+                    }
+            }
+            
         })
+
+        function ignoreFunction(){
+            $('#interestedQuest').hide();
+            $('#ignorediv').show();
+        }
 
     </script>
 </body>

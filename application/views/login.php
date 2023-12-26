@@ -210,25 +210,25 @@
                     <input type="text" id="email" class="inputs" placeholder="E-mail" onclick="focusinp('usr')">
                 </div>
                 <div class="inp">
-                    <input type="text" id="mob_num" class="inputs" placeholder="Mobile Number" onclick="focusinp('mob_num')">
+                    <input type="text" id="mob_num" class="inputs" placeholder="Mobile Number"
+                        onclick="focusinp('mob_num')">
                 </div>
-                <div class="inp">
-                    <input type="password" id="reg-password" class="inputs" placeholder="Password">
+                <div class="inp password-div"  style="display:none">
+                    <input type="password" id="reg-password" class="inputs" placeholder="One Time Password">
                 </div>
-                <div class='container' style='    width: 75%;
-    color: white;
-    font-size: 10px;'>
+                <div class='container' style='width: 75%;color: white;font-size: 10px;'>
                     <div class=" d-flex align-items-baseline">
 
-                        <input  type="checkbox" value="" id="exampleCheckbox" required>
+                        <input type="checkbox" value="" id="exampleCheckbox" required>
                         <label class="px-1" for="exampleCheckbox">
                             T & C
                         </label>
 
                     </div>
                 </div>
-
-                <button type="submit">Sign Up</button>
+                 
+                <button type="submit" class="sent-otp-btn">Sent Otp</button>
+                <button type="button" style="display:none" class="reg-btn" >Sign Up</button>
                 <div onclick="myFunction('login')"><a href="#">Already have a account? Sign In</a></div>
 
             </div>
@@ -280,23 +280,68 @@
             console.log('clicked on submit');
             var email = $('#email').val();
             var mobile = $('#mob_num').val();
-            var caNum = $('#reg-password').val();
+            var password = $('#reg-password').val();
             var checkbox = $('#exampleCheckbox');
 
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             var mobileRegex = /^\d{10}$/;
 
-            if (!emailRegex.test(email) || !mobileRegex.test(mobile) || caNum.trim() === '' || !checkbox.is(':checked')) {
+            if (!emailRegex.test(email) || !mobileRegex.test(mobile) || password.trim() === '' || !checkbox.is(':checked')) {
                 console.log('inside if');
                 $('#email').toggleClass('is-invalid', !emailRegex.test(email));
                 $('#mobile').toggleClass('is-invalid', !mobileRegex.test(mobile));
                 return false;
             } else {
-                console.log('all set');
+               let formdatas={email, mobile,password,T_C:checkbox[0].checked}
+               let formdata = new FormData();
+                    formdata.set('email', email);
+                    formdata.set('phone_number', mobile);
+                    formdata.set('T_C', checkbox[0].checked);
+                    // formdata.set('password', password);
+                    $.ajax({
+                        url     : baseUrl+"Welcome/getOtp",
+                        method  : "POST",
+                        data    : formdata,
+                        dataType: 'json',
+                        cache   : false,
+                        contentType: false,
+                        processData: false,
+                        success: function (success) {
+                            if (success.status === 200) {
+                               console.log(" success ", success);
+                               $('.password-div').show();
+                               $('.reg-btn').show();
+                               $('.sent-otp-btn').hide();
+                               localStorage.setItem('otp',success.otp);
+                            } else {
+                                $('.password-div').hide();
+                                $('.reg-btn').hide();
+                               $('.sent-otp-btn').show();
+                                console.log(" failed ", success);
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+
+                console.log('all set',formdatas,);
+               
+            }
+        })
+
+
+        $('.reg-btn').click(function () {
+            var password = $('#reg-password').val();
+            // console.log(fdata);
+          const otp=  localStorage.getItem('otp');
+            if (otp == password) {
+                // alert("sign up successfully...!");
+                $('#email, #mobile').removeClass('is-invalid');
                 window.location.href = '<?= base_url() ?>';
                 localStorage.setItem('isLoggedIn', 'true');
-
             }
+            
         })
     </script>
 </body>
