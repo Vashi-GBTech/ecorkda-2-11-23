@@ -183,6 +183,32 @@ class User_Model extends CI_Model
         }
     }
 
+    public function getUserDetails($id, $userEmail)
+    {   
+        try {
+            $this->db->select('*');
+            $this->db->from('otp_header_all');
+            if(!empty($id)){
+                $this->db->where('id', $id);
+            }else if(!empty($userEmail)){
+                $this->db->where('created_by', $userEmail);
+            }
+            $result = $this->db->get()->row_array();
+            // $result = $this->db->get()->result_array();
+            if(empty($result)){
+                $result = array();
+            }
+            // echo "<pre>"; print_r($result); exit();
+            return $result;
+        } catch (Exception $e) {
+            // echo "<pre>"; print_r($result); exit();
+            // echo "Error:" . $e;
+            $result = array();
+            return $result;
+        }
+    }
+
+
 }
 
 
