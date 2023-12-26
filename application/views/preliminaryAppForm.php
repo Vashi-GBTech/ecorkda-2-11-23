@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
+
 
 </head>
 <style>
@@ -616,9 +616,9 @@
 
 <body>
     <?php include_once "header.php" ?>
-    <input type="hidden" id="otpVal" name="otpVal" value="" >
-    <input type="hidden" id="id" name="id" value="" >
-    <input type="hidden" id="emailId" name="emailId" value="" >
+    <input type="hidden" id="otpVal" name="otpVal" value="">
+    <input type="hidden" id="id" name="id" value="">
+    <input type="hidden" id="emailId" name="emailId" value="">
     <div class='container my-2'>
         <h1 class='acc-for-heading mb-3'>RKDA Network</h1>
         <h4>Membership Application Form</h4>
@@ -647,7 +647,7 @@
                                     </li>
                                     <li role="presentation" class="disabled">
                                         <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span
-                                                class="round-tab">3</span> <i>Action</i></a>
+                                                class="round-tab">3</span> <i>Act</i></a>
                                     </li>
                                     <!-- <li role="presentation" class="disabled">
                                         <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span
@@ -663,7 +663,7 @@
                                     <h5 class=''>Contact Details</h5>
 
                                     <div class="container col-md-8 p-2">
-                                        <form id="emailForm" action="sendMail.php" method="post">
+                                        <form id="emailForm" Act="sendMail.php" method="post">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
@@ -756,17 +756,18 @@
 
 
                                 <div class="tab-pane my-3 p-3 bg-gray-ipm" role="tabpanel" id="step3">
-                                    <h5 class=''>Action</h5>
+                                    <h5 class=''>Act</h5>
 
                                     <div class="container p-5">
                                         <div id='interestedQuest'>
-                                            <h5 class='text-center pb-4'>Hey... Are You Interested to become our
-                                                partner ?</h5>
+                                            <h5 class='text-center pb-4'>Together We build foundation of future,
+                                                Interested ?
+                                            </h5>
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 d-flex justify-content-around">
                                                     <button type="button" onclick="ignoreFunction()"
                                                         class="btn btn-outline-danger btn-lg rounded-pill">
-                                                        <i class="fas fa-times"   ></i> Ignore
+                                                        <i class="fas fa-times"></i> Ignore
                                                     </button>
 
                                                     <button type="button" id="yesbtn"
@@ -791,9 +792,9 @@
                                         <div class='' id='ignorediv' style='display:none'>
                                             <div
                                                 style="text-align:center;margin-top:30px;position:relative;width:100%;height:100%;top:0px;left:0px;">
-                                               
+
                                                 <h1>"We've Got You Covered!</h1>
-                                                <p>Your request has been noted and will be overlooked for now.</p>
+                                                <p>We Appriciate your choice hope to welcome you back...</p>
                                             </div>
                                         </div>
 
@@ -1038,8 +1039,25 @@
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Include SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <!-- <script>  var baseUrl = "<?= base_url() ?>";</script> -->
     <script>
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            title: 'General Title',
+            animation: false,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
         // ------------step-wizard-------------
         $(document).ready(function () {
             $('.nav-tabs > li a[title]').tooltip();
@@ -1098,18 +1116,18 @@
                         nextTab.removeClass('disabled');
                         nextTab.find('a[data-toggle="tab"]').click();
                     }
-                    
+
                     // Mail otp to user Code start
                     let formdata = new FormData();
                     formdata.set('email', email);
                     formdata.set('phone_number', mobile);
                     formdata.set('caNum', caNum);
                     $.ajax({
-                        url     : baseUrl+"Welcome/getOtp",
-                        method  : "POST",
-                        data    : formdata,
+                        url: baseUrl + "Welcome/getOtp",
+                        method: "POST",
+                        data: formdata,
                         dataType: 'json',
-                        cache   : false,
+                        cache: false,
                         contentType: false,
                         processData: false,
                         success: function (success) {
@@ -1118,10 +1136,41 @@
                                 $('#otpVal').val(success.otp);
                                 $('#id').val(success.id);
                                 $('#emailId').val(email);
-                               console.log(" success ", success);
-                               localStorage.setItem('otp',success.otp);
+                                console.log(" success ", success);
+                                localStorage.setItem('otp', success.otp);
+
+                                Swal.fire({
+                                    toast: true,
+                                    icon: 'success',
+                                    title: 'OTP Sent To your Registered Mail...',
+                                    animation: false,
+                                    position: 'bottom',
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+
+
                             } else {
                                 console.log(" failed ", success);
+                                Swal.fire({
+                                    toast: true,
+                                    icon: 'error',
+                                    title: 'Error while sending OTP TO your Registered Mail...',
+                                    animation: false,
+                                    position: 'top',
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
                             }
                         },
                         error: function (error) {
@@ -1153,18 +1202,18 @@
             let formdata = new FormData();
             formdata.set('isPartner', 1);
             formdata.set('id', $('#id').val());
-            
+
             $.ajax({
-                url     : baseUrl+"Welcome/updatePartner",
-                method  : "POST",
-                data    : formdata,
+                url: baseUrl + "Welcome/updatePartner",
+                method: "POST",
+                data: formdata,
                 dataType: 'json',
-                cache   : false,
+                cache: false,
                 contentType: false,
                 processData: false,
                 success: function (success) {
                     if (success.status === 200) {
-                       console.log(" success ", success);
+                        console.log(" success ", success);
                     } else {
                         console.log(" failed ", success);
                     }
@@ -1184,24 +1233,25 @@
             const fdata = {};
             for (let [key, value] of formData.entries()) {
                 fdata[key] = value;
-            } 
+            }
             console.log(fdata);
-          const otp=  localStorage.getItem('otp');
+            const otp = localStorage.getItem('otp');
             if (otp == fdata.firmRegistrationNumber) {
+              
                 // alert("sign up successfully...!");
                 $('#email, #mobile').removeClass('is-invalid');
-                    var active = $('.wizard .nav-tabs li.active');
-                    var nextTab = active.next('li');
+                var active = $('.wizard .nav-tabs li.active');
+                var nextTab = active.next('li');
 
-                    if (nextTab.length > 0) {
-                        nextTab.removeClass('disabled');
-                        nextTab.find('a[data-toggle="tab"]').click();
-                    }
+                if (nextTab.length > 0) {
+                    nextTab.removeClass('disabled');
+                    nextTab.find('a[data-toggle="tab"]').click();
+                }
             }
-            
+
         })
 
-        function ignoreFunction(){
+        function ignoreFunction() {
             $('#interestedQuest').hide();
             $('#ignorediv').show();
         }

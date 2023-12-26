@@ -236,7 +236,7 @@
                         <!-- <a href="<?= base_url() ?>welcome/ourSolution">
                             <li>Why Us</li>
                         </a> -->
-                        <li class="parent" id="why-us"><a href="#" class='parent-li'>Why Us<span class="expand"><i
+                        <li class="parent" id="why-us"><a href="#" class='parent-li'>Governance<span class="expand"><i
                                         class="fas fa-chevron-down"></i></span></a>
                             <ul class="child why-us">
                                 <li><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
@@ -249,7 +249,7 @@
                             </ul>
                         </li>
                         <a href="#" id="services_link" title="Please Click">
-                            <li id="services">Our Services <i class="fas fa-chevron-down" style='font-size:12px'></i>
+                            <li id="services">Our Capabilities <i class="fas fa-chevron-down" style='font-size:12px'></i>
                             </li>
                         </a>
                         <!-- <a href="<?= base_url() ?>team">
