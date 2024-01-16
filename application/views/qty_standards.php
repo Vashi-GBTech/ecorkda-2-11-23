@@ -19,26 +19,26 @@
         <div class=" " style="">
           <h5>RKDA International General Quality Control Manual</h5>
           <ul class='internship-pt-ul p-0 mb-4'>
-            <li><a href="#">EI-GQCM (2022)</a></li>
-            <li><a href="#">EI-GQCM (previous version in track mode)</a></li>
-            <li><a href="#">RKDA ISQM1 Guidance tool</a>
-            <ul class="px-2"><li><a href="#">Webinar – RKDA ISQM1 Guidance tool (YouTube link)</a></li></ul>
+            <li><a href="<?= base_url() ?>onlyForMembers">EI-GQCM (2022)</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">EI-GQCM (previous version in track mode)</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">RKDA ISQM1 Guidance tool</a>
+            <ul class="px-2"><li><a href="<?= base_url() ?>onlyForMembers">Webinar – RKDA ISQM1 Guidance tool (YouTube link)</a></li></ul>
           </li>
-            <li><a href="#">High level comparison of the new RKDA EI-GQCM to the previous version</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">High level comparison of the new RKDA EI-GQCM to the previous version</a></li>
           </ul>
           <h5>Independence Standard</h5>
           <ul class='internship-pt-ul p-0 mb-4'>
-            <li><a href="#">RKDA Independence Procedure</a></li>
-            <li><a href="#">Independence Check Tool</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">RKDA Independence Procedure</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">Independence Check Tool</a></li>
           </ul>
           <h5> Quality Monitoring</h5>
           <ul class='internship-pt-ul p-0 mb-4'>
-            <li><a href="#">Memo of duties and responsibilities for IORs mode of execution</a></li>
-            <li><a href="#">Self-Inspection and Interoffice Review</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">Memo of duties and responsibilities for IORs mode of execution</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">Self-Inspection and Interoffice Review</a></li>
           </ul>
           <h5>Internal complaints procedure for RKDA member firms</h5>
           <ul class='internship-pt-ul p-0 mb-4'>
-            <li><a href="#">Internal complaints procedure for RKDA member firms</a></li>
+            <li><a href="<?= base_url() ?>onlyForMembers">Internal complaints procedure for RKDA member firms</a></li>
           </ul>
 
         </div>

@@ -10,6 +10,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
+
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -69,11 +70,11 @@
         height: 2px;
         background: #e0e0e0;
         position: absolute;
-        width: 60%;
+        width: 63%;
         margin: 0 auto;
         left: 0;
         right: 0;
-        top: 15px;
+        top: 32px;
         z-index: 1;
     }
 
@@ -117,8 +118,8 @@
         color: #5bc0de;
     }
 
-    .wizard .nav-tabs>li.active>a i {
-        color: crimson;
+    .wizard .nav-tabs> li.active  a i {
+        color: crimson !important;
     }
 
     .wizard .nav-tabs>li {
@@ -637,17 +638,21 @@
                                 <div class="connecting-line"></div>
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active">
-                                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab"
-                                            aria-expanded="true"><span class="round-tab">1 </span> <i>Personal
-                                                Details</i></a>
+                                        <button disabled="disabled" style="border:none"><a href="#step1"
+                                                data-toggle="tab" aria-controls="step1" role="tab"
+                                                aria-expanded="true"><span class="round-tab">1 </span> <i>Personal
+                                                    Details</i></a></button>
                                     </li>
                                     <li role="presentation" class="disabled">
-                                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"
-                                            aria-expanded="false"><span class="round-tab">2</span> <i>Verify</i></a>
+                                        <button disabled="disabled" style="border:none"><a href="#step2"
+                                                data-toggle="tab" aria-controls="step2" role="tab"
+                                                aria-expanded="false">
+                                                <span class="round-tab">2</span> <i>Verify</i></a></button>
                                     </li>
-                                    <li role="presentation" class="disabled">
-                                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span
-                                                class="round-tab">3</span> <i>Act</i></a>
+                                    <li role="presentation" class="disabled" id="act-tab">
+                                        <button disabled="disabled" style="border:none"><a href="#step3"
+                                                data-toggle="tab" aria-controls="step3" role="tab"><span
+                                                    class="round-tab">3</span> <i>Act</i></a></button>
                                     </li>
                                     <!-- <li role="presentation" class="disabled">
                                         <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span
@@ -682,7 +687,7 @@
                                                 <div class="col-md-12 p-0">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="caNum">CA Number:</label>
+                                                            <label for="caNum">Member Number:</label>
                                                             <input type="text" class="form-control" id="caNum"
                                                                 name="caNum">
                                                         </div>
@@ -867,7 +872,7 @@
             <div class="popup-card">
                 <div class='previewing-form ' id="previewing-form">
                     <div class="my-3 p-3 bg-gray-ipm">
-                        <h5 class=''>Personal Details</h5>
+                        <h5 class=''>Contact Details</h5>
 
                         <div class="container p-5">
                             <form>
@@ -1060,6 +1065,7 @@
         });
         // ------------step-wizard-------------
         $(document).ready(function () {
+
             $('.nav-tabs > li a[title]').tooltip();
 
             //Wizard
@@ -1071,7 +1077,25 @@
                     return false;
                 }
             });
+           
+            const userData = localStorage.getItem('userData');
+            
+            const userDataParse= JSON.parse(userData)
+            console.log(userDataParse);
+            if (userDataParse != 'undefined') {
+                console.log(userDataParse[0].is_partner,'userData[0].is_partner');
+                if (userDataParse[0].is_partner == '1') {
+                    console.log(userDataParse[0].is_partner == 1);
+                    $('.nav-tabs li.active').removeClass('active');
+                    $('#act-tab').addClass('active');
+                    $('#act-tab button[disabled="disabled"] a[data-toggle="tab"]').click();
+                    $('#interestedQuest').hide();
+                    $('#congratsdiv').show();
+                    
 
+                }
+            }
+        });
             // $(".next-step").click(function (e) {
 
             //     var active = $('.wizard .nav-tabs li.active');
@@ -1086,6 +1110,10 @@
 
             });
 
+            $('.nav-tabs').on('click', 'li', function () {
+                $('.nav-tabs li.active').removeClass('active');
+                $(this).addClass('active');
+            });
 
 
 
@@ -1122,67 +1150,155 @@
                     formdata.set('email', email);
                     formdata.set('phone_number', mobile);
                     formdata.set('caNum', caNum);
-                    $.ajax({
-                        url: baseUrl + "Welcome/getOtp",
-                        method: "POST",
-                        data: formdata,
-                        dataType: 'json',
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: function (success) {
-                            if (success.status === 200) {
-                                console.log(success);
-                                $('#otpVal').val(success.otp);
-                                $('#id').val(success.id);
-                                $('#emailId').val(email);
-                                console.log(" success ", success);
-                                localStorage.setItem('otp', success.otp);
-
-                                Swal.fire({
-                                    toast: true,
-                                    icon: 'success',
-                                    title: 'OTP Sent To your Registered Mail...',
-                                    animation: false,
-                                    position: 'bottom',
-                                    showConfirmButton: false,
-                                    timer: 3000,
-                                    timerProgressBar: true,
-                                    didOpen: (toast) => {
-                                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                                    }
-                                })
 
 
+                    getUserData(function (userData) {
+                        console.log(userData, 'userData');
+                        if (userData && userData.data) {
+                            const existingEmail = userData.data.find(user => user.created_by === email);
+                            if (existingEmail) {
+                            
+                                forgotPassword(email);
                             } else {
-                                console.log(" failed ", success);
-                                Swal.fire({
-                                    toast: true,
-                                    icon: 'error',
-                                    title: 'Error while sending OTP TO your Registered Mail...',
-                                    animation: false,
-                                    position: 'top',
-                                    showConfirmButton: false,
-                                    timer: 3000,
-                                    timerProgressBar: true,
-                                    didOpen: (toast) => {
-                                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                $.ajax({
+                                    url: baseUrl + "Welcome/getOtp",
+                                    method: "POST",
+                                    data: formdata,
+                                    dataType: 'json',
+                                    cache: false,
+                                    contentType: false,
+                                    processData: false,
+                                    success: function (success) {
+                                        if (success.status === 200) {
+                                            console.log(success);
+                                            $('#otpVal').val(success.otp);
+                                            $('#id').val(success.id);
+                                            $('#emailId').val(email);
+                                            console.log(" success ", success);
+                                            localStorage.setItem('otp', success.otp);
+
+                                            Swal.fire({
+                                                toast: true,
+                                                icon: 'success',
+                                                title: 'OTP Sent To your Registered Mail...',
+                                                animation: true,
+                                                position: 'bottom',
+                                                showConfirmButton: false,
+                                                timer: 3000,
+                                                timerProgressBar: true,
+                                                didOpen: (toast) => {
+                                                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                                }
+                                            })
+
+
+                                        } else {
+                                            console.log(" failed ", success);
+                                            Swal.fire({
+                                                toast: true,
+                                                icon: 'error',
+                                                title: 'Error while sending OTP TO your Registered Mail...',
+                                                animation: false,
+                                                position: 'top',
+                                                showConfirmButton: false,
+                                                timer: 3000,
+                                                timerProgressBar: true,
+                                                didOpen: (toast) => {
+                                                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                                }
+                                            })
+                                        }
+                                    },
+                                    error: function (error) {
+                                        console.log(error);
                                     }
-                                })
+                                });
                             }
-                        },
-                        error: function (error) {
-                            console.log(error);
                         }
                     });
                     // Mail otp to user Code end
 
                 }
             });
-        });
 
+        //     function getUserData($id = null, $emailId = null) {
+        //         let formdata = new FormData();
+        //         if ($id == null || $id == '') {
+        //             formdata.set('id', $('#id').val());
+        //         } else {
+        //             formdata.set('id', $id);
+        //         }
+        //         if ($emailId == null || $emailId == '') {
+        //             formdata.set('emailId', $('#emailId').val());
+        //         } else {
+        //             formdata.set('emailId', $emailId)
+        //         }
+
+        //         $.ajax({
+        //             url: baseUrl + "Welcome/getUserData",
+        //             method: "POST",
+        //             data: formdata,
+        //             dataType: 'json',
+        //             cache: false,
+        //             contentType: false,
+        //             processData: false,
+        //             success: function (success) {
+        //                 if (success.status === 200) {
+        //                     console.log(" success ", success);
+        //                     return success;
+        //                 } else {
+        //                     console.log(" failed ", success);
+        //                     return success;
+        //                 }
+        //             },
+        //             error: function (error) {
+        //                 console.log(error);
+        //                 return false;
+        //             }
+        //         });
+
+        //     }
+
+        //     console.log(getUserData(null, 'abhishek.kadam@gbtech.in'), " user data ");
+
+        // });
+
+        function getUserData(callback) {
+            let formdata = new FormData();
+
+            $.ajax({
+                url: baseUrl + "Welcome/getUserData",
+                method: "POST",
+                data: formdata,
+                dataType: 'json',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (success) {
+                    if (typeof callback === 'function') { // Check if callback is a function
+                        if (success.status === 200) {
+                            console.log(" success ", success);
+                            callback(success); // Pass the fetched data to the callback
+                        } else {
+                            console.log(" failed ", success);
+                            callback(null); // Indicate failure by passing null
+                        }
+                    } else {
+                        console.log('Callback is not a function');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                    if (typeof callback === 'function') {
+                        callback(null); // Indicate failure by passing null
+                    } else {
+                        console.log('Callback is not a function');
+                    }
+                }
+            });
+        }
         function nextTab(elem) {
             $(elem).next().find('a[data-toggle="tab"]').click();
         }
@@ -1191,14 +1307,10 @@
         }
 
 
-        $('.nav-tabs').on('click', 'li', function () {
-            $('.nav-tabs li.active').removeClass('active');
-            $(this).addClass('active');
-        });
 
 
         $('#yesbtn').on('click', function (e) {
-            console.log(e);
+            // console.log(e);
             let formdata = new FormData();
             formdata.set('isPartner', 1);
             formdata.set('id', $('#id').val());
@@ -1214,6 +1326,8 @@
                 success: function (success) {
                     if (success.status === 200) {
                         console.log(" success ", success);
+                        $('#interestedQuest').hide();
+                        $('#congratsdiv').show();
                     } else {
                         console.log(" failed ", success);
                     }
@@ -1222,8 +1336,7 @@
                     console.log(error);
                 }
             });
-            $('#interestedQuest').hide();
-            $('#congratsdiv').show();
+
 
         });
 
@@ -1237,7 +1350,7 @@
             console.log(fdata);
             const otp = localStorage.getItem('otp');
             if (otp == fdata.firmRegistrationNumber) {
-              
+
                 // alert("sign up successfully...!");
                 $('#email, #mobile').removeClass('is-invalid');
                 var active = $('.wizard .nav-tabs li.active');
@@ -1256,6 +1369,56 @@
             $('#ignorediv').show();
         }
 
+
+        function forgotPassword(email) {
+            
+            let formdata = new FormData();
+            formdata.set('email', email);
+
+            async function handleUserData(AllUsers) {
+                if (AllUsers && AllUsers.data) {
+                    console.log(AllUsers.data); // Verify the data is received
+
+                    const isUserPresent = AllUsers.data.filter((user) => user.created_by === email);
+                    console.log(isUserPresent, 'isUserPresent');
+
+                    if (isUserPresent.length > 0) {
+                        console.log(isUserPresent[0].otp); // Verify OTP value is logged correctly
+                        formdata.set('otp', isUserPresent[0].otp); // Set OTP value in formdata
+                        formdata.set('id', isUserPresent[0].id); // Set OTP value in formdata
+                        sendAjaxRequest(formdata);
+                        
+                    } else {
+                        console.log('No user found matching the email.');
+                    }
+                }
+            }
+
+            getUserData(handleUserData); // Fetch user data
+
+            function sendAjaxRequest(formData) {
+                $.ajax({
+                    url: baseUrl + "Welcome/forgotOtp",
+                    method: "POST",
+                    data: formData,
+                    dataType: 'json',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (success) {
+                     $('#id').val(success.id);
+                    toastMixin.fire({
+                    animation: true,
+                    title: 'Mail Sent Successfully'
+                });
+                    },
+                    error: function (error) {
+                        // Handle error response
+                        console.log(error);
+                    }
+                });
+            }
+        }
     </script>
 </body>
 

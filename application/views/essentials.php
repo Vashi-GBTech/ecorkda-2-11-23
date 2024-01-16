@@ -82,51 +82,59 @@
   .tree li a{
     color :black !important
   }
+  .ass-pro{
+    text-align: center;
+    background: bisque;
+    padding: 0px 10px;
+    width: 50%;
+    box-shadow: 0px 0px 7px -2px #d48e3b;
+  }
+  
 </style>
 
 <body>
   <?php include_once "header.php" ?>
   <div class="container-fluid">
     <div class='my-3 mx-2'>
-      <h1 class='acc-for-heading'>Membership Process</h1>
+      <h1 class='acc-for-heading'>Template Documentation</h1>
     </div>
     <div class="d-flex">
       <div class="col-md-7">
         <div class="d-flex justify-content-between" style="flex-wrap:wrap">
           <div>
             <ul class='internship-pt-ul p-0'>
-              <li><a href="#">Template of licence agreement</a>
+              <li><a href="<?= base_url() ?>onlyForMembers">Template of licence agreement</a>
                 <ul class='internship-pt-ul pl-2'>
-                  <li><a href="#">Template of licence agreement</a></li>
-                  <li><a href="#">Template of licence agreement</a></li>
+                  <li><a href="<?= base_url() ?>onlyForMembers">Template of licence agreement</a></li>
+                  <li><a href="<?= base_url() ?>onlyForMembers">Template of licence agreement</a></li>
                 </ul>
               </li>
-              <li><a href="#">Appendix 3 to licence agreement – Constitution of the RKDA Group</a></li>
-              <li><a href="#">Appendix 2 to licence agreement – The RKDA ESSENTIALS</a></li>
-              <li><a href="#">Statutes of RKDA International</a></li>
-              <li><a href="#">Mediation Rules</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Appendix 3 to licence agreement – Constitution of the RKDA Group</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Appendix 2 to licence agreement – The RKDA ESSENTIALS</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Statutes of RKDA International</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Mediation Rules</a></li>
             </ul>
 
             <ul class="tree">
-              <li>Membership Process</li>
-              <li>
+              <li class="ass-pro " >Association Process</li>
+              <li class='activeli'>
                 
-                  <span class='nodes-hover-effect'>Templates</span>
-                  <ul>
-                    <li><a href="#"><span class='nodes-hover-effect'>NDA</span></a></li>
-                    <li><a href="#"><span class='nodes-hover-effect'>Membership</span></a></li>
-                    <li><a href="#"><span class='nodes-hover-effect'>Structure of NDA</span></a></li>
+                  <span class='nodes-hover-effect '>Request</span>
+                  <ul class='' >
+                    <li><a href="<?= base_url() ?>preliminaryAppForm"><span class='nodes-hover-effect'>Interest</span></a></li>
+                    <li><a href="<?= base_url() ?>NDA"><span class='nodes-hover-effect'>NDA</span></a></li>
+                    <li><a href="<?= base_url() ?>authorization"><span class='nodes-hover-effect'>Authorization</span></a></li>
                   </ul>
             
               </li>
               <li>
               
-                  <span class='nodes-hover-effect'>Application</span>
+                  <span class='nodes-hover-effect'>Membership</span>
                   <ul>
-                    <li><a href="#"><span class='nodes-hover-effect'>Request</span></a></li>
-                    <li><a href="#"><span class='nodes-hover-effect'>Authorization</span></a></li>
-                    <li><a href="#"><span class='nodes-hover-effect'>Application</span></a></li>
-                    <li><a href="#"><span class='nodes-hover-effect'>Network incubation</span></a></li>
+                    <li><a href="#"><span class='nodes-hover-effect'>Firm Details</span></a></li>
+                    <li><a href="#"><span class='nodes-hover-effect'>Walkthrough</span></a></li>
+                    <li><a href="#"><span class='nodes-hover-effect'>Agreement</span></a></li>
+                    <li><a href="#"><span class='nodes-hover-effect'>Induction</span></a></li>
                   </ul>
              
               </li>
@@ -183,6 +191,17 @@
         });
       });
     });
+    // document.addEventListener('DOMContentLoaded', function () {
+    // // Find the first list item
+    // var firstListItem = document.querySelector('.tree li.activeli');
+    // console.log(firstListItem);
+    // var findicon =  firstListItem.querySelector('.js-toggle-icon');
+    // console.log(findicon);
+    // if (findicon) {
+    //   findicon.click();
+    // }
+  // });
+
 
 
   </script>

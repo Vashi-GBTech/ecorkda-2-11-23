@@ -42,6 +42,7 @@
              </ul>
         </li>
             <li id="IT_instructions"><a href="<?= base_url() ?>IT_instructions" class="wl-link-color">IT Working Instructions</a></li>
+            <li id="training_workshop"><a href="#" class="wl-link-color">Training Capabitlities Workshop</a></li>
 
             </ul>
         </li>

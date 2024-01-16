@@ -1,7 +1,14 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Welcome extends CI_Controller {
+defined('BASEPATH') or exit('No direct script access allowed');
+// require_once APPPATH . '/libraries/fpdf/fpdf.php'; 
+require_once 'vendor/autoload.php';
+// require_once APPPATH . 'libraries/html2pdf/src/Html2Pdf.php';
+use Dompdf\Dompdf;
+use Dompdf\Options;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -47,14 +54,14 @@ class Welcome extends CI_Controller {
 		// $this->form_validation->set_rules('image', 'Image', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			
+
 			$response['status'] = 200;
 			$response['msg'] = "false";
 			echo json_encode($response);
 			die();
 
 		} else {
-			
+
 			$empId = $this->input->post('emp_id');
 			$key_name = preg_replace('/\s+/', '_', $this->input->post('name'));
 			if (isset($empId) && !empty($empId)) {
@@ -146,7 +153,7 @@ class Welcome extends CI_Controller {
 				$response['status'] = 200;
 				$response['msg'] = "Deleted Successfully!";
 				echo json_encode($response);
-			}else{
+			} else {
 				$response['status'] = 201;
 				$response['msg'] = "Something went wrong";
 				echo json_encode($response);
@@ -159,36 +166,79 @@ class Welcome extends CI_Controller {
 		die();
 	}
 
-    public function savePreAppForm(){
-		   $Data= array(
-			"fname"=> $this->input->post("fname"),
-			"lname"=> $this->input->post("lname"),
-			"mem_email"=> $this->input->post("mem_email"),
-			"mem_mobile"=> $this->input->post("mem_mobile"),
-			"icai_mem_number"=> $this->input->post("icaiMembershipNumber"),
-			"b_name"=> $this->input->post("b_name"),
-			"specialization"=> $this->input->post("specialization"),
-			"firm_reg_num"=> $this->input->post("firmRegistrationNumber"),
-			"website"=> $this->input->post("website"),
-			"address"=> $this->input->post("address"),
-			"yoi"=> $this->input->post("yoi"),
-			"firm_typ"=> $this->input->post("firm_typ"),
-			"yoe"=> $this->input->post("yearsOfExperience"),
-			"num_of_partners"=> $this->input->post("totalPartners"),
-			"firm_name"=> $this->input->post("firm_name"),
-			"mem_number"=> $this->input->post("mem_number"),
-		   );
-	
-          exit();
-		 $result = $this->User_Model->savePreAppFormData($Data);
-		 $response['status'] = 200;
-		 $response['msg'] = "success";
-		 echo json_encode($response);
-		 
-		 die();
+	public function savePreAppForm()
+	{
+		$Data = array(
+			"fname" => $this->input->post("fname"),
+			"lname" => $this->input->post("lname"),
+			"mem_email" => $this->input->post("mem_email"),
+			"mem_mobile" => $this->input->post("mem_mobile"),
+			"icai_mem_number" => $this->input->post("icaiMembershipNumber"),
+			"b_name" => $this->input->post("b_name"),
+			"specialization" => $this->input->post("specialization"),
+			"firm_reg_num" => $this->input->post("firmRegistrationNumber"),
+			"website" => $this->input->post("website"),
+			"address" => $this->input->post("address"),
+			"yoi" => $this->input->post("yoi"),
+			"firm_typ" => $this->input->post("firm_typ"),
+			"yoe" => $this->input->post("yearsOfExperience"),
+			"num_of_partners" => $this->input->post("totalPartners"),
+			"firm_name" => $this->input->post("firm_name"),
+			"mem_number" => $this->input->post("mem_number"),
+		);
+
+		// exit();
+		$result = $this->User_Model->savePreAppFormData($Data);
+		$response['status'] = 200;
+		$response['msg'] = "success";
+		echo json_encode($response);
+
+		die();
 	}
 
-	public function getOtp(){
+
+	public function saveNdaFormDetails()
+	{
+
+		$Data = array(
+			"address" => $this->input->post("address"),
+			"childRelation" => $this->input->post("childRelation"),
+			"fullName" => $this->input->post("fullName"),
+			"parents_fullname" => $this->input->post("parentsFullName"),
+			"registered_office_address" => $this->input->post("registeredOfficeAddress"),
+			"registrationNo" => $this->input->post("registrationNo"),
+			"salutation" => $this->input->post("salutation"),
+			"signatoryName" => $this->input->post("signatoryName"),
+		);
+		// echo '<pre>'; print_r($Data);
+		// exit();
+		$result = $this->User_Model->saveNdaFormData($Data);
+		$response['status'] = 200;
+		$response['msg'] = "success";
+		echo json_encode($response);
+
+		die();
+	}
+	public function saveAuthFormDetails()
+	{
+
+		$Data = array(
+			"comp_name" => $this->input->post("comp_name"),
+			"salutation_auth" => $this->input->post("salutation"),
+			"partner_name" => $this->input->post("partner_name"),
+
+		);
+		// echo '<pre>'; print_r($Data);
+		// exit();
+		$result = $this->User_Model->saveAuthFormData($Data);
+		$response['status'] = 200;
+		$response['msg'] = "success";
+		echo json_encode($response);
+
+		die();
+	}
+	public function getOtp()
+	{
 		$user_id = $this->input->post('email');
 		$mobileNo = $this->input->post('phone_number');
 		$caNum = $this->input->post('caNum');
@@ -196,24 +246,24 @@ class Welcome extends CI_Controller {
 		if (!empty($user_id)) {
 			$otp = $this->User_Model->CreateOtp();
 			$opt_data = array(
-				'otp' => $otp, 
-				'created_on' => date("Y-m-d H:i:s"), 
-				'created_by' => $user_id, 
-				'expire_time' => date("Y-m-d H:i:s", strtotime('+15 minute')), 
-				'mobile_no'=>$mobileNo, 
-				'ca_number'=>$caNum
+				'otp' => $otp,
+				'created_on' => date("Y-m-d H:i:s"),
+				'created_by' => $user_id,
+				'expire_time' => date("Y-m-d H:i:s", strtotime('+15 minute')),
+				'mobile_no' => $mobileNo,
+				'ca_number' => $caNum
 			);
 			if ($this->User_Model->SaveOpt($opt_data, $user_id)) {
 				$sub = 'Otp Verification';
 				$msg = $otp . ' is your one time password sent by Ecovisrkda System . It is valid for 15 minutes.Do not share your Otp with anyone';
-				$mail=$this->User_Model->sendEmail($user_id, $sub, $msg);
+				$mail = $this->User_Model->sendEmail($user_id, $sub, $msg);
 				// echo "<pre>123 "; print_r($mail); echo " mail "; print_r($user_id);  print_r($sub); print_r($msg); exit();
 				if ($mail == true) {
-					$response['status']= 200;
-					$response['otp']= $otp;
-					$response['id']= $this->db->insert_id();
-					$response['body']= "Mail Sended Sucessfully";
-				}else {
+					$response['status'] = 200;
+					$response['otp'] = $otp;
+					$response['id'] = $this->db->insert_id();
+					$response['body'] = "Mail Sended Sucessfully";
+				} else {
 					$response['status'] = 201;
 					$response['body'] = 'Mail Not Send';
 				}
@@ -221,34 +271,227 @@ class Welcome extends CI_Controller {
 				$response['status'] = 201;
 				$response['body'] = 'OTP Generation Problem';
 			}
-		}else {
+		} else {
 			$response['status'] = 201;
 			$response['body'] = 'OTP Generation Problem';
 		}
 		echo json_encode($response);
 	}
+	public function forgotOtp()
+	{
+		$user_id = $this->input->post('email');
+		$otp = $this->input->post('otp');
+		$id = $this->input->post('id');
 
-	public function updatePartner(){
+		// echo "<pre>"; print_r($this->input->post()); exit();
+
+
+
+		$sub = 'Otp Verification';
+		$msg = $otp . ' is your one time password sent by Ecovisrkda System . It is valid for 15 minutes.Do not share your Otp with anyone';
+		$mail = $this->User_Model->sendEmail($user_id, $sub, $msg);
+		if ($mail == true) {
+			$response['status'] = 200;
+			$response['otp'] = $otp;
+			$response['id'] = $id;
+			$response['body'] = "Mail Sended Sucessfully";
+		} else {
+			$response['status'] = 201;
+			$response['body'] = 'Mail Not Send';
+		}
+
+
+		echo json_encode($response);
+	}
+
+	public function updatePartner()
+	{
 		$id = $this->input->post('id');
 		$isPartner = $this->input->post('isPartner');
 		if (!empty($id)) {
-			$otp = $this->User_Model->CreateOtp();
+			// $otp = $this->User_Model->CreateOtp();
 			$opt_data = array(
-				'is_partner' => $isPartner, 
+				'is_partner' => $isPartner,
 			);
+
 			if ($this->User_Model->updatePartnerData($opt_data, $id)) {
-					$response['status']= 200;
-					$response['body']= "Partner Added successfully";
-			}else {
+				$response['status'] = 200;
+				$response['body'] = "Partner Added successfully";
+			} else {
 				$response['status'] = 201;
 				$response['body'] = 'Something went wrong';
 			}
-		}else {
+		} else {
 			$response['status'] = 201;
 			$response['body'] = 'Something went wrong';
 		}
 		echo json_encode($response);
 	}
+
+	public function getUserData()
+	{
+		// $id = $this->input->post('id');
+		$userEmail = $this->input->post('emailId');
+		// echo "<pre>"; print_r($this->input->post()); exit();
+		// if (!empty($userEmail)) {
+		$userData = $this->User_Model->getUserDetails();
+		if (count($userData) > 0) {
+			$response['status'] = 200;
+			$response['body'] = 'User details found';
+			$response['data'] = $userData;
+		} else {
+			$response['status'] = 201;
+			$response['body'] = 'User details not found';
+			$response['data'] = $userData;
+		}
+		// } else {
+		// 	$response['status'] = 201;
+		// 	$response['body'] = 'Something went wrong';
+		// }
+		echo json_encode($response);
+	}
+
+	public function upload_method()
+	{
+		// Check if file was uploaded and no errors occurred
+		if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+			$tempFile = $_FILES['file']['tmp_name']; // Get the temporary file path
+			$uploadPath = './uploads/membersNDA/' . $_FILES['file']['name']; // Set the destination path
+
+			// Move the uploaded file to the desired directory
+			if (move_uploaded_file($tempFile, $uploadPath)) {
+				echo 'File uploaded successfully!';
+			} else {
+				echo 'Failed to move the file!';
+			}
+		} else {
+			echo 'File upload error!';
+		}
+	}
+
+
+
+	public function generateNDAPdf()
+	{
+
+		// $html = $this->load->view('ndaDownload', [], true);
+
+		$fname = isset($_GET['fullName']) ? $_GET['fullName'] : '';
+		$salutation = isset($_GET['salutation']) ? $_GET['salutation'] : '';
+		$address = isset($_GET['address']) ? $_GET['address'] : '';
+		$parentsFullName = isset($_GET['parentsFullName']) ? $_GET['parentsFullName'] : '';
+		$registeredOfficeAddress = isset($_GET['registeredOfficeAddress']) ? $_GET['registeredOfficeAddress'] : '';
+		$registrationNo = isset($_GET['registrationNo']) ? $_GET['registrationNo'] : '';
+		$signatoryName = isset($_GET['signatoryName']) ? $_GET['signatoryName'] : '';
+		$childRelation = isset($_GET['childRelation']) ? $_GET['childRelation'] : '';
+
+		// Load the view and pass form data to it
+		$html = $this->load->view('ndaDownload', [
+			'fullName' => $fname,
+			'salutation' => $salutation,
+			'address' => $address,
+			'parentsFullName' => $parentsFullName,
+			'registeredOfficeAddress' => $registeredOfficeAddress,
+			'registrationNo' => $registrationNo,
+			'signatoryName' => $signatoryName,
+			'childRelation' => $childRelation,
+
+		], true);
+
+
+		$options = new Options();
+		$options->set('isRemoteEnabled', TRUE);
+		$options->set('isHtml5ParserEnabled', TRUE);
+		$options->set('enable_php', true);
+		$options->set('enable_remote', true);
+		$dompdf = new Dompdf($options);
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('A1', 'potrait');
+		$dompdf->render();
+		ob_end_clean();
+		$dompdf->stream('NDA.pdf', ['Attachment' => false]);
+		$dompdf->Output();
+		exit(0);
+
+	}
+	public function generateAuthPdf()
+	{
+
+		// $html = $this->load->view('ndaDownload', [], true);
+
+		$partner_name = isset($_GET['partner_name']) ? $_GET['partner_name'] : '';
+		$salutation = isset($_GET['salutation']) ? $_GET['salutation'] : '';
+		$comp_name = isset($_GET['comp_name']) ? $_GET['comp_name'] : '';
+
+
+
+		// Load the view and pass form data to it
+		$html = $this->load->view('form_2', [
+			'partner_name' => $partner_name,
+			'salutation' => $salutation,
+			'comp_name' => $comp_name,
+		], true);
+
+		// echo $html; exit();
+
+		$options = new Options();
+		$options->set('isRemoteEnabled', TRUE);
+		$options->set('isHtml5ParserEnabled', TRUE);
+		$options->set('enable_php', true);
+		$options->set('enable_remote', true);
+		$dompdf = new Dompdf($options);
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('A1', 'potrait');
+		$dompdf->render();
+		ob_end_clean();
+		$dompdf->stream('authorization.pdf', ['Attachment' => false]);
+		$dompdf->Output();
+		exit(0);
+
+	}
+
+
+
+	public function generateXL()
+	{
+		// Creating sample data array
+		$data = array(
+			array('Name', 'Email', 'Age', 'Country'),
+			array('John Doe', 'john@example.com', 28, 'USA'),
+			array('Alice Smith', 'alice@example.com', 24, 'UK'),
+			array('Bob Johnson', 'bob@example.com', 32, 'Canada'),
+			array('Eva Williams', 'eva@example.com', 30, 'Australia')
+		);
+	
+		$this->load->library('PHPExcel');
+		$objPHPExcel = new PHPExcel();
+		$objPHPExcel->setActiveSheetIndex(0);
+	
+		// Populate headers
+		$row = 1;
+		foreach ($data[0] as $key => $value) {
+			$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($key + 1, $row, $value);
+		}
+	
+		// Populate data
+		for ($i = 1; $i < count($data); $i++) {
+			$row++;
+			foreach ($data[$i] as $key => $value) {
+				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($key + 1, $row, $value);
+			}
+		}
+	
+		$objPHPExcel->getProperties()->setTitle("Dynamic Excel File")->setCreator("Your Name");
+		$filename = 'dynamic_excel_' . date('YmdHis') . '.xlsx';
+		$objPHPExcel->setActiveSheetIndex(0);
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header('Content-Disposition: attachment;filename="' . $filename . '"');
+		header('Cache-Control: max-age=0');
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+		$objWriter->save('php://output');
+	}
+	
+
 
 
 	public function index()
@@ -669,7 +912,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('firms');
 	}
 	public function preliminaryAppForm()
-
 	{
 		$this->load->view('preliminaryAppForm');
 	}
@@ -684,6 +926,30 @@ class Welcome extends CI_Controller {
 	public function login()
 	{
 		$this->load->view('login');
+	}
+	public function onlyForMembers()
+	{
+		$this->load->view('onlyForMembers');
+	}
+	public function NDA()
+	{
+		$this->load->view('NDA');
+	}
+	public function ndaDownload()
+	{
+		$this->load->view('ndaDownload');
+	}
+	public function form_2()
+	{
+		$this->load->view('form_2');
+	}
+	public function authorization()
+	{
+		$this->load->view('authorization');
+	}
+	public function dummy()
+	{
+		$this->load->view('dummy');
 	}
 
 

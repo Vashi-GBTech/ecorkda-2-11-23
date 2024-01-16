@@ -21,9 +21,9 @@
             <p class="mb-4">In order to guarantee the uniform range of service portfolio within the network RKDA International has developed the tool “Ideal Range of Services”. The tool bundles information regarding service range of each RKDA office, responsible persons, their position and professional qualification for each offered service including the client focus. Furthermore the tool provides information on specialization of each professional in industries and on persons responsible for marketing and quality management system.</p>
 
             <ul class='internship-pt-ul p-0 mb-4'>
-              <li><a href="#">Definition of the minimum of ideal range of services (PDF)</a></li>
-              <li><a href="#">Ideal Range of Services (PDF)</a></li>
-              <li><a href="#">Ideal Range of Services (XLS)</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Definition of the minimum of ideal range of services (PDF)</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Ideal Range of Services (PDF)</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Ideal Range of Services (XLS)</a></li>
             </ul>
             </div>
             <div class="my-3">

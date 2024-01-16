@@ -19,7 +19,7 @@
             <div class="" style="" >
             <h5 class="mb-0">Memo of duties and responsibilities for IORs mode of execution</h5>
             <ul class='internship-pt-ul p-0 mb-4'>
-              <li><a href="#">Memo of duties and responsibilities for IORs mode of execution</a></li>
+              <li><a href="<?= base_url() ?>onlyForMembers">Memo of duties and responsibilities for IORs mode of execution</a></li>
             </ul>
             <h5 class="mb-0">Best practice</h5>
             <p class="mb-4">Visit the section “<a href="#" style="color:crimson"  >Case Studies</a>”  on our website and send us your experiences. </p>
