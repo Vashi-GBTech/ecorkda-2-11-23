@@ -31,10 +31,10 @@
                 </div>
                 <div class="my-3">
                     <ul class='internship-pt-ul p-0'>
-                        <li><a href="#">General information about Ecovis Internships</a></li>
-                        <li><a href="#">Checklist for hosts</a></li>
-                        <li><a href="#">Checklist for interns</a></li>
-                        <li><a href="#">Post evaluation (questionnaires)</a></li>
+                        <li><a href="<?= base_url() ?>onlyForMembers">General information about Ecovis Internships</a></li>
+                        <li><a href="<?= base_url() ?>onlyForMembers">Checklist for hosts</a></li>
+                        <li><a href="<?= base_url() ?>onlyForMembers">Checklist for interns</a></li>
+                        <li><a href="<?= base_url() ?>onlyForMembers">Post evaluation (questionnaires)</a></li>
                     </ul>
 
 

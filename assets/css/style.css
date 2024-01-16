@@ -10,8 +10,9 @@
     --heading_font_weight: 550;
     --box-shadow: 0px 2px 6px 1px lightgrey;
     --box_normal_text: 500;
-  
+
 }
+
 /* *{
     border: 1px solid red;
 } */
@@ -19,7 +20,7 @@
 .normalText {
     font-size: var(--secondry_font_size);
     font-weight: var(--box_normal_text);
-    font-family:Meta Offc W01 Normal, Arial, Helvetica, sans-serif;
+    font-family: Meta Offc W01 Normal, Arial, Helvetica, sans-serif;
     color: #cd1432;
 }
 
@@ -41,7 +42,10 @@
 html {
     scroll-behavior: smooth;
 }
-button:focus, button:active, button:hover{
+
+button:focus,
+button:active,
+button:hover {
     outline: none !important;
     cursor: pointer;
 }
@@ -50,31 +54,37 @@ button:focus, button:active, button:hover{
     outline: none !important;
     box-shadow: unset !important;
 }
+
 .pageBanner {
     height: 450px;
     width: 100%;
     background-size: cover;
 }
 
- /* drop down css  */
+/* drop down css  */
 
- .dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover,
+.dropdown-item:focus {
     color: #16181b;
     outline: none !important;
     text-decoration: none;
     background-color: #e7455f4a !important;
     font-weight: 500;
 }
-.dropdown-item.active, .dropdown-item:active {
+
+.dropdown-item.active,
+.dropdown-item:active {
     color: #16181b !important;
     text-decoration: none;
     background-color: #e7455f4a !important;
 }
 
-.clientStoriesDetailPageImage:hover{
+.clientStoriesDetailPageImage:hover {
     filter: brightness(1) !important;
 }
-.form-control:focus, .form-control:active{
+
+.form-control:focus,
+.form-control:active {
     box-shadow: none;
     outline: none;
 }
@@ -86,35 +96,44 @@ button:focus, button:active, button:hover{
     background-repeat: no-repeat;
     background-position: center;
 }
-.serviceList:hover .serviceName{
+
+.serviceList:hover .serviceName {
     color: #cd1432;
 }
-.serviceList:hover .Strategy_Performance_Consulting_logo{
+
+.serviceList:hover .Strategy_Performance_Consulting_logo {
     background-image: url(../images/icon_images/services_icons/Strategyp.png);
 }
-.serviceList:hover .Onshoreb_logo{
+
+.serviceList:hover .Onshoreb_logo {
     background-image: url(../images/icon_images/services_icons/Onshorep.png);
 
 }
-.serviceList:hover .Risk_Compliance_logo{
+
+.serviceList:hover .Risk_Compliance_logo {
     background-image: url(../new_icon_images/Governancep_red.png);
 
 }
+
 .serviceList:hover .businessSupport_logo {
     background-image: url(../new_icon_images/BusinessSupportp.png);
 
 }
-.serviceList:hover .Legalb_logo{
+
+.serviceList:hover .Legalb_logo {
     background-image: url(../new_icon_images/Legalp.png);
 
 }
-.serviceList:hover .financial_capital_Services{
+
+.serviceList:hover .financial_capital_Services {
     background-image: url(../images/icon_images/services_icons/Financial&Capitalp.png);
 }
-.serviceList:hover .Digital_Transformationb_logo{
+
+.serviceList:hover .Digital_Transformationb_logo {
     background-image: url(../new_icon_images/Digital_Transformationp.png);
 }
-.serviceList:hover  .Capacityb_logo{
+
+.serviceList:hover .Capacityb_logo {
     background-image: url(../new_icon_images/Capacityp.png);
 }
 
@@ -153,11 +172,13 @@ button:focus, button:active, button:hover{
     height: 100px;
     border-radius: 50%;
 }
-.menu li{
-    font-family: "MetaCompPro-Bold W01 Regular",Arial,Helvetica,sans-serif !important;
+
+.menu li {
+    font-family: "MetaCompPro-Bold W01 Regular", Arial, Helvetica, sans-serif !important;
     word-wrap: break-word;
     font-weight: 600;
 }
+
 .header_connectBTN {
     background-color: transparent;
     border: 2px solid whitesmoke;
@@ -181,12 +202,13 @@ button:focus, button:active, button:hover{
     font-size: larger;
 }
 
-.om-style{
+.om-style {
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
     text-align: justify;
 }
+
 /* ====================================================================== index page css ================================================================ */
 
 .carousel-caption {
@@ -200,11 +222,13 @@ button:focus, button:active, button:hover{
 .service_icons {
     width: 70px !important;
 }
+
 .services_logo {
     height: 105px;
     background-size: cover;
 }
-.index-service-logo{
+
+.index-service-logo {
     width: inherit !important;
 
 }
@@ -212,13 +236,16 @@ button:focus, button:active, button:hover{
 .offeringservicesHeading:hover {
     color: #cd1432;
 }
-.financial_capital_Services{
+
+.financial_capital_Services {
     background-image: url(../images/icon_images/services_icons/Financial&Capitalb.png);
 }
-.serviceColomn{
+
+.serviceColomn {
     margin-bottom: 1.5rem;
 }
-.serviceColomn:hover .financial_capital_Services{
+
+.serviceColomn:hover .financial_capital_Services {
     background-image: url(../images/icon_images/services_icons/Financial&Capitalp.png);
 }
 
@@ -227,48 +254,61 @@ button:focus, button:active, button:hover{
     background-image: url(../images/icon_images/services_icons/Strategyb.png);
 
 }
-.serviceColomn:hover .Strategy_Performance_Consulting_logo{
+
+.serviceColomn:hover .Strategy_Performance_Consulting_logo {
     background-image: url(../images/icon_images/services_icons/Strategyp.png);
 
 }
-.Onshoreb_logo{
+
+.Onshoreb_logo {
     background-image: url(../images/icon_images/services_icons/Onshoreb.png);
 
 }
-.serviceColomn:hover .Onshoreb_logo{
+
+.serviceColomn:hover .Onshoreb_logo {
     background-image: url(../images/icon_images/services_icons/Onshorep.png);
 
 }
-.Risk_Compliance_logo{
+
+.Risk_Compliance_logo {
     background-image: url(../new_icon_images/Governanceb_black.png);
 }
-.serviceColomn:hover .Risk_Compliance_logo{
+
+.serviceColomn:hover .Risk_Compliance_logo {
     background-image: url(../new_icon_images/Governancep_red.png);
 
 }
+
 .businessSupport_logo {
     background-image: url(../new_icon_images/BusinessSupportb.png);
 
 }
-.Legalb_logo{
+
+.Legalb_logo {
     background-image: url(../new_icon_images/Legalb.png);
 }
-.serviceColomn:hover .Legalb_logo{
+
+.serviceColomn:hover .Legalb_logo {
     background-image: url('../new_icon_images/Legalp.png');
 
 }
-.Digital_Transformationb_logo{
+
+.Digital_Transformationb_logo {
     background-image: url(../new_icon_images/Digital_Transformationb.png);
 }
-.serviceColomn:hover .Digital_Transformationb_logo{
+
+.serviceColomn:hover .Digital_Transformationb_logo {
     background-image: url(../new_icon_images/Digital_Transformationp.png);
 }
-.Capacityb_logo{
+
+.Capacityb_logo {
     background-image: url(../new_icon_images/Capacityb.png);
 }
-.serviceColomn:hover .Capacityb_logo{
+
+.serviceColomn:hover .Capacityb_logo {
     background-image: url(../new_icon_images/Capacityp.png);
 }
+
 .serviceColomn:hover .businessSupport_logo,
 .serviceColomn:hover .offeringservicesHeading {
     color: #cd1432;
@@ -282,11 +322,12 @@ button:focus, button:active, button:hover{
     height: 221px !important;
     filter: brightness(.5);
 }
-.client_stories_card:hover .client_stories_images{
+
+.client_stories_card:hover .client_stories_images {
     filter: brightness(1);
 }
 
-.client_story:hover .client_stories_images{
+.client_story:hover .client_stories_images {
     filter: brightness(1);
 }
 
@@ -303,6 +344,7 @@ button:focus, button:active, button:hover{
     display: flex;
     justify-content: space-around;
 }
+
 .offeringservicesdetails {
     font-size: var(--secondry_font_size);
 }
@@ -389,7 +431,7 @@ ul {
 
 /* careear page css */
 
-.careearBanner{
+.careearBanner {
     background-image: url(../images/ecovis_banners/homepage_b3_job_vaccancies.png);
 
 }
@@ -586,7 +628,8 @@ ul {
     width: 60%;
     top: 50%;
 }
-.clientStoriesBannaer{
+
+.clientStoriesBannaer {
     background-image: url(../images/ecovis_banners/client_stories.png);
     filter: brightness(1);
 }
@@ -635,10 +678,12 @@ ul {
         width: 35% !important;
     }
 }
-@media screen and (max-width:1024px){
-    #client_stories_1{
+
+@media screen and (max-width:1024px) {
+    #client_stories_1 {
         height: 175px !important;
     }
+
     .menu {
         width: 75% !important;
     }
@@ -687,7 +732,7 @@ ul {
     #indexProblem {
         width: 55% !important;
     }
-   
+
 }
 
 @media only screen and (max-width: 559px) {
@@ -698,7 +743,8 @@ ul {
     #indexProblem {
         width: 95% !important;
     }
-    .client_story{
+
+    .client_story {
         margin-left: 2rem !important;
         margin-right: 2rem !important;
     }
@@ -708,30 +754,32 @@ ul {
 
 /* Strategy_Performance_Consulting_services page  */
 
-.Strategy_Performance_Consulting_servicesBanner{
+.Strategy_Performance_Consulting_servicesBanner {
     background-image: url(../images/ecovis_banners/strategy_perfomance_consulting.png);
     filter: brightness(1);
 }
 
-.collabrationBanner{
+.collabrationBanner {
     background-image: url(../images/ecovis_banners/mentor_bi.png);
-    filter:brightness(0.7);
+    filter: brightness(0.7);
     z-index: 0;
     position: relative;
 }
-.ourSolutionDropDowndiv{
+
+.ourSolutionDropDowndiv {
     width: 100%;
     justify-content: center;
     background: white;
     padding: 27px;
     margin-top: -50px;
-    box-shadow: 0px 12px 18px -6px rgba(29,37,45,0.2);
-    z-index: 5!important;
+    box-shadow: 0px 12px 18px -6px rgba(29, 37, 45, 0.2);
+    z-index: 5 !important;
     position: relative;
 }
-.form-select{
+
+.form-select {
     color: #999;
-    background-color:#1d252d;
+    background-color: #1d252d;
     padding: 16px 20px 16px 16px;
     font-size: 14px;
     -webkit-box-sizing: border-box;
@@ -743,77 +791,98 @@ ul {
     appearance: none; */
     border-radius: 0;
 }
+
 /* .bg-color{
     background-color:white !important;
     color: black;
 } */
-  .options{
+.options {
     padding: 3px;
-  }
+}
 
-  @media only screen and (max-width: 559px) {
-    #cardsdiv{
+@media only screen and (max-width: 559px) {
+    #cardsdiv {
         width: 600px !important;
     }
-  }
-  .singlecard{
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  .singlecard:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* box shadow on hover */
-  }
+}
 
-  .card-img-top{
+.singlecard {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.singlecard:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* box shadow on hover */
+}
+
+.card-img-top {
     height: 150px;
     filter: brightness(.5);
-  }
+}
 
-.card-img-top:hover{
+.card-img-top:hover {
     filter: brightness(1) !important;
 }
 
 /* ecovis international page css  */
 
-.ecovisInternationalBanner{
+.ecovisInternationalBanner {
     background-image: url(../images/ecovis_banners/ecovis_intl_banner.png);
     /* background-image: url(); */
     filter: brightness(1);
 
 }
+
 /* ecovisIndia page css  */
-.cssanimation, .cssanimation span {
+.cssanimation,
+.cssanimation span {
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 
-.cssanimation span { display: inline-block }
+.cssanimation span {
+    display: inline-block
+}
 
-.fadeInBottom { animation-name: fadeInBottom }
+.fadeInBottom {
+    animation-name: fadeInBottom
+}
+
 @keyframes fadeInBottom {
     from {
         opacity: 0;
         transform: translateY(100%);
     }
-    to { opacity: 1 }
+
+    to {
+        opacity: 1
+    }
 }
-.ecovisIndiaBanner{
+
+.ecovisIndiaBanner {
     background-image: url(../images/ecovis_banners/homepage_b1_ecovis_india.png);
 }
-.team-person-div{
+
+.team-person-div {
     transition: transform .6s;
 }
-.team-person-div:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.1); 
-  }
 
-  .red-info-div-1,.red-info-div-2{
+.team-person-div:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.red-info-div-1,
+.red-info-div-2 {
     background-color: #cd1432;
     padding: 30px 0px;
-  }
-  .red-info{
+}
+
+.red-info {
     background-color: #cd1432;
     color: white;
     text-align: center;
@@ -821,100 +890,120 @@ ul {
     padding: 35px 38px 90px 38px;
     margin-top: -3px;
     font-weight: 500;
-  }
-  .ourTeamDropDowndiv{
+}
+
+.ourTeamDropDowndiv {
     width: 100%;
     justify-content: center;
     background: white;
     padding: 10px;
     margin-top: -30px;
-    box-shadow: 0px 12px 18px -6px rgba(29,37,45,0.2);
-    z-index: 5!important;
+    box-shadow: 0px 12px 18px -6px rgba(29, 37, 45, 0.2);
+    z-index: 5 !important;
     position: relative;
 }
-.team-search{
+
+.team-search {
     height: -webkit-fill-available;
     background-color: #1d252d;
     width: inherit;
     color: white;
     padding: 13px 10px;
 }
-input:focus,select:focus{
+
+input:focus,
+select:focus {
     outline: none;
 }
-.ourTeamDropDowndiv ::placeholder{
+
+.ourTeamDropDowndiv ::placeholder {
     color: darkgray;
     font-size: 13px;
 }
-select{
+
+select {
     color: white;
 }
-.desc-div-team{
-  display: flex;
-  justify-content: center;
+
+.desc-div-team {
+    display: flex;
+    justify-content: center;
 }
-.memberpage,.memberpage:hover{
+
+.memberpage,
+.memberpage:hover {
     text-decoration: none;
     color: black;
 }
 
-.change-img-filter{
+.change-img-filter {
     filter: grayscale(1);
 }
-.change-img-filter:hover{
-    filter:unset;
+
+.change-img-filter:hover {
+    filter: unset;
 }
-.teamMets h2{
+
+.teamMets h2 {
     word-wrap: break-word;
     color: #222;
     /* padding-bottom: 1rem; */
-    font-family: "MetaCompPro-Bold W01 Regular",Arial,Helvetica,sans-serif !important;
+    font-family: "MetaCompPro-Bold W01 Regular", Arial, Helvetica, sans-serif !important;
     font-weight: 600;
 }
-.teamMets .city_link{
+
+.teamMets .city_link {
 
     color: #000;
     /* text-decoration: black 1px solid !important ; */
 }
-.city-icons{
+
+.city-icons {
     width: 150px;
     height: 80px;
 
 }
-.city-name-div-new,.city-img-div-new{
+
+.city-name-div-new,
+.city-img-div-new {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.city-name-div-new{
+
+.city-name-div-new {
     padding: 10px 0px;
 }
-.teams-underline{
-    
+
+.teams-underline {
+
     height: 5px;
     background-color: #cd1432;
     border-radius: 2px;
 }
-.teams-underline-div{
-   
-        width: 65%;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: right; */
-        top: -5px;
-        position: relative;
+
+.teams-underline-div {
+
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+    top: -5px;
+    position: relative;
 }
-.pole-name-div{
+
+.pole-name-div {
     margin-bottom: 1.5rem;
 }
 
-.textAlignEnd{
+.textAlignEnd {
     text-align: end;
 }
+
 /* team about me pages */
 
 
-.aboutMeName{
+.aboutMeName {
     color: white;
     display: flex;
     align-self: center;
@@ -924,74 +1013,83 @@ select{
     justify-content: center;
 }
 
-.img-style-about{
-    width:250px ;
-    border-radius:50%;
+.img-style-about {
+    width: 250px;
+    border-radius: 50%;
     box-shadow: 2px -1px 8px 2px;
     width: inherit !important;
 }
+
 /* marketing_head page css  */
 
-.marketing_headBanner{
-background-image: url(../images/ecovis_banners/marketing_head_banner.png);
-filter: brightness(1);
+.marketing_headBanner {
+    background-image: url(../images/ecovis_banners/marketing_head_banner.png);
+    filter: brightness(1);
 
 }
+
 /* Business_Analyst page css  */
 
-.Business_AnalystBanner{
+.Business_AnalystBanner {
     background-image: url(../images/ecovis_banners/business_analys_banner.png);
     filter: brightness(1);
 }
 
 /* jobapplication page css  */
 
-.jobapplicationBanner{
+.jobapplicationBanner {
     background-image: url(../images/ecovis_banners/Apply_banner.png);
 }
 
 /* Private_Limited_CompanyBanner */
 
-.Private_Limited_CompanyBanner{
+.Private_Limited_CompanyBanner {
     background-image: url(../images/ecovis_banners/Apply_banner.png);
 }
-.One_Person_CompanyBanner{
+
+.One_Person_CompanyBanner {
     background-image: url(../images/ecovis_banners/one_person_company.png);
 }
-.Business_RestructuringBanner{
+
+.Business_RestructuringBanner {
     background-image: url(../images/ecovis_banners/business_restructuring.png);
 
 }
-.Succession_PlanningBanner{
+
+.Succession_PlanningBanner {
     background-image: url(../images/ecovis_banners/Succession_planning.png);
 }
 
 
 /* accounting task force */
-.acc-for-heading{
+.acc-for-heading {
     color: #cd1432;
     font-weight: 700;
 }
-.af-img{
+
+.af-img {
     width: 130px;
     border: 1px solid #bebdbd;
 }
-.af-names{
+
+.af-names {
     color: #000 !important;
     font-family: "Meta Offc W01 Normal", Arial, Helvetica, sans-serif;
     text-decoration: underline;
 }
-.af-names:hover{
+
+.af-names:hover {
     text-decoration: none;
 }
 
 /* work list */
-.wl-link-color{
+.wl-link-color {
     color: black;
     font-family: "Meta Offc W01 Normal", Arial, Helvetica, sans-serif;
 }
 
-.work-list-ul li::before, .internship-pt-ul li::before{
+.work-list-ul li::before,
+.internship-pt-ul li::before {
     content: "";
     border-top: 5px solid transparent !important;
     border-bottom: 5px solid transparent;
@@ -999,43 +1097,281 @@ filter: brightness(1);
     margin: 0 5px 0px 0;
     display: inline-block;
 }
-.work-list-ul{
-    padding: 10px ;
+
+.work-list-ul {
+    padding: 10px;
 }
 
-.internship-pt-ul li a{
+.internship-pt-ul li a {
     color: #cd1432;
 }
 
 
 /* geographical locations */
 
-.country-icons{
+.country-icons {
     width: 40px;
     height: fit-content;
     margin-right: 10px;
 }
 
 /* partner meetings */
-.ipm-name{
+.ipm-name {
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-.margin-right{
+
+.margin-right {
     margin-right: 10px;
 }
-.ipm-div , .ipm-div:hover{
-  text-decoration: none !important;
-  color:#000
+
+.ipm-div,
+.ipm-div:hover {
+    text-decoration: none !important;
+    color: #000
 }
 
 .ipm-img {
     width: 100px;
     border: 1px solid #bebdbd;
-    height:80px
+    height: 80px
 }
-.bg-gray-ipm{
+
+.bg-gray-ipm {
     background-color: lightgray;
 }
 
+
+/* ninja btn css */
+.ninja-btn {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    bottom: -30px;
+
+}
+
+.ninja-btn p,
+.ninja-btn a {
+    text-decoration: none;
+}
+
+/* bubble message css */
+.message-sender {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(64, 62, 62);
+    padding: 10px;
+    padding-bottom: 5px !important;
+    border-radius: 15px;
+    margin: 16px;
+    bottom: 55px;
+    max-width: 260px;
+    color: white;
+    box-shadow: 4px 2px 7px 1px darkgray;
+
+}
+
+.message-sender p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+}
+
+.message-sender::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    right: -8px;
+    border-style: solid;
+    border-width: 15px 0 0 15px;
+    border-color: transparent transparent transparent rgb(64, 62, 62);
+
+}
+
+
+/* Hide message initially */
+.message-sender {
+    display: none;
+}
+
+/* Animation for showing message */
+.message-sender.visible {
+    display: inline-block;
+    animation: showAnimation 0.5s ease forwards;
+}
+
+@keyframes showAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* nda */
+
+.salutation-form {
+    width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+.line {
+    width: 75%;
+    height: 1px;
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.nda-card-css {
+    box-shadow: 1px 1px 11px 3px lightgray;
+    box-shadow: 1px 1px 11px 3px lightgray;
+    background: darkgrey;
+    color: white;
+    border: none;
+}
+
+.details{
+    margin-bottom: 1rem;
+}
+
+
+
+/* Checkmark */
+.checkmark-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .checkmark-circle .background {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #00C09D;
+    position: absolute;
+  }
+  .checkmark-circle .checkmark {
+    border-radius: 5px;
+  }
+  .checkmark-circle .checkmark.draw:after {
+    -webkit-animation-delay: 100ms;
+    -moz-animation-delay: 100ms;
+    animation-delay: 100ms;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-name: checkmark;
+    -moz-animation-name: checkmark;
+    animation-name: checkmark;
+    -webkit-transform: scaleX(-1) rotate(135deg);
+    -moz-transform: scaleX(-1) rotate(135deg);
+    -ms-transform: scaleX(-1) rotate(135deg);
+    -o-transform: scaleX(-1) rotate(135deg);
+    transform: scaleX(-1) rotate(135deg);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .checkmark-circle .checkmark:after {
+    opacity: 1;
+    height: 75px;
+    width: 37.5px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    border-right: 15px solid white;
+    border-top: 15px solid white;
+    border-radius: 2.5px !important;
+    content: '';
+    left: 37px;
+    top: 81px;
+    position: absolute;
+  }
+  
+  @-webkit-keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: 37.5px;
+      opacity: 1;
+    }
+    40% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+    100% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: 37.5px;
+      opacity: 1;
+    }
+    40% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+    100% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+  }
+  @keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: 37.5px;
+      opacity: 1;
+    }
+    40% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+    100% {
+      height: 75px;
+      width: 37.5px;
+      opacity: 1;
+    }
+  }
+  
+  

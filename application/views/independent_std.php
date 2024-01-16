@@ -26,10 +26,10 @@
             <div class="col-md-7 independence-container">
                 <h4>Independence Check Tool</h4>
                 <ul class='internship-pt-ul p-0'>
-                    <li><a href="#">A 2.1 AURE:IND import file</a></li>
-                    <li><a href="#">A 2.2 Check procedure</a></li>
-                    <li><a href="#">A 2.3 Creation of Engagement</a></li>
-                    <li><a href="#">A 2.4 User Manual</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">A 2.1 AURE:IND import file</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">A 2.2 Check procedure</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">A 2.3 Creation of Engagement</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">A 2.4 User Manual</a></li>
                 </ul>
                 <p style='font-family:emoji;text-align: justify;'>RKDA International has introduced the IT-based
                     Independence Check Tool AURE.IND to manage the independence queries. The tool’s functions are
@@ -87,17 +87,17 @@
 
                 <h4 class='mb-0'>2. CaseWare</h4>
                 <ul class='internship-pt-ul p-0'>
-                    <li><a href="#">RKDA International Agreement 2020-2021</a></li>
-                    <li><a href="#">RKDA International Agreement 2019-2020</a></li>
-                    <li><a href="#">RKDA International Agreement 2018-2019</a></li>
-                    <li><a href="#">RKDA International Agreement 2017-2018</a></li>
-                    <li><a href="#">RKDA International Agreement 2016-2017</a></li>
-                    <li><a href="#">RKDA International Agreement 2015-2016</a></li>
-                    <li><a href="#">RKDA International Agreement 2014-2015</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2020-2021</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2019-2020</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2018-2019</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2017-2018</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2016-2017</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2015-2016</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">RKDA International Agreement 2014-2015</a></li>
                 </ul>
                 <h4 class='mb-0'>Webinar recording CaseWare</h4>
                 <ul class='internship-pt-ul p-0'>
-                    <li><a href="#">Webinar on youtube</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">Webinar on youtube</a></li>
                 </ul>
 
             </div>

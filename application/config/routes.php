@@ -159,5 +159,12 @@ $route['firms'] = 'welcome/firms';
 $route['preliminaryAppForm'] = 'welcome/preliminaryAppForm';
 $route['congrats'] = 'welcome/congrats';
 $route['sendMail'] = 'welcome/sendMail';
+$route['login'] = 'welcome/login';
+$route['onlyForMembers'] = 'welcome/onlyForMembers';
+$route['NDA'] = 'welcome/NDA';
+$route['ndaDownload'] = 'welcome/ndaDownload';
+$route['form_2'] = 'welcome/form_2';
+$route['authorization'] = 'welcome/authorization';
+$route['dummy'] = 'welcome/dummy';
 
 

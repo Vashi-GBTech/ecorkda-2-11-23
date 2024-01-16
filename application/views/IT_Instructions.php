@@ -17,10 +17,10 @@
         <div class="d-flex">
             <div class="col-md-7">
                 <ul class='internship-pt-ul p-0'>
-                    <li><a href="#">Data Backup – Instructions</a></li>
-                    <li><a href="#">Usage of Emails – Instructions</a></li>
-                    <li><a href="#">Usage of Network and Internet – Instructions</a></li>
-                    <li><a href="#">Usage of Software – Instructions</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">Data Backup – Instructions</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">Usage of Emails – Instructions</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">Usage of Network and Internet – Instructions</a></li>
+                    <li><a href="<?= base_url() ?>onlyForMembers">Usage of Software – Instructions</a></li>
                 </ul>
 
             </div>

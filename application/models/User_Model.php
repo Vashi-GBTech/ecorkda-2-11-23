@@ -16,7 +16,7 @@ class User_Model extends CI_Model
     public function updateUserData($data, $id)
     {
         try {
-            $result=$this->db->update("user_details",$data,"id=".$id."");
+            $result = $this->db->update("user_details", $data, "id=" . $id . "");
             // $result = $this->db->insert("user_details", $data);
             return $result;
         } catch (Exception $e) {
@@ -24,10 +24,10 @@ class User_Model extends CI_Model
             return false;
         }
     }
-    public function deleteUserData( $id)
+    public function deleteUserData($id)
     {
         try {
-            $result=$this->db->delete("user_details",array("id" => $id));
+            $result = $this->db->delete("user_details", array("id" => $id));
             // $result = $this->db->insert("user_details", $data);
             return $result;
         } catch (Exception $e) {
@@ -38,13 +38,13 @@ class User_Model extends CI_Model
     public function checkDuplicate($key_name, $id = null)
     {
         try {
-            if(isset($id) && !empty($id)){
+            if (isset($id) && !empty($id)) {
                 $this->db->select('key_name');
                 $this->db->from('user_details');
                 $this->db->where('key_name', $key_name);
                 $this->db->where('id !=', $id);
-                $query = $this->db->get();      
-            }else{
+                $query = $this->db->get();
+            } else {
                 $this->db->select('key_name');
                 $this->db->from('user_details');
                 $this->db->where('key_name', $key_name);
@@ -82,7 +82,7 @@ class User_Model extends CI_Model
             $this->db->where('id', $id);
             $result = $this->db->get()->row_array();
             // $result = $this->db->get()->result_array();
-           
+
             return $result;
         } catch (Exception $e) {
             echo "Error:" . $e;
@@ -121,8 +121,32 @@ class User_Model extends CI_Model
             return false;
         }
     }
+    public function saveNdaFormData($data)
+    {
+        try {
+            $result = $this->db->insert("nda_details", $data);
+            return $result;
+        } catch (Exception $e) {
+            error_log("Database error: " . $e->getMessage());
+            return false;
+        }
+    }
+    public function saveAuthFormData($data)
+    {
+       
+        try {
+            $result = $this->db->insert("auth_details", $data);
+            // echo '<pre>'; print_r($result);
+            // exit();
+            return $result;
+        } catch (Exception $e) {
+            error_log("Database error: " . $e->getMessage());
+            return false;
+        }
+    }
 
-    function sendEmail($to, $subject, $message) {
+    function sendEmail($to, $subject, $message)
+    {
         $from_email = 'mentor@ecovisrkca.com'; //change this to yours
         $this->load->library('email');
         //configure email settings
@@ -137,7 +161,7 @@ class User_Model extends CI_Model
         $config['wordwrap'] = TRUE;
         $config['newline'] = "\r\n"; //use double quotes
         $this->email->initialize($config);
-    
+
         //send mail
         $this->email->from($from_email, 'RMT Team');
         $this->email->to($to);
@@ -150,7 +174,8 @@ class User_Model extends CI_Model
         }
     }
 
-    public function CreateOtp() {
+    public function CreateOtp()
+    {
         $opt = rand(1000, 10000);
         $this->db->select('otp');
         $this->db->from('otp_header_all');
@@ -163,7 +188,8 @@ class User_Model extends CI_Model
         }
     }
 
-    public function SaveOpt($data, $user_id) {
+    public function SaveOpt($data, $user_id)
+    {
         $this->db->where("created_by", $user_id)->delete('otp_header_all');
         $this->db->insert('otp_header_all', $data);
         if ($this->db->affected_rows() > 0) {
@@ -173,7 +199,10 @@ class User_Model extends CI_Model
         }
     }
 
-    public function updatePartnerData($data, $id) {
+    public function updatePartnerData($data, $id)
+    {
+        // echo "<pre>"; print_r($data); exit();
+
         $this->db->where("id", $id);
         $this->db->update('otp_header_all', $data);
         if ($this->db->affected_rows() > 0) {
@@ -183,26 +212,22 @@ class User_Model extends CI_Model
         }
     }
 
-    public function getUserDetails($id, $userEmail)
-    {   
+    public function getUserDetails()
+    {
         try {
             $this->db->select('*');
             $this->db->from('otp_header_all');
-            if(!empty($id)){
-                $this->db->where('id', $id);
-            }else if(!empty($userEmail)){
-                $this->db->where('created_by', $userEmail);
-            }
-            $result = $this->db->get()->row_array();
-            // $result = $this->db->get()->result_array();
-            if(empty($result)){
+
+            // No specific conditions needed if you want to fetch all rows
+
+            $result = $this->db->get()->result_array();
+
+            if (empty($result)) {
                 $result = array();
             }
-            // echo "<pre>"; print_r($result); exit();
+
             return $result;
         } catch (Exception $e) {
-            // echo "<pre>"; print_r($result); exit();
-            // echo "Error:" . $e;
             $result = array();
             return $result;
         }

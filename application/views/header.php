@@ -49,6 +49,8 @@
 
     <!-- animate css cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <style>
     .row {
@@ -175,84 +177,109 @@
     <!-- <input type="hidden" id="base_url" value="<?php echo base_url(); ?>"> -->
     <header>
         <div class="row mx-0">
+
             <div
-                class="align-items-center col-md-12 bg-danger contact-header d-flex justify-content-end px-4 py-1 small text-light">
-                <a href="<?= base_url() ?>welcome/NewsLetter"
-                    style="text-decoration: none; font-size:medium; font-weight: 500;" class="text-light"> <span><i
-                            class="fa-solid fa-newspaper"></i></span> NewsLetter</a>
-                <a href="#" style="text-decoration: none; font-size:medium; font-weight: 500;" class="text-light ml-3">
-                    <span><i class="fa-solid fa-envelope"></i></span> mentor@rkca.in</a>
-            </div>
-            <div class="align-items-center col-md-12 d-flex justify-content-between main-header">
-                <div class="logo py-2 text-center">
-                    <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="img"
-                            id="img1"></a>
-                    <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="logo"
-                            class="cssanimation fadeInBottom" style="display:none; align-items:end;" id="img2"></a>
+                class="align-items-center col-md-12 bg-danger contact-header d-flex justify-content-between px-4 py-1 small text-light">
+                <div>
+                    <a href="<?= base_url() ?>welcome/NewsLetter"
+                        style="text-decoration: none; font-size:medium; font-weight: 500;" class="text-light"> <span><i
+                                class="fa-solid fa-newspaper"></i></span> NewsLetter</a>
+                    <a href="#" style="text-decoration: none; font-size:medium; font-weight: 500;"
+                        class="text-light ml-3">
+                        <span><i class="fa-solid fa-envelope"></i></span> mentor@rkca.in</a>
+
                 </div>
-                <div style="display:none;" class="w-50" id="searchbar_section">
-                    <div class="align-items-center d-flex px-4 searchbar ">
-                        <input type="search" name="searchbar" placeholder="Search..." autofocus="" id="searchbar"
-                            class="bg-light pl-3 border-0 normalText form-control w-100">
-                        <span id="closeSearchBar"><i class="fa-solid text-danger fa-xmark"></i></span>
+                <div class='d-flex align-items-end'>
+                    <div>
+                        <p class='mb-0' id='user-p'>
+                            <span class="user-icon"><i class="fas fa-user"></i></span>
+                            <span id="userMail" style="font-weight: 500;">example@email.com</span>
+                        </p>
                     </div>
+                    <div>
+                        <a href="<?= base_url() ?>login" class="btn btn-dark rounded-pill btn-sm text-light ml-3 login">
+                            Login <i class="fas fa-sign-in-alt"></i></a>
+                        <a href="<?= base_url() ?>login" class="btn btn-dark rounded-pill btn-sm text-light ml-3 logout"
+                            style='display:none'>
+                            Logout <i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+
+
                 </div>
-                <div id="menu" class="menu" style="width: 60%; z-index:50;">
-                    <ul class="d-flex mb-0 justify-content-around list-unstyled align-items-center">
-                        <a href="<?= base_url() ?>">
-                            <li id="home" class="">Home</li>
-                        </a>
-                        <a href="#" id="about_us_link" title="Please Click">
-                            <li id="about_us" class="about_us">About Us <i class="fas fa-chevron-down"
-                                    style='font-size:12px'></i></li>
-                        </a>
-                        <!-- <a href="<?= base_url() ?>welcome/client_stories">
+            </div>
+
+        </div>
+
+        <div class="align-items-center col-md-12 d-flex justify-content-between main-header">
+            <div class="logo py-2 text-center">
+                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="img"
+                        id="img1"></a>
+                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/ecovis-images/rkda-logo.png" alt="logo"
+                        class="cssanimation fadeInBottom" style="display:none; align-items:end;" id="img2"></a>
+            </div>
+            <div style="display:none;" class="w-50" id="searchbar_section">
+                <div class="align-items-center d-flex px-4 searchbar ">
+                    <input type="search" name="searchbar" placeholder="Search..."  id="searchbar"
+                        class="bg-light pl-3 border-0 normalText form-control w-100">
+                    <span id="closeSearchBar"><i class="fa-solid text-danger fa-xmark"></i></span>
+                </div>
+            </div>
+            <div id="menu" class="menu" style="width: 60%; z-index:50;">
+                <ul class="d-flex mb-0 justify-content-around list-unstyled align-items-center">
+                    <a href="<?= base_url() ?>" style="margin-right:10px;">
+                        <li id="home" class="">Home</li>
+                    </a>
+                    <a href="#" id="about_us_link" title="Please Click">
+                        <li id="about_us" class="about_us">About Us <i class="fas fa-chevron-down"
+                                style='font-size:12px'></i></li>
+                    </a>
+                    <!-- <a href="<?= base_url() ?>welcome/client_stories">
                             <li>Governance</li>
                         </a> -->
-                        <li class="parent" id="work-together"><a href="#" class='parent-li'>Task Force<span
-                                    class="expand"><i class="fas fa-chevron-down"></i></span></a>
-                            <ul class="child work-together">
-                                <li><a href="<?= base_url() ?>accounting_task_force" class="">Accounting Force</a>
-                                </li>
-                                <li><a href="<?= base_url() ?>audit_task_force">Audit Force</a></li>
-                                <li><a href="<?= base_url() ?>legal_task_force">Legal Force</a></li>
-                                <li><a href="<?= base_url() ?>ma_task_force">Merchants & Aquisition Force</a></li>
-                                <li><a href="<?= base_url() ?>tax_task_force">Governance Risk Compliance </a></li>
-                                <li><a href="<?= base_url() ?>technology_task_force">Technology Force</a></li>
-                                <li><a href="<?= base_url() ?>women_leadership_group">Women Leadership Group</a></li>
-                                <li><a href="<?= base_url() ?>rkda_internship">RKDA International Internships</a></li>
-                                <li><a href="<?= base_url() ?>partner_meetings">Partner Meetings</a></li>
-                                <!-- <li><a href="#">International Service Offerings</a></li> -->
-                                <!-- <li><a href="#">Multinational project news</a></li> -->
-                                <li><a href="#">VAT/ Experts</a></li>
-                                <li><a href="#">Vision 2030</a></li>
-                                <li><a href="#">Workshops & Webinars</a></li>
-                            </ul>
-                        </li>
-                        <!-- <a href="<?= base_url() ?>welcome/ourSolution">
+                    <li class="parent" id="work-together"><a href="#" class='parent-li'>Task Force<span
+                                class="expand"><i class="fas fa-chevron-down"></i></span></a>
+                        <ul class="child work-together">
+                            <li><a href="<?= base_url() ?>accounting_task_force" class="">Accounting </a>
+                            </li>
+                            <li><a href="<?= base_url() ?>audit_task_force">Audit </a></li>
+                            <li><a href="<?= base_url() ?>legal_task_force">Legal </a></li>
+                            <li><a href="<?= base_url() ?>ma_task_force">Merchants & Aquisition </a></li>
+                            <li><a href="<?= base_url() ?>tax_task_force">Governance Risk Compliance </a></li>
+                            <li><a href="<?= base_url() ?>technology_task_force">Technology </a></li>
+                            <li><a href="<?= base_url() ?>women_leadership_group">Women Leadership Group</a></li>
+                            <li><a href="<?= base_url() ?>rkda_internship">RKDA International Internships</a></li>
+                            <li><a href="<?= base_url() ?>partner_meetings">Partner Meetings</a></li>
+                            <!-- <li><a href="#">International Service Offerings</a></li> -->
+                            <!-- <li><a href="#">Multinational project news</a></li> -->
+                            <li><a href="#">VAT/ Experts</a></li>
+                            <li><a href="#">Vision 2030</a></li>
+                            <li><a href="#">Workshops & Webinars</a></li>
+                        </ul>
+                    </li>
+                    <!-- <a href="<?= base_url() ?>welcome/ourSolution">
                             <li>Why Us</li>
                         </a> -->
-                        <li class="parent" id="why-us"><a href="#" class='parent-li'>Why Us<span class="expand"><i
-                                        class="fas fa-chevron-down"></i></span></a>
-                            <ul class="child why-us">
-                                <li><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
-                                <li><a href="<?= base_url() ?>essentials">Membership Process</a></li>
-                                <li><a href="<?= base_url() ?>qty_standards">Quality Standards</a></li>
-                                <li><a href="<?= base_url() ?>qty_monitoring">Quality Monitoring</a></li>
-                                <li><a href="<?= base_url() ?>siir">Self-Inspection & Interoffice Review</a></li>
-                                <li><a href="<?= base_url() ?>service_portfolio">Service Portfolio</a></li>
-                                <!-- <li><a href="technical_standards">Technical Standards</a></li> -->
-                            </ul>
+                    <li class="parent" id="why-us"><a href="#" class='parent-li'>Governance<span class="expand"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <ul class="child why-us">
+                            <li><a href="<?= base_url() ?>qty_dev_board">Quality Development Board</a></li>
+                            <li><a href="<?= base_url() ?>essentials">Membership Process</a></li>
+                            <li><a href="<?= base_url() ?>qty_standards">Quality Standards</a></li>
+                            <li><a href="<?= base_url() ?>qty_monitoring">Quality Monitoring</a></li>
+                            <li><a href="<?= base_url() ?>siir">Self-Inspection & Interoffice Review</a></li>
+                            <li><a href="<?= base_url() ?>service_portfolio">Service Portfolio</a></li>
+                            <!-- <li><a href="technical_standards">Technical Standards</a></li> -->
+                        </ul>
+                    </li>
+                    <a href="#" id="services_link" title="Please Click">
+                        <li id="services">Our Capabilities <i class="fas fa-chevron-down" style='font-size:12px'></i>
                         </li>
-                        <a href="#" id="services_link" title="Please Click">
-                            <li id="services">Our Services <i class="fas fa-chevron-down" style='font-size:12px'></i>
-                            </li>
-                        </a>
-                        <!-- <a href="<?= base_url() ?>team">
+                    </a>
+                    <!-- <a href="<?= base_url() ?>team">
                             <li>Our team</li>
                         </a> -->
 
-                        <!-- <div class="btn-group">
+                    <!-- <div class="btn-group">
                             <a href="#" class="align-items-center btn d-flex dropdown-toggle w-100" style="padding:0px"
                                 data-toggle="dropdown" aria-expanded="false">
                                 Let's Connect
@@ -266,27 +293,38 @@
                                         vacancies</button></a>
                             </div>
                         </div> -->
-                        <li class="parent" id="membership"><a href="#" class='parent-li'>Membership<span
-                                    class="expand"><i class="fas fa-chevron-down"></i></span></a>
-                            <ul class="child membership">
-                                <li><a href="<?= base_url() ?>faq_new_partner">FAQ (New Partner)</a></li>
-                                <li><a href="<?= base_url() ?>expansion_plan">Expansion Plan</a></li>
-                                <li><a href="<?= base_url() ?>info_new_partners">Information about New Partners</a></li>
-                                <li><a href="<?= base_url() ?>integration_checklist">Integration Checklist</a></li>
-                                <li><a href="<?= base_url() ?>first_steps_checklist">First Steps Checklist</a></li>
+                    <li class="parent" id="membership"><a href="#" class='parent-li'>Membership<span class="expand"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <ul class="child membership">
+                            <li><a href="<?= base_url() ?>faq_new_partner">FAQ (New Partner)</a></li>
+                            <li><a href="<?= base_url() ?>expansion_plan">Expansion Plan</a></li>
+                            <li><a href="<?= base_url() ?>info_new_partners">Information about New Partners</a></li>
+                            <li><a href="<?= base_url() ?>integration_checklist">Integration Checklist</a></li>
+                            <li><a href="<?= base_url() ?>first_steps_checklist">First Steps Checklist</a></li>
 
-                            </ul>
-                        </li>
-                        <a href="#" id="toggleSearch">
-                            <li><span><i class="fa-solid text-danger fa-magnifying-glass"></i></span></li>
-                        </a>
-                    </ul>
+                        </ul>
+                    </li>
+                    <a href="#" id="toggleSearch">
+                        <li><span><i class="fa-solid text-danger fa-magnifying-glass"></i></span></li>
+                    </a>
+                </ul>
 
-                </div>
-                <span id="menu_icon" class="menu_icon mr-3 d-none" style="font-size: x-large;"><i
-                        class="fa-solid fa-bars"></i></span>
             </div>
+            <span id="menu_icon" class="menu_icon mr-3 d-none" style="font-size: x-large;"><i
+                    class="fa-solid fa-bars"></i></span>
         </div>
+        </div>
+        <div class='d-flex justify-content-end ninja-btn'>
+            <div class="message-sender" id="message">
+                <!-- <a href="" class="text-white"> -->
+                    <p>Hey..Are You Interested to become a Member ?</p>
+                <!-- </a> -->
+            </div>
+            <a href="<?= base_url() ?>preliminaryAppForm" id="rocketBtn" class="bg-danger text-white rounded-circle mr-3 d-flex align-items-center"
+                style="margin-bottom: 50px; box-shadow: 0px 0px 14px 2px #a3a3a3;"><i class="p-3 fas fa-rocket rocket-icon"></i></a>
+        </div>
+
+
         <!-- about us -->
         <div class=" row position-absolute " style="display: none; z-index: 6; right: 0; left: 0;" id="aboutUs_menu">
             <div class="col-md-4 pr-0 text-center" style="background: linear-gradient(0deg, #CD1432, #dc4f54);">
@@ -613,7 +651,7 @@
                                     style="text-decoration: none;">
                                     <div class="text-center">
                                         <div class="mx-auto service_icons" style="width:70px">
-                                           
+
 
                                             <img src="<?= base_url() ?>assets/new_icon_images/Legalb.png"
                                                 class="index-service-logo" style="width:inherit" alt="">
@@ -821,9 +859,36 @@
                 e.preventDefault();
                 $(this).parent().toggleClass("opened");
                 $(this).next('.child').slideToggle();
+
             });
+
+            const userEmail = localStorage.getItem('user-email');
+            // console.log(userEmail, 'userEmail');
+            if (userEmail != undefined) {
+                $('#userMail').text(userEmail);
+            }
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            // console.log(isLoggedIn, 'isLoggedIn');
+            if (isLoggedIn == 'true') {
+                $('.login').hide();
+                $('.logout').show();
+                $('#user-p').show();
+            }
+            else {
+                $('.login').show();
+                $('.logout').hide();
+                $('#user-p').hide();
+            }
+
         });
 
+        $('.logout').click(function () {
+            localStorage.setItem('isLoggedIn', 'false');
+            window.location.href = "<?= base_url() ?>login";
+            $('.login').show();
+            $('.logout').hide();
+            $('#user-p').hide();
+        })
     </script>
     <script>
         const baseURL = "<?php echo base_url(); ?>";
@@ -831,7 +896,7 @@
         $(document).ready(function () {
             let activeNav = localStorage.getItem('activeNav');
 
-            console.log(window.location.href);
+            // console.log(window.location.href);
             if (window.location.href === baseURL) {
 
                 localStorage.setItem('activeNav', '');
@@ -840,18 +905,18 @@
                     'text-decoration': 'underline'
                 })
             } else {
-                console.log('inside elsee');
+                // console.log('inside elsee');
                 if (activeNav) {
                     $('.parent-li').removeClass('underlineNav');
                     $(activeNav).find('.parent-li').addClass('underlineNav');
                 }
 
                 function handleMenuClick(selector) {
-                    console.log('inside handlemeuu', selector);
+                    // console.log('inside handlemeuu', selector);
                     $('.parent-li').removeClass('underlineNav');
                     let activeLinkSelector = '#' + $(selector).closest('.parent').attr('id');
                     $(activeLinkSelector + ' .parent-li').addClass('underlineNav');
-                    console.log(activeLinkSelector, 'activeLinkSelector');
+                    // console.log(activeLinkSelector, 'activeLinkSelector');
                     localStorage.setItem('activeNav', activeLinkSelector);
 
                     // Apply style immediately
@@ -875,6 +940,32 @@
             }
         });
 
+
+    </script>
+
+    <script>
+       $(document).ready(function() {
+  $("#rocketBtn").hover(function() {
+    $("#message").addClass("visible");
+  }, function() {
+    $("#message").removeClass("visible");
+  });
+
+  $("#rocketBtn").click(function(e) {
+    e.preventDefault();
+    $("#message").addClass("animate-bounce");
+    setTimeout(function() {
+      $("#message").addClass("animate-pop");
+    }, 600);
+    setTimeout(function() {
+      $("#message").removeClass("animate-bounce animate-pop");
+    }, 1200);
+  });
+});
+
+    $('.rocket-icon').click( function(){
+        window.location.href='<?= base_url() ?>preliminaryAppForm';
+    })
 
     </script>
 </body>

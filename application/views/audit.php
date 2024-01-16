@@ -34,10 +34,10 @@
                   <p></p>
                   <ul  class="internship-pt-ul p-0">
                     <li>1.1 <a
-                        href="https://www.ecovis.com/intranet/global/wp-content/uploads/2021/04/Independence_Procedures.pdf"
+                        href="<?= base_url() ?>onlyForMembers"
                         target="_blank" rel="noopener noreferrer">RKDA Independence Procedure</a></li>
                     <li>1.2 <a
-                        href="https://www.ecovis.com/intranet/global/wp-content/uploads/2021/04/Independence_threats_and_safeguarding.pdf"
+                        href="<?= base_url() ?>onlyForMembers"
                         target="_blank" rel="noopener noreferrer">Independence Threats and Safeguarding</a></li>
                   </ul>
                 </td>
@@ -48,7 +48,7 @@
                   <p></p>
                   <ul class="internship-pt-ul  p-0">
                     <li>2.1 <a
-                        href="https://www.ecovis.com/intranet/global/wp-content/uploads/2020/06/ECOVIS-Audit-guideline-v.20122017.xlsx"
+                        href="<?= base_url() ?>onlyForMembers"
                         target="_blank" rel="noopener noreferrer">RKDA Audit guideline</a></li>
                   </ul>
                 </td>
@@ -59,10 +59,10 @@
                   <p></p>
                   <ul class='internship-pt-ul  p-0'>
                     <li>3.1 <a
-                        href="https://www.ecovis.com/intranet/global/wp-content/uploads/2020/06/audit-instructions.zip"
+                        href="<?= base_url() ?>onlyForMembers"
                         target="_blank" rel="noopener noreferrer">Group Audit Instructions</a></li>
                     <li>3.2 <a
-                        href="https://www.ecovis.com/intranet/global/wp-content/uploads/2020/06/audits-group-financial-statements.pdf"
+                        href="<?= base_url() ?>onlyForMembers"
                         target="_blank" rel="noopener noreferrer">Audits of Group Financial Statements – Presentation at
                         IPM Tokyo 2016</a></li>
                   </ul>
@@ -73,13 +73,13 @@
                 <td>
                   <ul class='internship-pt-ul  p-0'>
                     <li>4.1 <a
-                        href="https://www.ecovis.com/intranet/global/marketing/corporate-design/power-point-presentations-and-proposals/"
+                        href="<?= base_url() ?>onlyForMembers"
                         rel="noopener noreferrer">Proposal audit of group financial statements</a></li>
-                    <li>4.2 <a href="https://www.ecovis.com/intranet/global/working-together/audit-task-force/"
+                    <li>4.2 <a href="<?= base_url() ?>onlyForMembers"
                         rel="noopener noreferrer">About us</a>, <a
-                        href="https://www.ecovis.com/intranet/global/marketing/corporate-design/image-brochure/"
+                        href="<?= base_url() ?>onlyForMembers"
                         rel="noopener noreferrer">Image Brochure</a></li>
-                    <li>4.3 <a href="https://www.ecovis.com/intranet/global/author/rosario/"
+                    <li>4.3 <a href="<?= base_url() ?>onlyForMembers"
                         rel="noopener noreferrer">Client reference list</a></li>
                   </ul>
                 </td>
