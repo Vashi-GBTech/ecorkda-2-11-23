@@ -951,6 +951,18 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('dummy');
 	}
+	public function navbar()
+	{
+		$this->load->view('navbar');
+	}
+	public function landing_page()
+	{
+		$this->load->view('landing_page');
+	}
+	public function rkda_login()
+	{
+		$this->load->view('rkda_login');
+	}
 
 
 }

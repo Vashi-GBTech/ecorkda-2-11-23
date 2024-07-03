@@ -166,5 +166,8 @@ $route['ndaDownload'] = 'welcome/ndaDownload';
 $route['form_2'] = 'welcome/form_2';
 $route['authorization'] = 'welcome/authorization';
 $route['dummy'] = 'welcome/dummy';
+$route['navbar'] = 'welcome/navbar';
+$route['landing_page'] = 'welcome/landing_page';
+$route['rkda_login'] = 'welcome/rkda_login';
 
 
