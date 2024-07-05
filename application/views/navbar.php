@@ -10,285 +10,221 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     </head>
 <style>
-    body{
-    min-height: 100vh;
-    /* background-color: #1a1e21; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    overflow-x:hidden;
-    }
-    nav{
-        background-color: white;
-        /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
-    }
-    nav ul{
-        width: 100%;
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    nav li{
-        height: 50px;
-    }
-    nav a{
-        height: 100%;
-        padding: 0 20px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: black;
-        font-size:1rem
-    }
-    .hideOnMobile:hover{
-        background-color: #f0f0f0;
-        border-radius:50px;
-    }
-    nav li:first-child{
-        /* margin-right: auto; */
-    }
-    .sidebar{
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 250px;
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(12px);
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-        list-style: none;
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    .sidebar li{
-        width: 100%;
-    }
-    .sidebar a{
-        width: 100%;
-    }
-    .menu-button{
-        display: none;
-    }
-    @media(max-width: 800px){
-        .hideOnMobile{
-            display: none;
-        }
-        .menu-button{
-            display: block;
-        }
-    }
-    @media(max-width: 400px){
-        .sidebar{
-            width: 100%;
-        }
-    }
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+}
 
-    a {
-    text-decoration: none;
-    }
+nav {
+  background-color: white;
+}
 
-    nav {
-        /* font-family: monospace; */
-    }
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-    ul {
-    background: white;
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-    }
+nav li {
+  height: 50px;
+}
 
-    li {
-        color: black;
-    background: white;
-        display: block;
-        float: left;
-        padding: .2rem;
-        position: relative;
-        text-decoration: none;
-    transition-duration: 0.5s;
-    }
-    
-    li a {
-    color: black;
-    }
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 1rem;
+}
 
-    li:hover {
-        /* background: red; */
-        cursor: pointer;
-    }
+.hideOnMobile:hover {
+  background-color: #f0f0f0;
+  border-radius: 50px;
+}
 
-    ul li ul {
-        background: orange;
-        visibility: hidden;
-    opacity: 0;
-    min-width: 5rem;
-        position: absolute;
-    transition: all 0.5s ease;
-    margin-top: 1rem;
-        left: 0;
+nav li:first-child {}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
     display: none;
-    }
-
-    ul li:hover > ul,
-    ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
+  }
+  .menu-button {
     display: block;
-    }
+  }
+}
 
-    ul li ul li {
-        clear: both;
+@media(max-width: 400px) {
+  .sidebar {
     width: 100%;
-    }
-
-    .hero-img {
-        object-fit: cover;
-        border-radius: 999px;
-        width: 100%;
-        min-width: 600px;
-        min-height: 600px;
-        overflow: hidden;
-    }
-    .hero-imgs{
-        max-width: 534px;
-        /* padding-top: 80px; */
-        position: relative;
-    }
-    .hero-title-wrap {
-        z-index: 2;
-        text-align: center;
-        max-width: 680px;
-        position: relative;
-    }
-    .hero-wrap{
-    grid-column-gap: 80px;
-        grid-row-gap: 80px;
-        flex-direction: column;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-columns: 1fr;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 80px;
-        display: grid;
-        position: relative;
-    }
-    h1{
-        margin-top: 0;
-        margin-bottom: 0;
-        font-family: Avenir Black, sans-serif;
-        font-size: 53px;
-        font-weight: 900;
-        line-height: 60px;
-    }
-    .span-green {
-        color: #04289D;
-    }
-    .hero {
-        z-index: 2;
-        background-color: var(--white);
-        background-image: url('assets/a_hero-bg.png');
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
-        background-size: 103.35%;
-        min-height: 768px;
-        position: relative;
-    }
-    .intro {
-        background-color: var(--white-smoke);
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
-    }
-    .intro-bg {
-        z-index: 0;
-        position: relative;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    }
-    .stat-number {
-        font-family: Avenir Black, sans-serif;
-        font-size: 75px;
-        line-height: 75px;
-        color:#FF3131;
-        /* font-size: 66px; */
-        line-height: 86px;
-        font-weight:700;
-    }
-    .card{
-        background-color:#E3DDDC !important;
-    }
-    .red-btn{
-        background-color:#C61431;
-        color: white;
-    }
-    .red-btn:hover {
-        color: white;
-        background-color: #df2c2c;
-        border-color:#df2c2c;
-    }
-    /* style='background-color:#ebebeb' */
-    header {
-        position: -webkit-sticky; /* For Safari */
-        position: sticky;
-        top: 0;
-        z-index: 1000; /* Ensures it stays above other content */
-        background-color: #fff; /* Optional: add a background color */
-        /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
-    }
-    .active-header {
-                background-color: #C61431;
-            
-                border-radius:50px;
-
-    }
-    .active-header a{
-        color:white !important;
-    }
-    .navbar ul li ul{ 
-       left: -100px !important;
-   }
-   .more-options ul li,.more-options .dropdown-menu, .more-options .dropdown-menu a{
-    color: white !important;
-    background: #f57e91 !important;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* padding: 10px; */
-    
-    /* margin: 5px 0; */
-   }
-   .more-options .dropdown-menu a:hover{
-    background: white !important;
-    color: #f57e91 !important;
-    transform: scale(1);
-    display:flex;
-   }
-   #needHelp p{
-    font-size: 1.2rem;
-    font-weight: 500;
-   }
-   #needHelp h1{
-   font-family: monospace;
-   font-size:90px !important;
-   font-weight: 500 !important;
-    line-height: 90px !important;
-}
-.navbar .dropdown-toggle::after{
-    content:none !important;
-}
-.dropdown-toggle:hover{
-   color:darkgray !important;
+  }
 }
 
-.navbar .fa-bars{     font-size: 2rem;}
+a {
+  text-decoration: none;
+}
+
+nav {
+  /* font-family: monospace; */
+}
+
+nav ul {
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav li {
+  color: black;
+  background: white;
+  display: block;
+  float: left;
+  padding: .2rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+nav li a {
+  color: black;
+}
+
+nav li:hover {
+  /* background: red; */
+  cursor: pointer;
+}
+
+.more-options ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  left: -104px;
+}
+
+nav ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+nav .card {
+  background-color: #E3DDDC !important;
+}
+
+.red-btn {
+  background-color: #C61431;
+  color: white;
+}
+
+.red-btn:hover {
+  color: white;
+  background-color: #df2c2c;
+  border-color: #df2c2c;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.active-header {
+  background-color: #C61431;
+  border-radius: 50px;
+}
+
+.active-header a {
+  color: white !important;
+}
+
+.more-options ul li,
+.more-options .dropdown-menu,
+.more-options .dropdown-menu a {
+  color: white !important;
+  background: #f57e91 !important;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-options .dropdown-menu a:hover {
+  background: white !important;
+  color: #f57e91 !important;
+  transform: scale(1);
+  display: flex;
+}
+
+#needHelp p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#needHelp h1 {
+  font-family: monospace;
+  font-size: 90px !important;
+  font-weight: 500 !important;
+  line-height: 90px !important;
+}
+
+.navbar .dropdown-toggle::after {
+  content: none !important;
+}
+
+.dropdown-toggle:hover {
+  color: darkgray !important;
+}
+
+.navbar .fa-bars {
+  font-size: 2rem;
+}
+
 </style>
 <body class=''  >
 <header>
@@ -307,24 +243,25 @@
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link" href="#about">About Us</a>
         </li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link" href="#needHelp">Need Help?</a>
+        <li class="nav-item d-none d-lg-block" id="loginSuperCA">
+          <a class="nav-link" href="superCa">SuperCA</a>
         </li>
         <li class="nav-item d-none d-lg-block" id="loginSignupLink">
           <a class="nav-link" href="rkda_login">Login/Signup</a>
         </li>
         <li class="nav-item dropdown more-options">
-          <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="fas fa-bars"></span>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="fas fa-bars"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Our Task Force</a></li>
             <li><a class="dropdown-item" href="#">Governance</a></li>
             <li><a class="dropdown-item" href="#">Our Capabilities</a></li>
             <li><a class="dropdown-item" href="#">Membership</a></li>
             <li><a class="dropdown-item" href="#">Contact us</a></li>
-          </ul>
-        </li>
+        </ul>
+     </li>
+
       </ul>
     </div>
   </div>
@@ -346,6 +283,9 @@
     </div>
  </div>
 </section> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
@@ -377,6 +317,10 @@
       // Check if current URL includes 'login' or 'signup'
       if (window.location.href.includes('rkda_login')) {
         document.getElementById('loginSignupLink').classList.add('active-header');
+      }
+      else if (window.location.href.includes('superCa')) {
+                   
+        document.getElementById('loginSuperCA').classList.add('active-header');
       }
     });
     document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {

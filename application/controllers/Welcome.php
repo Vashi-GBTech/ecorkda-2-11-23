@@ -963,6 +963,34 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('rkda_login');
 	}
+	public function signUp()
+	{
+		$this->load->view('signUp');
+	}
+	public function membership()
+	{
+		$this->load->view('membership');
+	}
+	public function c_carousel()
+	{
+		$this->load->view('c_carousel');
+	}
+	public function quality_std()
+	{
+		$this->load->view('quality_std');
+	}
+	public function tech_std()
+	{
+		$this->load->view('tech_std');
+	}
+	public function sii()
+	{
+		$this->load->view('sii');
+	}
+	public function superCa()
+	{
+		$this->load->view('superCa');
+	}
 
 
 }

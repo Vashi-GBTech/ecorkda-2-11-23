@@ -100,18 +100,6 @@
 .list-item a:hover,.list-item i:hover{
   color:black !important;
 }
-.photo-cards h4,.photo-cards p{
-
-    text-align:center;
-}
-.photo-cards img{
-    padding: 25px;
-    border-radius: 50%;
-}
-.bg-img{
-    background:lightgray;
-}
-
 </style>
 
 </head>
@@ -120,60 +108,58 @@
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Quality Development Boards</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-75">Quality Standards</div></div> 
         <div class="">
+            <!-- <h6>Lorem ipsum dolor sit amet consectetur. Aliquam massa odio egestas tincidunt. Mattis eget at nunc dui sollicitudin mi dictum. Condimentum dignissim turpis odio amet pulvinar venenatis. Sed amet ut eu quam aliquam tempus.</h6> -->
+            <!-- <h2 class="text-danger" style='font-size:2.5rem !important'>Association Process</h2> -->
+            <!-- <button class="button">Request</button>
+            <button class="button">Membership</button>
+            <button class="button">Essentials</button> -->
+
+            
         </div>
         <div class="d-flex h-100 mt-4">
-            <div class="col-md-8">
-         
-            <div class="container">
-    <div class="row">
-        <div class="row justify-content-around photo-cards" >
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card ">
-                   <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                  
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
+          <div class="col-md-8  ">
+            <div>
+            <h3 class="text-dark " style='font-size:1.5rem !important' >RKDA International General Quality Control manual</h3>
+            <ul class="">
+                <li class="list-item "><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>EI-GCQM (2022)</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">EI-GCQM (Previous Version in track mode )</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">RKDA ISQM 1 Guidance tool </a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Webinar - RKDA ISQM 1 Guidance tool (Youtube link)</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">High level comparison of the new RKDA EI- GCQM to the previous Version</a></li>
+            </ul>
             </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
+            <div>
+            <h3 class="text-dark " style='font-size:1.5rem !important' >Independent Standard</h3>
+            <ul class="">
+                <li class="list-item "><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>RKDA Independence Procedure</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Independence Check tool</a></li>
+              
+            </ul>
             </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
+            <div>
+            <h3 class="text-dark " style='font-size:1.5rem !important' >Quality Monitoring</h3>
+            <ul class="">
+                <li class="list-item "><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Memo of the duties and responsibilities for IOR’s mode of execution</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Self-inspection and Interoffice review</a></li>
+                
+            </ul>
             </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
+            <div>
+            <h3 class="text-dark " style='font-size:1.5rem !important' >Internal Complaints Procedure for RKDA member Firms</h3>
+            <ul class="">
+                <li class="list-item "><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Internal Complaints Procedure for RKDA Member Firms</a></li>
+               
+            </ul>
             </div>
-          
-        </div>
-    </div>
-</div>
+           
+            
+        
 
-             
-            </div>
-          <div class="col-md-4">
+           </div>
+        
+          <div>
           <?php include_once "membership_list.php" ?>
           </div>
           </div>

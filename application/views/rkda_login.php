@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    
 </head>
 <style>
     .wrapper {  
@@ -16,9 +17,10 @@ body{
 }
 
 .form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
+    width: 56%;
+    max-width: 600px;
+
+  /* margin: 0 auto; */
   /* background-color: #fff; */
   /* border-top: 1px solid rgba(0,0,0,0.08);
   border-right: 1px solid rgba(0,0,0,0.1);
@@ -76,19 +78,21 @@ body{
   margin: 0 auto;
   background-color: rgba(0,0,0,0.1); */
   text-align:center;
-  color:white !important;
+  color:black !important;
 }
 .account-signup a{
     color:#c61431 !important;
+    font-weight:bold;
 }
-.login-btn{
+.login-btn:hover{
     background: white !important;
     color: #c61431 !important;
     border: none !important;
 }
-.login-btn:hover{
+.login-btn{
     color: white !important;
     background: #c61431 !important;
+    border: none !important;
 }
 #signin h2{
    font-family: monospace;
@@ -96,17 +100,44 @@ body{
    font-weight: 500 !important;
     /* line-height: 90px !important; */
 }
+.form-control {
+            /* border-radius: 20px !important; */
+        }
+        .form-control, .input-group-text {
+            border-color:crimson !important;
+        }
+        .form-control:focus{
+
+            box-shadow: 0 0 0 0.20rem rgb(213 49 64 / 34%) !important;
+        }
+        .password-wrapper {
+            position: relative;
+        }
+        .password-wrapper .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 69%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .toggle-password svg {
+            display: none;
+        }
+        .toggle-password svg.active {
+            display: block;
+        }
 </style>
 <?php include_once "navbar.php" ?>
 <body>
-<section id='signin'>
+<section id='signin '>
     <div class='d-flex' >
-        <div class="col-md-4" style='    background:#b6b8bb;' >
-            <div class="col-md-12 pt-5 ">
+        <div class="col-md-5 " style='    background:#b6b8bb;height:100vh;    display: flex;
+    align-items: center; border-radius: 0px 175px 0px 0px;' >
+            <div class="col-md-12 ">
                 <div class='d-flex justify-content-center'  >
                 <div class='col-md-7'>
-                <h4 class=' text-white '>Are you a professional?</h4>
-                <h6 class='  text-white'>Join us to expand your practice worldwide</h6>
+                <h4 class=' text-dark '>Welcome Back, </h4>
+                <h6 class='  text-dark'>Connect & Expand Your Practice Worldwide.</h6>
 
                 </div>
                
@@ -114,41 +145,64 @@ body{
                 
                 <!-- <h2>SIGN IN</h2> -->
       
-                <div class="wrapper">
+                <div class="wrapper d-flex justify-content-center">
                 <form class="form-signin">
-                    <h2 class="form-signin-heading text-center text-white">SIGN IN</h2>
+                    <!-- <h2 class="form-signin-heading text-center text-white">SIGN IN</h2> -->
 
-                    <div class="inner-addon left-addon">
-                    <label class="control-label"></label>
-                        <i class="glyphicon"><i class="fas fa-user text-white"></i></i>
+                    <div class=" my-3">
+                    <label class="control-label">Email</label>
+                        <!-- <i class="glyphicon"><i class="fas fa-user text-white"></i></i> -->
                         <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
                     </div>
-                    <div class="inner-addon left-addon">
-                    <label class="control-label"></label>
-                        <i class="glyphicon "><i class="fas fa-lock text-light"></i></i>
-                        <input type="password" class="form-control" name="password" placeholder="*******" required="" autofocus=""/>
+                    <div class="form-group password-wrapper">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        <span class="toggle-password">
+                            <i class="fa fa-eye"></i>
+                        </span>
                     </div>
-                    <div class="options d-flex justify-content-between mt-2">
+                    <div class="options d-flex justify-content-between ">
                   <div >
-                   <input type="checkbox">  <label class="text-white"> Remember me</label>
+                   <input type="checkbox">  <label class=""> Remember me</label>
                   </div> 
-                    <a href="#" class="text-white">Forgot Password?</a>
+                    <a href="#" class="text-dark">Forgot Password?</a>
                     </div>
  
-                    <button class="btn btn-lg w-100 mt-3 login-btn" type="submit">LOGIN</button>
+                   <div class="d-flex justify-content-center">
+                   <button class="btn btn-sm w-50 mt-3 py-2 login-btn" type="submit">LOGIN</button>
+                   </div> 
+                   <p class="account-signup mt-2">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
                 </form>
-                <p class="account-signup">Don't have an account? <a href="#">Sign up here</a>
+                
                 </div>
             </div>
         </div>
-        <div class="col-md-8 d-flex justify-content-center">
-            <div class="col-md-7 d-flex justify-content-center align-items-baseline">
-                <img src="<?= base_url() ?>assets/rkda/signin1.jpg" alt="signin" style='width: 90%; '>
+        <div class="col-md-7 d-flex justify-content-center">
+            <div class="col-md-7 d-flex justify-content-center align-items-center">
+                <img src="<?= base_url() ?>assets/rkda/login.png" alt="signin" style='width: 90%; '>
+             
             </div>
         </div>
     </div>
 </section>
 
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> -->
+
+  <script>
+    $(document).ready(function() {
+            $(".toggle-password").click(function() {
+                let input = $("#password");
+                let icon = $(this).find("i");
+                if (input.attr("type") === "password") {
+                    input.attr("type", "text");
+                    icon.removeClass("fa-eye").addClass("fa-eye-slash");
+                } else {
+                    input.attr("type", "password");
+                    icon.removeClass("fa-eye-slash").addClass("fa-eye");
+                }
+            });
+        });
+  </script>
 </body>
 </html>

@@ -169,5 +169,12 @@ $route['dummy'] = 'welcome/dummy';
 $route['navbar'] = 'welcome/navbar';
 $route['landing_page'] = 'welcome/landing_page';
 $route['rkda_login'] = 'welcome/rkda_login';
+$route['signUp'] = 'welcome/signUp';
+$route['membership'] = 'welcome/membership';
+$route['c_carousel'] = 'welcome/c_carousel';
+$route['quality_std'] = 'welcome/quality_std';
+$route['tech_std'] = 'welcome/tech_std';
+$route['sii'] = 'welcome/sii';
+$route['superCa'] = 'welcome/superCa';
 
 

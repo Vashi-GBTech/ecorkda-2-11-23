@@ -18,25 +18,30 @@
 </style>
 
 <body>
-    <div class="container-fluid p-3 mb-5" style="background-color:rgb(238,238,238)">
-        <h6 class='mb-0'>RKDA Membership</h6>
-        <ul class='work-list-ul'>
-            <li id="faq_new_partner"><a href="<?= base_url() ?>faq_new_partner" class="wl-link-color">FAQ (New
-                    Partner)</a></li>
-            <li id="expansion_plan"><a href="<?= base_url() ?>expansion_plan" class="wl-link-color">Expansion Plan</a>
-            </li>
-            <li id="info_new_partners"><a href="<?= base_url() ?>info_new_partners" class="wl-link-color">Information
-                    about New Partners</a></li>
-            <li id="integration_checklist"><a href="<?= base_url() ?>integration_checklist"
-                    class="wl-link-color">Integration Checklist</a></li>
-            <li id="first_steps_checklist"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">First
-                    Steps Checklist</a></li>
-       
-        
+<div class="col-md-12 d-flex justify-content-end ">
+              <div class="">
+                <div class="container-fluid p-3 " style="background-color:rgb(238,238,238); border: 1px solid gray;border-radius:5px">
+                  <!-- <h6 class='mb-0'>Other Information</h6> -->
+                  <ul class='work-list-ul poppins-medium '>
+                      <li id="faq_new_partner"><a href="<?= base_url() ?>faq_new_partner" class="wl-link-color">Quality Development Board</a></li>
+                      <li id="expansion_plan"><a href="<?= base_url() ?>membership" class="wl-link-color">Membership process</a>
+                      </li>
+                      <li id="info_new_partners"><a href="<?= base_url() ?>quality_std" class="wl-link-color">Quality Standards</a></li>
+                      <li id="integration_checklist"><a href="<?= base_url() ?>integration_checklist"
+                              class="wl-link-color">Self inspection and Interoffice Review</a></li>
+                      <li id="service_ortfolio"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Service Portfolio</a></li>
+                      <li id="technical_standards"><a href="<?= base_url() ?>tech_std" class="wl-link-color">Technical standards</a></li>
+                      <li id="transfer_pricing"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Transfer Pricing</a></li>
+                      <li id="IT_Working_instructions"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">IT Working instructions</a></li>
+                      <li id="Training_Capabilities_workshop"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Training Capabilities workshop</a></li>
+                
+                  
 
         </ul>
 
     </div>
+              </div>
+            </div>
     <script>
         $(document).ready(function () {
             // Get the current URL

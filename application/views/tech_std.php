@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Process</title>
+    <title>Technical Standards</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 </style>
@@ -100,18 +100,6 @@
 .list-item a:hover,.list-item i:hover{
   color:black !important;
 }
-.photo-cards h4,.photo-cards p{
-
-    text-align:center;
-}
-.photo-cards img{
-    padding: 25px;
-    border-radius: 50%;
-}
-.bg-img{
-    background:lightgray;
-}
-
 </style>
 
 </head>
@@ -120,61 +108,25 @@
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Quality Development Boards</div></div> 
-        <div class="">
-        </div>
-        <div class="d-flex h-100 mt-4">
-            <div class="col-md-8">
-         
-            <div class="container">
-    <div class="row">
-        <div class="row justify-content-around photo-cards" >
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card ">
-                   <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                  
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
-            </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
-            </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
-            </div>
-            <div class="col-md-5 mb-3 d-flex justify-content-end">
-                <div class="col-md-9 card">
-                <div class="d-flex justify-content-center bg-img">
-                   <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
-                   </div> 
-                    <h4>John Doe</h4>
-                    <p>Software Engineer</p>
-                </div>
-            </div>
-          
-        </div>
-    </div>
-</div>
+       <div class='d-flex justify-content-center ' ><div class="header w-75">Technical Standards</div></div> 
 
-             
+        <div class="d-flex h-100 mt-5">
+          <div class="col-md-8  d-flex justify-content-center">
+            <div>
+           
+            <ul class="px-4">
+                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class=" " style='font-size:1.3rem !important;' >Audit</h3></a></li>
+                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class=" " style='font-size:1.3rem !important' >Tax Accounting</h3></a></li>
+               
+            </ul>
             </div>
-          <div class="col-md-4">
-          <?php include_once "membership_list.php" ?>
+           
+            
+        
+
+           </div>
+           <div>
+               <?php include_once "membership_list.php" ?>
           </div>
           </div>
       
