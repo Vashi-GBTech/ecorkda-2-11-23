@@ -176,5 +176,6 @@ $route['quality_std'] = 'welcome/quality_std';
 $route['tech_std'] = 'welcome/tech_std';
 $route['sii'] = 'welcome/sii';
 $route['superCa'] = 'welcome/superCa';
+$route['pricing'] = 'welcome/pricing';
 
 

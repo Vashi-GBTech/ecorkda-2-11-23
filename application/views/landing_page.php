@@ -10,7 +10,7 @@
     color:crimson;
     font-size:1rem !important;
     font-weight:600;
-    font-style: italic;
+    /* font-style: italic; */
   }
   .justify-text{
     text-align:justify;
@@ -43,10 +43,10 @@
 </section>
 <section id="about" class='my-5' >
  <div class='row align-items-center py-5 my-5'  style='height:100vh;'>
- <div class="col-md-5 col-sm-12 d-flex justify-content-center">
+ <div class="col-md-5 col-sm-12 d-flex justify-content-end">
         <div class="col-md-10">
         <h4  class='mb-4'>WHY JOIN US? </h4>
-         <p class='justify-text'>Connect with a network of <span class='red-letter' >C</span>lients and subject matter experts. Enhance <span class='red-letter' >C</span>apabilities through training and technology platforms. Join a global, value-driven <span class='red-letter' >C</span>ommunity. Serve clients better and acquire new ones. Expand <span class='red-letter' >C</span>apacity and gain access to social and financial <span class='red-letter' >C</span>apital as part of a larger community.</p>
+         <p class='justify-text' style='color: #726b6b;' >Connect with a network of <span class='red-letter' >C</span>lients and subject matter experts. Enhance <span class='red-letter' >C</span>apabilities through training and technology platforms. Join a global, value-driven <span class='red-letter' >C</span>ommunity. Serve clients better and acquire new ones. Expand <span class='red-letter' >C</span>apacity and gain access to social and financial <span class='red-letter' >C</span>apital as part of a larger community.</p>
            <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login" class='text-dark' >Join Us ></a></div> 
         </div>
     </div>
@@ -59,11 +59,11 @@
    
     </div>
     <div class='row align-items-center py-5 my-5'>
- <div class="col-md-8 col-sm-12 d-flex justify-content-center">
-        <div class="col-md-10">
+ <div class="col-md-8 col-sm-12 d-flex justify-content-end">
+        <div class="col-md-11 px-2">
          <h4  class='mb-3'>HOW IT WORKS? </h4>
-         <p class='fst-italic'>Register with us. We'll guide you through a smooth onboarding process, helping you craft a stellar profile and co-create a personalized plan for success. Sharpen your skills with top-notch training and resources, then dive into a vibrant community of clients and members, ready to collaborate and build your business. Finally, your expertise takes center stage. Contribute through exciting projects, strategic investments, or even by growing alongside our company.</p>
-           <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login" class='text-dark' >JOIN US ></a></div> 
+         <p class='fst-italic text-justify' >Register with us. We'll guide you through a smooth onboarding process, helping you craft a stellar profile and co-create a personalized plan for success. Sharpen your skills with top-notch training and resources, then dive into a vibrant community of clients and members, ready to collaborate and build your business. Finally, your expertise takes center stage. Contribute through exciting projects, strategic investments, or even by growing alongside our company.</p>
+           <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login" class='text-dark' >Join Us ></a></div> 
         </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
@@ -74,15 +74,15 @@
    
     </div>
      <div>
-       <img src="<?= base_url() ?>assets/rkda/roadmap.jpg" alt="" width='100%'>
+       <img src="<?= base_url() ?>assets/rkda/work-flow.png" alt="" width='100%'>
      </div>
 
     <div class='row align-items-center py-5 my-5'>
- <div class="col-md-8 col-sm-12 d-flex justify-content-center">
-        <div class="col-md-10">
+ <div class="col-md-8 col-sm-12 d-flex justify-content-end">
+        <div class="col-md-11 px-2">
         <h4  class='mb-3'>WHAT IT TAKES? </h4>
-         <p class='fst-italic'>Our Corporate Finance offerings encompass a comprehensive suite of services designed to navigate the complex landscape of mergers and acquisitions (M&A). We specialize in detailed valuation processes and strategic M&A planning, ensuring that every transaction is meticulously structured to achieve optimal outcomes.</p>
-           <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login" class='text-dark' >KNOW MORE ></a></div> 
+         <p class='fst-italic text-justify'>Our Corporate Finance offerings encompass a comprehensive suite of services designed to navigate the complex landscape of mergers and acquisitions (M&A). We specialize in detailed valuation processes and strategic M&A planning, ensuring that every transaction is meticulously structured to achieve optimal outcomes.</p>
+           <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login" class='text-dark' >Join Us ></a></div> 
         </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">

@@ -991,6 +991,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('superCa');
 	}
+	public function pricing()
+	{
+		$this->load->view('pricing');
+	}
 
 
 }

@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<?php include_once "header.php" ?>
+
+<?php include_once "navbar.php" ?>
+ <section id='noAccess' >
     <div class="d-flex justify-content-center py-5" style="background:#C8C8C8" >
         <div class="col-md-6 d-flex justify-content-center py-5" >
             <div class="col-md-12 " >
-              <div class='d-flex justify-content-center'> <img src="<?= base_url() ?>assets/ecovis-images/lock.png" alt="lock"  class="w-25" ></div> 
+              <div class='d-flex justify-content-center'> <img src="<?= base_url() ?>assets/rkda/access-denied.png" alt="lock"  class="w-50" ></div> 
                 <h4 class="text-center" >Access to this page is restricted</h4>
-                <p class="text-center" > Members can only Access this page</p>
+                <p class="text-center" >Members can only access this page</p>
                <div  class='d-flex justify-content-center'  >
                 <a href="<?= base_url() ?>preliminaryAppForm">
-                <button type="button" class="btn btn-danger btn-lg rounded-pill" style="border-radius:100px" >become a Member <i class="fas fa-arrow-right"></i></button>
+                <button type="button" class="btn btn-danger btn-lg " style="border-radius:10px" >Get Access </button>
 
                 </a>
 
@@ -27,7 +29,9 @@
             </div>
         </div>
     </div>
-    <?php include_once "footer.php" ?>
+
+    </section>
+    <!-- <?php include_once "footer.php" ?> -->
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

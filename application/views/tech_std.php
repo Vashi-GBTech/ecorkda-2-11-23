@@ -111,7 +111,7 @@
        <div class='d-flex justify-content-center ' ><div class="header w-75">Technical Standards</div></div> 
 
         <div class="d-flex h-100 mt-5">
-          <div class="col-md-8  d-flex justify-content-center">
+          <div class="col-md-8  d-flex justify-content-strat">
             <div>
            
             <ul class="px-4">
