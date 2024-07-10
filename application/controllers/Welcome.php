@@ -498,6 +498,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('landing_page.php');
 	}
+	public function index_old()
+	{
+		$this->load->view('index.php');
+	}
 	public function rkca_addPartner()
 	{
 		$this->load->view('rkca_addPartner');
@@ -1014,6 +1018,10 @@ class Welcome extends CI_Controller
 	public function task_force_new()
 	{
 		$this->load->view('task_force_new');
+	}
+	public function experts()
+	{
+		$this->load->view('experts');
 	}
 
 

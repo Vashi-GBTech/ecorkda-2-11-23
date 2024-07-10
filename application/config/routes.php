@@ -53,7 +53,7 @@ $route['404_override'] = '';
 $route['default_controller'] = 'welcome';
 $route['translate_uri_dashes'] = FALSE;
 
-
+$route['index_old'] = 'welcome/index_old';
 $route['rkca_addPartner'] = 'welcome/rkca_addPartner';
 $route['Business_Analyst'] = 'welcome/Business_Analyst';
 $route['Business_Analyst_copy'] = 'welcome/Business_Analyst_copy';
@@ -182,5 +182,6 @@ $route['transfer_pricing_new'] = 'welcome/transfer_pricing_new';
 $route['tax_consulting'] = 'welcome/tax_consulting';
 $route['service_portfolio_new'] = 'welcome/service_portfolio_new';
 $route['task_force_new'] = 'welcome/task_force_new';
+$route['experts'] = 'welcome/experts';
 
 
