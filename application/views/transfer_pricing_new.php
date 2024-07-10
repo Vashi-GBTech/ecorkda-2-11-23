@@ -108,91 +108,31 @@
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Technical Standards</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-75">Transfer Pricing</div></div> 
 
         <div class="d-flex h-100 mt-5">
           <div class="col-md-8  d-flex justify-content-strat">
             <div>
-           
-            <ul class="px-4">
-                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class="<?= base_url() ?>audit" style='font-size:1.3rem !important;' >Audit</h3></a></li>
-                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class=" " style='font-size:1.3rem !important' >Tax Accounting</h3></a></li>
-               
-            </ul>
-            </div>
-           
-            
-        
+             <p>     
+             Transfer pricing involves setting prices for assets, services, and funds transferred within an organization, such as goods sold from a production division to a marketing division or from a parent company to a foreign subsidiary. Unlike market transactions, these internal prices affect how profits are distributed within the company.</p>
+             <p>Fiscal authorities worry that multinational entities may manipulate transfer prices to reduce taxable profits, leading to stringent regulations and compliance requirements.</p>
+             <p>To address this, RKDA International is developing a standardized global transfer pricing documentation system. A working group was formed to gather examples from colleagues and competitors, and a budget was approved at the members' meeting in Bucharest to create a unified system.</p>
+
 
            </div>
-           <div>
-               <?php include_once "membership_list.php" ?>
+           
           </div>
+          <div class='col-md-4' >
+               <?php include_once "membership_list.php" ?>
           </div>
       
        
-        <div class="email">
+        
+    </div>
+    <div class="email">
           <p>  If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com">audit@rkda.com</a></p>
         </div>
-    </div>
     </section>
-         <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-       $(document).ready(function () {
-            $('ul.tree ul').hide();
-
-            $('.tree li > ul').each(function (i) {
-                var $subUl = $(this);
-                var $parentLi = $subUl.parent('li');
-                var $toggleIcon = '<i class="js-toggle-icon">+</i>';
-
-                $parentLi.addClass('has-children');
-
-                $parentLi.prepend($toggleIcon).find('.js-toggle-icon').on('click', function () {
-                    $(this).text($(this).text() == '+' ? '-' : '+');
-                    console.log('$subUl', $subUl);
-                    $subUl.slideToggle('fast');
-                });
-            });
-        });
-    </script>
-
-<script>
-        $(document).ready(function () {
-            // Get the current URL
-            var currentPageUrl = window.location.href;
-
-            // Get the page name by removing the base URL
-            var pageName = currentPageUrl.split('<?= base_url() ?>').pop();
-
-            // Set 'active' class to the element with the ID of the page name
-            $('#' + pageName).addClass('active');
-
-            // Remove 'active' class from all links and add 'active' class to the clicked link
-            $('.wl-link-color').removeClass('active');
-            $('.wl-link-color[href="' + currentPageUrl + '"]').addClass('active');
-
-            // On link click
-            $('.wl-link-color').on('click', function (e) {
-                e.preventDefault();
-                var linkHref = $(this).attr('href');
-
-                // Remove 'active' class from all links
-                $('.wl-link-color').removeClass('active');
-
-                // Add 'active' class to the clicked link
-                $(this).addClass('active');
-
-                // Store the clicked link in localStorage
-                localStorage.setItem('lastClickedLink', linkHref);
-
-                // Navigate to the clicked link
-                window.location.href = linkHref;
-            });
-        });
-
-
-    </script>
-</body>
+      
+  </body>
 </html>

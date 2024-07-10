@@ -177,5 +177,10 @@ $route['tech_std'] = 'welcome/tech_std';
 $route['sii'] = 'welcome/sii';
 $route['superCa'] = 'welcome/superCa';
 $route['pricing'] = 'welcome/pricing';
+$route['merchandise'] = 'welcome/merchandise';
+$route['transfer_pricing_new'] = 'welcome/transfer_pricing_new';
+$route['tax_consulting'] = 'welcome/tax_consulting';
+$route['service_portfolio_new'] = 'welcome/service_portfolio_new';
+$route['task_force_new'] = 'welcome/task_force_new';
 
 

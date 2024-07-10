@@ -179,7 +179,7 @@ body{
         </div>
         <div class="col-md-7 d-flex justify-content-center">
             <div class="col-md-7 d-flex justify-content-center align-items-center">
-                <img src="<?= base_url() ?>assets/rkda/login.png" alt="signin" style='width: 90%; '>
+                <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="signin" style='width: 90%; '>
              
             </div>
         </div>

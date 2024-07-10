@@ -218,7 +218,7 @@
                       <li class='activeli '>
                         
                           <span class=' text-white'>Request</span>
-                          <ul class='' >
+                          <ul class='' style='padding-left: 0;' >
                             <li><a href="<?= base_url() ?>preliminaryAppForm"><span class=''>Interest</span></a></li>
                             <li><a href="<?= base_url() ?>NDA"><span class=''>NDA</span></a></li>
                             <li><a href="<?= base_url() ?>authorization"><span class=''>Authorization</span></a></li>
@@ -236,7 +236,7 @@
                       <li>
                       
                           <span class='text-white'>Membership</span>
-                          <ul>
+                          <ul style='padding-left: 0;'>
                               <li><a href="#"><span class=''>Firm Details</span></a></li>
                               <li><a href="#"><span class=''>Walkthrough</span></a></li>
                               <li><a href="#"><span class=''>Agreement</span></a></li>
@@ -254,7 +254,7 @@
                         <li>
                         
                             <span class='text-white'>Essentials</span>
-                            <ul>
+                            <ul style='padding-left: 0;'>
                                 <li><a href="#"><span class=''>Network System</span></a></li>
                                 <li><a href="#"><span class=''>Code</span></a></li>
                                 <li><a href="#"><span class=''>Quality Manual</span></a></li>

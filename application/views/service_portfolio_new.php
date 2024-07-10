@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Standards</title>
+    <title>service portfolio</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 </style>
@@ -108,15 +108,18 @@
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Technical Standards</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-75">Service Portfolio</div></div> 
 
         <div class="d-flex h-100 mt-5">
           <div class="col-md-8  d-flex justify-content-strat">
             <div>
-           
+             <h4>Ideal Range of Services</h4>
+             <p>In order to guarantee the uniform range of service portfolio within the network RKDA International has developed the tool “Ideal Range of Services”. The tool bundles information regarding service range of each RKDA office, responsible persons, their position and professional qualification for each offered service including the client focus. Furthermore the tool provides information on specialization of each professional in industries and on persons responsible for marketing and quality management system.</p>
+
             <ul class="px-4">
-                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class="<?= base_url() ?>audit" style='font-size:1.3rem !important;' >Audit</h3></a></li>
-                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h3 class=" " style='font-size:1.3rem !important' >Tax Accounting</h3></a></li>
+                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class="<?= base_url() ?>audit" style='' >Definition of the minimum of ideal range of services (PDF)</h6></a></li>
+                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class=" " >Ideal range of servcies (PDF)</h6></a></li>
+                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class=" " >Ideal range of servcies (XLS)</h6></a></li>
                
             </ul>
             </div>

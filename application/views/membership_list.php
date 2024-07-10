@@ -27,15 +27,15 @@
                       <li id="expansion_plan"><a href="<?= base_url() ?>membership" class="wl-link-color">Membership process</a>
                       </li>
                       <li id="quality_std"><a href="<?= base_url() ?>quality_std" class="wl-link-color">Quality Standards</a></li>
-                      <li id="integration_checklist"><a href="<?= base_url() ?>integration_checklist"
+                      <li id="integration_checklist"><a href="<?= base_url() ?>onlyForMembers"
                               class="wl-link-color">Self inspection and Interoffice Review</a></li>
-                      <!-- <li id="service_ortfolio"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Service Portfolio</a></li> -->
+                      <li id="service_portfolio_new"><a href="<?= base_url() ?>service_portfolio_new" class="wl-link-color">Service Portfolio</a></li>
                      
 
                      <li id="technical_standards"><a href="<?= base_url() ?>tech_std" class="wl-link-color">Technical standards</a>
                 <ul class="pl-3">
                 <li id="audit"><a href="<?= base_url() ?>audit" class="wl-link-color">Audit</a></li>
-                    <li id="tax_acc"><a href="<?= base_url() ?>tax_acc" class="wl-link-color">Tax Accounting</a></li>
+                    <li id="tax_acc"><a href="<?= base_url() ?>tax_consulting" class="wl-link-color">Tax Accounting</a></li>
                 </ul>
               </li>
 
@@ -43,9 +43,9 @@
 
 
 
-                      <li id="transfer_pricing"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Transfer Pricing</a></li>
-                      <li id="IT_Working_instructions"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">IT Working instructions</a></li>
-                      <li id="Training_Capabilities_workshop"><a href="<?= base_url() ?>first_steps_checklist" class="wl-link-color">Training Capabilities workshop</a></li>
+                      <li id="tax_consulting"><a href="<?= base_url() ?>transfer_pricing_new" class="wl-link-color">Transfer Pricing</a></li>
+                      <li id="IT_Working_instructions"><a href="<?= base_url() ?>onlyForMembers" class="wl-link-color">IT Working instructions</a></li>
+                      <li id="Training_Capabilities_workshop"><a href="<?= base_url() ?>onlyForMembers" class="wl-link-color">Training Capabilities workshop</a></li>
                 
                   
 

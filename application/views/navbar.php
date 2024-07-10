@@ -207,10 +207,16 @@ header {
 }
 
 #needHelp h1 {
-  font-family: monospace;
-  font-size: 90px !important;
+  /* font-family: monospace; */
+  font-size: 70px !important;
   font-weight: 500 !important;
   line-height: 90px !important;
+}
+#needHelp h4 {
+  /* font-family: monospace; */
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  /* line-height: 90px !important; */
 }
 
 .navbar .dropdown-toggle::after {
@@ -254,11 +260,11 @@ header {
             <span class="fas fa-bars"></span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Our Task Force</a></li>
-            <li><a class="dropdown-item" href="#">Governance</a></li>
+            <li><a class="dropdown-item" href="<?= base_url() ?>task_force_new">Our Task Force</a></li>
+            <li><a class="dropdown-item" href="<?= base_url() ?>faq_new_partner">Governance</a></li>
             <li><a class="dropdown-item" href="#">Our Capabilities</a></li>
-            <li><a class="dropdown-item" href="#">Membership</a></li>
-            <li><a class="dropdown-item" href="#">Contact us</a></li>
+            <li><a class="dropdown-item" href="<?= base_url() ?>membership">Membership</a></li>
+            <li><a class="dropdown-item" href="<?= base_url() ?>#needHelp">Contact us</a></li>
         </ul>
      </li>
 
@@ -336,6 +342,24 @@ header {
           this.classList.add('active-header');
         });
       });
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        for (let link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
 </script>
 </body>
 </html>

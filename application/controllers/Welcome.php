@@ -496,7 +496,7 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('index.php');
+		$this->load->view('landing_page.php');
 	}
 	public function rkca_addPartner()
 	{
@@ -994,6 +994,26 @@ class Welcome extends CI_Controller
 	public function pricing()
 	{
 		$this->load->view('pricing');
+	}
+	public function merchandise()
+	{
+		$this->load->view('merchandise');
+	}
+	public function transfer_pricing_new()
+	{
+		$this->load->view('transfer_pricing_new');
+	}
+	public function tax_consulting()
+	{
+		$this->load->view('tax_consulting');
+	}
+	public function service_portfolio_new()
+	{
+		$this->load->view('service_portfolio_new');
+	}
+	public function task_force_new()
+	{
+		$this->load->view('task_force_new');
 	}
 
 
