@@ -121,9 +121,9 @@
                         </div>
                         <div class="card-back">
 
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Accounting</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Audit</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Tax</a >
+                           <a  href='<?= base_url() ?>accounting' class='btn btn-lg bg-back-card-btn' >Accounting</a >
+                           <a  href='<?= base_url() ?>tf_audit' class='btn btn-lg bg-back-card-btn' >Audit</a >
+                           <a  href='<?= base_url() ?>tax' class='btn btn-lg bg-back-card-btn' >Tax</a >
                         </div>
                     </div>
                 </div>
@@ -138,9 +138,9 @@
                             </div>
                         </div>
                         <div class="card-back h-100">
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Legal</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Governance</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Compliance</a >
+                           <a  href='<?= base_url() ?>legal' class='btn btn-lg bg-back-card-btn' >Legal</a >
+                           <a  href='<?= base_url() ?>governance' class='btn btn-lg bg-back-card-btn' >Governance</a >
+                           <a  href='<?= base_url() ?>compliance' class='btn btn-lg bg-back-card-btn' >Compliance</a >
                         </div>
                     </div>
                 </div>
@@ -155,9 +155,9 @@
                             </div>
                         </div>
                         <div class="card-back">
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >M & A</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Technology</a >
-                           <a  href='<?= base_url() ?>' class='btn btn-lg bg-back-card-btn' >Women Leadership Group</a >
+                           <a  href='<?= base_url() ?>m_a' class='btn btn-lg bg-back-card-btn' >M & A</a >
+                           <a  href='<?= base_url() ?>tech' class='btn btn-lg bg-back-card-btn' >Technology</a >
+                           <a  href='<?= base_url() ?>wlg' class='btn btn-lg bg-back-card-btn' >Women Leadership Group</a >
                         </div>
                     </div>
                 </div>

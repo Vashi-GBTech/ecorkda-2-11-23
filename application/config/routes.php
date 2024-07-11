@@ -183,5 +183,15 @@ $route['tax_consulting'] = 'welcome/tax_consulting';
 $route['service_portfolio_new'] = 'welcome/service_portfolio_new';
 $route['task_force_new'] = 'welcome/task_force_new';
 $route['experts'] = 'welcome/experts';
+$route['accounting'] = 'welcome/accounting';
+$route['explore_list'] = 'welcome/explore_list';
+$route['tf_audit'] = 'welcome/tf_audit';
+$route['tax'] = 'welcome/tax';
+$route['legal'] = 'welcome/legal';
+$route['governance'] = 'welcome/governance';
+$route['compliance'] = 'welcome/compliance';
+$route['m_a'] = 'welcome/m_a';
+$route['tech'] = 'welcome/tech';
+$route['wlg'] = 'welcome/wlg';
 
 

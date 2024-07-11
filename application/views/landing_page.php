@@ -68,14 +68,14 @@
 	}
 }
 .page-width {
-	max-width: 900px;
+	max-width: 950px;
 	margin: 0 auto;
 	h2 {
 		text-align: center;
 	}
 }
 .splide {
-	max-width: 800px;
+	max-width: 950px;
 	margin: 0 auto;
 }
 .splide__slide {
@@ -84,10 +84,13 @@
 	}
 }
 .splide__arrow--prev {
-	margin-left: -50px;
+	margin-left: -75px;
 }
 .splide__arrow--next {
-	margin-right: -50px;
+	margin-right: -75px;
+}
+.splide__arrow{
+  top:60%;
 }
 .splide__pagination {
 	margin-bottom: -35px;
@@ -161,7 +164,7 @@
         <h1  class='hading-fw'>Global Connects</h1>
         <h1  class='mb-4 hading-fw'> 
         Local Communities</h1>
-        <a href="#" class='btn red-btn w-50 d-flex justify-content-around align-items-center rounded-pill' ><span>Explore more</span></a>
+        <a href="<?= base_url() ?>experts" class='btn red-btn w-50 d-flex justify-content-around align-items-center rounded-pill' ><span>Explore more</span></a>
         </div>
     </div>
     <div class="col-md-6 col-sm-12 d-flex justify-content-center pt-5">
@@ -203,8 +206,8 @@
 				</li>
 
 				<li class="splide__slide">
-        <a href="https://www.youtube.com/watch?v=ocPXwbIzNoM" data-lity>
-            <iframe  src="https://www.youtube.com/embed/watch?v=ocPXwbIzNoM" 
+        <a href="https://youtu.be/ocPXwbIzNoM" data-lity>
+            <iframe  src="https://www.youtube.com/embed/ocPXwbIzNoM" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
@@ -212,8 +215,8 @@
 				</li>
 
 				<li class="splide__slide">
-					<a href="https://www.youtube.com/watch?v=C0OqyOU4B54" data-lity>
-              <iframe  src="https://www.youtube.com/embed/watch?v=C0OqyOU4B54" 
+					<a href="https://youtu.be/C0OqyOU4B54" data-lity>
+              <iframe  src="https://www.youtube.com/embed/C0OqyOU4B54" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>	
@@ -221,16 +224,16 @@
 				</li>
 
 				<li class="splide__slide">
-					<a href="https://www.youtube.com/watch?v=JUBF1cZG7kA" data-lity>
-          <iframe  src="https://www.youtube.com/embed/watch?v=JUBF1cZG7kA" 
+					<a href="https://youtu.be/JUBF1cZG7kA" data-lity>
+          <iframe  src="https://www.youtube.com/embed/JUBF1cZG7kA" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>	
 					</a>
 				</li>
 				<li class="splide__slide">
-					<a href="https://www.youtube.com/watch?v=oNZbmJisIyw" data-lity>
-          <iframe  src="https://www.youtube.com/embed/watch?v=oNZbmJisIyw" 
+					<a href="https://youtu.be/oNZbmJisIyw" data-lity>
+          <iframe  src="https://www.youtube.com/embed/oNZbmJisIyw" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>	

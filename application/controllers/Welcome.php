@@ -1023,6 +1023,47 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('experts');
 	}
+	public function accounting()
+	{
+		$this->load->view('accounting');
+	}
+	public function explore_list()
+	{
+		$this->load->view('explore_list');
+	}
+	public function tf_audit()
+	{
+		$this->load->view('tf_audit');
+	}
+	public function tax()
+	{
+		$this->load->view('tax');
+	}
+	public function legal()
+	{
+		$this->load->view('legal');
+	}
+	public function governance()
+	{
+		$this->load->view('governance');
+	}
+
+	public function compliance()
+	{
+		$this->load->view('compliance');
+	}
+	public function m_a()
+	{
+		$this->load->view('m&a');
+	}
+	public function tech()
+	{
+		$this->load->view('tech');
+	}
+	public function wlg()
+	{
+		$this->load->view('wlg');
+	}
 
 
 }
