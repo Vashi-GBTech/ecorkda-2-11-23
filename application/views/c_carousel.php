@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <style>
- .red-band{
-    height:3rem;
-    background: crimson;
-}
 :root {
   --animation-timing: 27s;
   --carousel-items: 5; /* Updated to 5 items */
@@ -99,8 +95,8 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   margin-top: 10px;
-  color:crimson;
-  font-weight:bold;
+  color: crimson;
+  font-weight: bold;
 }
 
 @keyframes carousel-animate-vertical {
@@ -134,7 +130,6 @@ body {
     visibility: hidden;
   }
 }
-
 
 </style>
 <body>
@@ -176,34 +171,7 @@ body {
         <p>Navigate confidently with clear guidelines, policies, and communication channels. Our commitment to transparency ensures defined expectations, roles, and fair conflict resolution. Foster trust for informed decisions, meaningful relationships, and goal achievement.</p>
       </div>
     </div>
-    <!-- <div class="carousel__item">
-      <div class="carousel__item-head">🐡</div>
-      <div class="carousel__item-body">
-        <p class="title">blowfish</p>
-        <p>Unicode: U+1F421</p>
-      </div>
-    </div>
-    <div class="carousel__item">
-      <div class="carousel__item-head">🦈</div>
-      <div class="carousel__item-body">
-        <p class="title">shark</p>
-        <p>Unicode: U+1F988</p>
-      </div>
-    </div>
-    <div class="carousel__item">
-      <div class="carousel__item-head">🐙</div>
-      <div class="carousel__item-body">
-        <p class="title">octopus</p>
-        <p>Unicode: U+1F419</p>
-      </div>
-    </div>
-    <div class="carousel__item">
-      <div class="carousel__item-head">🐚</div>
-      <div class="carousel__item-body">
-        <p class="title">spiral shell</p>
-        <p>Unicode: U+1F41A</p>
-      </div>
-    </div> -->
+
   </div>
 </div>
     

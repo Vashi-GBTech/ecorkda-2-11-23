@@ -168,8 +168,8 @@
         </div>
     </div>
     <div class="col-md-6 col-sm-12 d-flex justify-content-center pt-5">
-    <div class="col-md-8">
-      <img src="<?= base_url() ?>assets/rkda/landing-right.png" alt="" width='100%'>
+    <div class="col-md-12">
+      <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'>
       
     </div>
     </div>

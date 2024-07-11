@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     </head>
 <style>
+   .red-band{
+    height:3rem;
+    background: crimson;
+}
 body {
   min-height: 100vh;
   background-size: cover;
@@ -31,12 +35,12 @@ nav ul {
 }
 
 nav li {
-  height: 50px;
+  /* height: 50px; */
 }
 
 nav a {
   height: 100%;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -114,7 +118,7 @@ nav li {
   background: white;
   display: block;
   float: left;
-  padding: .2rem;
+  padding: .2rem 1.5rem;;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
@@ -170,10 +174,10 @@ nav .card {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-sticky !important;
+  position: sticky !important;
   top: 0;
-  z-index: 1000;
+  z-index: 1000 !important;
   background-color: #fff;
 }
 
@@ -309,6 +313,7 @@ header {
                 currentSection = section.getAttribute('id');
             }
         });
+        
 
         navLi.forEach(a => {
             a.parentElement.classList.remove('active-header');
