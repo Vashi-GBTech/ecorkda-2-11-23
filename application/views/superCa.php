@@ -61,7 +61,16 @@ header {
 .wrapper img {
   scroll-snap-align: center;
 }
+.km{
+  color:crimson;
+  font-weight:500;
 
+}
+.km:hover{
+  color:black;
+
+  
+}
 </style>
 <body>
 <?php include_once "navbar.php" ?>
@@ -71,7 +80,10 @@ header {
    <div class="d-flex justify-content-center">
       <div class='col-md-8'>
         <h1 class='text-center my-3'>Super CA</h1>
-         <p class='text-center' >SuperCA empowers Chartered Accountants through specialized tools, resources, and community support. It enables CAs to explore niches like investment banking, forensic auditing, and entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community engagement, and opportunities for mentorship and networking.</p>
+         <p class='text-center' >SuperCA empowers Chartered Accountants through specialized tools, resources, and community support. It enables CAs to explore niches like investment banking, forensic auditing, and entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community engagement, and opportunities for mentorship and networking</p>
+         <div class="d-flex justify-content-center">
+           <a href="https://forum.iitcouncil.org/superca/" class='km btn btn-danger rounded-pill' >Know more</a>
+         </div>
       </div>
       </div>
 <section  id='superca'>

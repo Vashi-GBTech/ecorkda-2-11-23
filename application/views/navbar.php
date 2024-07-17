@@ -247,7 +247,7 @@ header {
     <div class="collapse navbar-collapse col-md-7" id="navbarNavDropdown">
      
       <ul class="navbar-nav">
-        <li class="nav-item d-none d-lg-block">
+        <li class="nav-item d-none d-lg-block active-header">
           <a class="nav-link "  href="#home">Home</a>
         </li>
         <li class="nav-item d-none d-lg-block">
@@ -309,7 +309,7 @@ header {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            if (pageYOffset >= (sectionTop - sectionHeight / 1)) {
                 currentSection = section.getAttribute('id');
             }
         });
@@ -317,6 +317,8 @@ header {
 
         navLi.forEach(a => {
             a.parentElement.classList.remove('active-header');
+            console.log(currentSection,'currentSection');
+            console.log( a.getAttribute('href'),currentSection,"currentSection");
             if (a.getAttribute('href').includes(currentSection)) {
                 a.parentElement.classList.add('active-header');
             }

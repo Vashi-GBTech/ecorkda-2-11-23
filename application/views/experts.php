@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <style>
-    .hero-section {
-    background-image: url('./assets/rkda/experts_img.jpg'); /* Replace with the path to your image */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 40vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ .hero-section {
+    padding: 3rem 20px;
+    display: flex; /* Use flexbox to arrange images in a row */
+    justify-content: space-around; /* Space out images evenly */
+    align-items: center; /* Align items vertically center */
+    /* height: 50vh; Full height of the viewport */
 }
 
-.hero-section h1 {
-    color: black; /* Adjust text color as needed */
-    font-size: 5rem; /* Adjust font size as needed */
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Optional: Adds a shadow to the text for better readability */
+.hero-section img {
+    width: 230px; /* Set a fixed width for the images */
+    height: 250px; /* Set a fixed height for the images */
+    object-fit: cover; /* Cover the image without stretching */
+    border-radius: 10px; /* Optional: Add some border-radius for styling */
+    opacity: 0.5; /* Set the opacity of the images */
+    transition: opacity 0.3s ease; /* Add a smooth transition for hover effect */
+    border: 4px solid darkgray;
 }
+
+.slick-carousel img:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+
 
 
 
@@ -39,6 +48,7 @@
     align-items: center;
     width: 200px;
     position: relative;
+    background-color:white;
 }
 
 .search-box i {
@@ -105,17 +115,73 @@
     margin: 5px 0 0;
     color: #666;
 }
+#experts {
+  margin: 0;
+  padding: 0;
+
+
+}
+/* $c1: #E64C66;
+$c2: #2D3E50; */
+.slick-carousel {
+  /* width: auto; */
+  /* margin: 60px 50px 50px; */
+}
+.slick-carousel img{
+    width: 230px; /* Set a fixed width for the images */
+    height: 275px; /* Set a fixed height for the images */
+    object-fit: cover; /* Cover the image without stretching */
+    border-radius: 10px; /* Optional: Add some border-radius for styling */
+    opacity: 0.5; /* Set the opacity of the images */
+    transition: opacity 0.3s ease; /* Add a smooth transition for hover effect */
+    border: 4px solid darkgray;
+}
+
+.slick-slide {
+  /* background: $c1; */
+  color: white;
+  padding: 40px 0;
+  font-size: 30px;
+  font-family: "Arial", "Helvetica";
+  text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+/* .slick-slide:nth-child(odd) {
+  background: $c2;
+} */
+.heading h1{
+    font-weight:630;
+    font-size:3.5rem !important;
+}
 </style>
 <body>
 <section id='experts' >
 <?php include_once "navbar.php" ?>
-  
-        <div class="hero-section">
-            <h1>Experts and Advisors</h1>
+         
+        <div class="">
+                <section class="slick-carousel">
+                    <div> <img src="<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg" alt="Image 1"></div>
+                    <div> <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" alt="Image 1"></div>
+                    <div><img src="<?= base_url() ?>assets/rkda/deepa.png" alt="Image 1"></div>
+                    <div><img src="<?= base_url() ?>assets/rkda/deepak.png" alt="Image 1"></div>
+                    <div><img src="<?= base_url() ?>assets/rkda/rkabra.png" alt="Image 1"></div>
+                  
+                </section>
+                
         </div>
+         <div class='heading'> <h1 class='text-center'  >Partners & Associates</h1></div>
 
 
-        <div class="search-container my-3">
+        <div class="search-container mt-5">
             <div class="search-box">
                 <i class="fas fa-user"></i>
                 <input id="search-name" type="text" placeholder="Search By Name">
@@ -140,9 +206,12 @@
         </div>
 
 
-    <div class="container my-5" id="cards-container"></div>
+    <div class="container mt-5" id="cards-container"></div>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
          const experts=
@@ -203,63 +272,75 @@
                 container.appendChild(card);
             });
 
+        const carousel = document.querySelector('.slick-carousel');
 
-            // Function to filter and display cards based on user input
-            function filterCards() {
-                const searchName = document.getElementById('search-name').value.toLowerCase();
-                const searchLocation = document.getElementById('search-location').value;
-                const searchExpertise = document.getElementById('search-expertise').value;
-
-                const filteredExperts = experts.filter(person => {
-                    const matchesName = person.Name.toLowerCase().includes(searchName);
-                    const matchesLocation = !searchLocation || person.RelationWithFirm.includes(searchLocation);
-                    const matchesExpertise = !searchExpertise || person.RelationWithFirm === searchExpertise;
-
-                    return matchesName && matchesLocation && matchesExpertise;
+        carousel.addEventListener('mouseenter', function() {
+                    if (isAutoplay) {
+                        $('.slick-carousel').slick('slickPause'); // Pause the carousel
+                        isAutoplay = false;
+                    }
                 });
 
-                renderCards(filteredExperts);
-            }
-
-            // Function to render filtered cards
-            function renderCards(filteredExperts) {
-                const container = document.getElementById('cards-container');
-                container.innerHTML = ''; // Clear previous cards
-
-                filteredExperts.forEach(person => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-
-                    const img = document.createElement('img');
-                    img.src = './assets/rkda/vector-img.png'; // Replace with actual image path or URL
-                    img.alt = person.Name;
-
-                    const info = document.createElement('div');
-                    info.className = 'info';
-
-                    const name = document.createElement('h4');
-                    name.textContent = person.Name;
-
-                    const relation = document.createElement('p');
-                    relation.textContent = person.RelationWithFirm;
-
-                    info.appendChild(name);
-                    info.appendChild(relation);
-                    card.appendChild(img);
-                    card.appendChild(info);
-
-                    container.appendChild(card);
+                carousel.addEventListener('mouseleave', function() {
+                    if (!isAutoplay) {
+                        $('.slick-carousel').slick('slickPlay'); // Resume the carousel
+                        isAutoplay = true;
+                    }
                 });
-            }
 
-            // Initial rendering of all cards
-            renderCards(experts);
+</script>
 
-            // Event listeners for input changes
-            document.getElementById('search-name').addEventListener('input', filterCards);
-            document.getElementById('search-location').addEventListener('change', filterCards);
-            document.getElementById('search-expertise').addEventListener('change', filterCards);
 
-    </script>
+
+
+
+
+<script>
+   $(document).ready(function() {
+        // Initialize Slick Carousel
+        $(".slick-carousel").slick({
+            speed: 10000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            swipeToSlide: true,
+            centerMode: true,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+
+        const carousel = document.querySelector('.slick-carousel');
+
+        carousel.addEventListener('mouseenter', function() {
+                    if (isAutoplay) {
+                        $('.slick-carousel').slick('slickPause'); // Pause the carousel
+                        isAutoplay = false;
+                    }
+                });
+
+                carousel.addEventListener('mouseleave', function() {
+                    if (!isAutoplay) {
+                        $('.slick-carousel').slick('slickPlay'); // Resume the carousel
+                        isAutoplay = true;
+                    }
+                });
+      });
+</script>
 </body>
 </html>

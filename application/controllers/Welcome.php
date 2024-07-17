@@ -1064,6 +1064,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('wlg');
 	}
+	public function opinion()
+	{
+		$this->load->view('opinion');
+	}
 
 
 }

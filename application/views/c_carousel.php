@@ -6,130 +6,133 @@
     <title>Document</title>
 </head>
 <style>
-:root {
-  --animation-timing: 27s;
-  --carousel-items: 5; /* Updated to 5 items */
-  --animation-delay-fraction: calc(var(--animation-timing) / var(--carousel-items));
-  --animation-steps-fraction: calc(100% / var(--carousel-items));
-  --slide-change-timing: 3%; /* percentage of total animation cycle */
-}
+  :root {
+    --animation-timing: 27s;
+    --carousel-items: 5; /* Updated to 5 items */
+    --animation-delay-fraction: calc(var(--animation-timing) / var(--carousel-items));
+    --animation-steps-fraction: calc(100% / var(--carousel-items));
+    --slide-change-timing: 3%; /* percentage of total animation cycle */
+  }
 
-body {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  height: 100vh;
-}
+  body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+  }
 
-.wrapper {
-  background: linear-gradient(60deg, #420285, #08BDBD);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+  .wrapper {
+    background: linear-gradient(60deg, #420285, #08BDBD);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-.carousel_wp {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+  .carousel_wp {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.carousel__item {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  padding: 0 12px;
-  opacity: 0;
-  filter: drop-shadow(0 2px 2px #555);
-  will-change: transform, opacity;
-  animation: carousel-animate-vertical var(--animation-timing) linear infinite;
-}
-
-.carousel__item:nth-child(1) {
-  animation-delay: calc(var(--animation-delay-fraction) * -1);
-}
-
-.carousel__item:nth-child(2) {
-  animation-delay: calc(var(--animation-delay-fraction) * 0);
-}
-
-.carousel__item:nth-child(3) {
-  animation-delay: calc(var(--animation-delay-fraction) * 1);
-}
-
-.carousel__item:nth-child(4) {
-  animation-delay: calc(var(--animation-delay-fraction) * 2);
-}
-
-.carousel__item:nth-child(5) {
-  animation-delay: calc(var(--animation-delay-fraction) * 3);
-}
-
-.carousel__item-head {
-  border-radius: 50%;
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  padding: 14px;
-  position: relative;
-  margin-right: -45px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-}
-
-.carousel__item-body {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 16px 20px 16px 70px;
-}
-
-.title {
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-top: 10px;
-  color: crimson;
-  font-weight: bold;
-}
-
-@keyframes carousel-animate-vertical {
-  0% {
-    transform: translateY(100%) scale(0.5);
+  .carousel__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
     opacity: 0;
-    visibility: hidden;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+    animation: carousel-animate-vertical var(--animation-timing) linear infinite;
   }
 
-  3%, 20% {
-    transform: translateY(100%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
+  .carousel__item:nth-child(1) {
+    animation-delay: calc(var(--animation-delay-fraction) * -1);
   }
 
-  23%, 40% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
+  .carousel__item:nth-child(2) {
+    animation-delay: calc(var(--animation-delay-fraction) * 0);
   }
 
-  43%, 60% {
-    transform: translateY(-100%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
+  .carousel__item:nth-child(3) {
+    animation-delay: calc(var(--animation-delay-fraction) * 1);
   }
 
-  63%, 100% {
-    transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
+  .carousel__item:nth-child(4) {
+    animation-delay: calc(var(--animation-delay-fraction) * 2);
   }
-}
+
+  .carousel__item:nth-child(5) {
+    animation-delay: calc(var(--animation-delay-fraction) * 3);
+  }
+
+  .carousel__item-head {
+    border-radius: 50%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+
+  .carousel__item-body {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px 20px 16px 70px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+    color: crimson;
+    font-weight: bold;
+  }
+
+  @keyframes carousel-animate-vertical {
+    0% {
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    3%, 20% {
+      transform: translateY(100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+
+    23%, 40% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    43%, 60% {
+      transform: translateY(-100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+
+    63%, 100% {
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  /* .carousel__item:hover {
+  animation-play-state: paused;
+} */
 
 </style>
 <body>
@@ -176,4 +179,16 @@ body {
 </div>
     
 </body>
+<script>
+  const carouselItems = document.querySelectorAll('.carousel__item');
+    
+    carouselItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            carouselItems.forEach(el => el.style.animationPlayState = 'paused');
+        });
+        item.addEventListener('mouseleave', () => {
+            carouselItems.forEach(el => el.style.animationPlayState = 'running');
+        });
+    });
+</script>
 </html>
