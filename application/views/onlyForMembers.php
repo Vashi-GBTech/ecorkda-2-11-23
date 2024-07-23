@@ -20,7 +20,7 @@
                 <h4 class="text-center" >Access to this page is restricted</h4>
                 <p class="text-center" >Members can only access this page</p>
                <div  class='d-flex justify-content-center'  >
-                <a href="<?= base_url() ?>preliminaryAppForm">
+                <a href="<?= base_url() ?>rkda_login">
                 <button type="button" class="btn btn-danger btn-lg " style="border-radius:10px" >Get Access </button>
 
                 </a>
@@ -31,7 +31,7 @@
     </div>
 
     </section>
-    <!-- <?php include_once "footer.php" ?> -->
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

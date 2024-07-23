@@ -193,5 +193,7 @@ $route['compliance'] = 'welcome/compliance';
 $route['m_a'] = 'welcome/m_a';
 $route['tech'] = 'welcome/tech';
 $route['wlg'] = 'welcome/wlg';
+$route['opinion'] = 'welcome/opinion';
+$route['gridhome'] = 'welcome/gridhome';
 
 

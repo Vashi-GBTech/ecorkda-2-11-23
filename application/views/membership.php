@@ -273,11 +273,11 @@
         <div class="">
             <h3 class="text-danger " style='font-size:2.5rem !important' >Template Documentations</h3>
             <ul class="">
-                <li class="list-item "><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template of License Agreement</a></li>
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Appendix 3 to licence agreement - Constitution of RKDA Group</a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Appendix 2 to licence agreement - The RKDA ESSENTIALS</a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Statutes of RKDA International.</a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Mediation Rules</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Template of License Agreement</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Appendix 3 to licence agreement - Constitution of RKDA Group</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Appendix 2 to licence agreement - The RKDA ESSENTIALS</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Statutes of RKDA International.</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Mediation Rules</a></li>
             </ul>
         </div>
         

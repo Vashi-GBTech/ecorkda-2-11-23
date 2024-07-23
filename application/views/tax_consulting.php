@@ -155,17 +155,17 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Direct Debit Clearance</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Amendment Tax Accountancy contract</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Authorisation to represent</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Contract on inter-company exchange of message by email</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Fee Agreement</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard Assignment Terms RKDA AuditAG (Status as of 01.02.2002)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Assignment (Package)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Assignment</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Package)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Long)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Short)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Direct Debit Clearance</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Amendment Tax Accountancy contract</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Authorisation to represent</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Contract on inter-company exchange of message by email</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Fee Agreement</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard Assignment Terms RKDA AuditAG (Status as of 01.02.2002)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Assignment (Package)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Assignment</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Package)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Long)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Accountancy Contract (Short)</a></li>
                     </ul>
                 </div>
             </div>
@@ -182,10 +182,10 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Data Sheet for corporate clients (Corporations)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard chart of Accounts (SKR 04)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard chart of Accounts (SKR 03)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Text Modules for Corporations</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Data Sheet for corporate clients (Corporations)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard chart of Accounts (SKR 04)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Standard chart of Accounts (SKR 03)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Text Modules for Corporations</a></li>
                     </ul>
                 </div>
             </div>
@@ -202,20 +202,20 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Accounting and evaluations Options</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Audit of tax assessment notices (with objection)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Audit of tax assessment notices</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the 2011 Income tax return</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the Annual financial Accounts for the year ending</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the Annual financial Accounts for the year ending (Short)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Preparation of the annual financial accounts for the year ending</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Business Tax returns</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Capital Gains Tax</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Income Tax</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns_EST</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns_Festst</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Income Tax return</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Accounting and evaluations Options</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Audit of tax assessment notices (with objection)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Audit of tax assessment notices</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the 2011 Income tax return</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the Annual financial Accounts for the year ending</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>General representation Letter for the Annual financial Accounts for the year ending (Short)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Preparation of the annual financial accounts for the year ending</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Business Tax returns</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Capital Gains Tax</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Release Statement Income Tax</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns_EST</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns_Festst</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Business Tax returns</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission Income Tax return</a></li>
                     </ul>
                 </div>
             </div>
@@ -232,22 +232,22 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist BilMoG Corporates</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Client Newsletter Accounting Low Modernisation Act (Bilanzrechtsmodernisierungsgesetzes)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Client Newsletter Investment grant 2010</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Confirmation of a foreign value-added tax identification number (VAT ID no) for deliveries to EU Countries</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Disclosure of Annual Accounts</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Electronic invoices after 1 July 2011</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Heavy restrictions on tax exemption in intra-community deliveries</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Practical ramification of access to data by fiscal authorities</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Principles on proper cash book accounting</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Recapitulation of accounting regulations from a VAT Perspective</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Retention period for Accounting records</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Shift of tax liability to the customer in the construction industry</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Survey of Accounting obligations (Commercial law and tax law)</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Free or Non taxable employer benefits as of 2012</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Taxable employer benefits in 2012</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>The proper way to handle electronic invoices</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist BilMoG Corporates</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Client Newsletter Accounting Low Modernisation Act (Bilanzrechtsmodernisierungsgesetzes)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Client Newsletter Investment grant 2010</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Confirmation of a foreign value-added tax identification number (VAT ID no) for deliveries to EU Countries</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Disclosure of Annual Accounts</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Electronic invoices after 1 July 2011</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Heavy restrictions on tax exemption in intra-community deliveries</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Practical ramification of access to data by fiscal authorities</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Principles on proper cash book accounting</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Recapitulation of accounting regulations from a VAT Perspective</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Retention period for Accounting records</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Shift of tax liability to the customer in the construction industry</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Survey of Accounting obligations (Commercial law and tax law)</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Tax Free or Non taxable employer benefits as of 2012</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Taxable employer benefits in 2012</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>The proper way to handle electronic invoices</a></li>
                     </ul>
                 </div>
             </div>
@@ -264,18 +264,18 @@
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Annual Accounts for the year ending</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents annual accounts - GmbH</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Invoice correction through client</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission financial accounting</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents for the preparation of the annual accounts</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents file_Corporation</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents financial accounting</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents tax returns</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Termination client relationship</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist for checking completeness of documents for generating an annual account - GmbH</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist for financial Accounting (Balance) 2004</a></li>
-                        <li class="list-item"><a href="#"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist documenting completion of standard file</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Annual Accounts for the year ending</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents annual accounts - GmbH</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Invoice correction through client</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Submission financial accounting</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents for the preparation of the annual accounts</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents file_Corporation</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents financial accounting</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Template request documents tax returns</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Termination client relationship</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist for checking completeness of documents for generating an annual account - GmbH</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist for financial Accounting (Balance) 2004</a></li>
+                        <li class="list-item"><a  href="<?= base_url() ?>onlyForMembers"><i class="fa-solid fa-book-bookmark mr-2"></i>Checklist documenting completion of standard file</a></li>
                     </ul>
                 </div>
             </div>
