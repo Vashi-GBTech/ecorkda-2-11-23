@@ -152,29 +152,129 @@
 .icon-circle i {
     margin: 0;
 }
+
+.landing-page-s1 {
+  box-sizing: border-box;
+  padding: 3rem 6rem;
+  height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.landing-page-s1 .left{
+  height: 50%;
+}
+.landing-page-s1 .right {
+  position: relative;
+  height: 90%;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #0005;
+}
+.right svg{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid #0005;
+  border-radius: 100%;
+  padding: 0.3rem;
+  background: #fff;
+  cursor: pointer;
+}
+.right svg path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+}
+.right svg.l-btn{
+  left: 0;
+}
+.right svg.r-btn{
+  left: 100%;
+}
+
+.landing-page-s1 .sections {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-page-s1 .sections .section {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+}
+.landing-page-s1 .sections .section .img-container {
+  border-radius: 5px;
+  border: 1px solid #0004;
+  opacity: 0;
+  animation-fill-mode: forwards !important;
+}
+.landing-page-s1 .sections .section .img-container:hover {
+  filter: brightness(120%);
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 </style>
 
 <body>
     <?php include_once "navbar.php" ?>
 <section id="home"  >
- <div class='row align-items-center pt-4'>
+  <!-- <div class='row align-items-center pt-4'>
 
- <div class="col-md-6 col-sm-12 d-flex justify-content-end">
-        <div class="col-md-10">
+    <div class="col-md-6 col-sm-12 d-flex justify-content-end">
+      <div class="col-md-10">
         <h1  class='hading-fw'>Global Connects</h1>
         <h1  class='mb-4 hading-fw'> 
         Local Communities</h1>
         <a href="<?= base_url() ?>experts" class='btn red-btn w-50 d-flex justify-content-around align-items-center rounded-pill' ><span>Explore more</span></a>
-        </div>
+      </div>
     </div>
+
     <div class="col-md-6 col-sm-12 d-flex justify-content-center pt-5">
-    <div class="col-md-12">
-      <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'>
-      
-    </div>
+      <div class="col-md-12">
+        <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'>
+      </div>
     </div>
    
-</div>
+  </div> -->
+  <div class="landing-page-s1">
+    <div class="left">
+      <h1  class='hading-fw'>Global Connects</h1>
+      <h1  class='mb-4 hading-fw'>Local Communities</h1>
+      <a href="<?= base_url() ?>experts" class='btn red-btn w-50 d-flex justify-content-around align-items-center rounded-pill' ><span>Explore more</span></a>
+    </div>
+
+    <div class="right">
+      <div class="sections"></div>  <!-- contains dyamic images -->
+
+      <svg class="l-btn" viewBox = "0 0 50 50"><path d="M15,25 L30,10 M15,25 L30,40" /></svg>
+      <svg class="r-btn" viewBox = "0 0 50 50"><path d="M35,25 L20,10 M35,25 L20,40" /></svg>
+
+    </div>
+  </div>
 
 <div class='my-5'>
     <!-- <img src="<?= base_url() ?>assets/rkda/random-text.png" alt="" style='    width: -webkit-fill-available;'> -->
@@ -413,6 +513,71 @@ var splide = new Splide(".splide", {
 });
 
 splide.mount();
+
+</script>
+
+<script>
+  let rightSection = document.querySelector('.landing-page-s1 .right .sections')
+  let imagesData = []
+
+  for (let i = 0; i < 50; i++) {
+    imagesData.push({url:"https://random.imagecdn.app/500/500"})
+  }
+
+  // subdivide images into sections
+  let imgCount = 14
+  let sectionArray = []
+  let i = 0
+  while (i < imagesData.length) {
+    if (i % imgCount == 0) sectionArray.push([])
+    sectionArray[sectionArray.length - 1].push({...imagesData[i]})
+    i++
+  }
+  // console.log(sectionArray);
+
+  for (let i = sectionArray.length - 1; i > 0; i--) {
+    let section =sectionArray[i]
+    let div = document.createElement('div')
+    div.classList.add('section')
+    let columnStart = 1
+    let rowStart = 1
+    let counter = 0
+    section.forEach((card, j) => {
+
+      // setting up grid-column and grid-row
+      if (columnStart == 9) {
+        columnStart = 2
+        rowStart++
+      } else if (columnStart == 8) {
+        columnStart = 1
+        rowStart++
+      }
+
+      let imgContainer = document.createElement('div')
+      imgContainer.classList.add('img-container')
+      imgContainer.style.backgroundImage = `url("${card.url}")`
+      imgContainer.style.backgroundPosition = `center`
+      imgContainer.style.backgroundSize = `cover`
+      imgContainer.style.backgroundRepeat = `no repeat`
+
+      imgContainer.style.gridColumn = `${columnStart} / ${columnStart + 2}`
+      imgContainer.style.gridRow = `${rowStart} / ${rowStart}`
+      div.appendChild(imgContainer)
+
+      let img = new Image()
+      img.src = card.url
+      img.onload = () => {
+        imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
+        imgContainer.style.animationDelay = Math.random()*1+'s'
+        // imgContainer.style.animationDelay = j/section.length+'s'
+      }
+      columnStart += 2
+    })
+
+    rightSection.appendChild(div)
+  
+  }
+
 
 </script>
 
