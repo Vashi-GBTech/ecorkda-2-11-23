@@ -1072,6 +1072,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('gridhome');
 	}
+	public function capabilities()
+	{
+		$this->load->view('capabilities');
+	}
 
 
 }
