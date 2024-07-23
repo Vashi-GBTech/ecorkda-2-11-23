@@ -63,14 +63,7 @@
             maintaining excellence and maximizing value in all our endeavors.</p>
     </div>
 
-    <div class="slider pt-0">
-        <div class="slide-track red-border-scroll w-100 py-1 px-0">
-            <div class="slide px-0">
-				 <div class=''></div>
-            </div>
-
-        </div>
-    </div>
+   
 
     <div class="slider">
         <div class="slide-track">
@@ -121,15 +114,7 @@
             </div>
         </div>
     </div>
-	<div class="slider pb-0">
-        <div class="slide-track red-border-scroll w-100 py-1 px-0">
-            <div class="slide px-0">
-				 <div class=''></div>
-            </div>
-
-        </div>
-    </div>
-
+	
 </body>
 
 </html>

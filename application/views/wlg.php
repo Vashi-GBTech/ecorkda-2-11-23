@@ -112,6 +112,12 @@ border-radius: 50%;
 .bg-img{
 background:lightgray;
 }
+.bg-gray{
+    background:#D9D9D9;
+}
+.text-justify{
+    text-align:justify !important;
+}
 </style>
 
 </head>
@@ -120,24 +126,24 @@ background:lightgray;
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Women Leadership Group</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-100">Women Leadership Group</div></div> 
 
         <div class="d-flex h-100 mt-5">
-          <div class="col-md-8  d-flex justify-content-start">
+          <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='w-75'>Our Women Leadership Group is dedicated to advancing women in leadership roles across all sectors. We provide mentorship, professional development opportunities, and a supportive network that fosters growth and empowerment. By promoting diversity and inclusion, we create an environment where women can thrive, share insights, and achieve their career aspirations. Our initiatives are designed to break barriers, inspire leadership, and drive organizational success.
+           <p class='text-justify'>Our Women Leadership Group is dedicated to advancing women in leadership roles across all sectors. We provide mentorship, professional development opportunities, and a supportive network that fosters growth and empowerment. By promoting diversity and inclusion, we create an environment where women can thrive, share insights, and achieve their career aspirations. Our initiatives are designed to break barriers, inspire leadership, and drive organizational success.
            </p>
            
            </div>
-            <div class="row justify-content-around photo-cards" >
-                <div class="col-md-5 mb-3 d-flex justify-content-center">
+            <div class="row justify-content-start photo-cards" >
+                <div class="col-md-5 mb-3 d-flex justify-content-start">
                     <div class="col-md-9 card " style='border-radius: 1rem 1rem 1rem 1rem;' >
                       <div>
 
                        
                         <div class="d-flex justify-content-center bg-img" style='border-radius: 1rem 1rem 0px 0px;'>
-                        <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
+                        <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-50' alt="Profile Image 1">
                         </div> 
                         
                             <h4>Shruti Ambegaonkar</h4>
@@ -149,8 +155,11 @@ background:lightgray;
             </div>
 
            </div>
-           <div>
-               <?php include_once "explore_list.php" ?>
+           <div class='col-md-4 d-flex justify-content-end'>
+              <div class='col-md-11' >
+                <?php include_once "explore_list.php" ?>
+              </div>
+               
           </div>
           </div>
       

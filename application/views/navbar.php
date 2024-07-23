@@ -14,6 +14,10 @@
     height:3rem;
     background: crimson;
 }
+.navbar-brand{
+  margin-left: 1.5rem !important;
+
+}
 body {
   min-height: 100vh;
   background-size: cover;
@@ -141,7 +145,7 @@ nav li:hover {
   position: absolute;
   transition: all 0.5s ease;
   margin-top: 1rem;
-  left: 0;
+  left: 10;
   display: none;
 }
 
@@ -163,14 +167,17 @@ nav .card {
 }
 
 .red-btn {
-  background-color: #C61431;
-  color: white;
+    background-color: #ffbdc8ba;
+    color: #d83b59;
+    padding: 10px;
+    transition:.3s;
+    /* opacity: 0; */
 }
 
 .red-btn:hover {
   color: white;
-  background-color: #df2c2c;
-  border-color: #df2c2c;
+  background-color: crimson;
+  /* border-color: #df2c2c; */
 }
 
 header {
@@ -181,13 +188,13 @@ header {
   background-color: #fff;
 }
 
-.active-header {
+/* .active-header {
   background-color: #C61431;
   border-radius: 50px;
-}
+} */
 
 .active-header a {
-  color: white !important;
+  border-bottom: 2px solid #000;
 }
 
 .more-options ul li,
@@ -248,7 +255,7 @@ header {
      
       <ul class="navbar-nav">
         <li class="nav-item d-none d-lg-block active-header">
-          <a class="nav-link "  href="#home">Home</a>
+          <a class="nav-link "  href="<?= base_url() ?>landing_page">Home</a>
         </li>
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link" href="#about">About Us</a>
@@ -278,89 +285,35 @@ header {
 </nav>
 </header>
 
-<!-- <section id="mission">
- <div class='row align-items-center'>
-    <div class="col-md-6 col-sm-12 d-flex justify-content-center">
-    <div class="col-md-8">
-      <img src="<?= base_url() ?>assets/rkda/landing-left-rkda-forum.png" alt="" width='100%'>
-    </div>
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <div class="col-md-10">
-        <h1  class='mb-5'>Mission</h1>
-        <p>Our mission is to build a thriving community where clients and experts collaborate seamlessly to create exceptional value. We are committed to providing state-of-the-art training and innovative technology solutions to enhance your professional capabilities. By fostering a supportive and resource-rich environment, we enable you to excel in your field, expand your client base, and contribute to a network that values growth, innovation, and mutual success.</p>
-        </div>
-    </div>
- </div>
-</section> -->
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
+
 <script>
-    document.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const navLi = document.querySelectorAll('header nav ul li a');
+$(document).ready(function () {
+  var path = window.location.pathname;
 
-        let currentSection = '';
+  var lastSegment = path.substring(path.lastIndexOf('/') + 1);
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 1)) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-
-        navLi.forEach(a => {
-            a.parentElement.classList.remove('active-header');
-            console.log(currentSection,'currentSection');
-            console.log( a.getAttribute('href'),currentSection,"currentSection");
-            if (a.getAttribute('href').includes(currentSection)) {
-                a.parentElement.classList.add('active-header');
-            }
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-    
-    if (window.location.hash && window.location.hash === '#needHelp') {
-        
-        var contactusSection = document.getElementById('needHelp');
-        if (contactusSection) {
-            contactusSection.scrollIntoView({ behavior: 'smooth' });
-        }
+  $('a.nav-link').each(function () {
+    var href = $(this).attr('href');
+    var linkSegment = href.substring(href.lastIndexOf('/') + 1);
+     console.log(lastSegment,linkSegment);
+    if (lastSegment === linkSegment) {
+      $(this).parent().addClass('active-header');
+    } else {
+      $(this).parent().removeClass('active-header');
     }
+  });
+
+  $('a.nav-link').on('click', function () {
+    $('a.nav-link').parent().removeClass('active-header');
+    $(this).parent().addClass('active-header');
+  });
 });
-    document.addEventListener("DOMContentLoaded", function() {
-      // Check if current URL includes 'login' or 'signup'
-      if (window.location.href.includes('rkda_login')) {
-        document.getElementById('loginSignupLink').classList.add('active-header');
-      }
-      else if (window.location.href.includes('superCa')) {
-                   
-        document.getElementById('loginSuperCA').classList.add('active-header');
-      }
-    });
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-        link.addEventListener('click', function() {
-            var hrefValue = this.getAttribute('href');
-            console.log('Href value:', hrefValue);
-            console.log('link',link);
-            window.location.href='landing_page'+hrefValue;
-          document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-            link.classList.remove('active-header');
-          });
-          // Add active class to clicked link
-          this.classList.add('active-header');
-        });
-      });
 
-
-      
 </script>
 </body>
 </html>

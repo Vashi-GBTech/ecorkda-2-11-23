@@ -7,11 +7,12 @@
 </head>
 <style>
   :root {
-    --animation-timing: 27s;
+    --animation-timing: 10s;
     --carousel-items: 5; /* Updated to 5 items */
     --animation-delay-fraction: calc(var(--animation-timing) / var(--carousel-items));
     --animation-steps-fraction: calc(100% / var(--carousel-items));
-    --slide-change-timing: 3%; /* percentage of total animation cycle */
+    --slide-change-timing: 3%;
+
   }
 
   body {
@@ -130,9 +131,9 @@
       visibility: hidden;
     }
   }
-  /* .carousel__item:hover {
+  .carousel__item:hover {
   animation-play-state: paused;
-} */
+}
 
 </style>
 <body>
@@ -143,35 +144,35 @@
       <div class="carousel__item-head"><img src="<?= base_url() ?>assets/rkda/connect.png" alt="" width='100px'></div>
       <div class="carousel__item-body">
         <p class="title">Connect</p>
-        <p>Connect with a diverse network of CAs, industry experts, clients, and partners. Collaborate, build relationships, and explore new business opportunities. Expand your reach, share insights, and unlock growth potential on our platform.</p>
+        <p class='' style='font-size:smaller' >Connect with a diverse network of CAs, industry experts, clients, and partners. Collaborate, build relationships, and explore new business opportunities. </p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src="<?= base_url() ?>assets/rkda/community.png" alt="" width='100px'></div>
       <div class="carousel__item-body">
         <p class="title">Community</p>
-        <p>Access cutting-edge tools, resources, and tailored training to enhance your skills. Stay ahead in finance with knowledge to tackle challenges and seize opportunities. Continuous learning ensures exceptional client value.</p>
+        <p style='font-size:smaller'>Access cutting-edge tools, resources, and tailored training to enhance your skills. </p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src="<?= base_url() ?>assets/rkda/claritys.png" alt="" width='100px'></div>
       <div class="carousel__item-body">
         <p class="title">Clarity</p>
-        <p>Join a vibrant community passionate about excellence and innovation. Engage in meaningful discussions, share insights, and build lasting relationships. Find mentorship and camaraderie in a thriving environment where collaboration breeds success.</p>
+        <p style='font-size:smaller'>Join a vibrant community passionate about excellence and innovation.</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src="<?= base_url() ?>assets/rkda/capacity.png" alt="" width='100px'></div>
       <div class="carousel__item-body">
         <p class="title">Capacity</p>
-        <p>Optimize your practice with scalable infrastructure and streamlined processes. Manage workloads, expand your client base, and maintain quality. Access cutting-edge technology and dedicated support to confidently scale your business.</p>
+        <p style='font-size:smaller'>Optimize your practice with scalable infrastructure and streamlined processes. </p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src="<?= base_url() ?>assets/rkda/capability.png" alt="" width='100px'></div>
       <div class="carousel__item-body">
         <p class="title">Capability</p>
-        <p>Navigate confidently with clear guidelines, policies, and communication channels. Our commitment to transparency ensures defined expectations, roles, and fair conflict resolution. Foster trust for informed decisions, meaningful relationships, and goal achievement.</p>
+        <p style='font-size:smaller'>Navigate confidently with clear guidelines, policies, and communication channels. </p>
       </div>
     </div>
 

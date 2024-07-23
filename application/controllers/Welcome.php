@@ -1068,6 +1068,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('opinion');
 	}
+	public function gridhome()
+	{
+		$this->load->view('gridhome');
+	}
 
 
 }

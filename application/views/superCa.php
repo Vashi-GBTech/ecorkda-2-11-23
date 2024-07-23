@@ -27,7 +27,8 @@ header {
   overflow: hidden;
   position: relative;
   --v-offset: 60px;
-  --curve-height: 120px;
+  --curve-height: 125px;
+
 }
 #superca::before,
 #superca::after {
@@ -51,16 +52,27 @@ header {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 300px;
+  grid-template-rows: 316px;
   grid-auto-flow: column;
   grid-gap: 24px;
   overflow: auto;
   scroll-snap-type: x mandatory;
+  background:whitesmoke !important;
 }
 
 .wrapper img {
   scroll-snap-align: center;
+  height:300px;
+  width:280px;
+  /* padding:50px 20px !important; */
+  display: block;
+  -webkit-user-select: none;
+  margin: auto;
+  background-color: hsl(0, 0%, 90%);
+  transition: background-color 300ms;
+      /* padding:100px 20px; */
 }
+
 .km{
   color:crimson;
   font-weight:500;
@@ -82,30 +94,42 @@ header {
         <h1 class='text-center my-3'>Super CA</h1>
          <p class='text-center' >SuperCA empowers Chartered Accountants through specialized tools, resources, and community support. It enables CAs to explore niches like investment banking, forensic auditing, and entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community engagement, and opportunities for mentorship and networking</p>
          <div class="d-flex justify-content-center">
-           <a href="https://forum.iitcouncil.org/superca/" class='km btn btn-danger rounded-pill' >Know more</a>
+           <a href="https://forum.iitcouncil.org/superca/" class='km red-btn  text-center  rounded-pill' style='width:17%' >Know more</a>
          </div>
       </div>
       </div>
-<section  id='superca'>
+     <section  id='superca'>
      
 
         <div class="wrapper">
-            <img src="https://picsum.photos/seed/picsum1/300/300" alt="Image 1">
-            <img src="https://picsum.photos/seed/picsum2/300/300" alt="Image 2">
-            <img src="https://picsum.photos/seed/picsum3/300/300" alt="Image 3">
-            <img src="https://picsum.photos/seed/picsum4/300/300" alt="Image 4">
-            <img src="https://picsum.photos/seed/picsum5/300/300" alt="Image 5">
-            <img src="https://picsum.photos/seed/picsum6/300/300" alt="Image 6">
-            <img src="https://picsum.photos/seed/picsum7/300/300" alt="Image 7">
-            <img src="https://picsum.photos/seed/picsum8/300/300" alt="Image 8">
-            <img src="https://picsum.photos/seed/picsum9/300/300" alt="Image 9">
-            <img src="https://picsum.photos/seed/picsum10/300/300" alt="Image 10">
-            <img src="https://picsum.photos/seed/picsum11/300/300" alt="Image 11">
-            <img src="https://picsum.photos/seed/picsum12/300/300" alt="Image 12">
-            <img src="https://picsum.photos/seed/picsum13/300/300" alt="Image 13">
-            <img src="https://picsum.photos/seed/picsum14/300/300" alt="Image 14">
-            <img src="https://picsum.photos/seed/picsum15/300/300" alt="Image 15">
-            <img src="https://picsum.photos/seed/picsum16/300/300" alt="Image 16">
+            <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a> 
+
+           <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a> 
+           <a target=”_blank” href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a> 
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a> 
+          <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>  <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+            
+            <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a> 
+
+           <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a> 
+           <a target=”_blank” href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a> 
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a> 
+          <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>  <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+            
+
+            
         </div>
 
         

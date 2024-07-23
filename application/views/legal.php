@@ -112,6 +112,12 @@ border-radius: 50%;
 .bg-img{
 background:lightgray;
 }
+.bg-gray{
+    background:#D9D9D9;
+}
+.text-justify{
+    text-align:justify !important;
+}
 </style>
 
 </head>
@@ -120,23 +126,23 @@ background:lightgray;
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Audit</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-100">Audit</div></div> 
 
         <div class="d-flex h-100 mt-5">
-          <div class="col-md-8  d-flex justify-content-start">
+          <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='w-75'>Our legal team offers expert counsel on a wide array of legal matters critical to your business’s success. We provide advice on contracts, corporate governance, intellectual property, labor laws, and dispute resolution. Our proactive approach ensures that your business operates within legal boundaries, mitigates risks, and is prepared to handle any legal challenges that may arise. Our goal is to safeguard your interests and promote sustainable growth.</p>
+           <p class='text-justify'>Our legal team offers expert counsel on a wide array of legal matters critical to your business’s success. We provide advice on contracts, corporate governance, intellectual property, labor laws, and dispute resolution. Our proactive approach ensures that your business operates within legal boundaries, mitigates risks, and is prepared to handle any legal challenges that may arise. Our goal is to safeguard your interests and promote sustainable growth.</p>
            
            </div>
-            <div class="row justify-content-around photo-cards" >
-                <div class="col-md-5 mb-3 d-flex justify-content-center">
+            <div class="row justify-content-start photo-cards" >
+                <div class="col-md-5 mb-3 d-flex justify-content-start">
                     <div class="col-md-9 card " style='border-radius: 1rem 1rem 1rem 1rem;' >
                       <div>
 
                        
                         <div class="d-flex justify-content-center bg-img" style='border-radius: 1rem 1rem 0px 0px;'>
-                        <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-75' alt="Profile Image 1">
+                        <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" class='w-50' alt="Profile Image 1">
                         </div> 
                         
                             <h4>Sanjeev Bindal</h4>
@@ -148,8 +154,11 @@ background:lightgray;
             </div>
 
            </div>
-           <div>
-               <?php include_once "explore_list.php" ?>
+           <div class='col-md-4 d-flex justify-content-end'>
+              <div class='col-md-11' >
+                <?php include_once "explore_list.php" ?>
+              </div>
+               
           </div>
           </div>
       

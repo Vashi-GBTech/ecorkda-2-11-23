@@ -15,11 +15,14 @@
     .wl-link-color:hover {
         color: #cd2653;
     }
+    .card h4{
+        font-size:1.3rem !important;
+    }
 </style>
 
 <body>
 <div class="col-md-12 d-flex justify-content-end ">
-              <div class="">
+              <div class="w-100">
                 <div class="container-fluid p-3 " style="background-color:rgb(238,238,238); border: 1px solid gray;border-radius:5px">
                   <!-- <h6 class='mb-0'>Other Information</h6> -->
                   <ul class='work-list-ul poppins-medium '>

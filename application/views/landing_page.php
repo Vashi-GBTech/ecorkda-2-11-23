@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
 
 </head>
 <style>
@@ -179,6 +182,33 @@ body {
 .icon-circle i {
     margin: 0;
 }
+
+
+.carousel-container {
+            width: 100%;
+            /* max-width: 800px; */
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 346px !important;
+        }
+
+        .item iframe {
+            width: 100%;
+            /* height: 315px; */
+        }
+        .owl-item.active.center {
+    -webkit-transform: scale(1.8) !important;
+    transform: scale(1.8) !important;
+}
+       
 </style>
 
 <body>
@@ -188,117 +218,109 @@ body {
 
             <div class="col-md-6 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-10">
-                    <h1 class='hading-fw'>AI Expertise With</h1>
+                    <h1 class='hading-fw'>Where CAs </h1>
                     <h1 class='mb-4 hading-fw'>
-                        Human in Loop</h1>
+                    Meet Excellence</h1>
+                    <p>The network focuses on catering to the needs of listed companies with global operations seeking high-quality audit and assurance services.</p>
                     <a href="<?= base_url() ?>opinion"
-                        class='btn red-btn w-50 d-flex justify-content-around align-items-center rounded-pill'><span>Ask
+                        class='red-btn  d-flex justify-content-around align-items-center rounded-pill' style='width:30%' ><span>Ask
                             a Question</span></a>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center pt-5">
+            <div class="col-md-6 col-sm-12 d-flex justify-content-center ">
                 <div class="col-md-12">
-                    <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'>
+                    <!-- <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'> -->
+                    <?php include_once "gridhome.php" ?>
 
                 </div>
             </div>
 
         </div>
 
-        <div class='my-5'>
+        <div class='my-1'>
             <!-- <img src="<?= base_url() ?>assets/rkda/random-text.png" alt="" style='    width: -webkit-fill-available;'> -->
 
-            <div class="page-width">
-                <div class="splide" aria-labelledby="carousel-heading">
-                    <h2 id="carousel-heading" class='mb-3'>Our Journey</h2>
-
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/hh0Iwt4lwa0" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/hh0Iwt4lwa0" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-
-
-
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/XrT2Wfsk7gA" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/XrT2Wfsk7gA" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/ocPXwbIzNoM" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/ocPXwbIzNoM" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/C0OqyOU4B54" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/C0OqyOU4B54" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/JUBF1cZG7kA" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/JUBF1cZG7kA" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="https://youtu.be/oNZbmJisIyw" data-lity>
-                                    <iframe src="https://www.youtube.com/embed/oNZbmJisIyw" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </a>
-                            </li>
-
-                        </ul>
+            <div class="carousel-container">
+                <div id="owl-carousel" class="owl-carousel">
+                    <div class="item">
+                        <a href="https://youtu.be/hh0Iwt4lwa0" data-lity>
+                            <iframe src="https://www.youtube.com/embed/hh0Iwt4lwa0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/XrT2Wfsk7gA" data-lity>
+                            <iframe src="https://www.youtube.com/embed/XrT2Wfsk7gA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/ocPXwbIzNoM" data-lity>
+                            <iframe src="https://www.youtube.com/embed/ocPXwbIzNoM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/C0OqyOU4B54" data-lity>
+                            <iframe src="https://www.youtube.com/embed/C0OqyOU4B54" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/JUBF1cZG7kA" data-lity>
+                            <iframe src="https://www.youtube.com/embed/JUBF1cZG7kA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/oNZbmJisIyw" data-lity>
+                            <iframe src="https://www.youtube.com/embed/oNZbmJisIyw" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/hh0Iwt4lwa0" data-lity>
+                            <iframe src="https://www.youtube.com/embed/hh0Iwt4lwa0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="about" class='my-5'>
-        <div class='row align-items-center py-5 my-5' style='height:100vh;'>
+    <section id="about" class='my-1'>
+        <div class='row align-items-center py-0 my-0' style='height:100vh;'>
             <div class="col-md-5 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-10">
                     <h4 class='mb-4'>WHY JOIN US? </h4>
-                    <p class='justify-text' style='color: #726b6b;'>Connect with a network of <span
-                            class='red-letter'>C</span>lients and subject matter experts. Enhance <span
+                    <p class='text-justify'  style='color: #726b6b;text-align:justify'><span
+                    class='red-letter'>C</span>onnect with a network of clients and subject matter experts. Enhance <span
                             class='red-letter'>C</span>apabilities through training and technology platforms. Join a
                         global, value-driven <span class='red-letter'>C</span>ommunity. Serve clients better and acquire
                         new ones. Expand <span class='red-letter'>C</span>apacity and gain access to social and
-                        financial <span class='red-letter'>C</span>apital as part of a larger community.</p>
+                        financial <span class='red-letter'>C</span>larity as part of a larger community.</p>
                     <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login"
                             class='text-dark'>Join Us ></a></div>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-12 d-flex justify-content-center">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 col-sm-12 d-flex justify-content-center">
                 <!-- <div class="col-md-8"> -->
                 <!-- <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="" width='100%'> -->
                 <?php include_once "c_carousel.php" ?>
                 <!-- </div> -->
             </div>
+            <div class="col-md-1"></div>
 
         </div>
-        <div class='row align-items-center py-5 my-5'>
+        <div class='row align-items-center py-0 my-0'>
             <div class="col-md-8 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-11 px-2">
                     <h4 class='mb-3'>HOW IT WORKS? </h4>
@@ -319,11 +341,11 @@ body {
             </div>
 
         </div>
-        <div>
+        <div class='py-5' >
             <img src="<?= base_url() ?>assets/rkda/work-flow.png" alt="" width='100%'>
         </div>
 
-        <div class='row align-items-center py-5 my-5'>
+        <div class='row align-items-center py-2 my-0'>
             <div class="col-md-8 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-11 px-2">
                     <h4 class='mb-3'>WHAT IT TAKES? </h4>
@@ -436,28 +458,37 @@ body {
     </footer>
   
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script>
-    var splide = new Splide(".splide", {
-        perPage: 4,
-        gap: "2rem",
-        breakpoints: {
-            640: {
-                perPage: 2,
-                gap: "2rem",
-                height: "6rem"
-            },
-            480: {
-                perPage: 1,
-                gap: "2rem",
-                height: "6rem"
-            }
-        }
-    });
+        $(document).ready(function() {
+          
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                autoplay: true,
+                margin:10,
+                center: true,
+                autoPlay:true,
+                autoplayTimeout:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:false
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:true
+                    }
+                }
+            })
+        });
 
-    splide.mount();
     </script>
 
 </body>
