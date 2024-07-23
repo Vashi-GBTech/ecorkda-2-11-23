@@ -183,6 +183,91 @@ body {
     margin: 0;
 }
 
+.landing-page-s1 {
+  box-sizing: border-box;
+  padding: 3rem 6rem;
+  height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.landing-page-s1 .left{
+  height: 90%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+.landing-page-s1 .left h1 {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+}
+.landing-page-s1 .left .bottom {
+  margin-top: 2rem;
+  max-width: 50%;
+}
+
+.landing-page-s1 .right {
+  position: relative;
+  height: 90%;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+
+.landing-page-s1 .sections {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-page-s1 .sections .section {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+}
+.landing-page-s1 .sections .section .img-container {
+  border-radius: 5px;
+  border: 1px solid #000;
+  opacity: 0;
+  animation-fill-mode: forwards !important;
+}
+.landing-page-s1 .sections .section .img-container:hover {
+  filter: brightness(120%);
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes popdown {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+
 
 .carousel-container {
             width: 100%;
@@ -214,25 +299,25 @@ body {
 <body>
     <?php include_once "navbar.php" ?>
     <section id="home">
-        <div class='row align-items-center pt-4'>
+    
+        <div class='landing-page-s1'>
 
-            <div class="col-md-6 col-sm-12 d-flex justify-content-end">
-                <div class="col-md-10">
-                    <h1 class='hading-fw'>Where CAs </h1>
-                    <h1 class='mb-4 hading-fw'>
-                    Meet Excellence</h1>
-                    <p>The network focuses on catering to the needs of listed companies with global operations seeking high-quality audit and assurance services.</p>
-                    <a href="<?= base_url() ?>opinion"
-                        class='red-btn  d-flex justify-content-around align-items-center rounded-pill' style='width:30%' ><span>Ask
-                            a Question</span></a>
-                </div>
+            <div class="left">
+              <div class="top">
+                <h1 class='hading-fw'>Where CAs </h1>
+                <h1 class='mb-4 hading-fw'> Meet Excellence</h1>
+              </div>
+
+              <div class="bottom">
+                <p style="font-size: 18px">The network focuses on catering to the needs of listed companies with global operations seeking high-quality audit and assurance services.</p>
+                <a href="<?= base_url() ?>opinion" class='red-btn  d-flex justify-content-around align-items-center rounded-pill' style="width: fit-content; padding: 0.5rem 2rem; margin-top: 3rem" >
+                  <span>Ask a Question</span>
+                </a>
+              </div>
             </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center ">
-                <div class="col-md-12">
-                    <!-- <img src="<?= base_url() ?>assets/rkda/landing-page-rkda.jpg" alt="" width='100%'> -->
-                    <?php include_once "gridhome.php" ?>
 
-                </div>
+            <div class="right">
+              <div class="sections"></div>  <!-- contains dyamic images -->
             </div>
 
         </div>
@@ -488,6 +573,138 @@ body {
                 }
             })
         });
+
+</script>
+
+<script>
+  let imagesData = [
+  { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/03_Bharat_Mishra.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/04_Aditya_Pikle.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/05_Manish_Adukia.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
+  { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/13_Siddharth_Baghmar.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/14_Jaigovind_boob.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/15_Bharat_Gupta.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/16_Kevin_Balm.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/18_Nidhi_Vira.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/19_deepa_shetty.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/20_Prasidh_Sapaliga.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/asit_pal.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/deepa-rathi.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/kc_gupta.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/pankaj-monga.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/pradip-das.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/r.s.kela.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/rl-kabra.jpg' },
+  { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
+  { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
+]
+  let rightSection = document.querySelector('.landing-page-s1 .right .sections')
+
+
+  // subdivide images into sections
+  let imgCount = 14
+  let sectionArray = []
+  let i = 0
+  while (i < imagesData.length) {
+    if (i % imgCount == 0) sectionArray.push([])
+    sectionArray[sectionArray.length - 1].push({...imagesData[i]})
+    i++
+  }
+  // console.log(sectionArray);
+
+  let section = sectionArray[0]
+  let div = document.createElement('div')
+  div.classList.add('section')
+  let columnStart = 1
+  let rowStart = 1
+  let counter = 0
+  section.forEach((card, j) => {
+    console.log(j);
+
+    // setting up grid-column and grid-row
+    if (columnStart == 9) {
+      columnStart = 2
+      rowStart++
+    } else if (columnStart == 8) {
+      columnStart = 1
+      rowStart++
+    }
+
+    let imgContainer = document.createElement('div')
+    imgContainer.classList.add('img-container')
+    imgContainer.style.backgroundImage = `url("${card.url}")`
+    imgContainer.style.backgroundPosition = `center`
+    imgContainer.style.backgroundSize = `cover`
+    imgContainer.style.backgroundRepeat = `no repeat`
+
+    imgContainer.style.gridColumn = `${columnStart} / ${columnStart + 2}`
+    imgContainer.style.gridRow = `${rowStart} / ${rowStart}`
+    div.appendChild(imgContainer)
+
+    let img = new Image()
+    img.src = card.url
+    img.onload = () => {
+      imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
+      imgContainer.style.animationDelay = Math.random()*1+'s'
+      imgContainer.count = 0
+      imgContainer.j = j
+      // imgContainer.style.animationDelay = j/section.length+'s'
+
+      // updates each image independently
+      let sectionCount = 0
+      setInterval(() => {
+        sectionCount++
+        if (!sectionArray[sectionCount % sectionArray.length][j]) sectionCount = 0
+      
+        imgContainer.style.animation = 'popdown 1s cubic-bezier(.6,-0.3,.16,1.62)'
+
+        setTimeout(() => {
+          imgContainer.style.backgroundImage = `url("${sectionArray[sectionCount % sectionArray.length][j].url}")`
+          imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
+          imgContainer.style.animationDelay = Math.random()*1+'s'
+        }, 1000);
+        
+      }, Math.random()*7000 + 5000)  // random between 3 to 10 seconds
+
+    }
+    columnStart += 2
+  })
+  rightSection.appendChild(div)
+
+
+  // updates one image at a time
+  // let imgContainerAll = document.querySelectorAll('.img-container')
+  // let prevRandomIndex
+  // setInterval(() => {
+  //   let randomIndex = Math.floor(Math.random()*imgContainerAll.length)
+  //   if (prevRandomIndex == randomIndex) return
+
+  //   let randomImg = imgContainerAll[randomIndex]
+  //   randomImg.style.animation = 'popdown .5s cubic-bezier(.6,-0.3,.16,1.62)'
+
+  //   randomImg.count++
+  //   if (!sectionArray[randomImg.count % sectionArray.length][randomImg.j]) randomImg.count = 0
+
+  //   setTimeout(() => {
+  //     randomImg.style.backgroundImage = `url("${sectionArray[randomImg.count % sectionArray.length][randomImg.j].url}")`
+  //     randomImg.style.animation = 'popup .5s cubic-bezier(.6,-0.3,.16,1.62)'
+  //     // randomImg.style.animationDelay = Math.random()*1+'s'
+  //   }, 700);
+
+  //   prevRandomIndex = randomIndex
+  // }, Math.random()*1000 + 700)
+
 
     </script>
 
