@@ -288,6 +288,7 @@
         </div>
     </div>
 
-    <!-- <img src="<?= base_url() ?>assets/images/capabilities/Capabiitites_Raw_Hand.png" alt=""> -->
+    
+    <?php include_once "new_footer.php" ?>
 </body>
 </html>
