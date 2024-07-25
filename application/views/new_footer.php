@@ -55,7 +55,7 @@
         }
         footer .links .section .ul a:hover{
             color: #fff;
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
 
         footer .bottom {

@@ -1076,6 +1076,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('capabilities');
 	}
+	public function task_force_sub()
+	{
+		$this->load->view('task_force_sub');
+	}
 
 
 }
