@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         footer {
-            background: #CD1432;
+            background: #0c0c0c;
             display: flex;
             flex-direction: column;
             --pad: 1.5rem clamp(2vw, 3rem, 5vw);
@@ -41,13 +41,13 @@
             padding: var(--pad);
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            font-size: clamp(1vw, 14px, 3.7vw);
+            font-size: clamp(.8vw, 14px, 3.5vw);
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
         footer .links .section .ul a {
-            color: #efbbc5;
+            color: #adadad;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -116,6 +116,10 @@
             <div class="section">
                 <span>Social Links</span>
                 <div class="ul">
+                    <a href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
                     <a href="">
                         <i class="fa-brands fa-instagram"></i>
                         Instagram
