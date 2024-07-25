@@ -132,7 +132,7 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our tax specialists provide strategic tax planning and advisory services to help you navigate the complexities of tax laws and regulations. We optimize your tax position by identifying opportunities for savings and ensuring full compliance with the latest tax requirements. Whether it’s corporate tax, VAT, international tax, or personal tax planning, our experts offer tailored solutions to minimize liabilities and maximize financial benefits.</p>
+           <p class='text-justify'>The Tax Task Force manages the complex landscape of multi-jurisdictional tax regulations and compliance. Their roles include developing tax strategies that optimize financial outcomes, ensuring compliance with international tax laws, and leveraging technology for efficient tax reporting and planning. The team stays abreast of global tax developments, provides guidance on cross-border tax issues, and works closely with legal and accounting task forces to align tax strategies with broader financial and operational goals. Their expertise helps the network navigate tax complexities and maximize tax efficiency.</p>
 
            </div>
             <div class="row justify-content-start photo-cards" >

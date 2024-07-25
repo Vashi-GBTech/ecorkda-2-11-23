@@ -132,7 +132,7 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our compliance experts ensure that your business adheres to all relevant industry regulations and standards, reducing risks and enhancing operational efficiency. We conduct thorough compliance audits, develop comprehensive risk management strategies, and provide ongoing monitoring and training. Our proactive approach helps prevent compliance breaches, protects your reputation, and promotes a culture of ethical business practices.</p>
+           <p class='text-justify'>The Compliance Task Force safeguards the network against regulatory and compliance risks by implementing and monitoring comprehensive compliance programs. Responsibilities include developing compliance policies, conducting risk assessments, and ensuring adherence to international standards. Utilizing advanced compliance technologies, they enhance monitoring and reporting capabilities. The team works closely with legal, governance, and audit task forces to integrate compliance into all operational aspects, ensuring the network’s activities meet regulatory requirements and uphold the highest standards of ethical conduct.</p>
            
            </div>
             <div class="row justify-content-start photo-cards" >

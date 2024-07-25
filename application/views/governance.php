@@ -132,7 +132,7 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our governance advisors assist in building and maintaining robust governance frameworks that foster accountability and ethical conduct. We help define clear policies, establish roles and responsibilities, and implement best practices to ensure effective decision-making. By promoting a culture of transparency and integrity, we support your organization in achieving long-term sustainability and stakeholder trust.</p>
+           <p class='text-justify'>The Governance Task Force ensures that the network operates within a robust framework of corporate governance principles. Their roles include developing governance policies, monitoring adherence to regulatory requirements, and fostering a culture of accountability and ethical conduct. Leveraging technology, they enhance governance practices and transparency, ensuring alignment with global best practices. The team collaborates with audit, compliance, and legal task forces to ensure cohesive governance strategies, mitigating risks, and promoting sustainable organizational growth and stakeholder confidence.</p>
            
            </div>
             <div class="row justify-content-start photo-cards" >
