@@ -132,7 +132,7 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our legal team offers expert counsel on a wide array of legal matters critical to your business’s success. We provide advice on contracts, corporate governance, intellectual property, labor laws, and dispute resolution. Our proactive approach ensures that your business operates within legal boundaries, mitigates risks, and is prepared to handle any legal challenges that may arise. Our goal is to safeguard your interests and promote sustainable growth.</p>
+           <p class='text-justify'>The Legal Task Force provides comprehensive legal support and guidance to ensure compliance with local and international laws. Responsibilities include drafting and reviewing contracts, managing legal risks, and advising on regulatory changes. They utilize advanced legal technology to streamline processes and ensure efficient legal management. The team collaborates with other task forces, particularly governance and compliance, to align legal strategies with organizational objectives, mitigating legal risks and supporting the network’s strategic initiatives in a rapidly changing legal environment.</p>
            
            </div>
             <div class="row justify-content-start photo-cards" >

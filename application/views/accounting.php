@@ -132,8 +132,9 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our accounting experts offer a full spectrum of financial services designed to maintain your business’s financial health and support strategic decision-making. From meticulous bookkeeping and precise financial statement preparation to insightful financial forecasting and budgeting, our team ensures your financial records are accurate and compliant. We provide tailored solutions that align with your business goals, helping you navigate complex financial landscapes with confidence.</p>
-
+           <p class='text-justify'>
+            The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.
+           </p>
            </div>
             <div class="row justify-content-start photo-cards" >
                 <div class="col-md-5 mb-3 d-flex justify-content-start">

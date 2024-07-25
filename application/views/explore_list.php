@@ -36,7 +36,7 @@
                      <li id="compliance"><a href="<?= base_url() ?>compliance" class="wl-link-color">Compliance</a></li>
                      <li id="m_a"><a href="<?= base_url() ?>m_a" class="wl-link-color">M & A</a></li>
                      <li id="tech"><a href="<?= base_url() ?>tech" class="wl-link-color">Technology</a></li>
-                     <li id="wlg"><a href="<?= base_url() ?>wlg" class="wl-link-color">Women Leardership Group</a></li>
+                     <li id="wlg"><a href="<?= base_url() ?>wlg" class="wl-link-color">Non Profit</a></li>
             
             
 

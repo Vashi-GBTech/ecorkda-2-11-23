@@ -157,7 +157,7 @@
                         <div class="card-back">
                            <a  href='<?= base_url() ?>m_a' class='btn btn-lg bg-back-card-btn' >M & A</a >
                            <a  href='<?= base_url() ?>tech' class='btn btn-lg bg-back-card-btn' >Technology</a >
-                           <a  href='<?= base_url() ?>wlg' class='btn btn-lg bg-back-card-btn' >Women Leadership Group</a >
+                           <a  href='<?= base_url() ?>wlg' class='btn btn-lg bg-back-card-btn' >Non Profit</a >
                         </div>
                     </div>
                 </div>

@@ -132,8 +132,9 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our audit professionals deliver comprehensive and meticulous auditing services that go beyond compliance. By examining your financial records, internal controls, and operational processes in detail, we ensure accuracy, transparency, and adherence to regulatory standards. Our audits help identify areas for improvement, mitigate risks, and enhance the overall efficiency of your operations, fostering trust and credibility with stakeholders.</p>
-           
+           <p class='text-justify'>
+            The Audit Task Force ensures the integrity and accuracy of financial statements and operations across the network. Their responsibilities include conducting thorough internal and external audits, identifying and mitigating risks, and ensuring compliance with global auditing standards. Leveraging advanced auditing technologies and methodologies, they provide actionable insights to enhance organizational efficiency and transparency. The team also collaborates with accounting and compliance task forces to align audit practices with evolving regulatory requirements and industry best practices, ensuring robust financial oversight and fostering trust among stakeholders.
+            </p>
            </div>
             <div class="row justify-content-start photo-cards" >
                 <div class="col-md-5 mb-3 d-flex justify-content-start">

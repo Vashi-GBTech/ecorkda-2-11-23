@@ -132,7 +132,7 @@ background:lightgray;
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our technology professionals offer innovative IT solutions that drive digital transformation and enhance your business operations. We implement cutting-edge software, improve cybersecurity measures, and streamline IT infrastructure to boost efficiency and competitiveness. Our team stays ahead of technological trends, ensuring that your business leverages the latest advancements to achieve operational excellence and sustained growth.
+           <p class='text-justify'>The Technology Task Force spearheads the digital transformation initiatives within the network, ensuring the adoption of cutting-edge technologies to enhance operational efficiency and innovation. Responsibilities include developing and implementing technology strategies, managing IT infrastructure, and ensuring cybersecurity. The team stays at the forefront of technological advancements, integrating solutions that support other task forces in achieving their objectives. They collaborate with all departments to ensure technology aligns with business goals, driving digital innovation and maintaining the network’s competitive advantage in a tech-driven world.
            </p>
            
            </div>

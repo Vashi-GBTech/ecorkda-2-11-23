@@ -126,13 +126,13 @@ background:lightgray;
 
 <section id='membership' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-100">Women Leadership Group</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-100">Non-Profit Task Force</div></div> 
 
         <div class="d-flex h-100 mt-5">
           <div class="col-md-8  d-flex justify-content-start bg-gray p-4 pb-2 rounded">
             <div>
            <div class='d-flex justify-content-center' >
-           <p class='text-justify'>Our Women Leadership Group is dedicated to advancing women in leadership roles across all sectors. We provide mentorship, professional development opportunities, and a supportive network that fosters growth and empowerment. By promoting diversity and inclusion, we create an environment where women can thrive, share insights, and achieve their career aspirations. Our initiatives are designed to break barriers, inspire leadership, and drive organizational success.
+           <p class='text-justify'>The Non-Profit Task Force supports the network’s philanthropic initiatives and social responsibility goals. Their roles include managing non-profit projects, ensuring compliance with relevant regulations, and developing strategies for impactful community engagement. They leverage technology to enhance program efficiency and transparency, fostering strong partnerships with stakeholders and beneficiaries. The team collaborates with governance, compliance, and financial experts to ensure sustainable and effective non-profit activities, aligning the network’s social mission with its overall strategic objectives and making a positive impact on society.
            </p>
            
            </div>
