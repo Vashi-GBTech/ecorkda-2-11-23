@@ -195,7 +195,7 @@
             font-weight: 700;
             text-decoration: none;
             color: #000;
-            font-size: clamp(.8rem, -0.875rem + 2vw, 2rem);
+            font-size: clamp(.8rem, -0.875rem + 1.8vw, 2rem);
         }
         a.block-content .icon {
             display: block;
