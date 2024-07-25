@@ -100,13 +100,14 @@
         }
 
         .capabilities-container .hand{
-            --scale: 1.8;
+            --scale: 1.9;
 
             /* position: absolute; */
             position: relative;
             top: 0;
             float: right;
             width: clamp(30%, calc(323px* var(--scale)), 98%);
+            /* width: min(calc(323px* var(--scale)), 100vw); */
             aspect-ratio: 323 / 234;
             background-image: url('<?=base_url()?>assets/images/capabilities/Capabiitites_Raw_Hand.png');
         }
@@ -124,7 +125,7 @@
 
         .capabilities-container .blocks{
             /* display: none; */
-            --scale: 1.7;
+            --scale: 1.8;
             position: absolute;
             bottom: 2rem;
             left: 0;
@@ -195,7 +196,8 @@
             font-weight: 700;
             text-decoration: none;
             color: #000;
-            font-size: clamp(.8rem, -0.875rem + 1.8vw, 2rem);
+            /* font-size: clamp(.8rem, -0.875rem + 1.6vw, 2rem); */
+            font-size: 20px;
         }
         a.block-content .icon {
             display: block;
@@ -208,6 +210,26 @@
             background-size: contain;
         }
 
+        @media only screen and (max-height: 800px) {
+            .capabilities-container {
+                height: 120dvh;
+            }
+        }
+
+
+        @media only screen and (max-width: 1400px) {
+            .capabilities-container .hand {
+                --scale: 1.5;
+                width: min(calc(323px* var(--scale)), 100vw);
+            }
+            .capabilities-container .blocks {
+                --scale: 1.4;
+                width: min(calc(210px * var(--scale)), 100vw);
+            }
+            a.block-content .info {
+                font-size: 16px;
+            }
+        }
 
 
         @media only screen and (max-width: 800px) {
@@ -220,13 +242,13 @@
                 flex: 1;
             }
             .capabilities-container .right {
-                min-height: min(100dvh, calc(1.7* 100vw));
+                min-height: min(90dvh, calc(1.7* 100vw));
             }
             .capabilities-container .blocks {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            .capabilities-container .blocks .info {
+            a.block-content .info {
                 font-size: clamp(.8rem, -0.875rem + 2vw, 2rem);
             }
         }
@@ -290,5 +312,18 @@
 
     
     <?php include_once "new_footer.php" ?>
+
+    <!-- <Script>
+        function setScale() {
+            let min = window.innerWidth <= window.innerHeight? window.innerWidth : window.innerHeight
+            let max = window.innerWidth > window.innerHeight? window.innerWidth : window.innerHeight
+            document.body.style.setProperty('--scale', max*0.6 / min)
+        }
+        setScale()
+        window.onresize = () => {
+            console.log('scaling');
+            setScale()
+        }
+    </Script> -->
 </body>
 </html>

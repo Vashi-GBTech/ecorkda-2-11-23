@@ -15,12 +15,12 @@
   align-items: center;
   justify-items: center;
 } */
-
+/* 
 header {
   font-size: 42px;
   font-weight: bold;
   text-align: center;
-}
+} */
 
 #superca {
   width: 100vw;
