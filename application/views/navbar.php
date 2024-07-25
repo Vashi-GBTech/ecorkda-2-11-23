@@ -89,7 +89,7 @@
     }
 
     .menu-section {
-        position: absolute;
+        position: fixed;
         top: calc(100% + .5rem);
         right: 1rem;
         transform: translateX(400px);
