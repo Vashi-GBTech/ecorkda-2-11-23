@@ -22,18 +22,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 24px;
+        /* padding: 12px 24px; */
+        padding: 1rem clamp(1rem, 5vw, 3rem);
         position: relative;
+        z-index: 100;
         /* overflow-x: hidden; */
     }
 
-    header .logo-img{
+    /* header .logo-img{
         margin-left: 2rem;
-    }
+    } */
 
     header nav {
         display: flex;
         align-items: center;
+        position: relative;
         /* overflow: hidden; */
     }
     header nav li {
@@ -52,10 +55,10 @@
         color: black;
         background: white;
         display: block;
-        padding: .2rem 1.5rem;;
         position: relative;
         text-decoration: none;
         transition-duration: 0.5s;
+        padding: .2rem 1.5rem;
     }
 
     nav li a {
@@ -69,6 +72,7 @@
 
     .more-options {
         font-size: 2rem;
+        padding: 0;
     }
 
     .red-btn {
@@ -90,8 +94,8 @@
 
     .menu-section {
         position: fixed;
-        top: calc(100% + .5rem);
-        right: 1rem;
+        top: 80px;
+        right: 2rem;
         transform: translateX(400px);
         border-radius: 5px;
         background: #fff;
