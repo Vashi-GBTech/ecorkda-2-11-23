@@ -116,14 +116,14 @@
                         <div class="card-front">
                             <img src="<?= base_url() ?>assets/rkda/conventional_Practice.png" alt="Image 1" class="img-fluid">
                             <div class="crimson-div">
-                                <h6>CONVENTIONAL</h6>
+                                <h6>CORE</h6>
                             </div>
                         </div>
                         <div class="card-back">
 
-                           <a  href='<?= base_url() ?>accounting' class='btn btn-lg bg-back-card-btn' >Accounting</a >
-                           <a  href='<?= base_url() ?>tf_audit' class='btn btn-lg bg-back-card-btn' >Audit</a >
-                           <a  href='<?= base_url() ?>tax' class='btn btn-lg bg-back-card-btn' >Tax</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Accounting' class='btn btn-lg bg-back-card-btn' >Accounting</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Audit' class='btn btn-lg bg-back-card-btn' >Audit</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Tax' class='btn btn-lg bg-back-card-btn' >Tax</a >
                         </div>
                     </div>
                 </div>
@@ -134,13 +134,13 @@
                         <div class="card-front">
                             <img src="<?= base_url() ?>assets/rkda/specialized-n.jpg" alt="Image 2" class="img-fluid">
                             <div class="crimson-div">
-                                <h6>SPECIALIZED</h6>
+                                <h6>FUNCTIONAL</h6>
                             </div>
                         </div>
                         <div class="card-back h-100">
-                           <a  href='<?= base_url() ?>legal' class='btn btn-lg bg-back-card-btn' >Legal</a >
-                           <a  href='<?= base_url() ?>governance' class='btn btn-lg bg-back-card-btn' >Governance</a >
-                           <a  href='<?= base_url() ?>compliance' class='btn btn-lg bg-back-card-btn' >Compliance</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Legal' class='btn btn-lg bg-back-card-btn' >Legal</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Governance' class='btn btn-lg bg-back-card-btn' >Governance</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Compliance' class='btn btn-lg bg-back-card-btn' >Compliance</a >
                         </div>
                     </div>
                 </div>
@@ -151,13 +151,13 @@
                         <div class="card-front">
                             <img src="<?= base_url() ?>assets/rkda/new_age.jpg" alt="Image 3" class="img-fluid">
                             <div class="crimson-div">
-                                <h6>NEW AGE</h6>
+                                <h6>SPECIALIZED</h6>
                             </div>
                         </div>
                         <div class="card-back">
-                           <a  href='<?= base_url() ?>m_a' class='btn btn-lg bg-back-card-btn' >M & A</a >
-                           <a  href='<?= base_url() ?>tech' class='btn btn-lg bg-back-card-btn' >Technology</a >
-                           <a  href='<?= base_url() ?>wlg' class='btn btn-lg bg-back-card-btn' >Non Profit</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#M_&_A' class='btn btn-lg bg-back-card-btn' >M & A</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Technology' class='btn btn-lg bg-back-card-btn' >Technology</a >
+                           <a  href='<?= base_url() ?>task_force_sub/#Non_Profit' class='btn btn-lg bg-back-card-btn' >Non Profit</a >
                         </div>
                     </div>
                 </div>
