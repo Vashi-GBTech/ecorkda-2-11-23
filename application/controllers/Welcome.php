@@ -1080,7 +1080,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('task_force_sub');
 	}
-
+	public function governance_sub()
+	{
+		$this->load->view('governance_sub');
+	}
 
 }
 ?>

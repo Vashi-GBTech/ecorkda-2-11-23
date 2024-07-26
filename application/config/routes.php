@@ -197,5 +197,7 @@ $route['opinion'] = 'welcome/opinion';
 $route['gridhome'] = 'welcome/gridhome';
 $route['capabilities'] = 'welcome/capabilities';
 $route['task_force_sub'] = 'welcome/task_force_sub';
+$route['governance_sub'] = 'welcome/governance_sub';
+
 
 

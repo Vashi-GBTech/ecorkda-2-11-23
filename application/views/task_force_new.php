@@ -169,6 +169,8 @@
           <p>  If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com">audit@rkda.com</a></p>
         </div>
     </div> 
+
+    <?= include_once "new_footer.php" ?>
 </section>
 
 </body>
