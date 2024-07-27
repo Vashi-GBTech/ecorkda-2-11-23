@@ -181,7 +181,7 @@
             "Governing_Board" : {
                 title: "Governing Board",
                 sub: "",
-                content: `<?php include_once "QDS.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/QDS.php" ?>`,
             },
             "Membership_process" : {
                 title: "Membership process",
