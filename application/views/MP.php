@@ -48,7 +48,11 @@
             background: #D94453;
             padding: 0.5rem 1rem;
             position: relative;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 40px, 0% 40px, 0% 0%);
+            overflow: hidden;
+            transition: all .3s ease;
         }
+
 
         .sect .cards .drop-card span{
             font-family: 'Poppins';
@@ -77,32 +81,23 @@
             background: #D94453;
         }
         .sect .cards .drop-card .drop {
-            padding: 0rem 1rem 0.5rem 1rem;
+            padding-left: 1rem;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             position: relative;
-            margin: 0rem 0.61rem;
-            margin-top: 0.5rem;
+            margin: 0.5rem 0.61rem ;
             background: #D94453;
-            animation: show .4s linear forwards;
-            height: 100px;
-            display: none;
-        }
-        @keyframes show {
-            0% {
-                opacity: 0;
-                height: 0%;
-            }
-            100% {
-                opacity: 1;
-            }
+            height: 0%;
+            transition: all .3s ease;
+            opacity: 0;
+            /* display: none; */
         }
 
         .sect .cards .drop-card .drop::before {
             content: '';
             position: absolute;
-            top: -1.2rem;
+            top: -.8rem;
             left: 0;
             height: 100%;
             width: 1px;
@@ -125,13 +120,25 @@
             background: #fff;
         }
 
+
+        .list-item {
+            margin: 5px 0;
+            list-style: none;
+            color: crimson;
+        }
+        .list-item a {
+            margin-left: .5rem;
+            text-decoration: none;
+            color: crimson;
+        }
+
     </style>
 </head>
 <body>
     <div class="sect">
         <div class="title clip">Association Process</div>
         <div class="cards">
-            <div class="drop-card">
+            <div class="drop-card" style="margin-top: 0px">
                 <span>
                     <div class="icon">
                         <i class="fa-solid fa-plus"></i>
@@ -146,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="drop-card">
+            <div class="drop-card" style="margin-top: 30px">
                 <span>
                     <div class="icon">
                         <i class="fa-solid fa-plus"></i>
@@ -162,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="drop-card">
+            <div class="drop-card" style="margin-top: 60px">
                 <span>
                     <div class="icon">
                         <i class="fa-solid fa-plus"></i>
@@ -177,7 +184,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="">
+            <div class="title clip">Template Documentations</div>
+            <ul class="">
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Template of License Agreement</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Appendix 3 to licence agreement - Constitution of RKDA Group</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Appendix 2 to licence agreement - The RKDA ESSENTIALS</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Statutes of RKDA International.</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Mediation Rules</a></li>
+            </ul>
+        </div>
     </div>
+
+    
 
     
 </body>

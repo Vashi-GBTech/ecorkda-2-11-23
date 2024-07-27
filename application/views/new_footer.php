@@ -81,8 +81,8 @@
             <div class="section">
                 <span>Useful Link</span>
                 <div class="ul">
-                    <a href=""><i class="fa-solid fa-chevron-right"></i>Home</a>
-                    <a href=""><i class="fa-solid fa-chevron-right"></i>About Us </a>
+                    <a href="<?= base_url() ?>"><i class="fa-solid fa-chevron-right"></i>Home</a>
+                    <a href="<?= base_url() ?>/#about"><i class="fa-solid fa-chevron-right"></i>About Us </a>
                     <a href=""><i class="fa-solid fa-chevron-right"></i>Our Partners</a>
                     <a href="<?= base_url() ?>#needHelp"><i class="fa-solid fa-chevron-right"></i>Contact Us</a>
                 </div>

@@ -146,6 +146,10 @@
         }
     </style>
 </head>
+<script src="<?= base_url('assets/js/custom.js') ?>"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <body>
     <?php include_once "navbar.php" ?>
 
@@ -157,19 +161,8 @@
         <div class="sub"></div>
 
         <section>
-            <main>
-
-                <!-- <div class="img-section">
-                    <div class="top">
-                        <div class="img"></div>
-                    </div>
-
-                    <div class="details">
-                        <div class="name">Pankaj Bhargava</div>
-                        <div class="role">Partner</div>
-                    </div>
-                </div> -->
-            </main>
+            <!-- dynamic content is showed here -->
+            <main></main>
             
             <!-- Explore List present at RHS -->
             <div class="explore-list"></div>
@@ -183,6 +176,7 @@
     <?php include_once "new_footer.php" ?>
 
     <script>
+
         const GovernanceData = {
             "Governing_Board" : {
                 title: "Governing Board",
@@ -193,53 +187,57 @@
                 title: "Membership process",
                 sub: "",
                 content: `<?php include_once "MP.php" ?>`,
-                script: () => {
-                    let allCards = document.querySelectorAll('.drop-card')
-
-                    allCards.forEach(card => {
-                        card.querySelector('span').onclick = () => {
-                            card.querySelector('.drop').style.display = 'flex'
-                        }
-                    });
-                }
+                script: governance_js.membership_process
             },
             "Quality_Standards" : {
                 title: "Quality Standards",
                 sub: "",
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: `<?php include_once "QS.php" ?>`,
             },
             "Self_inspection_and_Interoffice_Review" : {
                 title: "Self inspection and Interoffice Review",
                 sub: "",
                 restricted: true,
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: ``,
             },
             "Service_Portfolio" : {
                 title: "Service Portfolio",
                 sub: "",
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: `<?php include_once "SP.php" ?>`,
             },
             "Technical_Standards" : {
                 title: "Technical Standards",
                 sub: "",
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: `<?php include_once "TS.php" ?>`,
             },
             "Transfer_Pricing" : {
                 title: "Transfer Pricing",
                 sub: "",
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: `<?php include_once "TP.php" ?>`,
             },
             "IT_Working_instructions" : {
                 title: "IT Working instructions",
                 sub: "",
                 restricted: true,
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: ``,
             },
             "Training_Capabilities_workshop" : {
                 title: "Training Capabilities workshop",
                 sub: "",
                 restricted: true,
-                content: "The Accounting Task Force plays a crucial role in navigating a rapidly evolving technological landscape and diverse multi-country accounting standards. Responsibilities include ensuring accurate financial reporting, adhering to global accounting principles, and implementing cutting-edge technology for efficiency. The team stays updated with international regulations, advice on best practices, and collaborates with other task forces to align accounting strategies with legal, tax, and compliance requirements. They also drive digital transformation initiatives, enhance financial transparency, and support decision-making through robust financial data analysis, ensuring the network’s accounting practices remain compliant, innovative, and adaptable to global changes.",
+                content: ``,
+            },
+            "Audit" : {
+                title: "Audit",
+                sub: "",
+                content: `<?php include_once "TS_Audit.php" ?>`,
+                hide: true
+            },
+            "Tax_Accounting" : {
+                title: "Tax Accounting",
+                sub: "",
+                content: `<?php include_once "TS_Tax.php" ?>`,
+                hide: true
             },
         }
 
@@ -248,6 +246,8 @@
             // adding explore list based on the data array
             let exploreList = document.querySelector('.explore-list')
             for (const key in GovernanceData) {
+                if (GovernanceData[key].hide) continue
+
                 const li = document.createElement('li')
                 li.setAttribute('data-name', key)
                 li.style.whiteSpace = 'wrap'
@@ -283,11 +283,15 @@
                 else li.classList.remove('active')
             })
 
-            document.querySelector('.sub-container h1').innerText = GovernanceData[topicName].title
-            if (GovernanceData[topicName].sub.trim() != '') document.querySelector('.sub-container .sub').innerText = GovernanceData[topicName].sub
+            let currentTopic = GovernanceData[topicName]
+
+            if (!currentTopic) return
+
+            document.querySelector('.sub-container h1').innerText = currentTopic.title
+            if (currentTopic.sub.trim() != '') document.querySelector('.sub-container .sub').innerText = currentTopic.sub
             else document.querySelector('.sub-container .sub').innerText = ''
-            document.querySelector('.sub-container section main').innerHTML = GovernanceData[topicName].content
-            if (GovernanceData[topicName].script) GovernanceData[topicName].script()
+            document.querySelector('.sub-container section main').innerHTML = currentTopic.content
+            if (currentTopic.script) currentTopic.script()
         }
 
     </script>
