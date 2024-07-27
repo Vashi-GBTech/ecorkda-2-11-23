@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>superCa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>superCa</title>
 </head>
 <style>
-    /* body {
+  /* body {
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -15,139 +16,191 @@
   align-items: center;
   justify-items: center;
 } */
-/* 
+  /* 
 header {
   font-size: 42px;
   font-weight: bold;
   text-align: center;
 } */
 
-#superca {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  --v-offset: 60px;
-  --curve-height: 125px;
+  #superca {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    --v-offset: 60px;
+    --curve-height: 125px;
 
-}
-#superca::before,
-#superca::after {
-  content: "";
-  display: block;
-  background: white;
-  width: calc(100vw + 2 * var(--v-offset));
-  height: var(--curve-height);
-  position: absolute;
-  border-radius: 50%;
-  left: calc(-1 * var(--v-offset));
-  right: calc(-1 * var(--v-offset));
-}
+  }
 
-#superca::before {
-  top: calc(-0.6 * var(--curve-height));
-}
-#superca::after {
-  bottom: calc(-0.6 * var(--curve-height));
-}
+  #superca::before,
+  #superca::after {
+    content: "";
+    display: block;
+    background: white;
+    width: calc(100vw + 2 * var(--v-offset));
+    height: var(--curve-height);
+    position: absolute;
+    border-radius: 50%;
+    left: calc(-1 * var(--v-offset));
+    right: calc(-1 * var(--v-offset));
+  }
 
-.wrapper {
-  display: grid;
-  grid-template-rows: 316px;
-  grid-auto-flow: column;
-  grid-gap: 24px;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  background:whitesmoke !important;
-}
+  #superca::before {
+    top: calc(-0.6 * var(--curve-height));
+  }
 
-.wrapper img {
-  scroll-snap-align: center;
-  height:300px;
-  width:280px;
-  /* padding:50px 20px !important; */
-  display: block;
-  -webkit-user-select: none;
-  margin: auto;
-  background-color: hsl(0, 0%, 90%);
-  transition: background-color 300ms;
-      /* padding:100px 20px; */
-}
+  #superca::after {
+    bottom: calc(-0.6 * var(--curve-height));
+  }
 
-.km{
-  color:crimson;
-  font-weight:500;
+  .wrapper {
+    display: grid;
+    grid-template-rows: 316px;
+    grid-auto-flow: column;
+    grid-gap: 24px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    background: whitesmoke !important;
+  }
 
-}
-.km:hover{
-  color:black;
+  .wrapper img {
+    scroll-snap-align: center;
+    height: 300px;
+    width: 280px;
+    /* padding:50px 20px !important; */
+    display: block;
+    -webkit-user-select: none;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    transition: background-color 300ms;
+    /* padding:100px 20px; */
+  }
 
-  
-}
+  .km {
+    color: crimson;
+    font-weight: 500;
+
+  }
+
+  .km:hover {
+    color: black;
+
+
+  }
+
+  .header {
+    background-color: crimson;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+  }
 </style>
+
 <body>
-<?php include_once "navbar.php" ?>
-<section id='superca_page'>
+  <?php include_once "navbar.php" ?>
+  <section id='superca_page'>
 
 
-   <div class="d-flex justify-content-center">
-      <div class='col-md-8'>
-        <h1 class='text-center my-3'>Super CA</h1>
-         <p class='text-center' >SuperCA empowers Chartered Accountants through specialized tools, resources, and community support. It enables CAs to explore niches like investment banking, forensic auditing, and entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community engagement, and opportunities for mentorship and networking</p>
-         <div class="d-flex justify-content-center">
-           <a href="https://forum.iitcouncil.org/superca/" class='km red-btn  text-center  rounded-pill' style='width:17%' >Know more</a>
-         </div>
-      </div>
-      </div>
-     <section  id='superca'>
-     
-
-        <div class="wrapper">
-            <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a> 
-
-           <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a> 
-           <a target=”_blank” href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a> 
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a> 
-          <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>  <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
-            
-            <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a> 
-
-           <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a> 
-           <a target=”_blank” href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a> 
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
-
-           <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a> 
-          <a target=”_blank” href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>  <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
-            
-
-            
+    <div class="d-flex justify-content-center">
+      <div class='' style="margin: 0 3rem">
+        <div class="mt-5">
+          <div class="header w-100" style="margin-bottom: 1rem">Super CA</div>
         </div>
 
-        
+        <p class='text-center'>SuperCA empowers Chartered Accountants through specialized tools, resources, and
+          community support. It enables CAs to explore niches like investment banking, forensic auditing, and
+          entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community
+          engagement, and opportunities for mentorship and networking</p>
+        <div class="d-flex justify-content-center">
+          <a href="https://forum.iitcouncil.org/superca/" class='km red-btn  text-center  rounded-pill'
+            style='width:17%'>Know more</a>
+        </div>
+      </div>
+    </div>
+    <section id='superca'>
+
+
+      <div class="wrapper">
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
+
+        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
+
+        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+
+
+
+      </div>
+
+
     </section>
-    <div class='d-flex justify-content-center' >
-            <div class="col-md-7">
-            <ul>
-                <li><strong>Specialized Support:</strong> Tailored tools and resources for niche areas within accounting.</li>
-                <li><strong>Community Engagement:</strong> Vibrant professional network fostering collaboration and learning.</li>
-                <li><strong>Professional Growth:</strong> Opportunities for mentorship, networking, and advanced training.</li>
-                <li><strong>Career Advancement:</strong> Empowering CAs to optimize practices and achieve career success.</li>
-            </ul>
+    <div class='d-flex justify-content-center'>
+      <div class="col-md-7">
+        <ul>
+          <li><strong>Specialized Support:</strong> Tailored tools and resources for niche areas within accounting.</li>
+          <li><strong>Community Engagement:</strong> Vibrant professional network fostering collaboration and learning.
+          </li>
+          <li><strong>Professional Growth:</strong> Opportunities for mentorship, networking, and advanced training.
+          </li>
+          <li><strong>Career Advancement:</strong> Empowering CAs to optimize practices and achieve career success.</li>
+        </ul>
 
-            </div>
-        </div>
+      </div>
+    </div>
 
 
 
-        </section>
+  </section>
+  <?php include_once "new_footer.php" ?>
 </body>
+
 </html>

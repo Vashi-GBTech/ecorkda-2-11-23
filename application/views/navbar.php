@@ -141,7 +141,7 @@
 
             <div class="menu-section">
                 <li><a href="<?= base_url() ?>task_force_new">Task Force</a></li>
-                <li><a href="<?= base_url() ?>faq_new_partner">Governance</a></li>
+                <li><a href="<?= base_url() ?>governance_sub">Governance</a></li>
                 <li><a href="<?= base_url() ?>capabilities">Capabilities</a></li>
                 <li><a href="<?= base_url() ?>membership">Membership</a></li>
                 <li><a href="<?= base_url() ?>#needHelp">Contact us</a></li>

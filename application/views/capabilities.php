@@ -278,30 +278,28 @@
 
         <div class="right">
             <div class="hand img-div">
-                <a href="" class="block-content">
+                <a href="<?= base_url() ?>Financial_and_Capital_Services" class="block-content">
                     <div class="info">Financial and Capital Services</div>
                     <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Financial and capital servcies icon.png")'></div>
                 </a>
-                <div class="overlay img-div">
-
-                </div>
+                <div class="overlay img-div"></div>
             </div>
 
             <div class="blocks img-div">
                 <div class="link-container">
-                    <a href="" class="block-content">
+                    <a href="<?= base_url() ?>BusinessSupportandFinancialReporting" class="block-content">
                         <div class="info">Business Support and Financial Reporting</div>
                         <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Financial Report ICon.png")'></div>
                     </a>
-                    <a href="" class="block-content">
+                    <a href="<?= base_url() ?>Digital_transformation" class="block-content">
                         <div class="info">Digital Transformation</div>
                         <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Digital Transformation Icon.png")'></div>
                     </a>
-                    <a href="" class="block-content">
+                    <a href="<?= base_url() ?>Strategy_Performance_Consulting_services" class="block-content">
                         <div class="info">Strategy and performance Consulting</div>
                         <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Strategy,performance and consulting Icon.png")'></div>
                     </a>
-                    <a href="" class="block-content">
+                    <a href="<?= base_url() ?>LitigationLegalServices" class="block-content">
                         <div class="info">Legal and GRC Services</div>
                         <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Legal and GRC Services ICon.png")'></div>
                     </a>

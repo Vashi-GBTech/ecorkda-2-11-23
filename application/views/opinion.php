@@ -101,7 +101,7 @@
   <section class='#signUp'>
     <div class='row'>
         <div class="col-md-5 img-signup" >
-            <img src="<?= base_url() ?>assets/rkda/SignUp.png" alt="reg" width="95%">
+            <img src="<?= base_url() ?>assets/rkda/signUp-2.png" alt="reg" width="95%">
         </div>
         <div class="col-md-7">
             <div class="container">
@@ -170,6 +170,8 @@
         </div>
     </div>
   </section>
+  
+    <?php include_once "new_footer.php" ?>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>

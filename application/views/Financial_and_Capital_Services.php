@@ -13,7 +13,7 @@
 
 <body>
     <!-- header -->
-    <?php include_once "header.php" ?>
+    <?php include_once "navbar.php" ?>
 
     <!-- banner   -->
     <div class="Strategy_Performance_Consulting_servicesBanner align-items-center d-flex justify-content-center pageBanner">
@@ -352,7 +352,7 @@ We assist you in determining your budgeting and capital requirements by estimati
         </div>
     </div>
     <!-- footer  -->
-    <?php include_once "footer.php" ?>
+    <?php include_once "new_footer.php" ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
         document.addEventListener('DOMContentLoaded', function () {
