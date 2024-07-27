@@ -129,10 +129,10 @@
                 <a class="nav-link" href="<?= base_url() ?>#about">About Us</a>
             </li>
             <li class="nav-item d-none d-lg-block" id="loginSuperCA">
-                <a class="nav-link" href="superCa">SuperCA</a>
+                <a class="nav-link" href="<?= base_url() ?>superCa">SuperCA</a>
             </li>
             <li class="nav-item d-none d-lg-block" id="loginSignupLink">
-                <a class="nav-link" href="rkda_login">Login/Signup</a>
+                <a class="nav-link" href="<?= base_url() ?>rkda_login">Login/Signup</a>
             </li>
 
             <li class="nav-item more-options" id="navbarDropdown">
