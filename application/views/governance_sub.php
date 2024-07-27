@@ -186,13 +186,13 @@
             "Membership_process" : {
                 title: "Membership process",
                 sub: "",
-                content: `<?php include_once "MP.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/MP.php" ?>`,
                 script: governance_js.membership_process
             },
             "Quality_Standards" : {
                 title: "Quality Standards",
                 sub: "",
-                content: `<?php include_once "QS.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/QS.php" ?>`,
             },
             "Self_inspection_and_Interoffice_Review" : {
                 title: "Self inspection and Interoffice Review",
@@ -203,17 +203,17 @@
             "Service_Portfolio" : {
                 title: "Service Portfolio",
                 sub: "",
-                content: `<?php include_once "SP.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/SP.php" ?>`,
             },
             "Technical_Standards" : {
                 title: "Technical Standards",
                 sub: "",
-                content: `<?php include_once "TS.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/TS.php" ?>`,
             },
             "Transfer_Pricing" : {
                 title: "Transfer Pricing",
                 sub: "",
-                content: `<?php include_once "TP.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/TP.php" ?>`,
             },
             "IT_Working_instructions" : {
                 title: "IT Working instructions",
@@ -230,13 +230,13 @@
             "Audit" : {
                 title: "Audit",
                 sub: "",
-                content: `<?php include_once "TS_Audit.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/TS_Audit.php" ?>`,
                 hide: true
             },
             "Tax_Accounting" : {
                 title: "Tax Accounting",
                 sub: "",
-                content: `<?php include_once "TS_Tax.php" ?>`,
+                content: `<?php include_once "governance_sub_pages/TS_Tax.php" ?>`,
                 hide: true
             },
         }
