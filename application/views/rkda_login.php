@@ -184,7 +184,10 @@ body{
             </div>
         </div>
     </div>
+    
 </section>
+
+
 
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> -->
@@ -204,5 +207,9 @@ body{
             });
         });
   </script>
+  
+<?php include_once "new_footer.php" ?>
+<div class="h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil natus numquam consequatur odio asperiores voluptate ab nisi aliquam, hic accusantium. Excepturi laboriosam suscipit vel, commodi assumenda debitis aliquam ratione qui.</div>
 </body>
+
 </html>

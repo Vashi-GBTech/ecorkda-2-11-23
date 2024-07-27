@@ -105,11 +105,11 @@
 <?php include_once "navbar.php" ?>
 <section id='task_force_new' >
     <div class="container mt-5">
-       <div class='d-flex justify-content-center ' ><div class="header w-75">Task Force</div></div> 
+       <div class='d-flex justify-content-center ' ><div class="header w-100">Task Force</div></div> 
        <p class='text-center my-3' >Meet our dedicated team of industry experts, professionals, and thought leaders who drive excellence and innovation. Our task force is committed to providing unparalleled support, guidance, and expertise to help you navigate challenges and achieve your professional goals. With diverse backgrounds and extensive experience, our team is here to empower you every step of the way.</p>
  
        <div class="container my-5">
-        <div class="row justify-content-around">
+        <div class="row justify-content-between">
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-inner">
@@ -170,7 +170,7 @@
         </div>
     </div> 
 
-    <?= include_once "new_footer.php" ?>
+    <?php include_once "new_footer.php" ?>
 </section>
 
 </body>

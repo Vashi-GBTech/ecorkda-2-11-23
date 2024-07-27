@@ -27,6 +27,10 @@
     
 
 </style>
+
+<!-- Do Not Write any JAVASCRIPT Here -->
+<!-- Opening a script file will give  -->
+
 <body>
     <div class="qds">
         <div class="img-container">

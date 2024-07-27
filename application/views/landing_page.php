@@ -203,7 +203,7 @@ body {
 }
 .landing-page-s1 .left .bottom {
   margin-top: 2rem;
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
 .landing-page-s1 .right {
@@ -427,7 +427,7 @@ body {
 
         </div>
         <div class='py-5' >
-            <img src="<?= base_url() ?>assets/rkda/work-flow.png" alt="" width='100%'>
+            <img src="<?= base_url() ?>assets/rkda/work-flow-2.png" alt="" width='100%'>
         </div>
 
         <div class='row align-items-center py-2 my-0'>
@@ -505,7 +505,7 @@ body {
     </section>
    
 
-    <section id='needHelp' style='height:100vh;display:flex'>
+    <section id='needHelp' style='height:100vh;display:flex; margin-top: 6rem;'>
 
         <div class='d-flex align-items-center'>
             <div class="col-md-7 d-flex justify-content-end ">
@@ -536,12 +536,7 @@ body {
 
 
 
-    <footer>
-        <div class='red-band'>
-
-        </div>
-    </footer>
-  
+    <?php include_once "new_footer.php" ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>

@@ -37,8 +37,9 @@
         } */
 
         .sect .cards {
-            /* display: flex;
-            gap: 1rem; */
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
         }
 
         .sect .cards .drop-card {
@@ -46,6 +47,7 @@
             border-radius: 5px;
             background: #D94453;
             padding: 0.5rem 1rem;
+            position: relative;
         }
 
         .sect .cards .drop-card span{
@@ -55,6 +57,9 @@
             display: flex;
             gap: 0.5rem;
             align-items: center;
+            background: #D94453;
+            position: relative;
+            z-index: 5;
         }
 
         .sect .cards .drop-card span .icon {
@@ -78,6 +83,20 @@
             gap: 0.5rem;
             position: relative;
             margin: 0rem 0.61rem;
+            margin-top: 0.5rem;
+            background: #D94453;
+            animation: show .4s linear forwards;
+            height: 100px;
+            display: none;
+        }
+        @keyframes show {
+            0% {
+                opacity: 0;
+                height: 0%;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         .sect .cards .drop-card .drop::before {
@@ -88,6 +107,7 @@
             height: 100%;
             width: 1px;
             background: #fff;
+            overflow: hidden;
         }
         .sect .cards .drop-card .drop li {
             position: relative;
@@ -158,5 +178,7 @@
             </div>
         </div>
     </div>
+
+    
 </body>
 </html>

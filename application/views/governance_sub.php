@@ -184,15 +184,24 @@
 
     <script>
         const GovernanceData = {
-            "Quality_Development_Standard" : {
-                title: "Quality Development Standard",
-                sub: "Lorem ipsum dolor sit amet consectetur. Aliquam massa odio egestas tincidunt. Mattis eget at nunc dui sollicitudin mi dictum. Condimentum dignissim turpis odio amet pulvinar venenatis. Sed amet ut eu quam aliquam tempus.",
-                content: `<?php include_once "QDS.php" ?>`
+            "Governing_Board" : {
+                title: "Governing Board",
+                sub: "",
+                content: `<?php include_once "QDS.php" ?>`,
             },
             "Membership_process" : {
                 title: "Membership process",
                 sub: "",
-                content: `<?php include_once "MP.php" ?>`
+                content: `<?php include_once "MP.php" ?>`,
+                script: () => {
+                    let allCards = document.querySelectorAll('.drop-card')
+
+                    allCards.forEach(card => {
+                        card.querySelector('span').onclick = () => {
+                            card.querySelector('.drop').style.display = 'flex'
+                        }
+                    });
+                }
             },
             "Quality_Standards" : {
                 title: "Quality Standards",
@@ -262,7 +271,7 @@
         function getTopicName() {
             let pathname = window.location.href
             let hashIndex = pathname.lastIndexOf('#')
-            return hashIndex > -1? pathname.slice(hashIndex + 1, pathname.length) : "Quality_Development_Standard"
+            return hashIndex > -1? pathname.slice(hashIndex + 1, pathname.length) : "Governing_Board"
         }
 
         function updateContent() {
@@ -278,6 +287,7 @@
             if (GovernanceData[topicName].sub.trim() != '') document.querySelector('.sub-container .sub').innerText = GovernanceData[topicName].sub
             else document.querySelector('.sub-container .sub').innerText = ''
             document.querySelector('.sub-container section main').innerHTML = GovernanceData[topicName].content
+            if (GovernanceData[topicName].script) GovernanceData[topicName].script()
         }
 
     </script>

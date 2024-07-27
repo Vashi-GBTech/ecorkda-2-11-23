@@ -92,7 +92,7 @@
                 <span>Services</span>
                 <div class="ul">
                     <a href="<?= base_url() ?>task_force_new"><i class="fa-solid fa-chevron-right"></i>Task Force</a>
-                    <a href="<?= base_url() ?>faq_new_partner"><i class="fa-solid fa-chevron-right"></i>Governance</a>
+                    <a href="<?= base_url() ?>governance_sub"><i class="fa-solid fa-chevron-right"></i>Governance</a>
                     <a href="<?= base_url() ?>capabilities"><i class="fa-solid fa-chevron-right"></i>Capabilities</a>
                     <a href="<?= base_url() ?>membership"><i class="fa-solid fa-chevron-right"></i>Membership</a>
                 </div>
