@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>superCa</title>
+
+  <link rel="stylesheet" href="<?= base_url('assets/owl/owl.carousel.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/owl/owl.carousel.min.css') ?>">
 </head>
 <style>
   /* body {
@@ -28,7 +31,7 @@ header {
     overflow: hidden;
     position: relative;
     --v-offset: 60px;
-    --curve-height: 125px;
+    --curve-height: 105px;
 
   }
 
@@ -43,6 +46,7 @@ header {
     border-radius: 50%;
     left: calc(-1 * var(--v-offset));
     right: calc(-1 * var(--v-offset));
+    z-index: 4;
   }
 
   #superca::before {
@@ -50,30 +54,28 @@ header {
   }
 
   #superca::after {
-    bottom: calc(-0.6 * var(--curve-height));
+    bottom: calc(-0.4 * var(--curve-height));
   }
 
   .wrapper {
-    display: grid;
+    /* display: grid;
     grid-template-rows: 316px;
     grid-auto-flow: column;
     grid-gap: 24px;
     overflow: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; */
     background: whitesmoke !important;
   }
 
   .wrapper img {
     scroll-snap-align: center;
     height: 300px;
-    width: 280px;
-    /* padding:50px 20px !important; */
+    /* width: 280px; */
     display: block;
     -webkit-user-select: none;
     margin: auto;
     background-color: hsl(0, 0%, 90%);
     transition: background-color 300ms;
-    /* padding:100px 20px; */
   }
 
   .km {
@@ -97,6 +99,8 @@ header {
     border-radius: 10px;
   }
 </style>
+
+<script src="<?= base_url('assets/owl/owl.carousel.min.js') ?>" defer></script>
 
 <body>
   <?php include_once "navbar.php" ?>
@@ -122,7 +126,7 @@ header {
     <section id='superca'>
 
 
-      <div class="wrapper">
+      <div class="wrapper owl-carousel owl-theme">
         <a target=”_blank”
           href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
             src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
@@ -147,8 +151,8 @@ header {
           href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
             src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
         <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>
-        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
 
         <a target=”_blank”
           href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
@@ -174,8 +178,8 @@ header {
           href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
             src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
         <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop"></a>
-        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8">
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
 
 
 
@@ -201,6 +205,16 @@ header {
 
   </section>
   <?php include_once "new_footer.php" ?>
+
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        margin: 20,
+      });
+    });
+  </script>
+
+ 
 </body>
 
 </html>
