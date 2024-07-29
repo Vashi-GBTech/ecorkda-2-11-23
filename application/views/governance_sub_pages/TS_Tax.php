@@ -86,6 +86,9 @@
 
     </style>
 </head>
+<!-- Warning: Do no write script here -->
+<!-- This page is rendered inside governance_sub.php -->
+<!-- Writing the script breaks the page -->
 <body>
     <div class="sect">
         <div class="accordion" id="accordionExample">
@@ -229,6 +232,8 @@
         </div>
     
     </div>
-    
+<!-- Warning: Do no write script here -->
+<!-- This page is rendered inside governance_sub.php -->
+<!-- Writing the script breaks the page -->
 </body>
 </html>

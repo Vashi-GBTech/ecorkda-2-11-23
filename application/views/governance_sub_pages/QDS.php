@@ -28,9 +28,9 @@
 
 </style>
 
-<!-- Do Not Write any JAVASCRIPT Here -->
-<!-- Opening a script file will give  -->
-
+<!-- Warning: Do no write script here -->
+<!-- This page is rendered inside governance_sub.php -->
+<!-- Writing the script breaks the page -->
 <body>
     <div class="qds">
         <div class="img-container">
@@ -80,4 +80,7 @@
         </div>
     </div>
 </body>
+<!-- Warning: Do no write script here -->
+<!-- This page is rendered inside governance_sub.php -->
+<!-- Writing the script breaks the page -->
 </html>
