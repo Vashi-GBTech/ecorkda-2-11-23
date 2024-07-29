@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" href="<?= base_url('assets/owl/owl.carousel.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/owl/owl.carousel.min.css') ?>">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <style>
   /* body {
@@ -69,7 +71,7 @@ header {
 
   .wrapper img {
     scroll-snap-align: center;
-    height: 300px;
+    height: 250px;
     /* width: 280px; */
     display: block;
     -webkit-user-select: none;
@@ -97,6 +99,21 @@ header {
     text-align: center;
     font-size: 25px;
     border-radius: 10px;
+  }
+
+  .video-player {
+    border: none;
+    outline: none;
+  }
+
+  .swal2-html-container {
+    padding: 1.25em 1.6em 0!important;
+  }
+  .swal2-actions {
+    display: none !important;
+  }
+  .swal2-popup.swal2-modal.swal2-show {
+    margin: 0rem !important;
   }
 </style>
 
@@ -126,63 +143,72 @@ header {
     <section id='superca'>
 
 
+      <!-- <div class="wrapper owl-carousel owl-theme">
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
+
+        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
+
+        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
+
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
+            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
+        <a target=”_blank”
+          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
+      </div> -->
+
+
       <div class="wrapper owl-carousel owl-theme">
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
-
-        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
-        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_careers-dreams-work-activity-7186988292234436610-6JdY?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_finance-accounting-charteredaccountants-activity-7214595656718442496-GW7r?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2"></a>
-
-        <a target=”_blank” href=""><img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_superca-findingyourniche-superca-activity-7217128047269847040-34lQ?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/deeparathi_50yearsofexcellence-innovationintech-newinitiatives-activity-7214576209861496832-YtjE?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountancy-careerexploration-professionaldevelopment-activity-7183076534373535744-Xvw1?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6"></a>
-
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_charteredaccountant-professionalgrowth-makeadifference-activity-7184151996868812801-jQ79?utm_source=share&utm_medium=member_desktop"><img
-            src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7"></a>
-        <a target=”_blank”
-          href="https://www.linkedin.com/posts/ecovisrkca_do-you-want-to-become-a-super-ca-too-activity-7185622930616107009-d9G8?utm_source=share&utm_medium=member_desktop">
-        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8"></a>
-
-
-
+        <img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1" data-video="<?= base_url() ?>assets/rkda/videos/vid-1.mp4">
+        <img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2" data-video="<?= base_url() ?>assets/rkda/videos/">
+        <img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3" data-video="<?= base_url() ?>assets/rkda/videos/">
+        <img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4" data-video="<?= base_url() ?>assets/rkda/videos/Saloni 2ndd Upload.m4v">
+        <img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5" data-video="<?= base_url() ?>assets/rkda/videos/">
+        <img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6" data-video="<?= base_url() ?>assets/rkda/videos/vid-6.mp4">
+        <img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7" data-video="<?= base_url() ?>assets/rkda/videos/vid-7.mp4">
+        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8" data-video="<?= base_url() ?>assets/rkda/videos/vid-8.mp4">
       </div>
 
 
@@ -212,6 +238,33 @@ header {
         margin: 20,
       });
     });
+  </script>
+
+  <script>
+    let wrapperImages = document.querySelectorAll('.wrapper img')
+
+    
+    wrapperImages.forEach(img => {
+      img.onclick = () => showVideo(img) 
+    })
+
+    function showVideo(img) {
+      let path = img.getAttribute('data-video')
+      
+      let html = path.charAt(path.length - 4) == '.'? `
+          <video controls controlsList="nodownload" autoplay width="100%" class="video-player">
+            <source src="${path}" type="video/mp4">
+          </video>` : `
+          <h3 style="color: #df3255;">Cannot play this Video!</h3>`
+
+      Swal.fire({
+        html,
+        showCloseButton: false,
+        showCancelButton: false,
+        focusConfirm: false,
+      })
+    }
+
   </script>
 
  
