@@ -316,9 +316,9 @@ body {
               </div>
             </div>
 
-            <div class="right">
+            <a class="right" href="<?= base_url('experts') ?>">
               <div class="sections"></div>  <!-- contains dyamic images -->
-            </div>
+            </a>
 
         </div>
 
