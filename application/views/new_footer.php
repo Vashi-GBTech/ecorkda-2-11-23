@@ -72,6 +72,16 @@
             color: #fff;
             margin-bottom: 0 ;
         }
+
+        .img-footer{
+            height: 1rem;
+            width: 1rem;
+            min-width: 1rem;
+            background: var(--src);
+            background-position: center;
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+        }
     </style>
 </head>
 <body>
@@ -101,36 +111,29 @@
             <div class="section">
                 <span>Connect With Us</span>
                 <div class="ul">
-                    <a href="">
-                        Lorem ipsum dolor sit amet consectetur. Ligula adipiscing ornare phasellus dignissim est posuere.
+                    <a href="" style="display: flex; align-items: flex-start">
+                        <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Location ICon.png') ?>");'></div>
+                        515, Tulsiani chambers, Nariman Point, Mumbai 400 021.
+                    </a>
+                    <a href="mailto:audit@rkda.com">
+                    <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/mail Icon.png') ?>");'></div>
+                        audit@rkda.com
                     </a>
                     <a href="">
-                        ABCD1234@gmail.com
-                    </a>
-                    <a href="">
-                        0987653412
+                    <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Call ICon.png') ?>");'></div>
+                        91XXXXXXXXX
                     </a>
                 </div>
             </div>
 
             <div class="section">
                 <span>Social Links</span>
-                <div class="ul">
+                <div class="ul" style="flex-direction: row;">
                     <a href="">
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn
+                        <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Linkedin Logo.png') ?>"); height: 2rem; width: 2rem;' ></div>
                     </a>
-                    <a href="">
-                        <i class="fa-brands fa-instagram"></i>
-                        Instagram
-                    </a>
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                        Facebook
-                    </a>
-                    <a href="">
-                        <i class="fa-solid fa-envelope"></i>
-                        Mail
+                    <a href="mailto:audit@rkda.com">
+                        <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Gmail logo.png') ?>"); height: 2rem; width: 2rem;' ></div>
                     </a>
                 </div>
             </div>

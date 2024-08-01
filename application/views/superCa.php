@@ -136,7 +136,7 @@ header {
           engagement, and opportunities for mentorship and networking</p>
         <div class="d-flex justify-content-center">
           <a href="https://forum.iitcouncil.org/superca/" class='km red-btn  text-center  rounded-pill'
-            style='width:17%'>Know more</a>
+            style='padding: .5rem 2rem;'>Know more</a>
         </div>
       </div>
     </div>

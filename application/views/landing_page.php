@@ -212,7 +212,7 @@ body {
   aspect-ratio: 1/1;
   background: #fff;
   border-radius: 10px;
-  border: 1px solid #000;
+  border: 7px solid #aaa;
 }
 
 
@@ -292,6 +292,10 @@ body {
         .owl-item.active.center {
     -webkit-transform: scale(1.8) !important;
     transform: scale(1.8) !important;
+}
+
+.ytp-large-play-button {
+    transform: scale(0) !important;
 }
        
 </style>
@@ -384,16 +388,16 @@ body {
         <div class='row align-items-center py-0 my-0' style='height:100vh;'>
             <div class="col-md-5 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-10">
-                    <h4 class='mb-4'>WHY JOIN US? </h4>
+                    <h4 class='mb-4' style="font-weight: 600;">WHY JOIN US? </h4>
                     <p class='text-justify'  style='color: #726b6b;text-align:justify'><span
                     class='red-letter'>C</span>onnect with a network of clients and subject matter experts. Enhance <span
                             class='red-letter'>C</span>apabilities through training and technology platforms. Join a
                         global, value-driven <span class='red-letter'>C</span>ommunity. Serve clients better and acquire
                         new ones. Expand <span class='red-letter'>C</span>apacity and gain access to social and
                         financial <span class='red-letter'>C</span>larity as part of a larger community.</p>
-                    <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login"
-                            class='text-dark'>Join Us ></a></div>
-                </div>
+                    <div class='d-flex justify-content-end'>
+                        <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a></div>
+                    </div>
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-5 col-sm-12 d-flex justify-content-center">
@@ -408,16 +412,16 @@ body {
         <div class='row align-items-center py-0 my-0'>
             <div class="col-md-8 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-11 px-2">
-                    <h4 class='mb-3'>HOW IT WORKS? </h4>
+                    <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
                     <p class=' text-justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
                         onboarding process, helping you craft a stellar profile and co-create a personalized plan for
                         success. Sharpen your skills with top-notch training and resources, then dive into a vibrant
                         community of clients and members, ready to collaborate and build your business. Finally, your
                         expertise takes center stage. Contribute through exciting projects, strategic investments, or
                         even by growing alongside our company.</p>
-                    <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login"
-                            class='text-dark'>Join Us ></a></div>
-                </div>
+                    <div class='d-flex justify-content-end'>
+                        <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a></div>
+                    </div>
             </div>
             <div class="col-md-4 col-sm-12 d-flex justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center align-items-center">
