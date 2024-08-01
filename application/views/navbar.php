@@ -126,6 +126,7 @@
         color: #d83b59;
         padding: 10px;
         transition:.3s;
+        border-radius: 10px !important;
         /* opacity: 0; */
     }
 
