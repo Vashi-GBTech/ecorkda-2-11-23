@@ -162,20 +162,73 @@ $c2: #2D3E50; */
     font-weight:630;
     font-size:3.5rem !important;
 }
+
+.slider {
+    width: 100%;
+    height: var(--height);
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    /* overflow: hidden; */
+    margin-block: 2rem;
+}
+.slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    border: 2px solid #0003;
+    border-radius: 10px;
+    position: absolute;
+    left: 100%;
+    animation: autoRun 30s linear infinite;
+    animation-delay: calc((30s / var(--quantity)) * (var(--position) - 1));
+    background-image: var(--src);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s ease;
+}
+/* .slider .list .item img {
+    width: 100%;
+} */
+
+.slider:hover .item {
+    animation-play-state: paused !important;
+    opacity: .5;
+}
+.slider .item:hover {
+    opacity: 1;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
 </style>
 <body>
 <section id='experts' >
 <?php include_once "navbar.php" ?>
          
         <div class="">
-                <section class="slick-carousel">
+                <!-- <section class="slick-carousel">
                     <div> <img src="<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg" alt="Image 1"></div>
                     <div> <img src="<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg" alt="Image 1"></div>
                     <div><img src="<?= base_url() ?>assets/rkda/deepa.png" alt="Image 1"></div>
                     <div><img src="<?= base_url() ?>assets/rkda/deepak.png" alt="Image 1"></div>
                     <div><img src="<?= base_url() ?>assets/rkda/rkabra.png" alt="Image 1"></div>
-                  
-                </section>
+                </section> -->
+                <div class="slider" style="--width: 170px; --height: 200px; --quantity: 30;">
+                    <div class="list">
+                        
+                    </div>
+                </div>
                 
         </div>
          <div class='heading'> <h1 class='text-center'  >Partners & Associates</h1></div>
@@ -214,6 +267,46 @@ $c2: #2D3E50; */
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
+        let imagesData = [
+            { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/03_Bharat_Mishra.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/04_Aditya_Pikle.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/05_Manish_Adukia.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
+            { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/13_Siddharth_Baghmar.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/14_Jaigovind_boob.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/15_Bharat_Gupta.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/16_Kevin_Balm.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/18_Nidhi_Vira.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/19_deepa_shetty.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/20_Prasidh_Sapaliga.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/asit_pal.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/deepa-rathi.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/kc_gupta.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/pankaj-monga.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/pradip-das.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/r.s.kela.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/rl-kabra.jpg' },
+            { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
+            { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
+        ]
+
+
+        let sliderList = document.querySelector('.slider .list')
+        imagesData.forEach((img, i) => {
+            sliderList.innerHTML += `<div class="item" style="--position: ${i+1}; --src:url('${img.url}')"></div>`
+        })
+
+
          const experts=
          [
             { "SrNo": 1, "Name": "Mr. Rameshwar Lal Kabra", "RelationWithFirm": "Partner" },
@@ -272,21 +365,21 @@ $c2: #2D3E50; */
                 container.appendChild(card);
             });
 
-        const carousel = document.querySelector('.slick-carousel');
+        // const carousel = document.querySelector('.slick-carousel');
 
-        carousel.addEventListener('mouseenter', function() {
-                    if (isAutoplay) {
-                        $('.slick-carousel').slick('slickPause'); // Pause the carousel
-                        isAutoplay = false;
-                    }
-                });
+        // carousel.addEventListener('mouseenter', function() {
+        //             if (isAutoplay) {
+        //                 $('.slick-carousel').slick('slickPause'); // Pause the carousel
+        //                 isAutoplay = false;
+        //             }
+        //         });
 
-                carousel.addEventListener('mouseleave', function() {
-                    if (!isAutoplay) {
-                        $('.slick-carousel').slick('slickPlay'); // Resume the carousel
-                        isAutoplay = true;
-                    }
-                });
+        //         carousel.addEventListener('mouseleave', function() {
+        //             if (!isAutoplay) {
+        //                 $('.slick-carousel').slick('slickPlay'); // Resume the carousel
+        //                 isAutoplay = true;
+        //             }
+        //         });
 
 </script>
 
@@ -303,43 +396,42 @@ $c2: #2D3E50; */
             autoplay: true,
             autoplaySpeed: 0,
             cssEase: 'linear',
-            slidesToShow: 4,
-            slidesToScroll: 1,
             infinite: true,
-            swipeToSlide: true,
+            slidesToShow: 4,
+            // swipeToSlide: true,
             centerMode: true,
             focusOnSelect: true,
             responsive: [
                 {
                     breakpoint: 750,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 1,
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                     }
                 }
             ]
         });
 
-        const carousel = document.querySelector('.slick-carousel');
+        // const carousel = document.querySelector('.slick-carousel');
 
-        carousel.addEventListener('mouseenter', function() {
-                    if (isAutoplay) {
-                        $('.slick-carousel').slick('slickPause'); // Pause the carousel
-                        isAutoplay = false;
-                    }
-                });
+        // carousel.addEventListener('mouseenter', function() {
+        //             if (isAutoplay) {
+        //                 $('.slick-carousel').slick('slickPause'); // Pause the carousel
+        //                 isAutoplay = false;
+        //             }
+        //         });
 
-                carousel.addEventListener('mouseleave', function() {
-                    if (!isAutoplay) {
-                        $('.slick-carousel').slick('slickPlay'); // Resume the carousel
-                        isAutoplay = true;
-                    }
-                });
+        //         carousel.addEventListener('mouseleave', function() {
+        //             if (!isAutoplay) {
+        //                 $('.slick-carousel').slick('slickPlay'); // Resume the carousel
+        //                 isAutoplay = true;
+        //             }
+        //         });
       });
 </script>
 </body>

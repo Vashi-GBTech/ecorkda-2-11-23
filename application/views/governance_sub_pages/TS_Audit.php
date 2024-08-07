@@ -43,6 +43,9 @@
             text-decoration: none;
             color: crimson;
         }
+        .list-item a:hover {
+            color: #000;
+        }
 
     </style>
 </head>

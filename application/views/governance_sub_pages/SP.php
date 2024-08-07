@@ -38,10 +38,14 @@
             margin: 5px 0;
             list-style: none;
             color: crimson;
+            cursor: pointer;
         }
         .list-item a {
             text-decoration: none;
             color: crimson;
+        }
+        .list-item a:hover {
+            color: #000
         }
         .list-item i {
             margin-right: .5rem;
@@ -59,12 +63,11 @@
              <h4>Ideal Range of Services</h4>
              <p>In order to guarantee the uniform range of service portfolio within the network RKDA International has developed the tool “Ideal Range of Services”. The tool bundles information regarding service range of each RKDA office, responsible persons, their position and professional qualification for each offered service including the client focus. Furthermore the tool provides information on specialization of each professional in industries and on persons responsible for marketing and quality management system.</p>
 
-            <ul class="px-4">
-                <li class="list-item d-flex"><a href="#" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class="<?= base_url() ?>audit" style='' >Definition of the minimum of ideal range of services (PDF)</h6></a></li>
-                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class=" " >Ideal range of servcies (PDF)</h6></a></li>
-                <li class="list-item d-flex"><a href="<?= base_url() ?>tax_consulting" class='d-flex align-items-baseline' ><i class="fa-solid fa-book-bookmark mr-2"></i> <h6 class=" " >Ideal range of servcies (XLS)</h6></a></li>
-               
-            </ul>
+                <ul class="px-4">
+                    <li class="list-item d-flex"><i class="fa-solid fa-book-bookmark mr-2"></i> <a href="<?= base_url() ?>onlyForMembers" class='d-flex align-items-baseline' > <h6 class=" " >Definition of the minimum of ideal range of services (PDF)</h6></a></li>
+                    <li class="list-item d-flex"><i class="fa-solid fa-book-bookmark mr-2"></i> <a href="<?= base_url() ?>onlyForMembers" class='d-flex align-items-baseline' > <h6 class=" " >Ideal range of servcies (PDF)</h6></a></li>
+                    <li class="list-item d-flex"><i class="fa-solid fa-book-bookmark mr-2"></i> <a href="<?= base_url() ?>onlyForMembers" class='d-flex align-items-baseline' > <h6 class=" " >Ideal range of servcies (XLS)</h6></a></li>
+                </ul>
             </div>
            
 
