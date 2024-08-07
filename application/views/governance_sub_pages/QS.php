@@ -42,11 +42,15 @@
             margin: 5px 0;
             list-style: none;
             color: crimson;
+            cursor: pointer;
         }
         .list-item a {
             margin-left: .5rem;
             text-decoration: none;
             color: crimson;
+        }
+        .list-item:hover a {
+            color: #000
         }
 
     </style>
@@ -59,19 +63,19 @@
         <div>
             <h3 class="text-dark " style='font-size:1.5rem !important' >RKDA International General Quality Control manual</h3>
             <ul class="">
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">EI-GCQM (2022)</a></li>
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">EI-GCQM (Previous Version in track mode )</a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">RKDA ISQM 1 Guidance tool </a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Webinar - RKDA ISQM 1 Guidance tool (Youtube link)</a></li>
-                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">High level comparison of the new RKDA EI- GCQM to the previous Version</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">EI-GCQM (2022)</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">EI-GCQM (Previous Version in track mode )</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">RKDA ISQM 1 Guidance tool </a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Webinar - RKDA ISQM 1 Guidance tool (Youtube link)</a></li>
+                <li class="list-item"><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">High level comparison of the new RKDA EI- GCQM to the previous Version</a></li>
             </ul>
         </div>
 
         <div>
             <h3 class="text-dark " style='font-size:1.5rem !important' >Independent Standard</h3>
             <ul class="">
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">RKDA Independence Procedure</a></li>
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Independence Check tool</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">RKDA Independence Procedure</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Independence Check tool</a></li>
               
             </ul>
         </div>
@@ -79,8 +83,8 @@
         <div>
             <h3 class="text-dark " style='font-size:1.5rem !important' >Quality Monitoring</h3>
             <ul class="">
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">RKDA Independence Procedure</a></li>
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Self-inspection and Interoffice review</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">RKDA Independence Procedure</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Self-inspection and Interoffice review</a></li>
                 
             </ul>
         </div>
@@ -88,7 +92,7 @@
         <div>
             <h3 class="text-dark " style='font-size:1.5rem !important' >Internal Complaints Procedure for RKDA member Firms</h3>
             <ul class="">
-                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="#">Internal Complaints Procedure for RKDA Member Firms</a></li>
+                <li class="list-item "><i class="fa-solid fa-book-bookmark mr-2"></i><a href="<?= base_url() ?>onlyForMembers">Internal Complaints Procedure for RKDA Member Firms</a></li>
             </ul>
         </div>
     </div>

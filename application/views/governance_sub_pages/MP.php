@@ -125,11 +125,15 @@
             margin: 5px 0;
             list-style: none;
             color: crimson;
+            cursor: pointer;
         }
         .list-item a {
             margin-left: .5rem;
             text-decoration: none;
             color: crimson;
+        }
+        .list-item:hover a {
+            color: #000
         }
 
     </style>
