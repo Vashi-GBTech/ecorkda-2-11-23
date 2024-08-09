@@ -175,45 +175,65 @@ $c2: #2D3E50; */
     width: 100%;
     min-width: calc(var(--width) * var(--quantity));
     position: relative;
+    display: flex;
+    gap: 1rem;
+    animation: autoRun 40s linear infinite;
 }
-.slider .list .item {
+@keyframes autoRun {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+ .wrap{
+    margin: 0 auto;
+    width: 100%;
+    /* mask-image: linear-gradient(to right, transparent, #000, #000, #000, #000, transparent); */
+ }
+ .wrap__logobar {
+    height: calc(var(--height) + 6rem);
+    overflow: hidden;
+    position: relative;
+ }
+ .list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    margin-left: 0;
+    /* animation: autoRun 10s linear infinite; */
+ }
+ .list__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+    
+    border: 5px solid #aaa;
+    border-radius: 10px;
     width: var(--width);
     height: var(--height);
-    border: 2px solid #0003;
-    border-radius: 10px;
-    position: absolute;
-    left: 100%;
-    animation: autoRun 30s linear infinite;
-    animation-delay: calc((30s / var(--quantity)) * (var(--position) - 1));
     background-image: var(--src);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: all .3s ease;
-}
-/* .slider .list .item img {
-    width: 100%;
-} */
-
-.slider:hover .item {
-    animation-play-state: paused !important;
-    opacity: .5;
-}
-.slider .item:hover {
+    overflow: hidden;
+    opacity: 0.6;
+ }
+ .list__item:hover {
     opacity: 1;
-}
-
-@keyframes autoRun {
-    from {
-        left: 100%;
-    }
-    to {
-        left: calc(var(--width) * -1);
-    }
-}
+ }
 </style>
 <body>
-<section id='experts' >
+<section id='experts' style="margin-bottom: 3rem">
 <?php include_once "navbar.php" ?>
          
         <div class="">
@@ -224,11 +244,12 @@ $c2: #2D3E50; */
                     <div><img src="<?= base_url() ?>assets/rkda/deepak.png" alt="Image 1"></div>
                     <div><img src="<?= base_url() ?>assets/rkda/rkabra.png" alt="Image 1"></div>
                 </section> -->
-                <div class="slider" style="--width: 170px; --height: 200px; --quantity: 30;">
-                    <div class="list">
-                        
-                    </div>
+                
+                
+                <div class="wrap wrap__logobar" id="containerElem" style="--width: 150px; --height: 170px;">
+                    <ul class="list" id="list"></ul>
                 </div>
+
                 
         </div>
          <div class='heading'> <h1 class='text-center'  >Partners & Associates</h1></div>
@@ -261,6 +282,8 @@ $c2: #2D3E50; */
 
     <div class="container mt-5" id="cards-container"></div>
     </section>
+
+    <?php include_once "new_footer.php" ?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick Carousel JS -->
@@ -301,10 +324,40 @@ $c2: #2D3E50; */
         ]
 
 
-        let sliderList = document.querySelector('.slider .list')
+        let sliderList = document.querySelector('#containerElem .list')
         imagesData.forEach((img, i) => {
-            sliderList.innerHTML += `<div class="item" style="--position: ${i+1}; --src:url('${img.url}')"></div>`
+            sliderList.innerHTML += `<li class="list__item" style="--position: ${i+1}; --src:url('${img.url}')"></li>`
         })
+
+        // image scrolling
+        const items = [...document.getElementsByClassName('list__item')];
+        const containerElem = document.getElementById('containerElem');
+        const leftSideOfContainer = containerElem.getBoundingClientRect().left;
+        const listElem = document.getElementById('list');
+        let currentLeftValue = 0;
+        
+        // Kick off for the animation function.
+        window.setInterval(animationLoop, 5);
+        
+        /* 
+            Looks at first item in the list and checks if it goes out of the visible area 
+            by comparing the right position of the first list item to the left position 
+            of the containing element. 
+        */
+        function animationLoop() {
+            const firstListItem = listElem.querySelector('.list__item:first-child');
+            
+            let rightSideOfFirstItem = firstListItem.getBoundingClientRect().right;
+            
+            if(rightSideOfFirstItem < leftSideOfContainer){
+                currentLeftValue = 16;
+                listElem.appendChild(firstListItem);
+            }
+            
+            // The part that keeps it all going: animating the margin left value of the list.
+            listElem.style.transform = `translateX(${currentLeftValue}px)`;
+            currentLeftValue -= 0.25;
+        }
 
 
          const experts=
