@@ -34,10 +34,11 @@ header {
     position: relative;
     --v-offset: 60px;
     --curve-height: 105px;
+    margin-block: 2rem;
 
   }
 
-  #superca::before,
+  /* #superca::before,
   #superca::after {
     content: "";
     display: block;
@@ -49,15 +50,15 @@ header {
     left: calc(-1 * var(--v-offset));
     right: calc(-1 * var(--v-offset));
     z-index: 4;
-  }
+  } */
 
-  #superca::before {
+  /* #superca::before {
     top: calc(-0.6 * var(--curve-height));
   }
 
   #superca::after {
     bottom: calc(-0.4 * var(--curve-height));
-  }
+  } */
 
   .wrapper {
     /* display: grid;
@@ -201,16 +202,10 @@ header {
 
 
       <div class="wrapper owl-carousel owl-theme">
-        <img src="<?= base_url() ?>assets/rkda/s1.jpeg" alt="Image 1" data-video="<?= base_url() ?>assets/rkda/videos/vid-1.mp4">
-        <img src="<?= base_url() ?>assets/rkda/s2.jpeg" alt="Image 2" data-video="<?= base_url() ?>assets/rkda/videos/">
-        <img src="<?= base_url() ?>assets/rkda/s3.jpeg" alt="Image 3" data-video="<?= base_url() ?>assets/rkda/videos/">
-        <img src="<?= base_url() ?>assets/rkda/s4.jpeg" alt="Image 4" data-video="<?= base_url() ?>assets/rkda/videos/Saloni 2ndd Upload.m4v">
-        <img src="<?= base_url() ?>assets/rkda/s5.jpeg" alt="Image 5" data-video="<?= base_url() ?>assets/rkda/videos/">
-        <img src="<?= base_url() ?>assets/rkda/s6.jpeg" alt="Image 6" data-video="<?= base_url() ?>assets/rkda/videos/vid-6.mp4">
-        <img src="<?= base_url() ?>assets/rkda/s7.jpeg" alt="Image 7" data-video="<?= base_url() ?>assets/rkda/videos/vid-7.mp4">
-        <img src="<?= base_url() ?>assets/rkda/s8.jpeg" alt="Image 8" data-video="<?= base_url() ?>assets/rkda/videos/vid-8.mp4">
+        
       </div>
 
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hh0Iwt4lwa0?si=XWWEv9XzbdYW17Q1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
     </section>
     <div class='d-flex justify-content-center'>
@@ -232,39 +227,58 @@ header {
   </section>
   <?php include_once "new_footer.php" ?>
 
+
+  <script>
+    let wrapperImagesData = [
+      { img: "<?= base_url() ?>assets/rkda/s1.jpeg", video: "<?= base_url() ?>assets/rkda/videos/vid-1.mp4" },
+      { img: "<?= base_url() ?>assets/rkda/s2.jpeg", video: "<?= base_url() ?>assets/rkda/videos/" },
+      { img: "<?= base_url() ?>assets/rkda/s3.jpeg", video: "<?= base_url() ?>assets/rkda/videos/" },
+      { img: "<?= base_url() ?>assets/rkda/s4.jpeg", video: "<?= base_url() ?>assets/rkda/videos/Saloni 2ndd Upload.m4v" },
+      { img: "<?= base_url() ?>assets/rkda/s5.jpeg", video: "<?= base_url() ?>assets/rkda/videos/" },
+      { img: "<?= base_url() ?>assets/rkda/s6.jpeg", video: "<?= base_url() ?>assets/rkda/videos/vid-6.mp4" },
+      { img: "<?= base_url() ?>assets/rkda/s7.jpeg", video: "<?= base_url() ?>assets/rkda/videos/vid-7.mp4" },
+      { img: "<?= base_url() ?>assets/rkda/s8.jpeg", video: "<?= base_url() ?>assets/rkda/videos/vid-8.mp4" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-1.jpg", video: "https://www.youtube.com/embed/hh0Iwt4lwa0" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-2.jpg", video: "https://www.youtube.com/embed/XrT2Wfsk7gA" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-3.jpg", video: "https://www.youtube.com/embed/ocPXwbIzNoM" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-4.jpg", video: "https://www.youtube.com/embed/C0OqyOU4B54" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-5.jpg", video: "https://www.youtube.com/embed/JUBF1cZG7kA" },
+      { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-6.jpg", video: "https://www.youtube.com/embed/oNZbmJisIyw" }
+    ]
+
+    let wrapperContainer = document.querySelector('.wrapper.owl-carousel')
+    wrapperImagesData.forEach(({img, video}, i) => {
+      let imgElem = document.createElement('img')
+      imgElem.setAttribute('src', img)
+      imgElem.setAttribute('alt', `Image ${i}`)
+
+      imgElem.onclick = () => {
+        let html = ''
+        if (video.charAt(video.length - 4) == '.') { html = `<video controls controlsList="nodownload" autoplay width="100%" class="video-player"> <source src="${video}" type="video/mp4"> </video>` }
+        else if (video.includes('youtube')) { html = `<iframe width="450" height="270" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>` }
+        else {html = `<h3 style="color: #df3255;">Cannot play this Video!</h3>`}
+
+        Swal.fire({
+          html,
+          showCloseButton: false,
+          showCancelButton: false,
+          focusConfirm: false,
+        })
+      }
+
+      wrapperContainer.appendChild(imgElem)
+    })
+
+  </script>
+
+  
   <script>
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
         margin: 20,
+        autoWidth:true
       });
     });
-  </script>
-
-  <script>
-    let wrapperImages = document.querySelectorAll('.wrapper img')
-
-    
-    wrapperImages.forEach(img => {
-      img.onclick = () => showVideo(img) 
-    })
-
-    function showVideo(img) {
-      let path = img.getAttribute('data-video')
-      
-      let html = path.charAt(path.length - 4) == '.'? `
-          <video controls controlsList="nodownload" autoplay width="100%" class="video-player">
-            <source src="${path}" type="video/mp4">
-          </video>` : `
-          <h3 style="color: #df3255;">Cannot play this Video!</h3>`
-
-      Swal.fire({
-        html,
-        showCloseButton: false,
-        showCancelButton: false,
-        focusConfirm: false,
-      })
-    }
-
   </script>
 
  

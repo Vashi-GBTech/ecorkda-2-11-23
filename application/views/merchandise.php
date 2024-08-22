@@ -28,10 +28,8 @@
     }
 
     .content {
-
-        margin: 70px 50px;
         /* background-color: whitesmoke; */
-        padding: 2em 2em;
+        padding: 2em var(--pad-lr);
         margin-bottom: 0 !important;
     }
 
