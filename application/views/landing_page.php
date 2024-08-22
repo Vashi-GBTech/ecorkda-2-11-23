@@ -12,6 +12,9 @@
 
 </head>
 <style>
+:root {
+    --pad-lr: clamp(1rem, 7vw, 10rem)
+}
 .owl-video-wrapper {
     width: 100%;
     height: 100%;
@@ -128,7 +131,7 @@ body {
 }
 
 .card-img-abt {
-    width: 60%;
+    width: 90px
 
 }
 
@@ -185,15 +188,16 @@ body {
 
 .landing-page-s1 {
   box-sizing: border-box;
-  padding: 3rem 6rem;
-  height: 80dvh;
+  padding: 3rem var(--pad-lr);
+  /* height: 80dvh; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .landing-page-s1 .left{
-  height: 90%;
+    flex: 1;
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
@@ -208,13 +212,15 @@ body {
 
 .landing-page-s1 .right {
   position: relative;
-  height: 90%;
+  min-width: 300px;
+  flex: 1;
   aspect-ratio: 1/1;
   background: #fff;
   border-radius: 10px;
   border: 7px solid #aaa;
 }
 
+/* 
 
 .landing-page-s1 .sections {
   position: relative;
@@ -265,7 +271,7 @@ body {
     opacity: 0;
     transform: scale(0);
   }
-}
+} */
 
 
 
@@ -297,15 +303,106 @@ body {
 .ytp-large-play-button {
     transform: scale(0) !important;
 }
-       
+
+.about-section {
+    height:80vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap
+}
+
+.about-section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem var(--pad-lr);
+    flex-wrap: wrap;
+}
+.about-section-2 .about-left {
+    flex: 10;
+    min-width: 300px;
+}
+.about-section-2 .about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container {
+    padding: 2rem var(--pad-lr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 4rem;
+}
+
+.card-body {
+    padding: 1.75rem !important;
+}
+
+.contact-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+    height: 100vh;
+    margin-block: 6rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-section .left {
+    margin-left: var(--pad-lr);
+    margin-bottom: 2rem;
+    flex: 1;
+}
+.contact-section .right {
+    width: clamp(30%, 450px, 100%);
+    aspect-ratio: 1/1;
+    background-image: var(--src);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@media only screen and (max-width: 767px) {
+    .about-section {
+        height: 100vh;
+    }
+}
+@media only screen and (max-width: 442px) {
+    .about-section {
+        height: 120vh;
+    }
+}
+
 </style>
 
 <body>
     <?php include_once "navbar.php" ?>
     <section id="home">
-    
         <div class='landing-page-s1'>
+            <div class="left">
+              <div class="top">
+                <h1 class='hading-fw'>Where CAs </h1>
+                <h1 class='mb-4 hading-fw'> Meet Excellence</h1>
+              </div>
 
+              <div class="bottom">
+                <p style="font-size: 18px">The network focuses on catering to the needs of listed companies with global operations seeking high-quality audit and assurance services.</p>
+                <a href="<?= base_url() ?>opinion" class='red-btn  d-flex justify-content-around align-items-center rounded-pill' style="width: fit-content; padding: 0.5rem 2rem; margin-top: 3rem" >
+                  <span>Ask a Question</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="right">
+
+            </div>
+        </div>
+    
+        <!-- <div class='landing-page-s1'>
             <div class="left">
               <div class="top">
                 <h1 class='hading-fw'>Where CAs </h1>
@@ -321,14 +418,11 @@ body {
             </div>
 
             <a class="right" href="<?= base_url('experts') ?>">
-              <div class="sections"></div>  <!-- contains dyamic images -->
+              <div class="sections"></div>
             </a>
+        </div> -->
 
-        </div>
-
-        <div class='my-1'>
-            <!-- <img src="<?= base_url() ?>assets/rkda/random-text.png" alt="" style='    width: -webkit-fill-available;'> -->
-
+        <!-- <div class='my-1'>
             <div class="carousel-container">
                 <div id="owl-carousel" class="owl-carousel">
                     <div class="item">
@@ -382,10 +476,11 @@ body {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
+    
     <section id="about" class='my-1'>
-        <div class='row align-items-center py-0 my-0' style='height:100vh;'>
+        <div class="about-section">
             <div class="col-md-5 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-10">
                     <h4 class='mb-4' style="font-weight: 600;">WHY JOIN US? </h4>
@@ -409,7 +504,8 @@ body {
             <div class="col-md-1"></div>
 
         </div>
-        <div class='row align-items-center py-0 my-0'>
+
+        <!-- <div class='row align-items-center py-0 my-0' style="margin-top: 2rem !important">
             <div class="col-md-8 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-11 px-2">
                     <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
@@ -428,88 +524,129 @@ body {
                     <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="" width='70%'>
                 </div>
             </div>
+        </div> -->
 
+
+        <div class='about-section-2' style="margin-top: 2rem !important">
+            <div class="about-left">
+                <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
+                <p style='text-align: justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
+                    onboarding process, helping you craft a stellar profile and co-create a personalized plan for
+                    success. Sharpen your skills with top-notch training and resources, then dive into a vibrant
+                    community of clients and members, ready to collaborate and build your business. Finally, your
+                    expertise takes center stage. Contribute through exciting projects, strategic investments, or
+                    even by growing alongside our company.</p>
+                <div class='d-flex justify-content-end'>
+                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="" width='200px'>
+            </div>
         </div>
+
+
         <div class='py-5' >
             <img src="<?= base_url() ?>assets/rkda/work-flow-2.png" alt="" width='100%'>
         </div>
 
-        <div class='row align-items-center py-2 my-0'>
-            <div class="col-md-8 col-sm-12 d-flex justify-content-end">
-                <div class="col-md-11 px-2">
-                    <h4 class='mb-3'>WHAT IT TAKES? </h4>
-                    <p class=' text-justify' style='color: #726b6b;'>Our Corporate Finance offerings encompass a
+
+        <div class='about-section-2' style="margin-top: 2rem !important">
+            <div class="about-left">
+                <h4 class='mb-3' style="font-weight: 600;">WHAT IT TAKES? </h4>
+                <p style='text-align: justify' style='color: #726b6b;'>Our Corporate Finance offerings encompass a
                         comprehensive suite of services designed to navigate the complex landscape of mergers and
                         acquisitions (M&A). We specialize in detailed valuation processes and strategic M&A planning,
                         ensuring that every transaction is meticulously structured to achieve optimal outcomes.</p>
-                    <div class='d-flex justify-content-end' style='font-weight:bold;'><a href="rkda_login"
-                            class='text-dark'>Join Us ></a></div>
+                <div class='d-flex justify-content-end'>
+                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-                <div class="col-md-8 d-flex justify-content-center align-items-center">
-                    <img src="<?= base_url() ?>assets/rkda/whatittakes.jpg" alt="" width='70%'>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="container mt-5 abt-cards">
-            <div class="row">
-                <div class="d-flex justify-content-around w-100">
-                    <div class="card col-md-3">
-                        <div class="card-body">
-                            <div class='card-img-abt-div'>
-                                <img src="<?= base_url() ?>assets/rkda/PAE.png" class='card-img-abt' alt="">
-                            </div>
-                            <div>
-
-                                <div class='d-flex justify-content-center'>
-                                    <h6 class='text-center w-75  mb-2 poppins-medium'>PROFFESIONL AND ETHICAL</h6>
-                                </div>
-                                <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards,
-                                    fostering trust and credibility within the network.</P>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="card col-md-3">
-                        <div class="card-body">
-                            <div class='card-img-abt-div'>
-                                <img src="<?= base_url() ?>assets/rkda/WTC.png" class='card-img-abt' alt="">
-                            </div>
-                            <div class='d-flex justify-content-center'>
-                                <h6 class='text-center w-75  mb-2 poppins-medium text-uppercase'>WilliNGNESS TO
-                                    CONTRIBUTE</h6>
-                            </div>
-                            <P class='text-justify text-secondary'>Actively engage, share resources, and collaborate for
-                                collective success within the network.</P>
-
-                        </div>
-                    </div>
-                    <div class="card col-md-3">
-                        <div class="card-body">
-                            <div class='card-img-abt-div'>
-                                <img src="<?= base_url() ?>assets/rkda/EM.png" class='card-img-abt' alt="">
-                            </div>
-                            <div class='d-flex justify-content-center'>
-                                <h6 class='text-center w-75  mb-2 poppins-medium text-uppercase'>ENTREPRENEURIAL MINDSET
-                                </h6>
-                            </div>
-                            <P class='text-justify text-secondary'>Embrace innovation, proactive problem-solving, and
-                                adaptability for growth and success within the network.</P>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="about-right">
+                <img src="<?= base_url() ?>assets/rkda/whatittakes.jpg" alt="" width='200px'>
             </div>
         </div>
+
+        
+        
+        <div class="cards-container">
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/PAE.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center  mb-2 poppins-medium'>PROFFESIONL AND ETHICAL</h6>
+                            </div>
+                            <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards,
+                                fostering trust and credibility within the network.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/WTC.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center w-75  mb-2 poppins-medium'>WilliNGNESS TO CONTRIBUTE</h6>
+                            </div>
+                            <P class='text-justify text-secondary'>Actively engage, share resources, and collaborate for collective success within the network.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/EM.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center w-75  mb-2 poppins-medium'>ENTREPRENEURIAL MINDSET</h6>
+                            </div>
+                            <P class='text-justify text-secondary'>Embrace innovation, proactive problem-solving, and adaptability for growth and success within the network.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php include_once "merchandise.php" ?>
     </section>
    
 
-    <section id='needHelp' style='height:100vh;display:flex; margin-top: 6rem;'>
+    <section id='needHelp' class="contact-section" style=''>
+        <div class="left">
+            <div class='mb-3 text-danger text-uppercase poppins-medium' style="font-size: clamp(1.8rem, 4vw, 5.5rem)">Stay in touch</div>
+            <h4>Connect with us.</h4>
+            <div class='d-flex justify-content-start'>
+                <div class="icon-container">
+                    <div class="icon-circle">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="icon-circle">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="icon-circle">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right" style='--src: url("<?= base_url() ?>assets/rkda/stayintouch.jpg")'></div>
+    </section>
+
+    <!-- <section id='needHelp' style='height:100vh;display:flex; margin-top: 6rem;'>
 
         <div class='d-flex align-items-center'>
             <div class="col-md-7 d-flex justify-content-end ">
@@ -536,7 +673,7 @@ body {
                 <img src="<?= base_url() ?>assets/rkda/stayintouch.jpg" alt="stayintouch" width='100%'>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -544,7 +681,7 @@ body {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
           
             $('.owl-carousel').owlCarousel({
@@ -573,7 +710,7 @@ body {
             })
         });
 
-</script>
+</script> -->
 
 <script>
   let imagesData = [
@@ -608,78 +745,78 @@ body {
   { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
   { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
 ]
-  let rightSection = document.querySelector('.landing-page-s1 .right .sections')
+//   let rightSection = document.querySelector('.landing-page-s1 .right .sections')
 
 
-  // subdivide images into sections
-  let imgCount = 14
-  let sectionArray = []
-  let i = 0
-  while (i < imagesData.length) {
-    if (i % imgCount == 0) sectionArray.push([])
-    sectionArray[sectionArray.length - 1].push({...imagesData[i]})
-    i++
-  }
-  // console.log(sectionArray);
+//   // subdivide images into sections
+//   let imgCount = 14
+//   let sectionArray = []
+//   let i = 0
+//   while (i < imagesData.length) {
+//     if (i % imgCount == 0) sectionArray.push([])
+//     sectionArray[sectionArray.length - 1].push({...imagesData[i]})
+//     i++
+//   }
+//   // console.log(sectionArray);
 
-  let section = sectionArray[0]
-  let div = document.createElement('div')
-  div.classList.add('section')
-  let columnStart = 1
-  let rowStart = 1
-  let counter = 0
-  section.forEach((card, j) => {
-    console.log(j);
+//   let section = sectionArray[0]
+//   let div = document.createElement('div')
+//   div.classList.add('section')
+//   let columnStart = 1
+//   let rowStart = 1
+//   let counter = 0
+//   section.forEach((card, j) => {
+//     console.log(j);
 
-    // setting up grid-column and grid-row
-    if (columnStart == 9) {
-      columnStart = 2
-      rowStart++
-    } else if (columnStart == 8) {
-      columnStart = 1
-      rowStart++
-    }
+//     // setting up grid-column and grid-row
+//     if (columnStart == 9) {
+//       columnStart = 2
+//       rowStart++
+//     } else if (columnStart == 8) {
+//       columnStart = 1
+//       rowStart++
+//     }
 
-    let imgContainer = document.createElement('div')
-    imgContainer.classList.add('img-container')
-    imgContainer.style.backgroundImage = `url("${card.url}")`
-    imgContainer.style.backgroundPosition = `center`
-    imgContainer.style.backgroundSize = `cover`
-    imgContainer.style.backgroundRepeat = `no repeat`
+//     let imgContainer = document.createElement('div')
+//     imgContainer.classList.add('img-container')
+//     imgContainer.style.backgroundImage = `url("${card.url}")`
+//     imgContainer.style.backgroundPosition = `center`
+//     imgContainer.style.backgroundSize = `cover`
+//     imgContainer.style.backgroundRepeat = `no repeat`
 
-    imgContainer.style.gridColumn = `${columnStart} / ${columnStart + 2}`
-    imgContainer.style.gridRow = `${rowStart} / ${rowStart}`
-    div.appendChild(imgContainer)
+//     imgContainer.style.gridColumn = `${columnStart} / ${columnStart + 2}`
+//     imgContainer.style.gridRow = `${rowStart} / ${rowStart}`
+//     div.appendChild(imgContainer)
 
-    let img = new Image()
-    img.src = card.url
-    img.onload = () => {
-      imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
-      imgContainer.style.animationDelay = Math.random()*1+'s'
-      imgContainer.count = 0
-      imgContainer.j = j
-      // imgContainer.style.animationDelay = j/section.length+'s'
+//     let img = new Image()
+//     img.src = card.url
+//     img.onload = () => {
+//       imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
+//       imgContainer.style.animationDelay = Math.random()*1+'s'
+//       imgContainer.count = 0
+//       imgContainer.j = j
+//       // imgContainer.style.animationDelay = j/section.length+'s'
 
-      // updates each image independently
-      let sectionCount = 0
-      setInterval(() => {
-        sectionCount++
-        if (!sectionArray[sectionCount % sectionArray.length][j]) sectionCount = 0
+//       // updates each image independently
+//       let sectionCount = 0
+//       setInterval(() => {
+//         sectionCount++
+//         if (!sectionArray[sectionCount % sectionArray.length][j]) sectionCount = 0
       
-        imgContainer.style.animation = 'popdown 1s cubic-bezier(.6,-0.3,.16,1.62)'
+//         imgContainer.style.animation = 'popdown 1s cubic-bezier(.6,-0.3,.16,1.62)'
 
-        setTimeout(() => {
-          imgContainer.style.backgroundImage = `url("${sectionArray[sectionCount % sectionArray.length][j].url}")`
-          imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
-          imgContainer.style.animationDelay = Math.random()*1+'s'
-        }, 1000);
+//         setTimeout(() => {
+//           imgContainer.style.backgroundImage = `url("${sectionArray[sectionCount % sectionArray.length][j].url}")`
+//           imgContainer.style.animation = 'popup 1s cubic-bezier(.6,-0.3,.16,1.62)'
+//           imgContainer.style.animationDelay = Math.random()*1+'s'
+//         }, 1000);
         
-      }, Math.random()*7000 + 5000)  // random between 3 to 10 seconds
+//       }, Math.random()*7000 + 5000)  // random between 3 to 10 seconds
 
-    }
-    columnStart += 2
-  })
-  rightSection.appendChild(div)
+//     }
+//     columnStart += 2
+//   })
+//   rightSection.appendChild(div)
 
 
   // updates one image at a time
