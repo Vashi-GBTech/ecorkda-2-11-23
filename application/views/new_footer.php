@@ -129,7 +129,7 @@
             <div class="section">
                 <span>Social Links</span>
                 <div class="ul" style="flex-direction: row;">
-                    <a href="">
+                    <a href="https://www.linkedin.com/company/ecovisrkca/">
                         <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Linkedin Logo.png') ?>"); height: 2rem; width: 2rem;' ></div>
                     </a>
                     <a href="mailto:audit@rkda.com">
