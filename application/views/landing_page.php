@@ -138,9 +138,13 @@ body {
 .card-img-abt-div {
     display: flex;
     justify-content: center;
-    margin-top: -28%;
+    /* margin-top: -28%; */
     position: relative;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .abt-cards h6 {
@@ -154,7 +158,7 @@ body {
 .abt-cards .card {
     border: 2px solid crimson;
     border-radius: 36px;
-
+    height: 100%;
 }
 
 .merchandise-div {
@@ -210,15 +214,6 @@ body {
   /* max-width: 50%; */
 }
 
-.landing-page-s1 .right {
-  position: relative;
-  min-width: 300px;
-  flex: 1;
-  aspect-ratio: 1/1;
-  background: #fff;
-  border-radius: 10px;
-  border: 7px solid #aaa;
-}
 
 /* 
 
@@ -339,6 +334,7 @@ body {
 
 .card-body {
     padding: 1.75rem !important;
+    padding-top: 4rem !important;
 }
 
 .contact-section {
@@ -379,6 +375,87 @@ body {
 
 </style>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+    .landing-page-s1 .right {
+        position: relative;
+        min-width: 300px;
+        flex: 1;
+        aspect-ratio: 1/1;
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .landing-page-s1 .right .section {
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+    .landing-page-s1 .right .section .top {
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        overflow: hidden;
+    } 
+    .landing-page-s1 .right .section .top .letter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        line-height: 0;
+        transition: all .3s ease;
+    }
+    .landing-page-s1 .right .section .top .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        transition: all .3s ease;
+        text-align: center;
+        opacity: 0;
+        font-size: 0.9rem;
+    }
+    .landing-page-s1 .right .section .top:hover .letter {
+        opacity: 0;
+    }
+    .landing-page-s1 .right .section .top:hover .details {
+        opacity: 1;
+    }
+
+    .landing-page-s1 .right .section .bottom {
+        position: absolute;
+        background: #C61431;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        overflow: hidden;
+    }
+    .landing-page-s1 .right .section .bottom .img-container {
+        position: absolute;
+    }
+    .landing-page-s1 .right .section .bottom .img {
+        position: absolute;
+        background: #fff3;
+        border-radius: 7px;
+        background-image: var(--src);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @keyframes move-up {
+        0% { top: 100%; }
+        100% { top: calc(var(--width) * -1); }
+    }
+</style>
+
 <body>
     <?php include_once "navbar.php" ?>
     <section id="home">
@@ -397,9 +474,7 @@ body {
               </div>
             </div>
 
-            <div class="right">
-
-            </div>
+            <div class="right"> </div>
         </div>
     
         <!-- <div class='landing-page-s1'>
@@ -713,38 +788,185 @@ body {
 </script> -->
 
 <script>
-  let imagesData = [
-  { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/03_Bharat_Mishra.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/04_Aditya_Pikle.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/05_Manish_Adukia.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
-  { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/13_Siddharth_Baghmar.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/14_Jaigovind_boob.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/15_Bharat_Gupta.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/16_Kevin_Balm.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/18_Nidhi_Vira.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/19_deepa_shetty.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/20_Prasidh_Sapaliga.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/asit_pal.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/deepa-rathi.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/kc_gupta.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/pankaj-monga.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/pradip-das.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/r.s.kela.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/rl-kabra.jpg' },
-  { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
-  { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
-]
+//   let imagesData = [
+//   { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/03_Bharat_Mishra.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/04_Aditya_Pikle.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/05_Manish_Adukia.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' }, //
+//   { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
+//   { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/13_Siddharth_Baghmar.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/14_Jaigovind_boob.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/15_Bharat_Gupta.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/16_Kevin_Balm.jpg' }, //
+//   { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/18_Nidhi_Vira.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/19_deepa_shetty.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/20_Prasidh_Sapaliga.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/asit_pal.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/deepa-rathi.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/kc_gupta.png' }, //
+//   { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/pankaj-monga.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/pradip-das.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/r.s.kela.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/rl-kabra.jpg' },
+//   { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
+//   { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
+// ]
+
+    let rightSectionContent = [
+        {
+            top: {
+                letter: 'R',
+                details: "when an unknown printer took a galley of type and scrambled it to"
+            },
+            bottom: [
+                { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/02_Dheeraj_rathi.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/03_Bharat_Mishra.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/04_Aditya_Pikle.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/05_Manish_Adukia.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
+            ]
+        },
+        {
+            top: {
+                letter: 'K',
+                details: "but also the leap into electronic typesetting, remaining essentially."
+            },
+            bottom : [
+                { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
+                { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/13_Siddharth_Baghmar.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/14_Jaigovind_boob.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/15_Bharat_Gupta.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/16_Kevin_Balm.jpg' },
+            ]
+        },
+        {
+            top: {
+                letter: 'D',
+                details: "when an unknown printer took a galley of type and scrambled it to"
+            },
+            bottom: [
+                { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/18_Nidhi_Vira.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/19_deepa_shetty.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/20_Prasidh_Sapaliga.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/asit_pal.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/deepa-rathi.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/kc_gupta.png' },
+            ]
+        },
+        {
+            top: {
+                letter: 'A',                
+                details: "but also the leap into electronic typesetting, remaining essentially."
+            },
+            bottom: [
+                { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/pankaj-monga.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/pradip-das.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/r.s.kela.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/rl-kabra.jpg' },
+                { url: '<?= base_url() ?>assets/OurTeam/SCKabra.png' },
+                { url: '<?= base_url() ?>assets/OurTeam/shruti-ambegaonkar.jpg' }
+            ]
+        }
+    ]
+
+    
+    function renderRightSection() {
+        let rightSection = document.querySelector('.landing-page-s1 .right')
+        rightSection.innerHTML = ''
+        let rightSectionRect = rightSection.getBoundingClientRect()
+        let sectionCount = rightSectionContent.length
+
+        let gap1 = 10
+        let gap2 = 5
+        let sectionWidth = (rightSectionRect.width  - (sectionCount - 1)*gap1)/sectionCount
+        let animationSpeed = 2
+
+        for (let i = 0; i < sectionCount; i++) {
+            let isEven = i % 2 == 0
+            // section
+            let section = document.createElement('div')
+            section.classList.add('section')
+            section.style.left = i * (sectionWidth + gap1) + 'px'
+            section.style.width = sectionWidth + 'px'
+            rightSection.appendChild(section)
+
+            // top
+            let top = document.createElement('div')
+            top.classList.add('top')
+            top.style.width = sectionWidth + 'px'
+            top.style.height = sectionWidth + 'px'
+            top.style.top = isEven ? '0px' : rightSectionRect.height - (sectionWidth) + 'px'
+            section.appendChild(top)
+
+            // letter
+            let letter = document.createElement('div')
+            letter.classList.add('letter')
+            letter.innerText = rightSectionContent[i].top.letter
+            top.appendChild(letter)
+
+            // details
+            let details = document.createElement('div')
+            details.classList.add('details')
+            details.innerText = rightSectionContent[i].top.details
+            top.appendChild(details)
+
+            // bottom
+            let bottom = document.createElement('div')
+            bottom.classList.add('bottom')
+            bottom.style.height = rightSectionRect.height - (sectionWidth + gap1) + 'px'
+            bottom.style.width = sectionWidth + 'px'
+            bottom.style.top = isEven? sectionWidth + gap1 + 'px' : '0px'
+            section.appendChild(bottom)
+
+            let size = sectionWidth - 2*gap2
+            let images = rightSectionContent[i].bottom
+
+            // img-container
+            let imgContainer = document.createElement('div')
+            imgContainer.classList.add('img-container')
+            imgContainer.style.width = sectionWidth + 'px'
+            imgContainer.style.height = images.length*size + (images.length + 1)*gap2 + 'px'
+            bottom.appendChild(imgContainer)
+            
+            // images
+            for (let j = 0; j < images.length; j++) {
+                let img = document.createElement('div')
+                img.classList.add('img')
+                img.style.top = '100%'
+                img.style.setProperty('--width', size+ 'px')
+                img.style.setProperty('--src', `url("${images[j].url}")`)
+                img.style.left = gap2 + 'px'
+                img.style.width = size + 'px'
+                img.style.height = size + 'px'
+                img.style.animation = `move-up ${!isEven? 'reverse' : ''} ${images.length*animationSpeed}s linear infinite`
+                img.style.animationDelay = `calc(-${animationSpeed}s * ${j} )` 
+                imgContainer.appendChild(img)
+            }
+        }
+    }
+    renderRightSection()
+    window.onresize = () => {
+        renderRightSection()
+    }
+
+
 //   let rightSection = document.querySelector('.landing-page-s1 .right .sections')
 
 
