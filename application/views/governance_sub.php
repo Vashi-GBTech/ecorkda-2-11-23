@@ -183,12 +183,12 @@
                 sub: "",
                 content: `<?php include_once "governance_sub_pages/QDS.php" ?>`,
             },
-            "Membership_process" : {
-                title: "Membership process",
-                sub: "",
-                content: `<?php include_once "governance_sub_pages/MP.php" ?>`,
-                script: governance_js.membership_process
-            },
+            // "Membership_process" : {
+            //     title: "Membership process",
+            //     sub: "",
+            //     content: `<?php // include_once "governance_sub_pages/MP.php" ?>`,
+            //     script: governance_js.membership_process
+            // },
             "Quality_Standards" : {
                 title: "Quality Standards",
                 sub: "",

@@ -63,15 +63,37 @@
         overflow-x: hidden;
     }
 
+    .header-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        background: #fff;
+    }
+    .header-container .top-bar {
+        background: #dc143c;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 0.5rem clamp(1rem, 5vw, 3rem);
+        color: #fff;
+    }
+    .header-container .top-bar span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+
     header {
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: space-between;
         /* padding: 12px 24px; */
-        padding: 1rem clamp(1rem, 5vw, 3rem);
         position: relative;
-        z-index: 100;
+        padding: 1rem clamp(1rem, 5vw, 3rem);
         /* overflow-x: hidden; */
     }
 
@@ -141,8 +163,8 @@
 
     .menu-section {
         position: fixed;
-        top: 80px;
-        right: 2rem;
+        top: 7.5rem;
+        right: clamp(1rem, 5vw, 3rem);
         transform: translateX(400px);
         border-radius: 5px;
         background: #fff;
@@ -165,36 +187,43 @@
 
 </style>
 <body class=''  >
-    <header>
-        <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top w-25" ></a>
+    <div class="header-container">
+        <div class="top-bar">
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <span><i class="fa-solid fa-phone" style="font-size: 0.9rem;"></i>91XXXXXXXXX</span>
+        </div>
+        <header>
+            <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top w-25" ></a>
 
-        <nav>
-            <li class="nav-item d-none d-lg-block active-header">
-                <a class="nav-link"  href="<?= base_url() ?>landing_page">Home</a>
-            </li>
-            <li class="nav-item d-none d-lg-block">
-                <a class="nav-link" href="<?= base_url() ?>#about">About Us</a>
-            </li>
-            <li class="nav-item d-none d-lg-block" id="loginSuperCA">
-                <a class="nav-link" href="<?= base_url() ?>superCa">SuperCA</a>
-            </li>
-            <li class="nav-item d-none d-lg-block" id="loginSignupLink">
-                <a class="nav-link" href="<?= base_url() ?>rkda_login">Login/Signup</a>
-            </li>
+            <nav>
+                <li class="nav-item d-none d-lg-block active-header">
+                    <a class="nav-link"  href="<?= base_url() ?>landing_page">Home</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" href="<?= base_url() ?>#about">About Us</a>
+                </li>
+                <li class="nav-item d-none d-lg-block" id="loginSuperCA">
+                    <a class="nav-link" href="<?= base_url() ?>superCa">SuperCA</a>
+                </li>
+                <li class="nav-item d-none d-lg-block" id="loginSignupLink">
+                    <a class="nav-link" href="<?= base_url() ?>rkda_login">Login/Signup</a>
+                </li>
 
-            <li class="nav-item more-options" id="navbarDropdown">
-                <span class="fas fa-bars"></span>
-            </li>
+                <li class="nav-item more-options" id="navbarDropdown">
+                    <span class="fas fa-bars"></span>
+                </li>
 
-            <div class="menu-section">
-                <li><a href="<?= base_url() ?>task_force_new">Task Force</a></li>
-                <li><a href="<?= base_url() ?>governance_sub">Governance</a></li>
-                <li><a href="<?= base_url() ?>capabilities">Capabilities</a></li>
-                <li><a href="<?= base_url() ?>membership">Membership</a></li>
-                <li><a href="<?= base_url() ?>#needHelp">Contact us</a></li>
-            </div>
-        </nav>
-    </header>
+                <div class="menu-section">
+                    <li><a href="<?= base_url() ?>task_force_new">Task Force</a></li>
+                    <li><a href="<?= base_url() ?>governance_sub">Governance</a></li>
+                    <li><a href="<?= base_url() ?>capabilities">Capabilities</a></li>
+                    <li><a href="<?= base_url() ?>new_membership">Membership</a></li>
+                    <li><a href="<?= base_url() ?>#needHelp">Contact us</a></li>
+                </div>
+            </nav>
+        </header>
+    </div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

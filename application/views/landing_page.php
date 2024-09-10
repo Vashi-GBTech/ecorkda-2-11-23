@@ -311,7 +311,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
+    row-gap: 2rem;
     padding: 2rem var(--pad-lr);
     flex-wrap: wrap;
 }
@@ -323,6 +324,9 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+.about-section-2 img {
+    width: clamp(150px, 24vw, 300px);
 }
 
 .cards-container {
@@ -404,9 +408,9 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
+        font-weight: 800;
         font-style: normal;
-        font-size: 5rem;
+        font-size: clamp(5rem, 10vw, 7.5rem);
         line-height: 0;
         transition: all .3s ease;
     }
@@ -420,7 +424,11 @@ body {
         transition: all .3s ease;
         text-align: center;
         opacity: 0;
-        font-size: 0.9rem;
+        font-size: clamp(0.7rem, 3vw, 1rem);
+        line-height: 1.25;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .landing-page-s1 .right .section .top:hover .letter {
         opacity: 0;
@@ -454,11 +462,13 @@ body {
         0% { top: 100%; }
         100% { top: calc(var(--width) * -1); }
     }
+
+    
 </style>
 
 <body>
     <?php include_once "navbar.php" ?>
-    <section id="home">
+    <section id="home" style="margin-top: 8rem">
         <div class='landing-page-s1'>
             <div class="left">
               <div class="top">
@@ -474,7 +484,7 @@ body {
               </div>
             </div>
 
-            <div class="right"> </div>
+            <div  class="right" style="color: #212529;"> </div>
         </div>
     
         <!-- <div class='landing-page-s1'>
@@ -602,7 +612,7 @@ body {
         </div> -->
 
 
-        <div class='about-section-2' style="margin-top: 2rem !important">
+        <div class='about-section-2' style="margin-top: 2rem !important; flex-direction: row-reverse">
             <div class="about-left">
                 <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
                 <p style='text-align: justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
@@ -616,13 +626,13 @@ body {
                 </div>
             </div>
             <div class="about-right">
-                <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="" width='200px'>
+                <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="">
             </div>
         </div>
 
 
         <div class='py-5' >
-            <img src="<?= base_url() ?>assets/rkda/work-flow-2.png" alt="" width='100%'>
+            <img src="<?= base_url() ?>assets/rkda/work-flow-3.png" alt="" width='100%'>
         </div>
 
 
@@ -638,7 +648,7 @@ body {
                 </div>
             </div>
             <div class="about-right">
-                <img src="<?= base_url() ?>assets/rkda/whatittakes.jpg" alt="" width='200px'>
+                <img src="<?= base_url() ?>assets/rkda/whatittakes.jpg" alt="">
             </div>
         </div>
 
@@ -653,7 +663,7 @@ body {
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center  mb-2 poppins-medium'>PROFFESIONL AND ETHICAL</h6>
+                                <h6 class='text-center  mb-2 poppins-medium'>PROFESSIONAL <br> AND ETHICAL</h6>
                             </div>
                             <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards,
                                 fostering trust and credibility within the network.</P>
@@ -670,7 +680,7 @@ body {
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center w-75  mb-2 poppins-medium'>WilliNGNESS TO CONTRIBUTE</h6>
+                                <h6 class='text-center w-75  mb-2 poppins-medium'>WILLINGNESS TO CONTRIBUTE</h6>
                             </div>
                             <P class='text-justify text-secondary'>Actively engage, share resources, and collaborate for collective success within the network.</P>
                         </div>
@@ -705,15 +715,21 @@ body {
             <h4>Connect with us.</h4>
             <div class='d-flex justify-content-start'>
                 <div class="icon-container">
-                    <div class="icon-circle">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="icon-circle">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="icon-circle">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
+                    <a href="mailto:audit@rkda.com">
+                        <div class="icon-circle">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </a>
+                    <a href="tel:7045545514">
+                        <div class="icon-circle">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/ecovisrkca/" target="_blank">
+                        <div class="icon-circle">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -825,7 +841,7 @@ body {
         {
             top: {
                 letter: 'R',
-                details: "when an unknown printer took a galley of type and scrambled it to"
+                details: "Responsibility is the foundation of leadership."
             },
             bottom: [
                 { url: '<?= base_url() ?>assets/OurTeam/01_Pankaj_Bhargava.jpg' },
@@ -842,7 +858,7 @@ body {
         {
             top: {
                 letter: 'K',
-                details: "but also the leap into electronic typesetting, remaining essentially."
+                details: "Knowledge empowers; wisdom transforms."
             },
             bottom : [
                 { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
@@ -857,7 +873,7 @@ body {
         {
             top: {
                 letter: 'D',
-                details: "when an unknown printer took a galley of type and scrambled it to"
+                details: "Diligence turns effort into excellence."
             },
             bottom: [
                 { url: '<?= base_url() ?>assets/OurTeam/17_Girish_Gangawat.png' },
@@ -872,7 +888,7 @@ body {
         {
             top: {
                 letter: 'A',                
-                details: "but also the leap into electronic typesetting, remaining essentially."
+                details: "Accountability fuels trust and progress."
             },
             bottom: [
                 { url: '<?= base_url() ?>assets/OurTeam/MDKabra.png' },
@@ -939,7 +955,8 @@ body {
             let images = rightSectionContent[i].bottom
 
             // img-container
-            let imgContainer = document.createElement('div')
+            let imgContainer = document.createElement('a')
+            imgContainer.href = `<?= base_url() ?>experts`
             imgContainer.classList.add('img-container')
             imgContainer.style.width = sectionWidth + 'px'
             imgContainer.style.height = images.length*size + (images.length + 1)*gap2 + 'px'

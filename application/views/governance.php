@@ -124,7 +124,7 @@ background:lightgray;
 <body>
 <?php include_once "navbar.php" ?>
 
-<section id='membership' >
+<section id='membership'  style="margin-top: 7.25rem;">
     <div class="container mt-5">
        <div class='d-flex justify-content-center ' ><div class="header w-100">Governance</div></div> 
 

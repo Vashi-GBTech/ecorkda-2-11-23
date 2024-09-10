@@ -16,7 +16,7 @@
     <?php include_once "navbar.php" ?>
 
     <!-- banner   -->
-    <div class="Strategy_Performance_Consulting_servicesBanner align-items-center d-flex justify-content-center pageBanner">
+    <div class="Strategy_Performance_Consulting_servicesBanner align-items-center d-flex justify-content-center pageBanner"  style="margin-top: 7.25rem;">
         <div class="text-center">
             <h1 class="mainHeading mb-4 px-5 text-center text-light">Digital Transformation </h1>
             <h6 class="mx-auto normalText text-justify text-light w-50" style="

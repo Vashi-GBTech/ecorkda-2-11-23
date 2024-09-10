@@ -257,7 +257,7 @@
 <body style="display: flex; flex-direction: column;">
     <?php include_once "navbar.php" ?>
 
-    <div class="capabilities-container img-div">
+    <div class="capabilities-container img-div" style="margin-top: 7.25rem;">
         <div class="left">
             <h1 class="clip">Capabilities</h1>
             <div class="animation">
@@ -280,7 +280,7 @@
             <div class="hand img-div">
                 <a href="<?= base_url() ?>Financial_and_Capital_Services" class="block-content">
                     <div class="info">Financial and Capital Services</div>
-                    <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Financial and capital servcies icon.png")'></div>
+                    <div class="icon" style='--icon: url("<?=base_url()?>assets/images/capabilities/icons/Financial and capital services logo.png")'></div>
                 </a>
                 <div class="overlay img-div"></div>
             </div>

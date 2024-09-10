@@ -98,7 +98,7 @@
 </head>
 <body>
 <?php include_once "navbar.php" ?>
-  <section class='#signUp'>
+  <section class='#signUp'  style="margin-top: 7.25rem;">
     <div class='row'>
         <div class="col-md-5 img-signup" >
             <img src="<?= base_url() ?>assets/rkda/signUp-2.png" alt="reg" width="95%">
