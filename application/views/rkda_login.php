@@ -13,12 +13,12 @@
  
 }
 body{
-    overflow-y:hidden;
+    /* overflow-y:hidden; */
 }
 
 .form-signin {
-    width: 56%;
-    max-width: 600px;
+    /* width: 56%;
+    max-width: 600px; */
 
   /* margin: 0 auto; */
   /* background-color: #fff; */
@@ -101,89 +101,149 @@ body{
     /* line-height: 90px !important; */
 }
 .form-control {
-            /* border-radius: 20px !important; */
-        }
-        .form-control, .input-group-text {
-            border-color:crimson !important;
-        }
-        .form-control:focus{
+    /* border-radius: 20px !important; */
+}
+.form-control, .input-group-text {
+    border-color:crimson !important;
+}
+.form-control:focus{
 
-            box-shadow: 0 0 0 0.20rem rgb(213 49 64 / 34%) !important;
-        }
-        .password-wrapper {
-            position: relative;
-        }
-        .password-wrapper .toggle-password {
-            position: absolute;
-            right: 10px;
-            top: 69%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-        .toggle-password svg {
-            display: none;
-        }
-        .toggle-password svg.active {
-            display: block;
-        }
+    box-shadow: 0 0 0 0.20rem rgb(213 49 64 / 34%) !important;
+}
+.password-wrapper {
+    position: relative;
+}
+.password-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 69%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.toggle-password svg {
+    display: none;
+}
+.toggle-password svg.active {
+    display: block;
+}
+
+#signin .left {
+    background:#b6b8bb;
+    height: 90vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px 175px 0px 0px;
+    flex: 1;
+    min-width: 350px;
+    padding: 2rem;
+    box-sizing: border-box;
+    padding: 2rem clamp(2rem, 10vw, 14rem);
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    min-width: 350px;
+    padding: 2rem;
+}
+.right img {
+    width: clamp(35vw, 400px, 100%);
+}
 </style>
 <?php include_once "navbar.php" ?>
 <body>
-<section id='signin '>
-    <div class='d-flex' >
-        <div class="col-md-5 " style='    background:#b6b8bb;height:100vh;    display: flex;
-    align-items: center; border-radius: 0px 175px 0px 0px;' >
-            <div class="col-md-12 ">
-                <div class='d-flex justify-content-center'  >
-                <div class='col-md-7'>
-                <h4 class=' text-dark '>Welcome Back, </h4>
-                <h6 class='  text-dark'>Connect & Expand Your Practice Worldwide.</h6>
+<section id='signin'  style="margin-top: 8.25rem;">
+    <div style='display: flex; flex-direction: row-reverse; flex-wrap: wrap; gap: 1rem' >
+        
+        <div class="right">
+            <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="signin">
+        </div>
 
+            <div class="left">
+                <div class="top">
+                    <h4 class=' text-dark '>Welcome Back, </h4>
+                    <h6 class='  text-dark'>Connect & Expand Your Practice Worldwide.</h6>
                 </div>
+
+                <form class="form-signin">
+                    <div class=" my-3">
+                        <label class="control-label">Email</label>
+                        
+                            <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
+                        </div>
+                        <div class="form-group password-wrapper">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <span class="toggle-password">
+                                <i class="fa fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="options d-flex justify-content-between ">
+                        <div >
+                            <input type="checkbox">  <label class=""> Remember me</label>
+                        </div> 
+                        <a href="#" class="text-dark">Forgot Password?</a>
+                    </div>
+    
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-sm w-50 mt-3 py-2 login-btn" type="submit">LOGIN</button>
+                    </div> 
+                    <p class="account-signup mt-2">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
+                </form>
+                <!-- <div class='d-flex justify-content-center'>
+                    <div class='col-md-7'>
+                        <h4 class=' text-dark '>Welcome Back, </h4>
+                        <h6 class='  text-dark'>Connect & Expand Your Practice Worldwide.</h6>
+
+                    </div>
                
-                </div>
+                </div> -->
                 
                 <!-- <h2>SIGN IN</h2> -->
       
-                <div class="wrapper d-flex justify-content-center">
-                <form class="form-signin">
-                    <!-- <h2 class="form-signin-heading text-center text-white">SIGN IN</h2> -->
+                <!-- <div class="wrapper d-flex justify-content-center">
+                    <form class="form-signin">
+                        
 
-                    <div class=" my-3">
-                    <label class="control-label">Email</label>
-                        <!-- <i class="glyphicon"><i class="fas fa-user text-white"></i></i> -->
-                        <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
-                    </div>
-                    <div class="form-group password-wrapper">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
-                        <span class="toggle-password">
-                            <i class="fa fa-eye"></i>
-                        </span>
-                    </div>
-                    <div class="options d-flex justify-content-between ">
-                  <div >
-                   <input type="checkbox">  <label class=""> Remember me</label>
-                  </div> 
-                    <a href="#" class="text-dark">Forgot Password?</a>
-                    </div>
- 
-                   <div class="d-flex justify-content-center">
-                   <button class="btn btn-sm w-50 mt-3 py-2 login-btn" type="submit">LOGIN</button>
-                   </div> 
-                   <p class="account-signup mt-2">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
-                </form>
+                        <div class=" my-3">
+                        <label class="control-label">Email</label>
+                        
+                            <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
+                        </div>
+                        <div class="form-group password-wrapper">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <span class="toggle-password">
+                                <i class="fa fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="options d-flex justify-content-between ">
+                    <div >
+                    <input type="checkbox">  <label class=""> Remember me</label>
+                    </div> 
+                        <a href="#" class="text-dark">Forgot Password?</a>
+                        </div>
+    
+                    <div class="d-flex justify-content-center">
+                    <button class="btn btn-sm w-50 mt-3 py-2 login-btn" type="submit">LOGIN</button>
+                    </div> 
+                    <p class="account-signup mt-2">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
+                    </form>
                 
-                </div>
+                </div> -->
             </div>
-        </div>
-        <div class="col-md-7 d-flex justify-content-center">
+        <!-- <div class="col-md-7 d-flex justify-content-center">
             <div class="col-md-7 d-flex justify-content-center align-items-center">
                 <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="signin" style='width: 90%; '>
              
             </div>
-        </div>
+        </div> -->
     </div>
+
+    
+    <?php include_once "new_footer.php" ?>
     
 </section>
 
@@ -208,8 +268,6 @@ body{
         });
   </script>
   
-<?php include_once "new_footer.php" ?>
-<div class="h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil natus numquam consequatur odio asperiores voluptate ab nisi aliquam, hic accusantium. Excepturi laboriosam suscipit vel, commodi assumenda debitis aliquam ratione qui.</div>
 </body>
 
 </html>

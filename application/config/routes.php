@@ -198,6 +198,7 @@ $route['gridhome'] = 'welcome/gridhome';
 $route['capabilities'] = 'welcome/capabilities';
 $route['task_force_sub'] = 'welcome/task_force_sub';
 $route['governance_sub'] = 'welcome/governance_sub';
+$route['new_membership'] = 'welcome/new_membership';
 
 
 

@@ -246,7 +246,7 @@ $c2: #2D3E50; */
                 </section> -->
                 
                 
-                <div class="wrap wrap__logobar" id="containerElem" style="--width: 150px; --height: 170px;">
+                <div class="wrap wrap__logobar" id="containerElem" style="--width: 150px; --height: 170px;"  style="margin-top: 7.25rem;">
                     <ul class="list" id="list"></ul>
                 </div>
 
@@ -255,7 +255,7 @@ $c2: #2D3E50; */
          <div class='heading'> <h1 class='text-center'  >Partners & Associates</h1></div>
 
 
-        <div class="search-container mt-5">
+        <div class="search-container mt-5" >
             <div class="search-box">
                 <i class="fas fa-user"></i>
                 <input id="search-name" type="text" placeholder="Search By Name">

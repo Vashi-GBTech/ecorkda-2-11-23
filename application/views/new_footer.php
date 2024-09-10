@@ -94,6 +94,7 @@
                     <a href="<?= base_url() ?>"><i class="fa-solid fa-chevron-right"></i>Home</a>
                     <a href="<?= base_url() ?>/#about"><i class="fa-solid fa-chevron-right"></i>About Us </a>
                     <a href=""><i class="fa-solid fa-chevron-right"></i>Our Partners</a>
+                    <a href="<?= base_url() ?>experts"><i class="fa-solid fa-chevron-right"></i>Experts</a>
                     <a href="<?= base_url() ?>#needHelp"><i class="fa-solid fa-chevron-right"></i>Contact Us</a>
                 </div>
             </div>
@@ -104,7 +105,7 @@
                     <a href="<?= base_url() ?>task_force_new"><i class="fa-solid fa-chevron-right"></i>Task Force</a>
                     <a href="<?= base_url() ?>governance_sub"><i class="fa-solid fa-chevron-right"></i>Governance</a>
                     <a href="<?= base_url() ?>capabilities"><i class="fa-solid fa-chevron-right"></i>Capabilities</a>
-                    <a href="<?= base_url() ?>membership"><i class="fa-solid fa-chevron-right"></i>Membership</a>
+                    <a href="<?= base_url() ?>new_membership"><i class="fa-solid fa-chevron-right"></i>Membership</a>
                 </div>
             </div>
 
@@ -129,7 +130,7 @@
             <div class="section">
                 <span>Social Links</span>
                 <div class="ul" style="flex-direction: row;">
-                    <a href="https://www.linkedin.com/company/ecovisrkca/">
+                    <a href="https://www.linkedin.com/company/ecovisrkca/" target="_blank">
                         <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Linkedin Logo.png') ?>"); height: 2rem; width: 2rem;' ></div>
                     </a>
                     <a href="mailto:audit@rkda.com">

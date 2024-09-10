@@ -16,7 +16,7 @@
 
     <!-- banner   -->
     <div
-        class="Strategy_Performance_Consulting_servicesBanner align-items-center d-flex justify-content-center pageBanner">
+        class="Strategy_Performance_Consulting_servicesBanner align-items-center d-flex justify-content-center pageBanner"  style="margin-top: 7.25rem;">
         <div class="text-center">
             <h1 class="mainHeading mb-4 text-center text-light">Strategy and Performance Consulting</h1>
             <h6 class="mx-auto normalText text-justify text-light w-50" style="

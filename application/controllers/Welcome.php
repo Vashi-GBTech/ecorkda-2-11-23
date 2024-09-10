@@ -1084,6 +1084,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('governance_sub');
 	}
+	public function new_membership()
+	{
+		$this->load->view('new_membership');
+	}
 
 }
 ?>

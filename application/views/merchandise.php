@@ -52,8 +52,9 @@
 
 <body>
     <div class='content'>
-        <h4 class='mb-3 text-uppercase'>Power of Community </h4>
-        <p class=' text-justify' style='color: #726b6b;'>As a member of the RKDA community, enjoy significant advantages
+        <h4 class='mb-3 text-uppercase' style="font-weight: 600">Power of Community </h4>
+        <!-- style='color: #726b6b;' -->
+        <p class=' text-justify' >As a member of the RKDA community, enjoy significant advantages
             through collective bargaining and bulk purchasing, resulting in 5-80% discounts on various services. By
             pooling our resources, we achieve cost savings and increased bargaining power, securing better terms,
             including extended warranties and prompt responses. The collective wisdom of our group ensures we receive
