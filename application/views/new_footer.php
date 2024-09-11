@@ -82,6 +82,16 @@
             background-repeat: no-repeat !important;
             background-size: contain !important;
         }
+
+        footer .logo {
+            height: 2rem;
+            width: 4rem;
+            min-width: 1rem;
+            background: var(--src);
+            background-position: center;
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +152,7 @@
         </div>
 
         <div class="bottom">
-            <div class="logo">
+            <div class="logo" style='--src: url("<?= base_url() ?>assets/images/RKDA White Logo.png")'>
 
             </div>
             <p>Approved and Affiliated by the Institute of Chartered Accountants of India (ICAI).</p>
