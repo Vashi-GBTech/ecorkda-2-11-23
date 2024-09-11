@@ -125,9 +125,9 @@ header {
   <section id='superca_page'>
 
 
-    <div class="d-flex justify-content-center"  style="margin-top: 7.25rem;">
+    <div class="d-flex justify-content-center"  style="margin-top: 8.5rem;">
       <div class='' style="margin: 0 3rem">
-        <div class="">
+        <div class="mt-5">
           <div class="header w-100" style="margin-bottom: 1rem">Super CA</div>
         </div>
 

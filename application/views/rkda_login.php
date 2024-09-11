@@ -154,7 +154,7 @@ body{
 </style>
 <?php include_once "navbar.php" ?>
 <body>
-<section id='signin'  style="margin-top: 8.25rem;">
+<section id='signin'  style="margin-top: 8.5rem;">
     <div style='display: flex; flex-direction: row-reverse; flex-wrap: wrap; gap: 1rem' >
         
         <div class="right">

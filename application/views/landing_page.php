@@ -720,7 +720,7 @@ body {
                             <i class="fas fa-envelope"></i>
                         </div>
                     </a>
-                    <a href="tel:7045545514">
+                    <a href="tel:9137522708">
                         <div class="icon-circle">
                             <i class="fas fa-phone-alt"></i>
                         </div>

@@ -71,14 +71,19 @@
         background: #fff;
     }
     .header-container .top-bar {
-        background: #dc143c;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         gap: 1.25rem;
         padding: 0.5rem clamp(1rem, 5vw, 3rem);
+        background: #dc143c;
+    }
+    
+    .header-container .top-bar a {
+
         color: #fff;
     }
+    
     .header-container .top-bar span {
         display: flex;
         align-items: center;
@@ -163,7 +168,7 @@
 
     .menu-section {
         position: fixed;
-        top: 7.5rem;
+        top: 8.4rem;
         right: clamp(1rem, 5vw, 3rem);
         transform: translateX(400px);
         border-radius: 5px;
@@ -189,9 +194,9 @@
 <body class=''  >
     <div class="header-container">
         <div class="top-bar">
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <span><i class="fa-solid fa-phone" style="font-size: 0.9rem;"></i>91XXXXXXXXX</span>
+            <a href="mailto:audit@rkda.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/company/ecovisrkca/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            
         </div>
         <header>
             <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top w-25" ></a>

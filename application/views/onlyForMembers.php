@@ -12,7 +12,7 @@
 <body>
 
 <?php include_once "navbar.php" ?>
- <section id='noAccess'  style="margin-top: 7.25rem;">
+ <section id='noAccess'  style="margin-top: 8.5rem;">
     <div class="d-flex justify-content-center py-5" style="background:#C8C8C8" >
         <div class="col-md-6 d-flex justify-content-center py-5" >
             <div class="col-md-12 " >

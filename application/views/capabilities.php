@@ -257,7 +257,7 @@
 <body style="display: flex; flex-direction: column;">
     <?php include_once "navbar.php" ?>
 
-    <div class="capabilities-container img-div" style="margin-top: 7.25rem;">
+    <div class="capabilities-container img-div" style="margin-top: 8.5rem;">
         <div class="left">
             <h1 class="clip">Capabilities</h1>
             <div class="animation">
