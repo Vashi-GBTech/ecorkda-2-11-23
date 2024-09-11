@@ -132,7 +132,7 @@
                     </a>
                     <a href="">
                     <div class="img-footer" style='--src: url("<?= base_url('assets/images/footer-img/Call ICon.png') ?>");'></div>
-                        91XXXXXXXXX
+                        +91 91375 22708
                     </a>
                 </div>
             </div>

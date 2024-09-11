@@ -10,7 +10,7 @@
 
         .sub-container {
             padding: 2rem clamp(1rem, 5vw, 3rem);
-            min-height: 100dvh;
+            min-height: 80dvh;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -153,7 +153,7 @@
 <body>
     <?php include_once "navbar.php" ?>
 
-    <div class="sub-container">
+    <div class="sub-container" style="margin-top: 8.5rem;">
         <!-- Stores Heading of the page -->
         <h1></h1>
 
@@ -183,12 +183,12 @@
                 sub: "",
                 content: `<?php include_once "governance_sub_pages/QDS.php" ?>`,
             },
-            // "Membership_process" : {
-            //     title: "Membership process",
-            //     sub: "",
-            //     content: `<?php // include_once "governance_sub_pages/MP.php" ?>`,
-            //     script: governance_js.membership_process
-            // },
+            "Membership_process" : {
+                title: "Membership process",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/MP.php" ?>`,
+                script: governance_js.membership_process
+            },
             "Quality_Standards" : {
                 title: "Quality Standards",
                 sub: "",

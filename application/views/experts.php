@@ -233,7 +233,7 @@ $c2: #2D3E50; */
  }
 </style>
 <body>
-<section id='experts' style="margin-bottom: 3rem">
+<section id='experts' style="margin-bottom: 3rem; margin-top: 8.5rem">
 <?php include_once "navbar.php" ?>
          
         <div class="">
