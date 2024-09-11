@@ -852,7 +852,6 @@ body {
                 { url: '<?= base_url() ?>assets/OurTeam/06_Sanjeev_Bindal.jpg' },
                 { url: '<?= base_url() ?>assets/OurTeam/07_Sanjay_Surana.jpg' },
                 { url: '<?= base_url() ?>assets/OurTeam/08_Ram_Verma.jpg' },
-                { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
             ]
         },
         {
@@ -861,6 +860,7 @@ body {
                 details: "Knowledge empowers; wisdom transforms."
             },
             bottom : [
+                { url: '<?= base_url() ?>assets/OurTeam/09_Parag_Shah.jpg' },
                 { url: '<?= base_url() ?>assets/OurTeam/10_D_Bala.JPG' },
                 { url: '<?= base_url() ?>assets/OurTeam/11_Rahul_Nagar.jpg' },
                 { url: '<?= base_url() ?>assets/OurTeam/12_Manju_Latha_Boob.jpg' },
@@ -959,7 +959,8 @@ body {
             imgContainer.href = `<?= base_url() ?>experts`
             imgContainer.classList.add('img-container')
             imgContainer.style.width = sectionWidth + 'px'
-            imgContainer.style.height = images.length*size + (images.length + 1)*gap2 + 'px'
+            // imgContainer.style.height = (images.length*size - (images.length + 1)) + 'px'
+            imgContainer.style.height = (images.length*size - images.length*(window.innerWidth/140)) + 'px'
             bottom.appendChild(imgContainer)
             
             // images
