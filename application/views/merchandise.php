@@ -73,19 +73,7 @@
                 <img src="<?= base_url() ?>assets/brand-logos/apple.png" alt="">
             </div>
             <div class="slide">
-                <img src="<?= base_url() ?>assets/brand-logos/hyundai.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="<?= base_url() ?>assets/brand-logos/rename.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="<?= base_url() ?>assets/brand-logos/suzuki.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="<?= base_url() ?>assets/brand-logos/apollo.png" alt="" width=200>
-            </div>
-            <div class="slide">
-                <img src="<?= base_url() ?>assets/brand-logos/apple.png" alt="">
+                <img src="<?= base_url() ?>assets/rkda/cprompt.gif" alt="">
             </div>
             <div class="slide">
                 <img src="<?= base_url() ?>assets/brand-logos/hyundai.png" alt="">
@@ -110,6 +98,27 @@
             </div>
             <div class="slide">
                 <img src="<?= base_url() ?>assets/brand-logos/suzuki.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/rkda/cprompt.gif" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/brand-logos/apollo.png" alt="" width=200>
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/brand-logos/apple.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/brand-logos/hyundai.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/brand-logos/rename.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/brand-logos/suzuki.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="<?= base_url() ?>assets/rkda/cprompt.gif" alt="">
             </div>
         </div>
     </div>

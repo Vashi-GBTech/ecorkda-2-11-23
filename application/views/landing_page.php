@@ -195,7 +195,7 @@ body {
   padding: 3rem var(--pad-lr);
   /* height: 80dvh; */
   display: flex;
-  align-items: center;
+  align-items: unset;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -207,7 +207,11 @@ body {
   justify-content: space-between; */
 }
 .landing-page-s1 .left h1 {
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color:crimson;
+}
+.landing-page-s1 .left .heading-span{
+    font-size:3rem;
 }
 .landing-page-s1 .left .bottom {
   margin-top: 2rem;
@@ -311,29 +315,52 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem var(--pad-lr);
+    flex-wrap: wrap;
+}
+.about-section-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 4rem;
     row-gap: 2rem;
     padding: 2rem var(--pad-lr);
     flex-wrap: wrap;
 }
 .about-section-2 .about-left {
-    flex: 10;
+    flex: 6;
     min-width: 300px;
 }
 .about-section-2 .about-right {
-    flex: 1;
+    flex: 10;
     display: flex;
     justify-content: center;
 }
 .about-section-2 img {
+    /* width: clamp(150px, 24vw, 300px); */
+    width:100%;
+}
+.about-section-3 img {
     width: clamp(150px, 24vw, 300px);
+    /* width:100%; */
+}
+.about-section-3 .about-left {
+    flex: 10;
+    min-width: 300px;
+}
+.about-section-3 .about-right {
+    flex: 5;
+    display: flex;
+   
 }
 
 .cards-container {
     padding: 2rem var(--pad-lr);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 4rem;
+    grid-gap: 1rem;
 }
 
 .card-body {
@@ -465,15 +492,105 @@ body {
 
     
 </style>
+<style>
+    ol, ol > li {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+ol {
+  width: min(400px, 100% - 2rem);
+  margin-inline: auto;
+  list-style: none;
+  display: grid;
+  font-family: system-ui, sans-serif;
+  color: white;
+  counter-reset: liCount;
+}
+ol:not(.alternate){
+  gap: 0.5rem;
+}
+ol > li {
+  --number-size: 3rem;
+  --padding-inline: 2.5rem;
+  --padding-block: 0.2rem;
+  margin-block: var(--padding-block);
+  padding: var(--padding-block) var(--padding-inline);
+  background-color: var(--accent-color);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-flow: dense;
+  align-items: center;
+  gap: calc(1rem + var(--padding-block));
+  border-radius: 100vmax;
+  box-shadow: 
+    inset 0.15rem 0.15rem hsl(0 0% 0% / .125),
+    inset 0.5rem 0.5rem 1rem hsl(0 0% 0% / .5),
+    inset -0.15rem -0.15rem hsl(0 0% 100% / .75);
+  position: relative;
+  isolation: isolate;
+  counter-increment: liCount;
+  font-size: .74rem !important;
+}
+ol > li::before {
+  content: counter(liCount);
+  font-size: calc(var(--number-size) / 2);
+  color: var(--accent-color);
+  width: var(--number-size);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 100vmax;
+  background-color: #e6e7e9;
+  box-shadow: 
+    inset 0.05rem 0.05rem hsl(0 0% 100% / .75),
+    0.25rem 0.25rem 0.5rem hsl(0 0% 0% / .5),
+    inset -0.05rem -0.05rem hsl(0 0% 0% / .125);
+}
+ol > li::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  --size: calc(var(--number-size) + var(--padding-block) * 4);
+  width: var(--size);
+  aspect-ratio: 1;
+  inset-block-start: calc(var(--padding-block) * -1);
+  --inset-inline: calc(var(--padding-inline) - var(--padding-block) * 2);
+  inset-inline: var(--inset-inline) auto;
+  border-radius: 100vmax;
+  background-color: hsl(0 0% 100% / .125);
+  background-image: 
+    radial-gradient(circle at calc(50% + 1px) calc(50% + 1px), transparent 67.7%, hsl(0 0% 100% / .5) calc(67.7% + 1px)),
+    radial-gradient(circle at top left, hsl(0 0% 100% / .1) 50%, transparent calc(50% + 1px));
+  --backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.125);
 
+}
+
+ol.alternate > li:nth-child(even),
+ol.right > li{
+  grid-template-columns: 1fr auto;
+}
+ol.alternate > li:nth-child(even)::before,
+ol.right > li::before{
+  grid-column: 2;
+}
+ol.alternate > li:nth-child(even)::after,
+ol.right > li::after{
+  inset-inline: auto var(--inset-inline);
+}
+</style>
 <body>
     <?php include_once "navbar.php" ?>
     <section id="home" style="margin-top: 8rem">
         <div class='landing-page-s1'>
             <div class="left">
               <div class="top">
-                <h1 class='hading-fw'>Where CAs </h1>
-                <h1 class='mb-4 hading-fw'> Meet Excellence</h1>
+                <h1 class=''><span class="text-dark heading-span" > Super CA is our </span></h1>
+                <h1 class='hading-fw mb-0'><span class="text-dark heading-span" ></span>Resolve</h1>
+                <h1 class='mb-4 mb-0'><span class="text-dark heading-span">Rest is Detail</span> </h1>
               </div>
 
               <div class="bottom">
@@ -614,19 +731,26 @@ body {
 
         <div class='about-section-2' style="margin-top: 2rem !important; flex-direction: row-reverse">
             <div class="about-left">
-                <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
-                <p style='text-align: justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
+                <h4 class='mb-3' style="font-weight: 600;text-align: center;">Register with us</h4>
+                <!-- <p style='text-align: justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
                     onboarding process, helping you craft a stellar profile and co-create a personalized plan for
                     success. Sharpen your skills with top-notch training and resources, then dive into a vibrant
                     community of clients and members, ready to collaborate and build your business. Finally, your
                     expertise takes center stage. Contribute through exciting projects, strategic investments, or
-                    even by growing alongside our company.</p>
+                    even by growing alongside our company.</p> -->
+                    <ol class="alternate p-0 mx-0 w-100"> <!--[left]/alternate/right-->
+                        <li style="--accent-color: #d53140">Onboard with personalized profile setup</li>
+                        <li style="--accent-color: #d53140">Access RESOLVE for AI tools, automation, and resources</li>
+                        <li style="--accent-color: #d53140">Connect with clients and collaborate with peers</li>
+                        <!-- <li style="--accent-color: #6b4495">Lorem Ipsum</li>
+                        <li style="--accent-color: #229ab5">Lorem Ipsum</li> -->
+                        </ol>
                 <div class='d-flex justify-content-end'>
-                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a>
+                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Become a SuperCA ></a>
                 </div>
             </div>
             <div class="about-right">
-                <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="">
+                <img src="<?= base_url() ?>assets/rkda/superca-corp-adv.png" alt="">
             </div>
         </div>
 
@@ -636,7 +760,7 @@ body {
         </div>
 
 
-        <div class='about-section-2' style="margin-top: 2rem !important">
+        <div class='about-section-3 ' style="margin-top: 2rem !important">
             <div class="about-left">
                 <h4 class='mb-3' style="font-weight: 600;">WHAT IT TAKES? </h4>
                 <p style='text-align: justify' style='color: #726b6b;'>Our Corporate Finance offerings encompass a
@@ -663,10 +787,9 @@ body {
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center  mb-2 poppins-medium'>PROFESSIONAL <br> AND ETHICAL</h6>
+                                <h6 class='text-center  mb-2 poppins-medium'>RESPONSIBILITY TOWARDS PROFESSION</h6>
                             </div>
-                            <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards,
-                                fostering trust and credibility within the network.</P>
+                            <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards, fostering trust and credibility within the network.</P>
                         </div>
                     </div>
                 </div>
@@ -680,9 +803,9 @@ body {
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center w-75  mb-2 poppins-medium'>WILLINGNESS TO CONTRIBUTE</h6>
+                                <h6 class='text-center   mb-2 poppins-medium'>DESIRE TO LEARN AND GROW</h6>
                             </div>
-                            <P class='text-justify text-secondary'>Actively engage, share resources, and collaborate for collective success within the network.</P>
+                            <P class='text-justify text-secondary'>Embrace continuous learning, adapting to new challenges and opportunities to enhance expertise and value.</P>
                         </div>
                     </div>
                 </div>
@@ -696,9 +819,24 @@ body {
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center w-75  mb-2 poppins-medium'>ENTREPRENEURIAL MINDSET</h6>
+                                <h6 class='text-center   mb-2 poppins-medium text-uppercase'>Diligence in work ethic & service</h6>
                             </div>
-                            <P class='text-justify text-secondary'>Embrace innovation, proactive problem-solving, and adaptability for growth and success within the network.</P>
+                            <P class='text-justify text-secondary'>Consistently deliver excellence through dedication, ensuring clients' needs are met with thorough attention and care.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/right-check-1.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center   mb-2 poppins-medium text-uppercase'>Accountability to stakeholders & society</h6>
+                            </div>
+                            <P class='text-justify text-secondary'>Act with transparency and responsibility, ensuring actions positively impact both stakeholders and the broader community.</P>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -192,4 +192,161 @@
         });
     });
 </script>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.infographic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    /* background-color: #f0f0f0; Light gray background */
+    padding: 20px;
+}
+
+.circle-container {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0; /* Slightly darker gray for the circle area */
+    border-radius: 50%; /* Circle shape for the area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.connector-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure lines are behind the circles */
+    display:none;
+}
+
+.circle {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1; /* Ensure circles are above the lines */
+}
+
+.circle1 {
+    top: -42px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* background-color: #00bcd4; */
+}
+
+.circle2 {
+    left: 0px;
+    bottom: -15px;
+    /* background-color: #ffc107; */
+}
+
+.circle3 {
+    right: 0px;
+    bottom: -15px;
+    /* background-color: #03a9f4; */
+}
+
+.description-center {
+  position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+}
+
+#description-text {
+    font-size: .9rem;
+    color: #555;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+</style>
+<body>
+<div class="infographic-container">
+    <!-- SVG for straight lines -->
+    <svg class="connector-lines" width="400" height="400" viewBox="0 0 400 400">
+        <!-- Straight lines connecting the circles -->
+        <line x1="200" y1="60" x2="100" y2="320" stroke="#ffc107" stroke-width="3" />
+        <line x1="100" y1="320" x2="300" y2="320" stroke="#03a9f4" stroke-width="3" />
+        <line x1="300" y1="320" x2="200" y2="60" stroke="#00bcd4" stroke-width="3" />
+    </svg>
+
+    <!-- Circles -->
+    <div class="circle-container">
+       
+        <div class="circle circle1" data-heading="Community" data-description="Access cutting-edge tools, resources, and tailored training to enhance your skills."><img src="<?= base_url() ?>assets/rkda/comm-c.png" alt="" width='100px'></div>
+        <div class="circle circle2" data-heading="Clarity" data-description="Join a vibrant community passionate about excellence and innovation."><img src="<?= base_url() ?>assets/rkda/clarity-c.png" alt="" width='100px'></div>
+        <div class="circle circle3" data-heading="Capacity" data-description="Optimize your practice with scalable infrastructure and streamlined processes. "><img src="<?= base_url() ?>assets/rkda/capacity-c.png" alt="" width='100px'></div>
+    </div>
+
+    <!-- Central Description -->
+    <div class="description-center">
+        <h5 class="text-danger" id="desc-head" ></h5>
+        <h2 class="text-danger" id="super-head" style="font-weight: 650;" ></h2>
+        <p id="description-text"></p>
+    </div>
+</div>
+
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    // Set the default text when the page loads
+    descriptionText.textContent = "";
+    descHead.textContent = "";
+    superHead.textContent= "Super CA";
+});
+
+const circles = document.querySelectorAll('.circle');
+const descriptionText = document.getElementById('description-text');
+const descHead = document.getElementById('desc-head');
+const superHead = document.getElementById('super-head');
+
+circles.forEach(circle => {
+    circle.addEventListener('mouseenter', () => {
+        const description = circle.getAttribute('data-description');
+        const heading = circle.getAttribute('data-heading');
+        descriptionText.textContent = description;
+        descHead.textContent = heading;
+        superHead.textContent= "";
+    });
+
+    circle.addEventListener('mouseleave', () => {
+        descriptionText.textContent = "";
+        descHead.textContent = "";
+        superHead.textContent = "Super CA"; // Optionally reset the heading on mouse leave
+    });
+});
+
+</script>
+</body>
 </html>
