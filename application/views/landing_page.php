@@ -304,11 +304,11 @@ body {
 }
 
 .about-section {
-    height:80vh; 
+    /* height:80vh;  */
     display: flex; 
-    align-items: center; 
+    /* align-items: center;  */
     justify-content: space-between; 
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .about-section-2 {
@@ -681,8 +681,8 @@ ol.right > li::after{
         </div> -->
     </section>
     
-    <section id="about" class='my-1'>
-        <div class="about-section">
+    <section id="about" class='my-5'>
+        <div class="about-section mt-5">
             <div class="col-md-7 col-sm-12 d-flex justify-content-end">
                 <div class="col-md-11">
                     <h4 class='mb-4' style="font-weight: 600;">WHY JOIN US? </h4>

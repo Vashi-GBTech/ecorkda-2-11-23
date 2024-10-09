@@ -209,7 +209,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
     position: relative;
     /* background-color: #f0f0f0; Light gray background */
@@ -218,12 +218,12 @@
 
 .circle-container {
     position: relative;
-    width: 330px;
-    height: 330px;
+    width: 310px;
+    height: 310px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0; /* Slightly darker gray for the circle area */
+    border: 1.5rem solid #e0e0e0;
     border-radius: 50%; /* Circle shape for the area */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -253,20 +253,20 @@
 }
 
 .circle1 {
-    top: -42px;
+    top: -100px;
     /* left: 50%;
     transform: translateX(-50%); */
     /* background-color: #00bcd4; */
 }
 
 .circle2 {
-    left: 0px;
+    left: -80px;
     bottom: -15px;
     /* background-color: #ffc107; */
 }
 
 .circle3 {
-    right: 0px;
+    right: -80px;
     bottom: -15px;
     /* background-color: #03a9f4; */
 }
@@ -277,11 +277,11 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    width: 80%;
+    width: 50%;
 }
 
 #description-text {
-    font-size: .9rem;
+    font-size: .7rem;
     color: #555;
 }
 
@@ -304,15 +304,15 @@
     <!-- Circles -->
     <div class="circle-container">
        
-        <div class="circle circle1" data-heading="Community" data-description="Access cutting-edge tools, resources, and tailored training to enhance your skills."><img src="<?= base_url() ?>assets/rkda/comm-c.png" alt="" width='100px'></div>
-        <div class="circle circle2" data-heading="Clarity" data-description="Join a vibrant community passionate about excellence and innovation."><img src="<?= base_url() ?>assets/rkda/clarity-c.png" alt="" width='100px'></div>
+        <div class="circle circle1" data-heading="Community" data-description="Join a vibrant community passionate about excellence and innovation."><img src="<?= base_url() ?>assets/rkda/comm-c.png" alt="" width='100px'></div>
+        <div class="circle circle2" data-heading="Clarity" data-description="Access cutting-edge tools, resources, and tailored training to enhance your skills"><img src="<?= base_url() ?>assets/rkda/clarity-c.png" alt="" width='100px'></div>
         <div class="circle circle3" data-heading="Capacity" data-description="Optimize your practice with scalable infrastructure and streamlined processes. "><img src="<?= base_url() ?>assets/rkda/capacity-c.png" alt="" width='100px'></div>
     </div>
 
     <!-- Central Description -->
     <div class="description-center">
-        <h5 class="text-danger" id="desc-head" ></h5>
-        <h2 class="text-danger" id="super-head" style="font-weight: 650;" ></h2>
+        <h5 class="text-danger " id="desc-head" ></h5>
+        <h2 class="text-danger mt-3" id="super-head" style="font-weight: 650;" ></h2>
         <p id="description-text"></p>
     </div>
 </div>
