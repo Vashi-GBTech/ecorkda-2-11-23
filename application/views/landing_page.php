@@ -683,21 +683,16 @@ ol.right > li::after{
     
     <section id="about" class='my-1'>
         <div class="about-section">
-            <div class="col-md-5 col-sm-12 d-flex justify-content-end">
-                <div class="col-md-10">
+            <div class="col-md-7 col-sm-12 d-flex justify-content-end">
+                <div class="col-md-11">
                     <h4 class='mb-4' style="font-weight: 600;">WHY JOIN US? </h4>
-                    <p class='text-justify'  style='color: #726b6b;text-align:justify'><span
-                    class='red-letter'>C</span>onnect with a network of clients and subject matter experts. Enhance <span
-                            class='red-letter'>C</span>apabilities through training and technology platforms. Join a
-                        global, value-driven <span class='red-letter'>C</span>ommunity. Serve clients better and acquire
-                        new ones. Expand <span class='red-letter'>C</span>apacity and gain access to social and
-                        financial <span class='red-letter'>C</span>larity as part of a larger community.</p>
+                    <p class='text-justify'  style='color: #726b6b;text-align:justify'><span class='red-letter'>RESOLVE</span>, our AI-driven platform empowers Chartered Accountants to be true powerhouse for growth partnerships of their client. Enhance <span class='red-letter'>C</span>apacity by automating tasks, <span class='red-letter'>C</span>onnecting with experts and enabling <span class='red-letter'>C</span>larity  to build their practice is our promise. We invite you to Join our <span class='red-letter'>SUPER CA</span> Community.</p>
                     <div class='d-flex justify-content-end'>
                         <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a></div>
                     </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-5 col-sm-12 d-flex justify-content-center">
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center">
                 <!-- <div class="col-md-8"> -->
                 <!-- <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="" width='100%'> -->
                 <?php include_once "c_carousel.php" ?>
@@ -803,7 +798,7 @@ ol.right > li::after{
                         </div>
                         <div>
                             <div class='d-flex justify-content-center'>
-                                <h6 class='text-center   mb-2 poppins-medium'>DESIRE TO LEARN AND GROW</h6>
+                                <h6 class='text-center   mb-2 poppins-medium'>DESIRE TO LEARN AND <br> GROW</h6>
                             </div>
                             <P class='text-justify text-secondary'>Embrace continuous learning, adapting to new challenges and opportunities to enhance expertise and value.</P>
                         </div>
