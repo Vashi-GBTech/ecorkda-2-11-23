@@ -375,7 +375,7 @@ body {
     gap: 1rem;
     justify-content: flex-end;
     height: 100vh;
-    margin-block: 6rem 0;
+    /* margin-block: 6rem 0; */
     flex-wrap: wrap;
 }
 

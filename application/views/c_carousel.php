@@ -273,7 +273,7 @@
 
 .description-center {
   position: absolute;
-    top: 42%;
+    top: 35%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -311,9 +311,11 @@
 
     <!-- Central Description -->
     <div class="description-center">
-        <h5 class="text-danger " id="desc-head" ></h5>
-        <h2 class="text-danger mt-3" id="super-head" style="font-weight: 650;" ></h2>
-        <p id="description-text"></p>
+       
+       
+      <div><h5 class="text-danger " id="desc-head" ></h5>
+      <p id="description-text"></p></div>  
+      <h2 class="text-danger mt-4" id="super-head" style="font-weight: 650;" ></h2>
     </div>
 </div>
 
