@@ -220,11 +220,11 @@
                 </li>
 
                 <div class="menu-section">
-                    <li><a href="<?= base_url() ?>task_force_new">Task Force</a></li>
-                    <li><a href="<?= base_url() ?>governance_sub">Governance</a></li>
-                    <li><a href="<?= base_url() ?>capabilities">Capabilities</a></li>
-                    <li><a href="<?= base_url() ?>new_membership">Membership</a></li>
-                    <li><a href="<?= base_url() ?>#needHelp">Contact us</a></li>
+                    <a href="<?= base_url() ?>task_force_new"> <li>Task Force</li></a>
+                    <a href="<?= base_url() ?>governance_sub">   <li>Governance</li></a>
+                    <a href="<?= base_url() ?>capabilities">   <li>Capabilities</li></a>
+                    <a href="<?= base_url() ?>new_membership">  <li>Membership</li></a>
+                    <a href="<?= base_url() ?>#needHelp">  <li>Contact us</li></a>
                 </div>
             </nav>
         </header>
@@ -260,18 +260,34 @@ $(document).ready(function () {
   });
 });
 
-let menuBtn = document.querySelector('#navbarDropdown')
-let menuBtnClicked = false
-menuBtn.onclick = () => {
-    menuBtnClicked = !menuBtnClicked
+let menuBtn = document.querySelector('#navbarDropdown');
+let menuBtnClicked = false;
+
+// Function to handle opening and closing the menu
+menuBtn.onclick = (event) => {
+    event.stopPropagation(); // Prevent click event from bubbling up to the document
+    menuBtnClicked = !menuBtnClicked;
 
     if (menuBtnClicked) {
-        document.querySelector('.menu-section').style.transform = 'translateX(0px)'
+        document.querySelector('.menu-section').style.transform = 'translateX(0px)';
+    } else {
+        document.querySelector('.menu-section').style.transform = 'translateX(400px)';
     }
-    else {
-        document.querySelector('.menu-section').style.transform = 'translateX(400px)'
+};
+
+// Function to handle clicks outside the menu
+document.addEventListener('click', (event) => {
+    let menuSection = document.querySelector('.menu-section');
+    
+    // Check if the click happened outside the menu and the button
+    if (!menuSection.contains(event.target) && !menuBtn.contains(event.target)) {
+        if (menuBtnClicked) {
+            menuBtnClicked = false;
+            menuSection.style.transform = 'translateX(400px)'; // Close the menu
+        }
     }
-}
+});
+
 
 </script>
 </body>
