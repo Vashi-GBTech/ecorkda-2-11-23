@@ -152,7 +152,7 @@
     }
 
     /* For Webkit based browsers (e.g., Chrome, Safari) */
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
         width: 5px;
     }
 
@@ -166,7 +166,7 @@
     ::-webkit-scrollbar-thumb {
         background: crimson;
 
-    }
+    } */
 
     .parent-li.underlineNav {
         text-decoration: underline;
@@ -961,7 +961,7 @@
       $("#message").removeClass("animate-bounce animate-pop");
     }, 1200);
   });
-});
+   });
 
     $('.rocket-icon').click( function(){
         window.location.href='<?= base_url() ?>preliminaryAppForm';

@@ -54,6 +54,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <style>
 
@@ -62,6 +65,11 @@
         flex-direction: column;
         overflow-x: hidden;
     }
+    body {
+        font-family: "Poppins", serif !important;
+        /* font-weight: 500; */
+        font-style: normal;
+        }
 
     .header-container {
         position: fixed;
@@ -75,7 +83,7 @@
         justify-content: flex-end;
         align-items: center;
         gap: 1.25rem;
-        padding: 0.5rem clamp(1rem, 5vw, 3rem);
+        padding: 0.05rem clamp(1rem, 5vw, 3rem);
         background: #dc143c;
     }
     
@@ -98,7 +106,7 @@
         justify-content: space-between;
         /* padding: 12px 24px; */
         position: relative;
-        padding: 1rem clamp(1rem, 5vw, 3rem);
+        padding: .5rem clamp(1rem, 5vw, 1.5rem);
         /* overflow-x: hidden; */
     }
 
@@ -144,16 +152,19 @@
     }
 
     .more-options {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0;
     }
 
     .red-btn {
         background-color: #ffbdc8ba;
-        color: #d83b59;
-        padding: 10px;
-        transition:.3s;
-        border-radius: 10px !important;
+    color: #d83b59;
+    padding: 12px 15px;
+    transition: .3s;
+    border-radius: 10px !important;
+    /* opacity: 0; */
+    font-weight: 600;
+    font-size: .9vw;
         /* opacity: 0; */
     }
 
@@ -168,8 +179,8 @@
 
     .menu-section {
         position: fixed;
-        top: 8.4rem;
-        right: clamp(1rem, 5vw, 3rem);
+        top: 5.4rem;
+        right: clamp(1rem, 5vw, 0rem);
         transform: translateX(400px);
         border-radius: 5px;
         background: #fff;
@@ -199,7 +210,7 @@
             
         </div>
         <header>
-            <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top w-25" ></a>
+            <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top" style="width: 20% !important;" ></a>
 
             <nav>
                 <li class="nav-item d-none d-lg-block active-header">
@@ -219,7 +230,7 @@
                     <span class="fas fa-bars"></span>
                 </li>
 
-                <div class="menu-section">
+                <div class="menu-section shadow">
                     <a href="<?= base_url() ?>task_force_new"> <li>Task Force</li></a>
                     <a href="<?= base_url() ?>governance_sub">   <li>Governance</li></a>
                     <a href="<?= base_url() ?>capabilities">   <li>Capabilities</li></a>

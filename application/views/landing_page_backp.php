@@ -192,7 +192,7 @@ body {
 
 .landing-page-s1 {
     box-sizing: border-box;
-    padding: 0rem var(--pad-lr);
+    padding: 3rem var(--pad-lr);
     /* height: 80dvh; */
     display: flex;
     align-items: unset;
@@ -203,7 +203,6 @@ body {
 
 .landing-page-s1 .left {
     flex: 1;
-    margin-top:2rem;
     /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
@@ -212,7 +211,6 @@ body {
 .landing-page-s1 .left h1 {
     font-size: clamp(2rem, 5vw, 4.5rem);
     color: crimson;
-    margin:0px !important;
 }
 
 .landing-page-s1 .left .heading-span {
@@ -621,7 +619,6 @@ ol.right>li::after {
 .pyramid-heading {
     position: relative;
     display: inline-block;
-    font-weight:600;
 }
 
 .pyramid-heading::after {
@@ -637,8 +634,8 @@ ol.right>li::after {
 }
 
 .pyramid-sub-heading {
-    color: #6a6969;
-    font-size: .9rem;
+    color: #a7a7a7;
+    font-size: small;
 }
 
 .left-scroll-part h3 {
@@ -647,7 +644,7 @@ ol.right>li::after {
 
 }
 
-.left-scroll-part p {
+.left-scroll-part p{
     text-align: justify;
 }
 
@@ -661,9 +658,8 @@ ol.right>li::after {
     height: 50vh;
     overflow: auto;
     /* padding: 10px; */
-    /* scrollbar-width: thin; */
-    /* For Firefox */
-    /* scrollbar-color: transparent transparent; */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; 
 }
 
 .right-unscroll-div {
@@ -674,22 +670,21 @@ ol.right>li::after {
 
 .video-container {
     height: 50vh;
-    display: flex;
-    justify-content: end;
+    display:flex;
+    justify-content:end;
 }
-
 /* For WebKit-based browsers (Chrome, Edge, Safari) */
 .scrollable-content::-webkit-scrollbar {
     width: 5px; /* Makes the scrollbar thin */
 }
 
 .scrollable-content::-webkit-scrollbar-track {
-    background: lightgray; /* Keeps a visible, neutral background for the track */
+    background: transparent; /* Removes the background */
 }
 
 .scrollable-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, darkgray, crimson); /* Adds the gradient to the thumb */
-    border-radius: 10px; /* Rounds the edges of the thumb */
+    background: linear-gradient(to bottom, darkgray, crimson); /* Adds the gradient */
+    border-radius: 10px; /* Rounds the edges */
 }
 
 .scrollable-content::-webkit-scrollbar-thumb:hover {
@@ -698,351 +693,27 @@ ol.right>li::after {
 
 /* Remove start/end arrows */
 .scrollable-content::-webkit-scrollbar-button {
-    display: none !important; /* Hides up/down arrows */
-}
-
-
-/* Ensure flex layout behaves well at all screen sizes */
-.scoped-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    /* Ensures all cards have equal height */
-    flex-wrap: wrap;
-}
-
-.scoped-card-container .col-md-3,
-.scoped-card-container .col-sm-6,
-.scoped-card-container .col-12 {
-    display: flex;
-    /* Make columns flex containers */
-    justify-content: center;
-    /* Center content within the column */
-    padding: 10px;
-    /* Add padding for spacing */
-}
-
-.scoped-card-container .card-wrapper {
-    background: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url('http://localhost/ecorkda/assets/rkda/sqr-cards-bg.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-}
-
-.scoped-card-container .card {
-    flex-grow: 1;
-    /* Make the card grow to fill available space */
-    display: flex;
-    flex-direction: column;
-    /* Ensure content is arranged vertically */
-    align-items: center;
-    justify-content: space-between;
-    /* Distribute content evenly */
-    min-height: 250px;
-    /* Optional: Ensure a minimum height */
-}
-
-.scoped-card-container .card-icon img {
-    width: 30%;
-    /* height: 50px; */
-}
-
-.scoped-card-container .card h3 {
-    font-size: 65%;
-    margin: 15px 0;
-    font-weight: bold;
-    color: #000;
-}
-
-.scoped-card-container .card p {
-    font-size: 80%;
-    color: lightgray;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-.card-inner {
-    width: 95%;
-}
-
-
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .scoped-card-container .col-sm-6 {
-        flex: 0 0 50%;
-        /* On medium screens, two cards per row */
-    }
-}
-
-@media (min-width: 992px) {
-    .scoped-card-container .col-md-3 {
-        flex: 0 0 25%;
-        /* On larger screens, four cards per row */
-    }
-}
-
-@media (max-width: 1200px) {
-    .scoped-card-container .card {
-        min-height: 200px !important;
-    }
-}
-
-@media (max-width: 1000px) {
-    .scoped-card-container .card {
-        min-height: 100px !important;
-    }
-}
-
-@media (max-width: 770px) {
-    .scoped-card-container .col-md-3 {
-        max-width: 33% !important;
-    }
-}
-
-/* Add responsive adjustments */
-@media (max-width: 500px) {
-
-    .scoped-card-container .col-sm-6,
-    .scoped-card-container .col-md-3 {
-        flex: 0 0 100% !important;
-        /* Each card takes full width on smaller screens */
-        max-width: 100% !important;
-
-    }
-
-    .scoped-card-container .card {
-        min-height: 250px !important;
-    }
-}
-
-body {
-    font-size: calc(.5 * (1.5vh + 1.1vw));
-}
-</style>
-<style>
-.responsibility-section {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    /* overflow: auto; */
-    flex-wrap:wrap;
-    justify-content: center;
-    padding: 40px 10px;
-    padding-bottom: 0px;
-}
-
-.content-wrapper {
-    display: flex;
-    width: 100%;
-    max-width: 1304px;
-    align-items: start;
-    gap: 10px 0;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.grid-container {
-    min-width: 240px;
-    width: 1304px;
-}
-
-.grid-row {
-    gap: 20px;
-    display: flex;
-}
-
-.grid-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-bottom: 3rem;
-}
-
-.card-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-start;
-}
-
-.card-wrapper {
-    align-self: stretch;
-    display: flex;
-    min-width: 240px;
-    width: 287px;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-start;
-    margin: auto 0;
-    padding: 10px;
-}
-
-.card {
-    align-self: stretch;
-    display: flex;
-    min-width: 240px;
-    width: 267px;
-    align-items: center;
-    gap: 13px;
-    margin: auto 0;
-}
-
-.border-decoration {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-}
-
-.border-decoration.right {
-    position: absolute;
-    right: 0;
-    z-index: 0;
-}
-
-.border-top {
-    /* height: 4px;
-  border: 4px solid #960808; */
-}
-
-.border-vertical-thick.left {
-    width: 38px;
-    height: 115px;
-    border: 4px solid #960808;
-    border-bottom: none;
-}
-
-.border-vertical-thick.right {
-    width: 38px;
-    height: 115px;
-    border: 4px solid #960808;
-    border-top: none;
-}
-
-.border-vertical-thin.left {
-    width: 1px;
-    height: 112px;
-    border-left: 1px solid #4d4d4d;
-}
-
-.border-vertical-thin.right {
-    width: auto;
-    height: 112px;
-    border-right: 1px solid #4d4d4d;
-}
-
-.border-horizontal {
-    width: 38px;
-    height: 0px;
-    border: 1px solid black;
-}
-
-.content-card {
-    border-radius: 13px;
-    background: #e7c0c0;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    font-family: Poppins, sans-serif;
-    justify-content: center;
-    padding: 16px 0;
-    position: absolute;
-    width: 90%;
-    left: 12px;
-    top: -28px;
-    z-index: 50;
-}
-
-.inner-card {
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    padding: 0px 10px 40px;
-
-}
-
-.card-icon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 70px;
-}
-
-.card-title {
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 13px;
-}
-
-.card-description {
-    color: #4d4d4d;
-    font-size: 10px;
-    font-weight: 300;
-    align-self: stretch;
-    margin-top: 24px;
-}
-
-.image-full {
-    aspect-ratio: 0.92;
-    object-fit: contain;
-    object-position: center;
-    width: 267px;
-    align-self: stretch;
-    min-width: 240px;
-    margin: auto 0;
-}
-
-.red-btn{
-    width: fit-content !important;
-    padding: .7rem 1rem !important;
-    margin-top: .5rem !important;
-    font-weight: 700 !important;
-    font-size: .8rem !important;
-}
-.circle-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.circle-div img{
-    width: 80% !important;
+    display: none; /* Hides up/down arrows */
 }
 </style>
 
-<body class="parent-body">
+<body>
     <?php include_once "navbar.php" ?>
-    <section id="home" style="margin-top: 7rem">
+    <section id="home" style="margin-top: 8rem">
         <div class='landing-page-s1'>
             <div class="left">
                 <div class="top">
-                    <h1 class='' style="line-height: 1.1 !important;"><span class="text-dark heading-span" > Super CA is our </span></h1>
-                    <h1 class='hading-fw mb-0' style="line-height: 1.1 !important;"><span class="text-dark heading-span" ></span>Resolve</h1>
-                    <h1 class='' style="line-height: .9 !important;"><span class="text-dark heading-span" >Rest is Detail</span> </h1>
+                    <h1 class=''><span class="text-dark heading-span"> Super CA is our </span></h1>
+                    <h1 class='hading-fw mb-0'><span class="text-dark heading-span"></span>Resolve</h1>
+                    <h1 class='mb-4 mb-0'><span class="text-dark heading-span">Rest is Detail</span> </h1>
                 </div>
 
                 <div class="bottom">
-                    <p style="font-size: 15px">The network focuses on catering to the needs of listed companies with
+                    <p style="font-size: 18px">The network focuses on catering to the needs of listed companies with
                         global operations seeking high-quality audit and assurance services.</p>
                     <a href="<?= base_url() ?>opinion"
                         class='red-btn  d-flex justify-content-around align-items-center rounded-pill'
-                        style="">
+                        style="width: fit-content; padding: 0.5rem 2rem; margin-top: 3rem">
                         <span>Ask a Question</span>
                     </a>
                 </div>
@@ -1050,7 +721,7 @@ body {
 
             <div class="right" style="color: #212529;"> </div>
         </div>
-        <div class="pt-5 px-5 mt-5">
+        <div class="py-4 px-5">
             <div class="d-flex justify-content-center w-100">
                 <h1 class="text-center mb-4 pyramid-heading">WHY WE'RE THE RIGHT CHOICE</h1>
             </div>
@@ -1058,12 +729,12 @@ body {
                 elevate your journey as a CA. Connect with experts, access powerful AI-driven tools, and streamline
                 financial and governance solutions. Our platform empowers you to grow, scale your services, and deliver
                 exceptional value to clients. This is your key to unlocking success in the CA profession.</p>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mb-4">
                 <a href="#" class='red-btn'>Join SUPER CA</a>
             </div>
-            <img src="<?= base_url() ?>assets/rkda/superca-corp-adv.png" alt="" class='pt-5  mt-5' style="width: -webkit-fill-available;">
+            <img src="<?= base_url() ?>assets/rkda/superca-corp-adv.png" alt="" style="width: -webkit-fill-available;">
         </div>
-        <div class="pt-4 px-5 mt-5">
+        <div class="py-4 px-5">
             <div class="d-flex justify-content-center w-100">
                 <h1 class="text-center mb-4 pyramid-heading">EXPLORE OUR OFFERINGS</h1>
             </div>
@@ -1073,291 +744,325 @@ body {
                 We invite you to Join our SUPER CA Community.</p>
 
             <div class='row justify-content-around mt-5'>
-                <div class="col-md-3 circle-div ">
-                    <img src="<?= base_url() ?>assets/rkda/u-c.png" alt="" style="">
+                <div class="col-md-3 ">
+                    <img src="<?= base_url() ?>assets/rkda/u-c.png" alt="" style="width: -webkit-fill-available;">
                 </div>
-                <div class="col-md-3 circle-div">
-                    <img src="<?= base_url() ?>assets/rkda/n-c.png" alt="" style="">
+                <div class="col-md-3">
+                    <img src="<?= base_url() ?>assets/rkda/n-c.png" alt="" style="width: -webkit-fill-available;">
                 </div>
-                <div class="col-md-3 circle-div">
-                    <img src="<?= base_url() ?>assets/rkda/n2-c.png" alt="" style="">
+                <div class="col-md-3">
+                    <img src="<?= base_url() ?>assets/rkda/n2-c.png" alt="" style="width: -webkit-fill-available;">
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid py-4 px-5 mt-5">
-            <div class="d-flex flex-wrap my-5 ">
-                <div class="col-md-6 px-0 d-flex justify-content-center left-scroll-part">
-                    <div class="px-3 scrollable-content ">
-                        <div>
-                            <h3>Technology</h3>
-                            <p><b>Advanced Analytics for Informed Decisions:</b> Our advisory services leverage
-                                cutting-edge
-                                analytics tools to provide insights that drive smarter business decisions.</p>
-                            <p><b>Secure Digital Platforms:</b> We utilize state-of-the-art cybersecurity measures to
-                                ensure that
-                                your data remains confidential and protected, providing peace of mind in all your
-                                interactions with us.</p>
-                            <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory
-                                tools through
-                                a user-friendly digital portal, designed to make navigating your data and insights
-                                simple
-                                and effective.</p>
-                            <p><b>Customized Tech Solutions:</b>We tailor our technological tools to match your unique
-                                needs,
-                                ensuring that our digital solutions align perfectly with your business goals.</p>
-                        </div>
-                        <div>
-                            <h3>Organize</h3>
-                            <p><b>Advanced Analytics for Informed Decisions: </b>Our advisory services leverage
-                                cutting-edge
-                                analytics tools to provide insights that drive smarter business decisions.</p>
-                            <p><b>Secure Digital Platforms:</b> We utilize state-of-the-art cybersecurity measures to
-                                ensure that
-                                your data remains confidential and protected, providing peace of mind in all your
-                                interactions with us.</p>
-                            <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory
-                                tools through
-                                a user-friendly digital portal, designed to make navigating your data and insights
-                                simple
-                                and effective.</p>
-                            <p><b>Customized Tech Solutions:</b> We tailor our technological tools to match your unique
-                                needs,
-                                ensuring that our digital solutions align perfectly with your business goals.</p>
-                        </div>
-                        <div>
-                            <h3>Review</h3>
-                            <p><b>Advanced Analytics for Informed Decisions:</b> Our advisory services leverage
-                                cutting-edge
-                                analytics tools to provide insights that drive smarter business decisions.</p>
-                            <p><b>Secure Digital Platforms: </b>We utilize state-of-the-art cybersecurity measures to
-                                ensure that
-                                your data remains confidential and protected, providing peace of mind in all your
-                                interactions with us.</p>
-                            <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory
-                                tools through
-                                a user-friendly digital portal, designed to make navigating your data and insights
-                                simple
-                                and effective.</p>
-                            <p><b>Customized Tech Solutions:</b> We tailor our technological tools to match your unique
-                                needs,
-                                ensuring that our digital solutions align perfectly with your business goals.</p>
-                        </div>
+        <div class="container-fluid py-4 px-5">
+        <div class="d-flex flex-wrap my-5 ">
+            <div class="col-md-6 px-0 d-flex justify-content-center left-scroll-part">
+                <div class="scrollable-content ">
+                    <div>
+                        <h3>Technology</h3>
+                        <p><b>Advanced Analytics for Informed Decisions:</b> Our advisory services leverage cutting-edge
+                            analytics tools to provide insights that drive smarter business decisions.</p>
+                        <p><b>Secure Digital Platforms:</b> We utilize state-of-the-art cybersecurity measures to ensure that
+                            your data remains confidential and protected, providing peace of mind in all your
+                            interactions with us.</p>
+                        <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory tools through
+                            a user-friendly digital portal, designed to make navigating your data and insights simple
+                            and effective.</p>
+                        <p><b>Customized Tech Solutions:</b>We tailor our technological tools to match your unique needs,
+                            ensuring that our digital solutions align perfectly with your business goals.</p>
                     </div>
-                </div>
-                <div class="col-md-6 px-0 right-unscroll-div">
-                    <div class="video-container">
-                        <video controls width="100%" height="100%" style="    width: fit-content;">
-                            <source src="<?= base_url() ?>assets/rkda/videos/vid-1.mp4" type="video/mp4">
-                        </video>
+                    <div>
+                        <h3>Organize</h3>
+                        <p><b>Advanced Analytics for Informed Decisions: </b>Our advisory services leverage cutting-edge
+                            analytics tools to provide insights that drive smarter business decisions.</p>
+                        <p><b>Secure Digital Platforms:</b> We utilize state-of-the-art cybersecurity measures to ensure that
+                            your data remains confidential and protected, providing peace of mind in all your
+                            interactions with us.</p>
+                        <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory tools through
+                            a user-friendly digital portal, designed to make navigating your data and insights simple
+                            and effective.</p>
+                        <p><b>Customized Tech Solutions:</b> We tailor our technological tools to match your unique needs,
+                            ensuring that our digital solutions align perfectly with your business goals.</p>
+                    </div>
+                    <div>
+                        <h3>Review</h3>
+                        <p><b>Advanced Analytics for Informed Decisions:</b> Our advisory services leverage cutting-edge
+                            analytics tools to provide insights that drive smarter business decisions.</p>
+                        <p><b>Secure Digital Platforms: </b>We utilize state-of-the-art cybersecurity measures to ensure that
+                            your data remains confidential and protected, providing peace of mind in all your
+                            interactions with us.</p>
+                        <p><b>Streamlined Client Portals:</b> Access your reports, recommendations, and advisory tools through
+                            a user-friendly digital portal, designed to make navigating your data and insights simple
+                            and effective.</p>
+                        <p><b>Customized Tech Solutions:</b> We tailor our technological tools to match your unique needs,
+                            ensuring that our digital solutions align perfectly with your business goals.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid py-4 px-5 mt-5">
-            <div class="d-flex justify-content-center w-100">
-                <h1 class="text-center mb-4 pyramid-heading">HOW WE ACHIEVE IT</h1>
+            <div class="col-md-6 px-0 right-unscroll-div">
+                <div class="video-container">
+                    <video controls width="100%" height="100%" style="    width: fit-content;">
+                        <source src="<?= base_url() ?>assets/rkda/videos/vid-1.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <p class="text-justify mb-3 pyramid-sub-heading">Our Corporate Finance offerings encompass a comprehensive
-                suite of services designed to navigate the complex landscape of mergers and acquisitions (M&A). We
-                specialize in detailed valuation processes and strategic M&A planning, ensuring that every transaction
-                is meticulously structured to achieve optimal outcomes.</p>
         </div>
-        <!-- <div class="container">
-            <div class="row scoped-card-container">
-                <div class="col-md-3">
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="card-inner " >
-                            <div class="card-icon">
-                                <img src="<?= base_url() ?>assets/rkda/recycling.png" alt="Icon">
-                            </div>
-                            <h3>RESPONSIBILITY TOWARD PROFESSION</h3>
-                            <p>Maintain integrity, honesty, and high standards, fostering trust and credibility within the network.</p>
-                        </div>
-                        </div>
+        </div>
+
+
+
+        <!-- <div class='landing-page-s1'>
+            <div class="left">
+              <div class="top">
+                <h1 class='hading-fw'>Where CAs </h1>
+                <h1 class='mb-4 hading-fw'> Meet Excellence</h1>
+              </div>
+
+              <div class="bottom">
+                <p style="font-size: 18px">The network focuses on catering to the needs of listed companies with global operations seeking high-quality audit and assurance services.</p>
+                <a href="<?= base_url() ?>opinion" class='red-btn  d-flex justify-content-around align-items-center rounded-pill' style="width: fit-content; padding: 0.5rem 2rem; margin-top: 3rem" >
+                  <span>Ask a Question</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="right" href="<?= base_url('experts') ?>">
+              <div class="sections"></div>
+            </a>
+        </div> -->
+
+        <!-- <div class='my-1'>
+            <div class="carousel-container">
+                <div id="owl-carousel" class="owl-carousel">
+                    <div class="item">
+                        <a href="https://youtu.be/hh0Iwt4lwa0" data-lity>
+                            <iframe src="https://www.youtube.com/embed/hh0Iwt4lwa0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/XrT2Wfsk7gA" data-lity>
+                            <iframe src="https://www.youtube.com/embed/XrT2Wfsk7gA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/ocPXwbIzNoM" data-lity>
+                            <iframe src="https://www.youtube.com/embed/ocPXwbIzNoM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/C0OqyOU4B54" data-lity>
+                            <iframe src="https://www.youtube.com/embed/C0OqyOU4B54" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/JUBF1cZG7kA" data-lity>
+                            <iframe src="https://www.youtube.com/embed/JUBF1cZG7kA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/oNZbmJisIyw" data-lity>
+                            <iframe src="https://www.youtube.com/embed/oNZbmJisIyw" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://youtu.be/hh0Iwt4lwa0" data-lity>
+                            <iframe src="https://www.youtube.com/embed/hh0Iwt4lwa0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card-wrapper">
-                        <div class="card">
-                        <div class="card-inner " >
-                            <div class="card-icon">
-                                <img src="<?= base_url() ?>assets/rkda/recycling.png" alt="Icon">
-                            </div>
-                            <h3>DESIRE TO LEARN AND GROW</h3>
-                            <p>Embrace continuous learning, adapting to new challenges and opportunities to enhance expertise and value.</p>
-                        </div>
-                        </div>
+            </div>
+        </div> -->
+    </section>
+
+    <section id="about" class='my-5'>
+        <div class="about-section mt-5">
+            <div class="col-md-7 col-sm-12 d-flex justify-content-end">
+                <div class="col-md-11">
+                    <h4 class='mb-4' style="font-weight: 600;">WHY JOIN US? </h4>
+                    <p class='text-justify' style='color: #726b6b;text-align:justify'><span
+                            class='red-letter'>RESOLVE</span>, our AI-driven platform empowers Chartered Accountants to
+                        be true powerhouse for growth partnerships of their client. Enhance <span
+                            class='red-letter'>C</span>apacity by automating tasks, <span
+                            class='red-letter'>C</span>onnecting with experts and enabling <span
+                            class='red-letter'>C</span>larity to build their practice is our promise. We invite you to
+                        Join our <span class='red-letter'>SUPER CA</span> Community.</p>
+                    <div class='d-flex justify-content-end'>
+                        <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card-wrapper">
-                        <div class="card">
-                        <div class="card-inner " >
-                            <div class="card-icon">
-                                <img src="<?= base_url() ?>assets/rkda/recycling.png" alt="Icon">
-                            </div>
-                            <h3>DILIGENCE IN WORK ETHIC AND SERVICE</h3>
-                            <p>Consistently deliver excellence through dedication, ensuring clients' needs are met with thorough attention and care.</p>
-                        </div>
-                        </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+                <!-- <div class="col-md-8"> -->
+                <!-- <img src="<?= base_url() ?>assets/rkda/about-rkda.png" alt="" width='100%'> -->
+                <?php include_once "c_carousel.php" ?>
+                <!-- </div> -->
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+
+        <!-- <div class='row align-items-center py-0 my-0' style="margin-top: 2rem !important">
+            <div class="col-md-8 col-sm-12 d-flex justify-content-end">
+                <div class="col-md-11 px-2">
+                    <h4 class='mb-3' style="font-weight: 600;">HOW IT WORKS? </h4>
+                    <p class=' text-justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
+                        onboarding process, helping you craft a stellar profile and co-create a personalized plan for
+                        success. Sharpen your skills with top-notch training and resources, then dive into a vibrant
+                        community of clients and members, ready to collaborate and build your business. Finally, your
+                        expertise takes center stage. Contribute through exciting projects, strategic investments, or
+                        even by growing alongside our company.</p>
+                    <div class='d-flex justify-content-end'>
+                        <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a></div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-wrapper">
-                        <div class="card">
-                        <div class="card-inner " >
-                            <div class="card-icon">
-                                <img src="<?= base_url() ?>assets/rkda/recycling.png" alt="Icon">
-                            </div>
-                            <h3>ACCOUNTABILITY TO STAKEHOLDERS AND SOCIETY</h3>
-                            <p>Act with transparency and responsibility, ensuring actions positively impact both stakeholders and the broader community.</p>
-                        </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+                <div class="col-md-8 d-flex justify-content-center align-items-center">
+                    <img src="<?= base_url() ?>assets/rkda/howittake.jpg" alt="" width='70%'>
                 </div>
             </div>
         </div> -->
 
 
+        <div class='about-section-2' style="margin-top: 2rem !important; flex-direction: row-reverse">
+            <div class="about-left">
+                <h4 class='mb-3' style="font-weight: 600;text-align: center;">Register with us</h4>
+                <!-- <p style='text-align: justify' style='color: #726b6b;'>Register with us. We'll guide you through a smooth
+                    onboarding process, helping you craft a stellar profile and co-create a personalized plan for
+                    success. Sharpen your skills with top-notch training and resources, then dive into a vibrant
+                    community of clients and members, ready to collaborate and build your business. Finally, your
+                    expertise takes center stage. Contribute through exciting projects, strategic investments, or
+                    even by growing alongside our company.</p> -->
+                <ol class="alternate p-0 mx-0 w-100">
+                    <!--[left]/alternate/right-->
+                    <li style="--accent-color: #d53140">Onboard with personalized profile setup</li>
+                    <li style="--accent-color: #d53140">Access RESOLVE for AI tools, automation, and resources</li>
+                    <li style="--accent-color: #d53140">Connect with clients and collaborate with peers</li>
+                    <!-- <li style="--accent-color: #6b4495">Lorem Ipsum</li>
+                        <li style="--accent-color: #229ab5">Lorem Ipsum</li> -->
+                </ol>
+                <div class='d-flex justify-content-end'>
+                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Become a SuperCA ></a>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="<?= base_url() ?>assets/rkda/superca-corp-adv.png" alt="">
+            </div>
+        </div>
+
+
+        <div class='py-5'>
+            <img src="<?= base_url() ?>assets/rkda/work-flow-3.png" alt="" width='100%'>
+        </div>
+
+
+        <div class='about-section-3 ' style="margin-top: 2rem !important">
+            <div class="about-left">
+                <h4 class='mb-3' style="font-weight: 600;">WHAT IT TAKES? </h4>
+                <p style='text-align: justify' style='color: #726b6b;'>Our Corporate Finance offerings encompass a
+                    comprehensive suite of services designed to navigate the complex landscape of mergers and
+                    acquisitions (M&A). We specialize in detailed valuation processes and strategic M&A planning,
+                    ensuring that every transaction is meticulously structured to achieve optimal outcomes.</p>
+                <div class='d-flex justify-content-end'>
+                    <a href="rkda_login" class='red-btn' style="padding: .5rem 1rem">Join Us ></a>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="<?= base_url() ?>assets/rkda/whatittakes.jpg" alt="">
+            </div>
+        </div>
 
 
 
-    </section>
-    <section class="responsibility-section">
-        <div class="content-wrapper">
-            <div class="grid-container">
-                <div class="row">
-                    <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
-                                    <div class="border-decoration left">
-                                        <div class="border-top left"></div>
-                                        <div class="border-vertical-thick left"></div>
-                                        <div class="border-vertical-thin left"></div>
-                                        <div class="border-horizontal left"></div>
-                                    </div>
-                                    <div class="content-card">
-                                        <div class="inner-card">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
-                                                alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
-                                        </div>
-                                    </div>
-                                    <div class="border-decoration right">
-                                        <div class="border-horizontal right"></div>
-                                        <div class="border-vertical-thin right"></div>
-                                        <div class="border-vertical-thick right"></div>
-                                        <div class="border-top right"></div>
-                                    </div>
-                                </div>
+        <div class="cards-container">
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/PAE.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center  mb-2 poppins-medium'>RESPONSIBILITY TOWARDS PROFESSION</h6>
                             </div>
+                            <P class='text-justify text-secondary'>Maintain integrity, honesty, and high standards,
+                                fostering trust and credibility within the network.</P>
                         </div>
                     </div>
-                    <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
-                                    <div class="border-decoration left">
-                                        <div class="border-top left"></div>
-                                        <div class="border-vertical-thick left"></div>
-                                        <div class="border-vertical-thin left"></div>
-                                        <div class="border-horizontal left"></div>
-                                    </div>
-                                    <div class="content-card">
-                                        <div class="inner-card">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
-                                                alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
-                                        </div>
-                                    </div>
-                                    <div class="border-decoration right">
-                                        <div class="border-horizontal right"></div>
-                                        <div class="border-vertical-thin right"></div>
-                                        <div class="border-vertical-thick right"></div>
-                                        <div class="border-top right"></div>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/WTC.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center   mb-2 poppins-medium'>DESIRE TO LEARN AND <br> GROW</h6>
                             </div>
+                            <P class='text-justify text-secondary'>Embrace continuous learning, adapting to new
+                                challenges and opportunities to enhance expertise and value.</P>
                         </div>
                     </div>
-                    <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
-                                    <div class="border-decoration left">
-                                        <div class="border-top left"></div>
-                                        <div class="border-vertical-thick left"></div>
-                                        <div class="border-vertical-thin left"></div>
-                                        <div class="border-horizontal left"></div>
-                                    </div>
-                                    <div class="content-card">
-                                        <div class="inner-card">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
-                                                alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
-                                        </div>
-                                    </div>
-                                    <div class="border-decoration right">
-                                        <div class="border-horizontal right"></div>
-                                        <div class="border-vertical-thin right"></div>
-                                        <div class="border-vertical-thick right"></div>
-                                        <div class="border-top right"></div>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/EM.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center   mb-2 poppins-medium text-uppercase'>Diligence in work ethic &
+                                    service</h6>
                             </div>
+                            <P class='text-justify text-secondary'>Consistently deliver excellence through dedication,
+                                ensuring clients' needs are met with thorough attention and care.</P>
                         </div>
                     </div>
-                    <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
-                                    <div class="border-decoration left">
-                                        <div class="border-top left"></div>
-                                        <div class="border-vertical-thick left"></div>
-                                        <div class="border-vertical-thin left"></div>
-                                        <div class="border-horizontal left"></div>
-                                    </div>
-                                    <div class="content-card">
-                                        <div class="inner-card">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
-                                                alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
-                                        </div>
-                                    </div>
-                                    <div class="border-decoration right">
-                                        <div class="border-horizontal right"></div>
-                                        <div class="border-vertical-thin right"></div>
-                                        <div class="border-vertical-thick right"></div>
-                                        <div class="border-top right"></div>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="abt-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class='card-img-abt-div'>
+                            <img src="<?= base_url() ?>assets/rkda/right-check-1.png" class='card-img-abt' alt="">
+                        </div>
+                        <div>
+                            <div class='d-flex justify-content-center'>
+                                <h6 class='text-center   mb-2 poppins-medium text-uppercase'>Accountability to
+                                    stakeholders & society</h6>
                             </div>
+                            <P class='text-justify text-secondary'>Act with transparency and responsibility, ensuring
+                                actions positively impact both stakeholders and the broader community.</P>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <?php include_once "merchandise.php" ?>
     </section>
-
-
-
-
-    <?php include_once "merchandise.php" ?>
-
-
-
-
 
 
     <section id='needHelp' class="contact-section" style=''>
@@ -1788,43 +1493,6 @@ body {
 
     //   prevRandomIndex = randomIndex
     // }, Math.random()*1000 + 700)
-
-
-
-
-    $(document).ready(function() {
-        // Function to adjust font size
-        function adjustFontSizeInEm() {
-            const baseFontSize = 16; // Assume the base font size of the root element is 16px
-            let screenWidth = $(window).width(); // Get the current screen width
-            let emSize = Math.max(0.75, Math.min(1.5, screenWidth / 1600));
-            // Adjust range: 0.75em (min) to 1.5em (max)
-
-            $('py-4.px-5 p').css('font-size', emSize + 'em'); // Apply the calculated font size
-            $('h3').css('font-size', emSize + 'em'); // Apply the calculated font size
-        }
-
-        // Call the function on page load
-        adjustFontSizeInEm();
-
-        // Adjust font size on window resize
-        $(window).resize(function() {
-            adjustFontSizeInEm();
-        });
-
-    });
-
-    $(document).ready(function () {
-        const parentArea = $("html"); // Replace with your parent area selector
-        const scrollableContent = $(".scrollable-content");
-         console.log(parentArea,scrollableContent,'parentArea');
-         
-        parentArea.on("scroll", function () {
-            console.log(parentArea,'parentArea 2');
-            scrollableContent.scrollTop(0); // Reset the scrollable area to the top
-        });
-    });
-
     </script>
 
 </body>
