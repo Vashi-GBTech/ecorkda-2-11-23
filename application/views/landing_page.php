@@ -997,7 +997,10 @@ body {
     font-size: 10px;
     font-weight: 300;
     align-self: stretch;
-    margin-top: 24px;
+    /* margin-top: 24px; */
+    text-align: justify;
+    word-spacing: -2px;
+
 }
 
 .image-full {
@@ -1120,8 +1123,11 @@ body {
     width: 100%;
 }
 
+.responsibility-section .card-title{
 
-@media screen and (min-height: 580px) and (max-height: 800px) {
+    height:50px;
+}
+@media screen and (min-height: 580px) and (max-height: 1000px) {
   /* Styles for screens with height between 590px and 800px */
   /* Your styles for screens taller than 590px */
   video{
@@ -1361,7 +1367,7 @@ body {
                                         <div class="inner-card">
                                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
                                                 alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
+                                            <h3 class="card-title mb-0">RESPONSIBILITY TOWARD PROFESSSION</h3>
                                             <p class="card-description">Maintain integrity, honesty, and high standards,
                                                 fostering trust and credibility within the network.</p>
                                         </div>
