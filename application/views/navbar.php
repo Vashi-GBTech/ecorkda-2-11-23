@@ -173,8 +173,15 @@
         background-color: crimson;
         /* border-color: #df2c2c; */
     }
-    .active-header a {
-        border-bottom: 2px solid #000;
+    .active-header {
+        display: flex;
+        justify-content:center;
+
+    }
+    .active-underline{
+        width: 40%;
+        height: 2px;
+        background:black;
     }
 
     .menu-section {
@@ -199,7 +206,11 @@
     .menu-section li:hover {
         background: #0001;
     }
+   .global-sub-font{
+     font-size: 15px !important;color: #6a6969;
+     word-spacing:-2px;
 
+   }
 
 </style>
 <body class=''  >
@@ -213,21 +224,26 @@
             <a class="logo-img" href="<?= base_url() ?>landing_page"><img src="<?= base_url() ?>assets/rkda/rkda-new-logo.png" alt="logo" class="d-inline-block align-top" style="width: 20% !important;" ></a>
 
             <nav>
-                <li class="nav-item d-none d-lg-block active-header">
+                <li class="nav-item d-none d-lg-block ">
                     <a class="nav-link"  href="<?= base_url() ?>landing_page">Home</a>
+                    <div class="active-header"> <div class='active-underline'></div></div>
                 </li>
                 <li class="nav-item d-none d-lg-block">
                     <a class="nav-link" href="<?= base_url() ?>#about">About Us</a>
+                    <div class="active-header"> <div class=''></div></div>
                 </li>
                 <li class="nav-item d-none d-lg-block" id="loginSuperCA">
                     <a class="nav-link" href="<?= base_url() ?>superCa">SuperCA</a>
+                    <div class="active-header"> <div class=''></div></div>
                 </li>
                 <li class="nav-item d-none d-lg-block" id="loginSignupLink">
                     <a class="nav-link" href="<?= base_url() ?>rkda_login">Login/Signup</a>
+                    <div class="active-header"> <div class=''></div></div>
                 </li>
 
                 <li class="nav-item more-options" id="navbarDropdown">
                     <span class="fas fa-bars"></span>
+                    <div class="active-header"> <div class=''></div></div>
                 </li>
 
                 <div class="menu-section shadow">
@@ -250,26 +266,31 @@
 
 <script>
 $(document).ready(function () {
-  var path = window.location.pathname;
+    var path = window.location.pathname; // Get the current pathname
+    var lastSegment = path.substring(path.lastIndexOf('/') + 1); // Extract the last segment
 
-  var lastSegment = path.substring(path.lastIndexOf('/') + 1);
+    // Iterate through all links with the 'nav-link' class
+    $('a.nav-link').each(function () {
+        var href = $(this).attr('href'); // Get the href attribute of the link
+        var linkSegment = href.substring(href.lastIndexOf('/') + 1); // Extract the last segment of the href
 
-  $('a.nav-link').each(function () {
-    var href = $(this).attr('href');
-    var linkSegment = href.substring(href.lastIndexOf('/') + 1);
-     console.log(lastSegment,linkSegment);
-    if (lastSegment === linkSegment) {
-      $(this).parent().addClass('active-header');
-    } else {
-      $(this).parent().removeClass('active-header');
-    }
-  });
+        if (lastSegment === linkSegment) {
+            // Add 'active-underline' class to the nested div inside 'active-header'
+            $(this).next('.active-header').find('div').addClass('active-underline');
+        } else {
+            // Remove 'active-underline' class from other nested divs
+            $(this).next('.active-header').find('div').removeClass('active-underline');
+        }
+    });
 
-  $('a.nav-link').on('click', function () {
-    $('a.nav-link').parent().removeClass('active-header');
-    $(this).parent().addClass('active-header');
-  });
+    // Optional: Handle click events to update dynamically
+    $('a.nav-link').on('click', function () {
+        $('a.nav-link').next('.active-header').find('div').removeClass('active-underline');
+        $(this).next('.active-header').find('div').addClass('active-underline');
+    });
 });
+
+
 
 let menuBtn = document.querySelector('#navbarDropdown');
 let menuBtnClicked = false;

@@ -116,9 +116,10 @@ body{
 .password-wrapper .toggle-password {
     position: absolute;
     right: 10px;
-    top: 69%;
+    top: 75%;
     transform: translateY(-50%);
     cursor: pointer;
+    font-size: .8rem;
 }
 .toggle-password svg {
     display: none;
@@ -151,10 +152,25 @@ body{
 .right img {
     width: clamp(35vw, 400px, 100%);
 }
+input::placeholder {
+      font-size: .8rem; /* Adjust the font size */;
+     }
+     .form-signin .small{
+        font-size:70%;
+        font-weight: 600;
+     }
+     .form-signin .form-group{
+        margin-bottom:.3rem !important;
+     }
+     .form-signin label{
+        margin-bottom:.1rem !important;
+     }
+
 </style>
+
 <?php include_once "navbar.php" ?>
 <body>
-<section id='signin'  style="margin-top: 8.5rem;">
+<section id='signin'  style="margin-top: 6.5rem;">
     <div style='display: flex; flex-direction: row-reverse; flex-wrap: wrap; gap: 1rem' >
         
         <div class="right">
@@ -164,7 +180,7 @@ body{
             <div class="left">
                 <div class="top">
                     <h4 class=' text-dark '>Welcome Back, </h4>
-                    <h6 class='  text-dark'>Connect & Expand Your Practice Worldwide.</h6>
+                    <h6 class='  text-dark' style='font-weight: 300;'>Connect & Expand Your Practice Worldwide.</h6>
                 </div>
 
                 <form class="form-signin">
@@ -177,20 +193,21 @@ body{
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Enter your password">
                             <span class="toggle-password">
-                                <i class="fa fa-eye"></i>
+                                <i class="fa fa-eye-slash"></i>
                             </span>
                         </div>
                         <div class="options d-flex justify-content-between ">
-                        <div >
-                            <input type="checkbox">  <label class=""> Remember me</label>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox"  name="rememberMe" id="rememberMe"  >
+                              <label class="small mb-0 ml-1" for="rememberMe"> Remember me</label>
                         </div> 
-                        <a href="#" class="text-dark">Forgot Password?</a>
+                        <a href="#" class="text-dark small">Forgot Password?</a>
                     </div>
     
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-sm w-50 mt-3 py-2 login-btn" type="submit">LOGIN</button>
                     </div> 
-                    <p class="account-signup mt-2">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
+                    <p class="account-signup mt-2 small">Don't have an account? <a href="<?= base_url() ?>signUp">Sign up</a>
                 </form>
                 <!-- <div class='d-flex justify-content-center'>
                     <div class='col-md-7'>
@@ -259,10 +276,10 @@ body{
                 let icon = $(this).find("i");
                 if (input.attr("type") === "password") {
                     input.attr("type", "text");
-                    icon.removeClass("fa-eye").addClass("fa-eye-slash");
+                    icon.removeClass("fa-eye-slash").addClass("fa-eye");
                 } else {
                     input.attr("type", "password");
-                    icon.removeClass("fa-eye-slash").addClass("fa-eye");
+                    icon.removeClass("fa-eye").addClass("fa-eye-slash");
                 }
             });
         });

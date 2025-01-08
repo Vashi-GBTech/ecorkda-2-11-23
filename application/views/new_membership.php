@@ -19,7 +19,7 @@
         .sect {
             padding: 1rem clamp(1rem, 5vw, 3rem);
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column; */
             gap: 2rem;
         }
 
@@ -136,6 +136,45 @@
             color: #000
         }
 
+        /* explore list */
+        .explore-list {
+            padding: 1.5rem;
+            background: #EEEEEE;;
+            border-radius: 10px;
+            min-width: 250px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border: 1px solid #0006;
+        }
+        .explore-list li {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: .5rem;  
+            font-size: 13px;
+            color: #000;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        
+        .explore-list li:hover, .explore-list li.active {
+            color: #C61431;
+        }
+
+        .arrow-icon {
+            height: 16px;
+            aspect-ratio: 39/26;
+            background: url("<?= base_url() ?>assets/images/arrow-bold-right.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+
     </style>
 </head>
 
@@ -145,8 +184,8 @@
 <body>
     <?php include_once "navbar.php" ?>
 
-    <div class="sect" style="margin-top: 8rem">
-        <div class="title clip">Association Process</div>
+    <div class="sect d-flex justify-content-center" style="margin-top: 8rem">
+        <div class="col-md-8"> <div class="title clip">Association Process</div>
         <div class="cards">
             <div class="drop-card" style="margin-top: 0px">
                 <span>
@@ -206,12 +245,106 @@
             </ul>
         </div>
     </div>
-
+    <div class="col-md-4"><div class="explore-list"></div></div>
+       
+    </div>
+    
     
     <?php include_once "new_footer.php" ?>
 
     <script>
         governance_js.membership_process()
+
+
+        const GovernanceData = {
+            "Governing_Board" : {
+                title: "Governing Board",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/QDS.php" ?>`,
+            },
+            "Membership_process" : {
+                title: "Membership process",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/MP.php" ?>`,
+                script: governance_js.membership_process
+            },
+            "Quality_Standards" : {
+                title: "Quality Standards",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/QS.php" ?>`,
+            },
+            "Self_inspection_and_Interoffice_Review" : {
+                title: "Self inspection and Interoffice Review",
+                sub: "",
+                restricted: true,
+                content: ``,
+            },
+            "Service_Portfolio" : {
+                title: "Service Portfolio",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/SP.php" ?>`,
+            },
+            "Technical_Standards" : {
+                title: "Technical Standards",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/TS.php" ?>`,
+            },
+            "Transfer_Pricing" : {
+                title: "Transfer Pricing",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/TP.php" ?>`,
+            },
+            "IT_Working_instructions" : {
+                title: "IT Working instructions",
+                sub: "",
+                restricted: true,
+                content: ``,
+            },
+            "Training_Capabilities_workshop" : {
+                title: "Training Capabilities workshop",
+                sub: "",
+                restricted: true,
+                content: ``,
+            },
+            "Audit" : {
+                title: "Audit",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/TS_Audit.php" ?>`,
+                hide: true
+            },
+            "Tax_Accounting" : {
+                title: "Tax Accounting",
+                sub: "",
+                content: `<?php include_once "governance_sub_pages/TS_Tax.php" ?>`,
+                hide: true
+            },
+        }
+
+        let exploreLi = document.querySelectorAll('.explore-list li')
+        window.onload = () => {
+            // adding explore list based on the data array
+            let exploreList = document.querySelector('.explore-list')
+            for (const key in GovernanceData) {
+                if (GovernanceData[key].hide) continue
+
+                const li = document.createElement('li')
+                li.setAttribute('data-name', key)
+                li.style.whiteSpace = 'wrap'
+                li.innerHTML = `<div class="arrow-icon"></div>${GovernanceData[key].title}`
+                li.onclick = () => {
+                    if (GovernanceData[key].restricted) return location.href = "<?= base_url() ?>onlyForMembers"
+                    location.replace(`<?= base_url() ?>governance_sub/#${key}`)
+                    document.body.scrollTop = 0
+                    document.documentElement.scrollTop = 0
+                    updateContent()
+                }
+
+                exploreList.appendChild(li)
+            }
+
+            exploreLi = document.querySelectorAll('.explore-list li')
+            updateContent()
+        }
     </script>
 </body>
 </html>

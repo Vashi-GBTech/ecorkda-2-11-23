@@ -259,7 +259,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                             Transform your financial landscape with our AI-based accounting services. Harness
                             cutting-edge technology for precise record-keeping, ensuring accuracy and efficiency.
                             Elevate your financial management with innovative solutions tailored for modern businesses.
@@ -284,7 +284,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                             Elevate your business confidence with our auditing and assurance services. Uncover insights,
                             mitigate risks, and ensure regulatory compliance. Our meticulous capability and leverage of
                             technology empowers informed decisions, safeguarding your financial integrity and fostering
@@ -312,7 +312,7 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                             We recognize that many businesses encounter challenges in talent retention and securing
                             funding in later stages due to mismatches in their capital structure and entity type with
                             the envisioned business plan. Our ESOP and Capital Structure Advisory services are designed
@@ -339,7 +339,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                             In the world of AI, business doesnt use technology, but technology is business, at the same
                             time the human touch of the story of any business is critical to engage various stake
                             holders or raise resources, with understanding of business , technology and finance we help
@@ -369,7 +369,7 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                             World is responding to growing ESG (Environmental, Social, and Governance) and
                             sustainability concerns with strict regulatory measures. These include assistance in
                             End-to-End ESG Data management & prepare , CBAM Reports, GRI , TCFD and Business
@@ -395,7 +395,7 @@
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
 
                             "Our tax advisory services offer comprehensive guidance on tax strategies, compliance, and
                             regulations. We navigate complexities, ensuring your business meets all obligations while

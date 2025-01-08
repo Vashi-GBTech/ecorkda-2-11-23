@@ -837,7 +837,7 @@ body {
     /* overflow: auto; */
     flex-wrap:wrap;
     justify-content: center;
-    padding: 40px 10px;
+    padding: 40px 90px;
     padding-bottom: 0px;
 }
 
@@ -973,6 +973,7 @@ body {
     overflow: hidden;
     align-items: center;
     padding: 0px 10px 40px;
+    height: 250px;
 
 }
 
@@ -1024,6 +1025,110 @@ body {
 .circle-div img{
     width: 80% !important;
 }
+
+.equal-height-cards {
+    display: flex;
+  }
+  .equal-height-cards .card {
+    flex: 1;
+  }
+
+
+/* Initial state of the underline */
+.scaleFromCenter::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 35%;
+  width: 30%;
+  height: 0.1em;
+  background-color: #d53140;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 900ms ease, opacity 900ms ease;
+}
+
+/* When the element is in view */
+.scaleFromCenter.in-view::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+
+
+/* circless */
+.circle-content {
+    position: relative;
+    text-align: center; 
+    display:flex;
+    justify-content:center;
+}
+
+.circle-content img {
+    display: block;
+    width: 100%;
+    height: auto; /* Ensures responsive design */
+}
+
+.circle-content p {
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: 0;
+}
+.circle-div {
+   display:flex;
+   justify-content:center;
+} 
+
+
+.threeC-text {
+    display: inline-block;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    visibility: hidden; /* Hide text initially */
+    transition: width 2s ease; 
+}
+
+/* Typing animation */
+.threeC-text.typing {
+    visibility: visible; /* Make the text visible when typing */
+    width: 100%; /* Gradually expand the width */
+    animation: blink 0.8s step-end infinite; /* Optional cursor blink */
+}
+
+
+
+/* Cursor blink effect */
+@keyframes blink {
+    from {
+        border-right-color: #d53140;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+.threeC-text.typed{
+    visibility: visible; /* Make the text visible when typing */
+    width: 100%;
+}
+
+
+@media screen and (min-height: 580px) and (max-height: 800px) {
+  /* Styles for screens with height between 590px and 800px */
+  /* Your styles for screens taller than 590px */
+  video{
+   width: 90% !important;
+  }
+}
+
 </style>
 
 <body class="parent-body">
@@ -1038,7 +1143,7 @@ body {
                 </div>
 
                 <div class="bottom">
-                    <p style="font-size: 15px">The network focuses on catering to the needs of listed companies with
+                    <p style="font-size: 15px;color: #6a6969;">The network focuses on catering to the needs of listed companies with
                         global operations seeking high-quality audit and assurance services.</p>
                     <a href="<?= base_url() ?>opinion"
                         class='red-btn  d-flex justify-content-around align-items-center rounded-pill'
@@ -1052,7 +1157,7 @@ body {
         </div>
         <div class="pt-5 px-5 mt-5">
             <div class="d-flex justify-content-center w-100">
-                <h1 class="text-center mb-4 pyramid-heading">WHY WE'RE THE RIGHT CHOICE</h1>
+                <h1 class="text-center mb-4 pyramid-heading scaleFromCenter">WHY WE'RE THE RIGHT CHOICE</h1>
             </div>
             <p class="text-justify mb-3 pyramid-sub-heading">Join us and unlock a world of opportunities designed to
                 elevate your journey as a CA. Connect with experts, access powerful AI-driven tools, and streamline
@@ -1065,24 +1170,37 @@ body {
         </div>
         <div class="pt-4 px-5 mt-5">
             <div class="d-flex justify-content-center w-100">
-                <h1 class="text-center mb-4 pyramid-heading">EXPLORE OUR OFFERINGS</h1>
+                <h1 class="text-center mb-4 pyramid-heading scaleFromCenter">EXPLORE OUR OFFERINGS</h1>
             </div>
             <p class="text-justify mb-3 pyramid-sub-heading">RESOLVE, our AI-driven platform empowers Chartered
                 Accountants to be true powerhouse for growth partnerships of their client. Enhance Capacity by
                 automating tasks, Connecting with experts and enabling Clarity to build their practice is our promise.
                 We invite you to Join our SUPER CA Community.</p>
+                <div class="d-flex justify-content-center">
+                    <div class='container row justify-content-center mt-5'>
+                        <div class="col-md-3 circle-div">
+                            <div class="circle-content">
+                                <img src="<?= base_url() ?>assets/rkda/circle-i1.jpg" alt="" class="img-fluid">
+                                <p class="threeC-text" data-text="Clarity"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 circle-div">
+                            <div class="circle-content">
+                                <img src="<?= base_url() ?>assets/rkda/circle-i2.jpg" alt="" class="img-fluid">
+                                <p class="threeC-text" data-text="Capacity"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 circle-div">
+                            <div class="circle-content">
+                                <img src="<?= base_url() ?>assets/rkda/circle-i3.jpg" alt="" class="img-fluid">
+                                <p class="threeC-text" data-text="Community"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class='row justify-content-around mt-5'>
-                <div class="col-md-3 circle-div ">
-                    <img src="<?= base_url() ?>assets/rkda/u-c.png" alt="" style="">
-                </div>
-                <div class="col-md-3 circle-div">
-                    <img src="<?= base_url() ?>assets/rkda/n-c.png" alt="" style="">
-                </div>
-                <div class="col-md-3 circle-div">
-                    <img src="<?= base_url() ?>assets/rkda/n2-c.png" alt="" style="">
-                </div>
-            </div>
+
+
         </div>
 
         <div class="container-fluid py-4 px-5 mt-5">
@@ -1156,7 +1274,7 @@ body {
         </div>
         <div class="container-fluid py-4 px-5 mt-5">
             <div class="d-flex justify-content-center w-100">
-                <h1 class="text-center mb-4 pyramid-heading">HOW WE ACHIEVE IT</h1>
+                <h1 class="text-center mb-4 pyramid-heading scaleFromCenter">HOW WE ACHIEVE IT</h1>
             </div>
             <p class="text-justify mb-3 pyramid-sub-heading">Our Corporate Finance offerings encompass a comprehensive
                 suite of services designed to navigate the complex landscape of mergers and acquisitions (M&A). We
@@ -1228,11 +1346,11 @@ body {
     <section class="responsibility-section">
         <div class="content-wrapper">
             <div class="grid-container">
-                <div class="row">
+                <div class="row align-items-stretch">
                     <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
+                        <div class="card-container h-100">
+                            <div class="card-wrapper h-100">
+                                <div class="card h-100">
                                     <div class="border-decoration left">
                                         <div class="border-top left"></div>
                                         <div class="border-vertical-thick left"></div>
@@ -1259,9 +1377,9 @@ body {
                         </div>
                     </div>
                     <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
+                        <div class="card-container h-100">
+                            <div class="card-wrapper h-100">
+                                <div class="card h-100">
                                     <div class="border-decoration left">
                                         <div class="border-top left"></div>
                                         <div class="border-vertical-thick left"></div>
@@ -1272,9 +1390,8 @@ body {
                                         <div class="inner-card">
                                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
                                                 alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
+                                            <h3 class="card-title">DESIRE TO LEARN AND GROW</h3>
+                                            <p class="card-description">Embrace continuous learning, adapting to new challenges and opportunities to enhance expertise and value.</p>
                                         </div>
                                     </div>
                                     <div class="border-decoration right">
@@ -1288,9 +1405,9 @@ body {
                         </div>
                     </div>
                     <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
+                        <div class="card-container h-100">
+                            <div class="card-wrapper h-100">
+                                <div class="card h-100">
                                     <div class="border-decoration left">
                                         <div class="border-top left"></div>
                                         <div class="border-vertical-thick left"></div>
@@ -1301,9 +1418,8 @@ body {
                                         <div class="inner-card">
                                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
                                                 alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
+                                            <h3 class="card-title">DILIGENCE IN WORK ETHIC AND SERVICE</h3>
+                                            <p class="card-description">Consistently deliver excellence through dedication, ensuring clients' needs are met with thorough attention and care.</p>
                                         </div>
                                     </div>
                                     <div class="border-decoration right">
@@ -1317,9 +1433,9 @@ body {
                         </div>
                     </div>
                     <div class="grid-column col-12 col-md-6 col-lg-3">
-                        <div class="card-container">
-                            <div class="card-wrapper">
-                                <div class="card">
+                        <div class="card-container h-100">
+                            <div class="card-wrapper h-100">
+                                <div class="card h-100">
                                     <div class="border-decoration left">
                                         <div class="border-top left"></div>
                                         <div class="border-vertical-thick left"></div>
@@ -1330,9 +1446,8 @@ body {
                                         <div class="inner-card">
                                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6adbd9f63e89df8f076ceaac82bd03bdc79f400451d71ac5376f0164180deb95?placeholderIfAbsent=true&apiKey=b229c8c8e9ba4159b2d71eac9ee82d43"
                                                 alt="Responsibility Icon" class="card-icon" />
-                                            <h3 class="card-title">RESPONSIBILITY TOWARD PROFESSSION</h3>
-                                            <p class="card-description">Maintain integrity, honesty, and high standards,
-                                                fostering trust and credibility within the network.</p>
+                                            <h3 class="card-title">ACCOUNTABILITY TO STAKEHOLDERS AND SOCIETY</h3>
+                                            <p class="card-description">Act with transparency and responsibility, ensuring actions positively impact both stakeholders and the broader community.</p>
                                         </div>
                                     </div>
                                     <div class="border-decoration right">
@@ -1811,6 +1926,69 @@ body {
         $(window).resize(function() {
             adjustFontSizeInEm();
         });
+
+        function checkVisibility() {
+            $(".scaleFromCenter").each(function () {
+            var elementTop = $(this).offset().top; // Distance of the element from the top of the document
+            var elementBottom = elementTop + $(this).outerHeight(); // Bottom of the element
+            var viewportTop = $(window).scrollTop(); // Top of the viewport
+            var viewportBottom = viewportTop + $(window).height(); // Bottom of the viewport
+
+            // Check if the element is in the viewport
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                if (!$(this).hasClass("in-view")) {
+                $(this).addClass("in-view"); // Add animation class
+                }
+            } else {
+                $(this).removeClass("in-view"); // Remove class when out of view
+            }
+            });
+        }
+
+        // Trigger the function on scroll
+        $(window).on("scroll", function () {
+            checkVisibility();
+        });
+
+        // Trigger on page load (for elements already in view)
+        checkVisibility();
+
+
+        function typingEffect() {
+        $('.threeC-text').each(function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            // Check if element is in the viewport
+            if (elementBottom > viewportTop && elementTop < viewportBottom && !$(this).hasClass('typing')) {
+                var text = $(this).data('text'); // Get the text from the data attribute
+                var $element = $(this);
+
+                // Simulate typing effect
+                $element.addClass('typing').css('visibility', 'visible'); // Make text visible
+                let charIndex = 0;
+
+                // Clear previous text and reset it for typing effect
+                $element.text(''); 
+
+                let typingInterval = setInterval(() => {
+                    $element.text(text.substring(0, charIndex + 1)); // Display next character
+                    charIndex++;
+                    if (charIndex === text.length) {
+                        clearInterval(typingInterval); // Stop typing
+                        $element.removeClass('typing'); // Remove typing class for future animations
+                        $element.addClass('typed'); 
+                    }
+                }, 100); // Adjust typing speed (in milliseconds)
+            }
+        });
+    }
+
+    // Trigger the function on page load and scroll
+    $(window).on('scroll', typingEffect);
+    typingEffect(); // Initial check
 
     });
 
