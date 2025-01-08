@@ -1121,7 +1121,7 @@ body {
 }
 
 
-@media screen and (min-height: 580px) and (max-height: 800px) {
+@media screen and (min-height: 580px) and (max-height: 1000px) {
   /* Styles for screens with height between 590px and 800px */
   /* Your styles for screens taller than 590px */
   video{
