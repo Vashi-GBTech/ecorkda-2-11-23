@@ -50,7 +50,7 @@
 }
 
 .card-front {
-    background-color: #007bff;
+    background-color: transparent;
     flex-direction: column;
     justify-content: flex-start;
     border-radius:1rem;
@@ -89,7 +89,7 @@
         .email a {
             color: #e60000;
             text-decoration: none;
-            font-size:1.2rem;
+            /* font-size:1.2rem; */
         }
         .bg-back-card-btn{
             background-color:#f4e4e6 !important;
@@ -103,10 +103,10 @@
 <body>
 
 <?php include_once "navbar.php" ?>
-<section id='task_force_new'  style="margin-top: 8.5rem;">
+<section id='task_force_new'  style="margin-top: 4rem;">
     <div class="container mt-5">
        <div class='d-flex justify-content-center ' ><div class="header w-100">Task Force</div></div> 
-       <p class='text-center my-3' >Meet our dedicated team of industry experts, professionals, and thought leaders who drive excellence and innovation. Our task force is committed to providing unparalleled support, guidance, and expertise to help you navigate challenges and achieve your professional goals. With diverse backgrounds and extensive experience, our team is here to empower you every step of the way.</p>
+       <p class='text-center my-3 global-sub-font text-justify' >Meet our dedicated team of industry experts, professionals, and thought leaders who drive excellence and innovation. Our task force is committed to providing unparalleled support, guidance, and expertise to help you navigate challenges and achieve your professional goals. With diverse backgrounds and extensive experience, our team is here to empower you every step of the way.</p>
  
        <div class="container my-5">
         <div class="row justify-content-between">
@@ -165,8 +165,8 @@
         </div>
     </div>
 
-    <div class="email">
-          <p>  If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com">audit@rkda.com</a></p>
+    <div class="email global-sub-font">
+          <p class=''>  If you want to reach all members of the Audit Task Force, please mailto: <a href="mailto:audit@rkda.com">audit@rkda.com</a></p>
         </div>
     </div> 
 

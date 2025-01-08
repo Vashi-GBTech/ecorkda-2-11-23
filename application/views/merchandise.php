@@ -63,7 +63,7 @@
     </div> -->
     <div class="py-4 px-5 mt-5">
     <div class="d-flex justify-content-center w-100">
-                <h1 class="text-center mb-4 pyramid-heading">Power of Community</h1>
+                <h1 class="text-center mb-4 pyramid-heading text-uppercase scaleFromCenter">Power of Community</h1>
             </div>
             <p class="text-justify mb-3 pyramid-sub-heading">As a member of the RKDA community, we not only focus on enhancing professional growth but also enable savings from the power of collective representation. Our members have enjoyed over 50% discounts on infrastructure, products, and services, leading to significant cost savings advantages.</p>
    

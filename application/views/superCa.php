@@ -116,6 +116,21 @@ header {
   .swal2-popup.swal2-modal.swal2-show {
     margin: 0rem !important;
   }
+  div:where(.swal2-container) button:where(.swal2-close):focus-visible{
+    box-shadow:unset !important;
+  }
+  .swal2-close{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    margin-top: -10px;
+  }
+  .success-keys .card.border-0.shadow.p-3 {
+    border-radius: .5rem;
+}
+
+
+
 </style>
 
 <script src="<?= base_url('assets/owl/owl.carousel.min.js') ?>" defer></script>
@@ -125,13 +140,13 @@ header {
   <section id='superca_page'>
 
 
-    <div class="d-flex justify-content-center"  style="margin-top: 8.5rem;">
+    <div class="d-flex justify-content-center"  style="margin-top: 4rem;">
       <div class='' style="margin: 0 3rem">
         <div class="mt-5">
           <div class="header w-100" style="margin-bottom: 1rem">Super CA</div>
         </div>
 
-        <p class='text-center'>SuperCA empowers Chartered Accountants through specialized tools, resources, and
+        <p class='text-justify px-4 global-sub-font'>SuperCA empowers Chartered Accountants through specialized tools, resources, and
           community support. It enables CAs to explore niches like investment banking, forensic auditing, and
           entrepreneurship. Key features include state-of-the-art tools, comprehensive training, vibrant community
           engagement, and opportunities for mentorship and networking</p>
@@ -208,15 +223,20 @@ header {
       <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hh0Iwt4lwa0?si=XWWEv9XzbdYW17Q1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
     </section>
-    <div class='d-flex justify-content-center'>
-      <div class="col-md-7">
-        <ul>
-          <li><strong>Specialized Support:</strong> Tailored tools and resources for niche areas within accounting.</li>
-          <li><strong>Community Engagement:</strong> Vibrant professional network fostering collaboration and learning.
+    <div class='d-flex justify-content-center success-keys'>
+      <div class="col-md-11">
+        <ul class="pl-0 d-flex justify-content-center">
+      
+          <li class="col-md-3"><div class="card border-0 shadow p-3"><strong><p class="text-center">Specialized Support</p></strong><p class="text-justify global-sub-font">
+          Tailored tools and resources for niche areas within accounting.
+          </p></div></li>
+          <li class="col-md-3"><div class="card border-0 shadow p-3"><strong><p class="text-center">Community Engagement</p></strong> <p class="text-justify global-sub-font">Vibrant professional network fostering collaboration and learning.</p></div>
           </li>
-          <li><strong>Professional Growth:</strong> Opportunities for mentorship, networking, and advanced training.
+          <li class="col-md-3"><div class="card border-0 shadow p-3">
+          <strong><p class="text-center">Professional Growth</p></strong> <p class="text-justify global-sub-font">Opportunities for mentorship, networking, and advanced training.</p>
+          </div>
           </li>
-          <li><strong>Career Advancement:</strong> Empowering CAs to optimize practices and achieve career success.</li>
+          <li class="col-md-3"><div class="card border-0 shadow p-3"><strong><p class="text-center">Career Advancement</p></strong><p class="text-justify global-sub-font"> Empowering CAs to optimize practices and achieve career success.</p></div></li>
         </ul>
 
       </div>
@@ -246,28 +266,34 @@ header {
       { img: "<?= base_url() ?>assets/rkda/yt_thumb/thumb-6.jpg", video: "https://www.youtube.com/embed/oNZbmJisIyw" }
     ]
 
-    let wrapperContainer = document.querySelector('.wrapper.owl-carousel')
-    wrapperImagesData.forEach(({img, video}, i) => {
-      let imgElem = document.createElement('img')
-      imgElem.setAttribute('src', img)
-      imgElem.setAttribute('alt', `Image ${i}`)
+    let wrapperContainer = document.querySelector('.wrapper.owl-carousel');
+    wrapperImagesData.forEach(({ img, video }, i) => {
+      let imgElem = document.createElement('img');
+      imgElem.setAttribute('src', img);
+      imgElem.setAttribute('alt', `Image ${i}`);
 
       imgElem.onclick = () => {
-        let html = ''
-        if (video.charAt(video.length - 4) == '.') { html = `<video controls controlsList="nodownload" autoplay width="100%" class="video-player"> <source src="${video}" type="video/mp4"> </video>` }
-        else if (video.includes('youtube')) { html = `<iframe width="450" height="270" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>` }
-        else {html = `<h3 style="color: #df3255;">Cannot play this Video!</h3>`}
+        let html = '';
+        if (video.charAt(video.length - 4) == '.') {
+          html = `<video controls controlsList="nodownload" autoplay width="100%" class="video-player"> <source src="${video}" type="video/mp4"> </video>`;
+        } else if (video.includes('youtube')) {
+          html = `<iframe width="450" height="270" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        } else {
+          html = `<h3 style="color: #df3255;">Cannot play this Video!</h3>`;
+        }
 
         Swal.fire({
           html,
-          showCloseButton: false,
+          showCloseButton: true, // Enable close button
+          closeButtonHtml: '<i class="fas fa-times" style="font-size: 1rem;"></i>', // Customize the close button (Font Awesome icon)
           showCancelButton: false,
           focusConfirm: false,
-        })
+        });
       }
 
-      wrapperContainer.appendChild(imgElem)
-    })
+      wrapperContainer.appendChild(imgElem);
+    });
+
 
   </script>
 

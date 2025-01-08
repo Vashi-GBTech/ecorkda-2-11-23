@@ -226,7 +226,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more Digital_transformation" style=" font-size: var(--secondry_font_size);">
                         We help startups and Micro Business on AI Based Accounting, Compliance, project management services and Collaborate  with them to classify cloud security, architecture, resilience, and IT asset models into a contributing business model to improve their technology and business efficiencies.
                         </p>
                     </div>
@@ -248,7 +248,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     Unlock the power of data with our tailored Data Analytics solutions for businesses, which can leverage internal as well as external data . It helps to gain actionable insights, enhance decision-making, and drive growth and enables  business forward efficiently and effectively.
 
                         </p>
@@ -273,7 +273,7 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     In addition to AI driven accounting and compliance services we Empower  startups or small business with our Cloud Infrastructure and leased digital asset Services. This assists our client to Scale seamlessly, enhance agility, and boost efficiency. While they focus on operations we assist them accelerate their path to success.
 
                         </p>
@@ -296,7 +296,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     We help Elevate the service and project-based business with our SAAS solutions, based on proprietary platfoms. We assist clients in Streamline operations, enhance collaboration, and optimize workflows. Tailored for efficiency, our health care and MSME ACT AI platform  empowers small business to thrive in a dynamic business landscape.
 
                         </p>
@@ -319,7 +319,7 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     We assist Clients Transform their professional service offerings with our expert Mobile and Web Development solutions. Craft seamless digital experiences, engage clients effortlessly, and stay ahead in a competitive landscape. We assist lawyers, Accountants and Doctors Elevate their online presence with our tailored development expertise.
                         </p>
                     </div>
@@ -341,7 +341,7 @@
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     We assist our clients to improve business resilience with our comprehensive technology services including precise technology assessments to rigorous cyber audits, ISO 27000 Certifications, and  Safeguard their business operations to stay ahead in the digital landscape with our expertise.
 
                         </p>

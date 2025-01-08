@@ -276,7 +276,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                        <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
 
 
                             Empowering clients since 1967, our legal prowess spans all India courts, offering strategic,
@@ -303,7 +303,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     When it comes to Navigating complexities in secretarial matters. Our expertise enabled by cloud solutions and AI applications ensure seamless compliance, corporate governance, and regulatory excellence. Trust us to handle your corporate secretarial needs with precision and proficiency, what we assure is value for money services."
                         </p>
                     </div>
@@ -327,7 +327,7 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     At the heart of this offering lies the design of GRC frameworks, risk registers, and compliance solutions along with mitigation plan. We specialize in crafting and implementing SOPs, firmly believing that effective Risk Management should seamlessly integrate into organizational culture, not just isolated exercises. We've got it all covered
 
                         </p>
@@ -350,7 +350,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     Company Resolution Matters, With more than 150 cases and 20 resolution professional part of network our team claims to be one of most experienced in IBC Bankruptcy Code and Corporate Resolution. With our help one can Navigate financial challenges seamlessly ensuring a strategic approach to financial resolution and recovery."
 
                         </p>
@@ -373,7 +373,7 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     We construct a specific offshore business structure that lowers your worldwide tax responsibilities, diversify your business abroad, secure your assets, design specific residency programs starting with the domicile, jurisdiction, taxation  and type of entity.
                         </p>
                     </div>
@@ -395,7 +395,7 @@
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p class="ml-3 pl-4 see-more" style=" font-size: var(--secondry_font_size);">
+                    <p class="ml-3 pl-4 see-more global-sub-font" style=" font-size: var(--secondry_font_size);">
                     "We work with  onshore business of clients with  our comprehensive support services, From managing contracts and GDPR compliance to succession planning, and business continuity – we guide clients through every strategic move, ensuring resilience and success in a dynamic business landscape."
 
                         </p>

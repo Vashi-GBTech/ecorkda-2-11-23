@@ -153,7 +153,7 @@
 <body>
     <?php include_once "navbar.php" ?>
 
-    <div class="sub-container" style="margin-top: 8.5rem;">
+    <div class="sub-container" style="margin-top: 4rem;">
         <!-- Stores Heading of the page -->
         <h1></h1>
 
@@ -168,7 +168,7 @@
             <div class="explore-list"></div>
         </section>
 
-        <div class="bottom-section">
+        <div class="bottom-section global-sub-font">
             If you want to reach all members of the Audit Task Force, please mailto <a href="mailto:audit@rkda.com">:audit@rkda.com</a>
         </div>
     </div>
