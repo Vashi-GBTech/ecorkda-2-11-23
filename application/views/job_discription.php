@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Marketing head</title>
-    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
+    <title>ECOVISRKDA - Marketing head</title>
+    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball.png" type="image/icon type">
 
     <!-- font-awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -113,7 +113,7 @@
                     </div>
                     <div class="col-lg-7">
                         <h1 class="primaryHeading">About Us</h1>
-                        <p>ECOVIS RKCA with presence and representation of firms in India having more
+                        <p>ECOVIS RKDA with presence and representation of firms in India having more
                             than 5 decades of presence and offices in Major Indian cities, a global footprint
                             with associates in more than 70+ countries serving clients in Assurance,Tax,
                             legal, commercial, economic, regulatory, management consulting and Wealth

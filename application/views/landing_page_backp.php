@@ -1082,7 +1082,7 @@ ol.right>li::after {
                             <i class="fas fa-phone-alt"></i>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/company/ecovisrkca/" target="_blank">
+                    <a href="https://www.linkedin.com/company/ecovisrkda/" target="_blank">
                         <div class="icon-circle">
                             <i class="fab fa-linkedin-in"></i>
                         </div>

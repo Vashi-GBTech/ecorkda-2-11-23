@@ -217,7 +217,7 @@
     <div class="header-container">
         <div class="top-bar">
             <a href="mailto:audit@rkda.com"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/company/ecovisrkca/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/ecovisrkda/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             
         </div>
         <header>

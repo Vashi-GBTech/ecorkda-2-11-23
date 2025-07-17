@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Ecovis</title>
+    <title>ECOVISRKDA - Ecovis</title>
     <!-- font-awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap css cdn  -->
@@ -40,7 +40,7 @@
         <div class="row mx-0">
             <div class="align-items-center col-md-12 bg-danger contact-header d-flex font-weight-bold justify-content-end px-4 py-1 small text-light">
                 <a href="./" style="text-decoration: none; font-size:medium;" class="text-light"> <span><i class="fa-solid fa-newspaper"></i></span> NewsLetters</a>
-                <a href="#" style="text-decoration: none; font-size:medium;" class="text-light ml-3"> <span><i class="fa-solid fa-envelope"></i></span> Info@ecovisrkca.com</a>
+                <a href="#" style="text-decoration: none; font-size:medium;" class="text-light ml-3"> <span><i class="fa-solid fa-envelope"></i></span> Info@ecovisrkda.com</a>
             </div>
             <div class="align-items-center col-md-12 d-flex justify-content-between main-header">
                 <div class="logo py-2 text-center">
@@ -91,10 +91,10 @@
         <div class=" row position-absolute " style="display: none; z-index: 1; right: 0; left: 0;" id="aboutUs_menu">
         <div class="col-md-4 pr-0 text-center" style="background: linear-gradient(0deg, #CD1432, #dc4f54);">
                 <div class="bg-light mt-5 mx-auto px-2 py-2 rounded-circle" style="width: 111px;">
-                <img src="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball2.png" alt="" class="rounded-circle">
+                <img src="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball2.png" alt="" class="rounded-circle">
                 </div>
                 <h4 class="text-light  mt-3">Let’s Connect</h4>
-                <p class="mx-auto text-justify text-light mt-5 w-75">RKCA is an organization excelled by its Competency Centers with more than 5 decades of presence in India, having a global footprint with associates in more than 70+ countries. Our Purpose is to mentor start-ups &amp; SMEs of today as MNC’s for tomorrow.</p>
+                <p class="mx-auto text-justify text-light mt-5 w-75">RKDA is an organization excelled by its Competency Centers with more than 5 decades of presence in India, having a global footprint with associates in more than 70+ countries. Our Purpose is to mentor start-ups &amp; SMEs of today as MNC’s for tomorrow.</p>
                 <a href="./contact_us"><button class="btn header_connectBTN mb-4 font-weight-bold text-light">CONTACT US</button></a>
             </div>
             <div class="col-md-4 ourPresents pt-4">
@@ -185,7 +185,7 @@
         <div class="mx-0 row position-absolute" style="display: none; z-index: 1;" id="services_menu">
             <div class="col-md-4 text-center" style="background: linear-gradient(0deg, #CD1432, #dc4f54);">
                 <!-- <div class="Contact_image bg-light mt-5 mx-auto">
-                     <img src="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" class="w-100" alt="">
+                     <img src="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball.png" class="w-100" alt="">
                 </div> -->
                 <div class="mt-5 mx-auto px-2 py-2 rounded-circle" style="width: 210px;">
                 <img src="<?=base_url()?>assets/images/ecovis_logoes/Mentor_bi.png" alt="" class="rounded-circle w-100">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Ecovis</title>
+    <title>ECOVISRKDA - Ecovis</title>
     <!-- font-awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
@@ -186,7 +186,7 @@
                                 class="fa-solid fa-newspaper"></i></span> NewsLetter</a>
                     <a href="#" style="text-decoration: none; font-size:medium; font-weight: 500;"
                         class="text-light ml-3">
-                        <span><i class="fa-solid fa-envelope"></i></span> mentor@rkca.in</a>
+                        <span><i class="fa-solid fa-envelope"></i></span> mentor@rkda.in</a>
 
                 </div>
                 <div class='d-flex align-items-end'>

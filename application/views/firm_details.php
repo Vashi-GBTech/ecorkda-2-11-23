@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Mentor Bi</title>
-    <link rel="icon" href="<?= base_url() ?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png"
+    <title>ECOVISRKDA - Mentor Bi</title>
+    <link rel="icon" href="<?= base_url() ?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball.png"
         type="image/icon type">
     <!-- bootstrap css cdn  -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/bootstrap.min.css">
@@ -92,7 +92,7 @@
                 <p id="about-me">
                 <p>I am Rameshwarlal Badrilalji Kabra, a highly experienced financial professional with close to five
                     decades of experience across industries, geographies, and economic cycles. As the Founding Partner
-                    of ECOVIS RKCA, I have played an instrumental role in developing the firm's capabilities and
+                    of ECOVIS RKDA I have played an instrumental role in developing the firm's capabilities and
                     reputation in the industry.</p>
                 <p>I hold a Bachelor's degree in Commerce and am a Chartered Accountant (CA). Additionally, I am a
                     Certified Fraud Examiner (CFE), which highlights my expertise in detecting, investigating, and
@@ -101,13 +101,13 @@
                     telecommunication, and healthcare.,
                     Throughout my career, I have gained a deep understanding of the market, which has enabled me to
                     provide my clients with valuable insights and solutions to their financial challenges. As the
-                    Founding Partner of ECOVIS RKCA, I have been responsible for leading the firm's financial strategy
+                    Founding Partner of ECOVIS RKDA I have been responsible for leading the firm's financial strategy
                     and ensuring that our team delivers high-quality services to our clients.,
                     Apart from my professional achievements, I am also actively involved in various social initiatives
                     aimed at improving the lives of the underprivileged. Giving back to society is a cause close to my
                     heart, and I have supported several charitable causes over the years.",
                     In conclusion, I take great pride in my accomplishments in the field of finance and banking. My
-                    expertise, experience, and leadership have helped establish ECOVIS RKCA as a trusted financial and
+                    expertise, experience, and leadership have helped establish ECOVIS RKDA as a trusted financial and
                     banking service provider in the industry.</p>
                 </p>
 
