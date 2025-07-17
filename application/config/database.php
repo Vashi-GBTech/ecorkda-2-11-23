@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
  $db['default'] = array(
  	'dsn' => '',
- 	'hostname' => 'ecovisrkca-rmt-com.cdeky8oy4qrz.ap-south-1.rds.amazonaws.com',
+ 	'hostname' => 'forensicaudit.cdeky8oy4qrz.ap-south-1.rds.amazonaws.com',
  	'username' => 'echo_rmt_user',
  	'password' => 'rmt^1998#ucode',
  	'database' => 'ecorkda',
