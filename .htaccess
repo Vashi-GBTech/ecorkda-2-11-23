@@ -13,3 +13,6 @@
 			RewriteCond %{HTTP_HOST} ^www\.docango\.com$
 		RewriteRule ^/?$ "https://docango.com\" [R=301,L]
 	</IfModule>
+	<Files "robots.txt">
+	Allow from all
+	</Files>
