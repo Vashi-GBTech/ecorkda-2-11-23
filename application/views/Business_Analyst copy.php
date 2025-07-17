@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Business Analyst</title>
-    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
+    <title>ECOVISRKDA - Business Analyst</title>
+    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball.png" type="image/icon type">
 
     <!-- font-awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -160,7 +160,7 @@
     <div class="ecovis_insia_banner">
         <div class="mt-5 mx-auto w-75">
             <h1 class="mb-4 primaryHeading text-center">About Us</h1>
-            <p class="mb-3 normalText text-justify">ECOVIS RKCA with presence and representation of firms in India having more than 5 decades of presence and offices in Major Indian cities, a
+            <p class="mb-3 normalText text-justify">ECOVIS RKDA with presence and representation of firms in India having more than 5 decades of presence and offices in Major Indian cities, a
                 global footprint with associates in more than 70+ countries serving clients in Strategy & Performance Consulting, On shore and Off shore Advisory, Government, Risk & Compliance, Business Support and Financial Reporting , Legal & Litigation Services, Financial and Capital Services, Digital Transformation, Cross border and Merchant Banking Services management consulting and Wealth planning matters. Serving with core values of Responsibility towards Profession, Knowledge in People,
                 Commitment towards Clients and Accountability towards the society is our key differentiator. </p>
         </div>
