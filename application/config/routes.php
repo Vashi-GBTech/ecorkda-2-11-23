@@ -54,7 +54,7 @@ $route['default_controller'] = 'welcome';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['index_old'] = 'welcome/index_old';
-$route['rkca_addPartner'] = 'welcome/rkca_addPartner';
+$route['rkda_addPartner'] = 'welcome/rkda_addPartner';
 $route['Business_Analyst'] = 'welcome/Business_Analyst';
 $route['Business_Analyst_copy'] = 'welcome/Business_Analyst_copy';
 $route['Business_Restructuing'] = 'welcome/Business_Restructuing';
@@ -90,7 +90,7 @@ $route['contact-us-cp'] = 'welcome/contact_us_copy';
 $route['Crossborderandmerchantbankingservices'] = 'welcome/Crossborderandmerchantbankingservices';
 $route['Digital_Signature_Registration'] = 'welcome/Digital_Signature_Registration';
 $route['Digital_transformation'] = 'welcome/Digital_transformation';
-$route['ecovis_india'] = 'welcome/ecovis_india';
+$route['rkda_india'] = 'welcome/ecovis_india';
 $route['ecovis-international'] = 'welcome/ecovis_International';
 $route['epf_registration'] = 'welcome/epf_registration';
 $route['ESI'] = 'welcome/ESI';

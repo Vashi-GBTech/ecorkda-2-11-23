@@ -502,9 +502,9 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('index.php');
 	}
-	public function rkca_addPartner()
+	public function rkda_addPartner()
 	{
-		$this->load->view('rkca_addPartner');
+		$this->load->view('rkda_addPartner');
 	}
 	public function Business_Analyst()
 	{

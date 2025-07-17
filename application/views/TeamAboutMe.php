@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECOVISRKCA - Mentor Bi</title>
-    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkca_logo_ball.png" type="image/icon type">
+    <title>ECOVISRKDA - Mentor Bi</title>
+    <link rel="icon" href="<?=base_url()?>assets/images/ecovis_logoes/Ecovis_rkda_logo_ball.png" type="image/icon type">
  <!-- bootstrap css cdn  -->
     <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.css">
@@ -97,7 +97,7 @@ let Members =[
       "I hold a Bachelor's degree in Commerce and am a Chartered Accountant (CA). Additionally, I am a Certified Fraud Examiner (CFE), which highlights my expertise in detecting, investigating, and preventing fraud. My vast experience and knowledge in finance have made me a trusted advisor to my clients, and I have served clients across various sectors such as education and training, telecommunication, and healthcare.",
       "Throughout my career, I have gained a deep understanding of the market, which has enabled me to provide my clients with valuable insights and solutions to their financial challenges. As the Founding Partner of ECOVIS RKCA, I have been responsible for leading the firm's financial strategy and ensuring that our team delivers high-quality services to our clients.",
       "Apart from my professional achievements, I am also actively involved in various social initiatives aimed at improving the lives of the underprivileged. Giving back to society is a cause close to my heart, and I have supported several charitable causes over the years.",
-      "In conclusion, I take great pride in my accomplishments in the field of finance and banking. My expertise, experience, and leadership have helped establish ECOVIS RKCA as a trusted financial and banking service provider in the industry."
+      "In conclusion, I take great pride in my accomplishments in the field of finance and banking. My expertise, experience, and leadership have helped establish ECOVIS RKDA as a trusted financial and banking service provider in the industry."
     ]
    },
    { key:'Asit_Pal',
@@ -337,7 +337,7 @@ let Members =[
     post:'Cross Border & Merchant Banking Advice',
     location:'Vashi, Navi Mumbai',
     about:[
-      "Hello there! I am Sanjay Surana, As someone who strongly believes in the power of financial planning and compliance, I am excited to share with you my experience and expertise in the field of taxation. It has been said that taxes are the price we pay for a civilized society, and I couldn't agree more. My goal as a Senior Partner at ECOVIS RKCA is to help businesses navigate the complexities of income tax matters and ensure compliance with regulatory requirements.",
+      "Hello there! I am Sanjay Surana, As someone who strongly believes in the power of financial planning and compliance, I am excited to share with you my experience and expertise in the field of taxation. It has been said that taxes are the price we pay for a civilized society, and I couldn't agree more. My goal as a Senior Partner at ECOVIS RKDA is to help businesses navigate the complexities of income tax matters and ensure compliance with regulatory requirements.",
 
       "With a Bachelor's degree in Commerce and my designation as a Fellow Chartered Accountant, I have honed my skills in various areas of taxation, including income tax consulting, compliance, litigation, and advisory. I am also a certified DISA professional, which has provided me with additional expertise in information systems auditing.",
 

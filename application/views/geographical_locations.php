@@ -611,7 +611,7 @@
 
         const regions = [
             {
-                image: "http://ecorkca.ecovisrkca.com/ecovis_icons/mumbai.png",
+                image: "http://ecorkda.ecovisrkca.com/ecovis_icons/mumbai.png",
                 city: "Corporate Office,Mumbai",
                 central_city: 'mumbai',
                 post: "Mentor",
@@ -619,7 +619,7 @@
                 address: "515, Tulsiani chambers, Nariman Point, Mumbai 400021",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/ahmedabad.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/ahmedabad.png",
                 city: "Ahemdabad",
                 central_city: "ahemdabad",
                 post: "Mentor",
@@ -627,7 +627,7 @@
                 address: "Naharraj Leela, 1 Ganga Soc, Shahibaug",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/chennai.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/chennai.png",
                 city: "Chennai",
                 central_city: "chennai",
                 post: "Mentor",
@@ -636,7 +636,7 @@
             },
             {
 
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/delhi.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/delhi.png",
                 city: "Delhi",
                 central_city: "delhi",
                 post: "Mentor",
@@ -644,7 +644,7 @@
                 address: "A 531, Shastri Nagar, New Delhi – 110052",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/hyderabad.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/hyderabad.png",
                 city: "Hyderabad",
                 central_city: "hyderabad",
                 post: "Mentor",
@@ -652,7 +652,7 @@
                 address: "1st Flr, Ramky House, Raj Bhavan Road, Hyderabad – 500082",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/indore.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/indore.png",
                 city: "Indore",
                 central_city: "indore",
                 post: "Mentor",
@@ -660,7 +660,7 @@
                 address: "401, Fortune Ambience Business Spaces Indore (M.P) – 452001",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/hyderabad.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/hyderabad.png",
                 city: "Jaipur",
                 central_city: "jaipur",
                 post: "Mentor",
@@ -668,7 +668,7 @@
                 address: "1st Flr, Ramky House, Raj Bhavan Road, Hyderabad – 500082",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/kolkata.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/kolkata.png",
                 city: "Kolkata",
                 central_city: "kolkata",
                 post: "Mentor",
@@ -676,7 +676,7 @@
                 address: "4A/2, Anandam Apt, 7 Mall Road, Kolkata – 700 080",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/mumbai.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/mumbai.png",
                 city: "Mumbai",
                 central_city: "mumbai",
                 post: "Mentor",
@@ -684,7 +684,7 @@
                 address: "1902 C, Kailas Business Park, Vikhroli – W, Mumbai – 400 079",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/mumbai.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/mumbai.png",
                 city: "Nagpur",
                 central_city: "nagpur",
                 post: "Mentor",
@@ -692,7 +692,7 @@
                 address: "2nd Floor, Bhiwapurkar Chambers, Dhantoli, Nagpur, Maharashtra 440012",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/images/icon_images/mumbai.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/mumbai.png",
                 city: "Vashi,Mumbai",
                 central_city: "mumbai",
                 post: "Mentor",
@@ -700,7 +700,7 @@
                 address: "513, Arenja Corner, Vashi, Navi Mumbai – 400 703",
             },
             {
-                image: "http://ecorkca.ecovisrkca.com/ecovis_icons/kolk.png",
+                image: "http://ecorkda.ecovisrkca.com/assets/ecovis_icons/kolk.png",
                 city: "Pune",
                 central_city: "pune",
                 post: "Mentor",
